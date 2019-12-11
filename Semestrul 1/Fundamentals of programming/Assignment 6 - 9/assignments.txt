@@ -1,0 +1,19 @@
+269,implement PyUnit tests,24,7,2020
+369,update,24,12,2019
+389,list,5,12,2019
+337, do something,17,8,2019
+223,list,20,10,2020
+351,create GUI,18,7,2019
+370,filter,2,7,2020
+331,delete,14,11,2019
+201,sort,12,1,2020
+307,test,17,2,2020
+321,create GUI,6,1,2020
+385,create GUI,22,3,2019
+355,implement PyUnit tests,11,9,2019
+322,redo,4,4,2019
+318,redo,10,12,2020
+259,implement PyUnit tests,21,3,2020
+308,delete,21,9,2019
+325,test,27,3,2020
+220,list,23,11,2019
