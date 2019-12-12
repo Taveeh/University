@@ -1,0 +1,39 @@
+.bm-burger-bars {
+    background: black;
+}
+
+.bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+    outline: none;
+}
+
+/*
+.bm-menu {
+    background: #33ccff;
+}
+*/
+
+* {
+    outline: none;
+}
+
+.x-button {
+    width: 250px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.bm-cross {
+    background: white;
+}
+
+.bm-morph-shape {
+    fill: #135589;
+}

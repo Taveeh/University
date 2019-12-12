@@ -1,0 +1,9 @@
+.videoContainer {
+    width: 500px;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -150px;
+}

@@ -1,0 +1,52 @@
+#button {
+  background-color: #135589;
+  border-radius: 10px;
+  color: white;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+#newsOuterDiv {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #2e77aa;
+  border-radius: 10px;
+}
+
+#chenarTitlu {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#chenarText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+#images {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+  overflow: auto;
+}
+
+.news-image {
+  height: 100%;
+  cursor: pointer;
+}
+
+.news-image:not(:first-child):not(:last-child) {
+  margin: 0 10px;
+}
+
+.news-image:first-child {
+  margin-right: 10px;
+}
+
+.news-image:last-child {
+  margin-left: 10px;
+}

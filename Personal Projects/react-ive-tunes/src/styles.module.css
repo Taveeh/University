@@ -1,0 +1,284 @@
+html, body {
+    background-color: #33ccff;
+}
+
+.spinnerContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    text-align: center;
+}
+
+.spinner {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    margin-top: -32px;
+  }
+  .spinner div {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation: lds-grid 1.2s linear infinite;
+  }
+  .spinner div:nth-child(1) {
+    top: 6px;
+    left: 6px;
+    animation-delay: 0s;
+  }
+  .spinner div:nth-child(2) {
+    top: 6px;
+    left: 26px;
+    animation-delay: -0.4s;
+  }
+  .spinner div:nth-child(3) {
+    top: 6px;
+    left: 45px;
+    animation-delay: -0.8s;
+  }
+  .spinner div:nth-child(4) {
+    top: 26px;
+    left: 6px;
+    animation-delay: -0.4s;
+  }
+  .spinner div:nth-child(5) {
+    top: 26px;
+    left: 26px;
+    animation-delay: -0.8s;
+  }
+  .spinner div:nth-child(6) {
+    top: 26px;
+    left: 45px;
+    animation-delay: -1.2s;
+  }
+  .spinner div:nth-child(7) {
+    top: 45px;
+    left: 6px;
+    animation-delay: -0.8s;
+  }
+  .spinner div:nth-child(8) {
+    top: 45px;
+    left: 26px;
+    animation-delay: -1.2s;
+  }
+  .spinner div:nth-child(9) {
+    top: 45px;
+    left: 45px;
+    animation-delay: -1.6s;
+  }
+  @keyframes lds-grid {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+
+.videoContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.progressBar {
+    width: 100%;
+    height: 10px;
+    z-index: 10;
+    position: absolute;
+    bottom: 30px;
+    left: -2px;
+}
+
+.controlBar {
+    background-image: linear-gradient(to top, black, transparent);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 9;
+}
+
+.playPauseContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.playPauseButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.muteContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    left: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.muteButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.volumeButtonContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    left: 60px;
+    position: absolute;
+}
+
+.volumeButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.uploadContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    right: 90px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.uploadButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.removeContainer {
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+  bottom: 4px;
+  right: 120px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.removeButton {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.previousContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    right: 60px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.previousButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.nextContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    right: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.nextButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.fullscreenContainer {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    bottom: 4px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.fullscreenButton {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.timeContainer {
+    position: absolute;
+    bottom: 4px;
+    left: 90px;
+    width: 80px;
+    height: 30px;
+    z-index: 10;
+}
+
+.time {
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+    position: relative;
+    font-size: 10px;
+    padding-left: 3px;
+}
+
+.volumeContainer {
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    z-index: 20;
+    left: 60px;
+    bottom: 4px;
+}
+
+.volumeBar {
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-appearance: slider-vertical;
+    writing-mode: bt-lr;
+}
