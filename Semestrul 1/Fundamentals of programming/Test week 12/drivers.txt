@@ -1,0 +1,6 @@
+ion,10,21
+vasile,50,102
+popa,1,4
+gigel,13,57
+mihnea,34,98
+andrew,56,115

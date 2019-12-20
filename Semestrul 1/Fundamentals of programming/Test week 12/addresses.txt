@@ -1,0 +1,5 @@
+1,theodor mihali,0,0
+2000,dorobantilor,50,100
+23,preot vladeanu,13,17
+945,independentei,25,68
+425,mihai dragan,98,140
