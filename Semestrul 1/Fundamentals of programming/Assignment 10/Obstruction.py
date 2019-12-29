@@ -15,7 +15,15 @@ class UI:
         self._game.setBoard(sizex, sizey)
 
     def initDifficulty(self):
-        self._game.setComputer('Easy')
+        print('Levels:')
+        print('1. Easy')
+        print('2. Medium')
+        print('3. Hard')
+        lvl = input('Difficulty: ')
+        d = {'1': 'Easy',
+             '2': 'Medium',
+             '3': 'Hard'}
+        self._game.setComputer(d[lvl])
 
     @staticmethod
     def _readPlayerMove():
@@ -69,6 +77,3 @@ class UI:
 g = Game()
 u = UI(g)
 u.start()
-
-
-

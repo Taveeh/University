@@ -2,7 +2,28 @@ import random
 from copy import deepcopy
 
 
+class SimpletonComputer:
+    '''
+    Computer for easy difficulty
+
+    Returns:
+        tuple -- coords of next move
+    '''
+    @staticmethod
+    def calculateMove(board):
+        for i in range(board.sizeofX):
+            for j in range(board.sizeofY):
+                if board.get(i, j) == 0:
+                    return (i, j)
+
+
 class RandomComputer:
+    '''
+    Computer for medium difficulty
+
+    Returns:
+        tuple -- coords of next move
+    '''
     @staticmethod
     def calculateMove(board):
         candidates = []
@@ -14,32 +35,60 @@ class RandomComputer:
 
 
 class SmartestComputer:
-    def minmax(self, board, depth, isMax):
+    '''
+    Computer for hard difficulty
+    '''
+
+    def minmax(self, board, depth, isMax, alpha, beta):
+        '''
+        minmax Function that finds the best value of a move
+
+        Arguments:
+            board {Board} -- Game board
+            depth {int} -- depth of the tree
+            isMax {bool} -- check if is max or min
+            alpha {int} -- value of max function
+            beta {int} -- value of min function
+
+        Returns:
+            int -- value of moveset
+        '''
         eva = board.evaluate()
-        if eva == -10 or eva == 10:
+        if eva != 999 and eva != 998:
             return eva
         if board.isEnded():
             return 0
+        if beta <= alpha:
+            return 0
         if isMax:
-            best = -1000
             for i in range(board.sizeofX):
                 for j in range(board.sizeofY):
                     if board.get(i, j) == 0:
                         board.move(i, j, 'X')
-                        best = max(best, self.minmax(board, depth + 1, not isMax))
+                        alpha = max(alpha, self.minmax(
+                            board, depth + 1, not isMax, alpha, beta))
                         board.kindaUndo()
-            return best
+            return alpha
         else:
-            best = 1000
             for i in range(board.sizeofX):
                 for j in range(board.sizeofY):
                     if board.get(i, j) == 0:
                         board.move(i, j, '0')
-                        best = min(best, self.minmax(board, depth + 1, not isMax))
+                        beta = min(beta, self.minmax(
+                            board, depth + 1, not isMax, alpha, beta))
                         board.kindaUndo()
-            return best
+            return beta
 
     def calculateMove(self, board):
+        '''
+        calculateMove Finds the best move
+
+        Arguments:
+            board {Board} -- Game board
+
+        Returns:
+            tuple -- Coords of next move
+        '''
         bestVal = -1000
         x = -1
         y = -1
@@ -48,7 +97,7 @@ class SmartestComputer:
             for j in range(board.sizeofY):
                 if board.get(i, j) == 0:
                     board.move(i, j, 'X')
-                    moveVal = self.minmax(board, 0, False)
+                    moveVal = self.minmax(board, 0, False, -1000, 1000)
                     board.kindaUndo()
                     if moveVal > bestVal:
                         x = i
