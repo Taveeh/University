@@ -6,6 +6,21 @@ from tkinter.messagebox import showinfo
 import sys
 from copy import deepcopy
 import time
+from PIL import ImageTk, Image
+
+
+class PopupWindowFinish:
+    def __init__(self, master, kind):
+        top = self.top = Toplevel(master)
+        if kind:
+            self.text = "GAME WON"
+        else:
+            self.text = "GAME LOST"
+        self.lab = Label(top, text=self.text)
+        self.lab.pack()
+        self.btn = Button(top, text='Exit', command=lambda: top.quit())
+        self.btn.pack()
+#
 
 
 class PopupWindowSize:
@@ -63,7 +78,7 @@ class GUI:
     def startUI(self):
         self.tk = Tk()
         self.tk.title('Obstruction')
-        self.tk.geometry('1000x700')
+        self.tk.geometry('600x700')
         frame1 = Frame(self.tk)
         frame1.pack()
         self.frame1 = frame1
@@ -120,72 +135,49 @@ class GUI:
         self.showBoard()
 
     def showBoard(self):
-        d = {1: 'X', -1: '0', 0: ' ', 2: 'B'}
-        a = StringVar()
-        a.set('X')
-        d[1] = a
-        b = StringVar()
-        b.set('0')
-        d[-1] = b
-        c = StringVar()
-        c.set(' ')
-        d[0] = c
-        e = StringVar()
-        e.set('B')
-        d[2] = e
+        self.d = {1: 'X', -1: '0', 0: ' ', 2: 'B'}
+        self.buttonVariables = []
+        for i in range(self._game.getBoard().sizeofX):
+            tempArr = []
+            for j in range(self._game.getBoard().sizeofY):
+                textVar = StringVar(value="")
+                tempArr.append(textVar)
+                Button(self.frame2, font=('Times 20 bold'), bg='white', fg='black', height=2, width=4,
+                       textvariable=textVar, command=lambda i=i, j=j: self.press(i, j)).grid(row=i, column=j)
+            self.buttonVariables.append(tempArr)
 
+    def updateBoard(self):
         for i in range(self._game.getBoard().sizeofX):
             for j in range(self._game.getBoard().sizeofY):
-                Button(self.frame2, font=('Times 20 bold'), bg='white', fg='black', height=2, width=4, textvariable=d[self._game.getBoard().get(i, j)], command=lambda i=i, j=j: self.press(i, j)).grid(row=i, column=j)
-        # col = 0
-        # row = 0
-        # ind = 1
-        # for i in self.buttons:
-        #     i.grid(row=row, column=col)
-        #     col += 1
-        #     if ind % self._game.getBoard().sizeofY == 0:
-        #         row += 1
-        #         col = 0
-        #     ind += 1
+                newValue = self.d[self._game.getBoard().get(i, j)]
+                self.buttonVariables[i][j].set(newValue)
+        self.tk.update()
 
     def press(self, i, j):
         b = self._game.getBoard()
         try:
             self._game.playerMove(i, j)
-            time.sleep(2)
-            print('woke up like this')
-            self.showBoard()
-            if self._game.getBoard().isEnded():
-                print('Game won')
-                # self.showBoard()
-                return
         except Exception as err:
             print(err)
+        self.updateBoard()
+            # self.showBoard()
+            # self.tk.update()
+        if self._game.getBoard().isEnded():
+            self.fin = PopupWindowFinish(self.frame1, True)
+            # self.showBoard()
+            return
         try:
             self._game.computerMove()
-            if self._game.getBoard().isEnded():
-                print(''' ______   _______ _______ _______ _______ ___ _______                                         
-                                                                     |   _  \ |   _   |       |   _   |   _   |   |       |                                        
-                                                                     |.  |   \|.  1___|.|   | |.  l   |.  |   |.  |.|   | |                                        
-                                                                     |.  |    |.  __)_`-|.  |-|.  _   |.  |   |.  `-|.  |-'                                        
-                                                                     |:  1    |:  1   | |:  | |:  |   |:  1   |:  | |:  |                                          
-                                                                     |::.. . /|::.. . | |::.| |::.|:. |::.. . |::.| |::.|                                          
-                                                                     `------' `-------' `---' `--- ---`-------`---' `---'                                          
-                                                                      _______  _______ _______ _______ ___ ___ _______     ___ ___ ___ ___ ___ ___ _______ ______  
-                                                                     |   _   \|   _   |   _   |   _   |   Y   |   _   |   |   Y   |   Y   |   Y   |   _   |   _  \ 
-                                                                     |.  1   /|.  1___|.  1___|.  |   |.      |.  1___|   |.  1   |.  |   |.      |.  1   |.  |   |
-                                                                     |.  _   \|.  __)_|.  |___|.  |   |. \_/  |.  __)_    |.  _   |.  |   |. \_/  |.  _   |.  |   |
-                                                                     |:  1    |:  1   |:  1   |:  1   |:  |   |:  1   |   |:  |   |:  1   |:  |   |:  |   |:  |   |
-                                                                     |::.. .  |::.. . |::.. . |::.. . |::.|:. |::.. . |   |::.|:. |::.. . |::.|:. |::.|:. |::.|   |
-                                                                     `-------'`-------`-------`-------`--- ---`-------'   `--- ---`-------`--- ---`--- ---`--- ---'
-                                                                                                                                                                   ''')
-
-                # self.showBoard()
-                return
-            # self.showBoard()
         except Exception as err:
             print(err)
-
+        self.updateBoard()
+        # self.tk.update()
+        # self.showBoard()
+        if self._game.getBoard().isEnded():
+            # self.showBoard()
+            self.fin = PopupWindowFinish(self.frame1, False)
+            return
+        # self.showBoard()
 
 
 game = Game()
