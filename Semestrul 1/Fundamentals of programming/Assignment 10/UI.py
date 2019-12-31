@@ -74,6 +74,6 @@ class UI:
         print(b)
 
 
-g = Game()
-u = UI(g)
-u.start()
+# g = Game()
+# u = UI(g)
+# u.start()

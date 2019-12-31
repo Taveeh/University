@@ -180,6 +180,6 @@ class GUI:
         # self.showBoard()
 
 
-game = Game()
-g = GUI(game)
-g.startUI()
+# game = Game()
+# g = GUI(game)
+# g.startUI()
