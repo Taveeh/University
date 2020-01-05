@@ -1,4 +1,7 @@
-from utils.exceptions import RepositoryException
+try:
+    from utils.exceptions import RepositoryException
+except Exception:
+    from exceptions import RepositoryException
 
 
 class Repository:
@@ -11,25 +14,25 @@ class Repository:
     def store(self, obj):
         '''
         store Function that stores an item to the list
-        
+
         Arguments:
             obj  -- object to be added
-        
+
         Raises:
             RepositoryException: Element already exists
         '''
         if self.find(obj.Id) is not None:
-            print(self._objects)
-            raise RepositoryException('Element having id = ' + str(obj.Id) + ' already exists')
+            raise RepositoryException(
+                'Element having id = ' + str(obj.Id) + ' already exists')
         self._objects.append(obj)
 
     def find(self, objID):
         '''
         find Function to find an element by id
-        
+
         Arguments:
             objID {int} -- id of element
-        
+
         Returns:
             element -- element if found | None otherwise
         '''
@@ -41,10 +44,10 @@ class Repository:
     def update(self, obj):
         '''
         update Function to update an element from the list
-        
+
         Arguments:
             obj {object} -- object to be updated
-        
+
         Raises:
             RepositoryException: Item does not exist
         '''
@@ -58,13 +61,13 @@ class Repository:
     def delete(self, objID):
         '''
         delete Function to delete an element from the list
-        
+
         Arguments:
             objID {int} -- id of object to be deleted
-        
+
         Raises:
             RepositoryException: Item does not exist
-        
+
         Returns:
             object -- object deleted
         '''
