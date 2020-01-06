@@ -1,3 +1,0 @@
-/Users/taveeh/Desktop/cerc c/Project6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/taveeh/Desktop/cerc c/Project6/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/taveeh/Desktop/cerc c/Project6/cmake-build-debug/CMakeFiles/Project6.dir
