@@ -1,5 +1,6 @@
 import unittest
 from Board import Board
+from Game import Game
 
 
 class MyTestCase(unittest.TestCase):
@@ -16,6 +17,22 @@ class MyTestCase(unittest.TestCase):
             b.move(1, 1, 'p')
         with self.assertRaises(ValueError):
             b.move(1, 1, 'X')
+
+    def test_game(self):
+        g = Game()
+        g.setComputer('Easy')
+        g.setBoard('2', '2')
+        g.computerMove()
+        self.assertEqual(g.getBoard().isEnded(), True)
+
+    def test_computer(self):
+        g = Game()
+        g.setComputer('Hard')
+        g.setBoard('3', '3')
+        g.computerMove()
+        self.assertEqual(g.getBoard().isEnded(), True)
+
+
 
 
 
