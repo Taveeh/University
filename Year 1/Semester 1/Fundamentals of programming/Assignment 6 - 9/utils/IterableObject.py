@@ -27,7 +27,8 @@ class SirIndian:
         raise StopIteration
 
     def __iter__(self):
-        return self
+        for i in self._list:
+            yield i
 
     def __len__(self):
         return self._len
@@ -43,8 +44,14 @@ class SirIndian:
         self._list.remove(obj)
         self._len -= 1
 
+    def index(self, obj):
+        return self._list.index(obj)
 
-def sortFunction(array, criteria=lambda x, y: x < y):
+    def insert(self, idx, obj):
+        self._list.insert(idx, obj)
+
+
+def sortFunction(array, key=lambda x, y: x < y, reverse=False):
     # Stooge Sort
     """
     This sorting algorithm swaps first with last element if first > last, then recursively sorts the first 2/3 of the
@@ -52,12 +59,14 @@ def sortFunction(array, criteria=lambda x, y: x < y):
     """
     initial = 0
     final = len(array) - 1
-    array = stoogeSort(array, initial, final, criteria)
+    array = stoogeSort(array, initial, final, key)
+    if reverse is True:
+        return array[::-1]
     return array
 
 
-def stoogeSort(array, initial, final, criteria):
-    if not criteria(array[initial], array[final]):
+def stoogeSort(array, initial, final, key):
+    if not key(array[initial], array[final]):
         aux = array[initial]
         array[initial] = array[final]
         array[final] = aux
@@ -66,11 +75,11 @@ def stoogeSort(array, initial, final, criteria):
     if final - initial + 1 > 2:
         aux = (final - initial + 1) // 3
         # first 2/3
-        stoogeSort(array, initial, final - aux, criteria)
+        stoogeSort(array, initial, final - aux, key)
         # second 2/3
-        stoogeSort(array, initial + aux, final, criteria)
+        stoogeSort(array, initial + aux, final, key)
         # third 2/3 - for verification
-        stoogeSort(array, initial, final - aux, criteria)
+        stoogeSort(array, initial, final - aux, key)
 
     return array
 
@@ -126,38 +135,41 @@ class SirIndianTest(unittest.TestCase):
         self.assertEqual(arr[0], 234)
 
 
-a = SirIndian()
-print(a)
-print()
-a.append(123)
-a.append(234)
-a.append(345)
-a.append(456)
-a.append(567)
-a.append(678)
-a.append(789)
-a.append(890)
-print(a)
-print()
-print(a[2])
-print()
-a.append(777)
-print(a[7])
-print()
-print(len(a))
-print()
-for i in a:
-    print(i)
-print()
-del a[3]
-print(a)
-print()
-a[5] = 12
-print(a)
-b = sortFunction(a, lambda x, y: x > y)
-print(a)
-print(b)
-a.append(19992)
-b = filterFunction(a, lambda x: x % 2 == 0)
-print(a)
-print(b)
+# sir = [123, 234, 345, 456, 567, 678, 789, 890]
+# a = SirIndian()
+# print(a)
+# print()
+# a.append(123)
+# a.append(234)
+# a.append(345)
+# a.append(456)
+# a.append(567)
+# a.append(678)
+# a.append(789)
+# a.append(890)
+# print(a)
+# print()
+# print(a[2])
+# print()
+# a.append(777)
+# print(a[7])
+# print()
+# print(len(a))
+# print()
+# for i in a:
+#     print(i)
+# print()
+# del a[3]
+# print(a)
+# print()
+# a[5] = 12
+# print(a)
+# b = sortFunction(a, lambda x, y: x > y)
+# print(a)
+# print(b)
+# a.append(19992)
+# b = filterFunction(a, lambda x: x % 2 == 0)
+# print(a)
+# print(b)
+# b = sortFunction(sir)
+# print(b)

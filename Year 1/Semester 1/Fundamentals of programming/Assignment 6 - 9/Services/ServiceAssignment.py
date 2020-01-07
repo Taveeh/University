@@ -3,7 +3,7 @@ import datetime
 from domain.Assignment import Assignment
 from Services.undo import FunctionCall, Operation, CascadeOperation
 from copy import deepcopy
-
+from utils import IterableObject
 
 class ServiceAssignment:
     def __init__(self, repo, gradesRepo, serviceUndo):
@@ -140,11 +140,12 @@ class ServiceAssignment:
                 ok = 1
         if not ok:
             raise GradeException('No students have that assignment')
-        l = sorted(l, key=lambda x: x.Grade, reverse=True)
+        l = IterableObject.sortFunction(l, key=lambda x, y: x.Grade < y.Grade, reverse=True)
         r = ''
         for i in l:
-            r += str(i)
-            r += '\n'
+            if i.Grade != -1:
+                r += str(i)
+                r += '\n'
         return r
 
     def sortDeadline(self):

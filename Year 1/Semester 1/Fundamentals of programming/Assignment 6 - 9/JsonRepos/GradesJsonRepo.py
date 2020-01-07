@@ -20,13 +20,16 @@ class GradesJsonRepo(Repository):
                 return
         for i in data.keys():
             data[i] = data[i].split(',')
-            self.store(Grade(Student(int(data[i][0]), '', ''), Assignment(int(data[i][1]), '', ''), int(data[i][2]), int(data[i][3])))
+            self.store(Grade(Student(int(data[i][0]), '', ''), Assignment(
+                int(data[i][1]), '', ''), int(data[i][2]), int(data[i][3])))
         f.close()
 
     def _saveFile(self):
         grades = {}
         for i in range(len(self._objects)):
-            grades[i] = str(self._objects[i].IdStud) + ',' + str(self._objects[i].IdAssignment) + ',' + str(self._objects[i].Id) + ',' + str(self._objects[i].Grade)
+            grades[i] = str(self._objects[i].IdStud) + ',' + str(self._objects[i].IdAssignment) + \
+                ',' + str(self._objects[i].Id) + ',' + \
+                str(self._objects[i].Grade)
         with open(self._file, 'w') as f:
             json.dump(grades, f)
         f.close()
@@ -40,5 +43,6 @@ class GradesJsonRepo(Repository):
         self._saveFile()
 
     def delete(self, objID):
-        Repository.delete(self, objID)
+        r = Repository.delete(self, objID)
         self._saveFile()
+        return r

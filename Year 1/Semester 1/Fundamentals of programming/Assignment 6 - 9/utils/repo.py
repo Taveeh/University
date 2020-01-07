@@ -1,15 +1,14 @@
-try:
-    from utils.exceptions import RepositoryException
-except Exception:
-    from exceptions import RepositoryException
+from utils.exceptions import RepositoryException
+from utils.IterableObject import SirIndian
 
 
-class Repository:
+class Repository(SirIndian):
     def __init__(self, objlist=None):
+        super().__init__()
         if objlist is None:
-            self._objects = []
+            self._objects = SirIndian()
         else:
-            self._objects = objlist
+            self._objects = SirIndian(objlist)
 
     def store(self, obj):
         '''
@@ -75,6 +74,7 @@ class Repository:
         if obj is None:
             raise RepositoryException('Item does not exist')
         self._objects.remove(obj)
+        print(obj)
         return obj
 
     @property

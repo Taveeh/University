@@ -135,18 +135,18 @@ class UI:
     def sortAssignments(self):
         assign = input('Assignment ID: ')
         l = []
-        print(l := self._assignments.sortAssign(assign))
+        print(l:= self._assignments.sortAssign(assign))
         # for i in l:
         #     if i.Grade != -1:
         #         print(i)
 
     def sortLate(self):
-        print(l := self._assignments.sortDeadline())
+        print(l:= self._assignments.sortDeadline())
         # for i in l:
         #     print(self._students.find(i.IdStud))
 
     def sortAllStuds(self):
-        print(reslist := self._grades.sortStuds())
+        print(reslist:= self._grades.sortStuds())
         # for i in range(len(reslist[0])):
         #     if reslist[1][reslist[0][i].Id] > 0:
         #         print('Student ' + str(reslist[0][i]) + ' has the average grade ' + str(format(reslist[1][reslist[0][i].Id], '.2f')))
@@ -187,6 +187,7 @@ class UI:
                     print(ex)
             else:
                 print('Invalid command')
+
 
 '''
 # Initialise repository

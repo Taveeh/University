@@ -25,7 +25,8 @@ class StudentJsonRepo(Repository):
     def _saveFile(self):
         students = {}
         for i in range(len(self._objects)):
-            students[i] = str(self._objects[i].Id) + ',' + self._objects[i].Name + ',' + str(self._objects[i].Group)
+            students[i] = str(self._objects[i].Id) + ',' + \
+                self._objects[i].Name + ',' + str(self._objects[i].Group)
         with open(self._file, 'w') as f:
             json.dump(students, f)
         f.close()
@@ -39,6 +40,6 @@ class StudentJsonRepo(Repository):
         self._saveFile()
 
     def delete(self, objID):
-        Repository.delete(self, objID)
+        r = Repository.delete(self, objID)
         self._saveFile()
-
+        return r
