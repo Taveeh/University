@@ -28,5 +28,6 @@ Year 1:
       - Database operations
       - Game (Obstruction)
       - MinMax algorithm
-      - Custom Container
+      - Custom Container (+ Stooge Sort)
       - PyUnit Tests
+      - Backtracking (Recursive + Iterative)
