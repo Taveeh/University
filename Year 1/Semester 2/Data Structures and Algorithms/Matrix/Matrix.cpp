@@ -68,38 +68,39 @@ TElem Matrix::modify(int i, int j, TElem e) {
     if (i > lines or j > cols or i < 0 or j < 0) {
         throw exception();
     }
-    if (e != 0) {
-        if (size == 0) {
-            ++size;
-            array[0] = make_pair(make_pair(i, j), e);
-            return e;
+//    if (e != 0) {
+    if (size == 0) {
+        ++size;
+        array[0] = make_pair(make_pair(i, j), e);
+        return e;
+    }
+    for (int poz = 0; poz < size; ++poz) {
+        if (i == array[poz].first.first and j == array[poz].first.second) {
+            array[poz].second = e;
+            break;
         }
-        for (int poz = 0; poz < size; ++poz) {
-            if (i == array[poz].first.first and j == array[poz].first.second) {
-                array[poz].second = e;
-                break;
-            }
-            if ((i == array[poz].first.first and j > array[poz].first.second) or i > array[poz].first.first) {
-                insertElement(make_pair(make_pair(i, j), e), poz);
-                break;
-            }
-        }
-    }else {
-        if (size == 0) {
-            return NULL_TELEM;
-        }else {
-            if (element(i, j) == 0) {
-                return NULL_TELEM;
-            }else {
-                for (int poz = 0; poz < size; ++poz) {
-                    if (i == array[poz].first.first and j == array[poz].first.second) {
-                        removeElement(poz);
-                        return NULL_TELEM;
-                    }
-                }
-            }
+        if ((i == array[poz].first.first and j > array[poz].first.second) or i > array[poz].first.first) {
+            insertElement(make_pair(make_pair(i, j), e), poz);
+            break;
         }
     }
+    
+//    }else {
+//        if (size == 0) {
+//            return NULL_TELEM;
+//        }else {
+//            if (element(i, j) == 0) {
+//                return NULL_TELEM;
+//            }else {
+//                for (int poz = 0; poz < size; ++poz) {
+//                    if (i == array[poz].first.first and j == array[poz].first.second) {
+//                        removeElement(poz);
+//                        return NULL_TELEM;
+//                    }
+//                }
+//            }
+//        }
+//    }
 
 	return NULL_TELEM;
 }

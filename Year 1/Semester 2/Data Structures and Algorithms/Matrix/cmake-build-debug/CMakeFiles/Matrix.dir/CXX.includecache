@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/Matrix.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/ExtendedTest.cpp
+assert.h
+-
 Matrix.h
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/Matrix.h
-exception
--
+ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/ExtendedTest.h
 iostream
 -
+exception
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/ExtendedTest.h
+ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/ExtendedTest.h
 
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Matrix/Matrix.h
 utility
