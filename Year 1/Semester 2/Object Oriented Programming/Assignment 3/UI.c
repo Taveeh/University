@@ -9,12 +9,12 @@
 
 
 void parseReading(char* stringToBeParsed, char parsedArrayOfStrings[5][50]) {
-    char *p;
-    p = strtok(stringToBeParsed, " ");
+    char *pointerForParsingUserInputCommand;
+    pointerForParsingUserInputCommand = strtok(stringToBeParsed, " ");
     int indexWordFromCommands = 0;
-    while (p != NULL) {
-        strcpy(parsedArrayOfStrings[indexWordFromCommands++], p);
-        p = strtok(NULL, " ");
+    while (pointerForParsingUserInputCommand != NULL) {
+        strcpy(parsedArrayOfStrings[indexWordFromCommands++], pointerForParsingUserInputCommand);
+        pointerForParsingUserInputCommand = strtok(NULL, " ");
     }
     if (strcmp(parsedArrayOfStrings[0], "add") == 0 || strcmp(parsedArrayOfStrings[0], "update") == 0) {
         for (int wordInParsedString = 1; wordInParsedString < 4; ++wordInParsedString) {
