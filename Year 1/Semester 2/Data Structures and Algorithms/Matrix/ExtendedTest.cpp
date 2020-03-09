@@ -3,9 +3,9 @@
 #include "ExtendedTest.h"
 #include <iostream>
 #include <exception>
-
+#include <chrono>
+using namespace std::chrono;
 using namespace std;
-
 
 void testCreate() {
 	cout << "Test create" << endl;
@@ -42,8 +42,9 @@ void testQuantity() {
 			if (i % 2 == 0 && v1 % 2 == 0)
 				m.modify(i, v1, i*v1);
 			else
-				if (v1 % 3 == 0)
-					m.modify(i, v1, i + v1);
+				if (v1 % 3 == 0) {
+                     m.modify(i, v1, i + v1);
+                }
 			if (i % 2 == 0 && v2 % 2 == 0)
 				m.modify(i, v2, i*v2);
 			else
@@ -61,7 +62,6 @@ void testQuantity() {
 			else
 				if (v1 % 3 == 0) {
                     m.modify(i, v1, i + v1);
-//                    cout << m.element(i, v1) << '\n';
                 }
 			if (i % 2 == 0 && v2 % 2 == 0)
 				m.modify(i, v2, i*v2);
@@ -70,7 +70,6 @@ void testQuantity() {
 					m.modify(i, v2, i + v2);
 		}
 	}
-
 	for (int i = 0; i < m.nrLines(); i++)
 		for (int j = 0; j < m.nrColumns(); j++)
 			if (i % 2 == 0 && j % 2 == 0)
@@ -161,9 +160,27 @@ void testMix() {
 }
 
 void testAllExtended() {
-	testCreate();
-	testModify();
+    auto start1 = high_resolution_clock::now();
+    auto start = high_resolution_clock::now();
+    testCreate();
+    auto end = high_resolution_clock::now();
+    cout << "The test took " << duration_cast<microseconds>(end - start).count() << " microseconds\n";
+    start = high_resolution_clock::now();
+    testModify();
+    end = high_resolution_clock::now();
+    cout << "The test took " << duration_cast<microseconds>(end - start).count() << " microseconds\n";
+    start = high_resolution_clock::now();
 	testQuantity();
+    end = high_resolution_clock::now();
+    cout << "The test took " << duration_cast<seconds>(end - start).count() << " seconds\n";
+    start = high_resolution_clock::now();
 	testMix();
+    end = high_resolution_clock::now();
+    cout << "The test took " << duration_cast<seconds>(end - start).count() << " seconds\n";
+    start = high_resolution_clock::now();
 	testExceptions();
+    end = high_resolution_clock::now();
+    cout << "The test took " << duration_cast<microseconds>(end - start).count() << " microseconds\n";
+    auto end1 = high_resolution_clock::now();
+    cout << "The tests took " << duration_cast<seconds>(end1 - start1).count() << " seconds\n";
 }

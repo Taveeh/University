@@ -35,4 +35,7 @@ public:
 	void resize(int val);
 
 	void removeElement(int poz);
+
+	std::pair<int, bool> secventialSearch(Triple elem) const;
+
 };

@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Graph.h"
 #include <fstream>
-#include <random>
 #include <exception>
 
 OrderedGraphCost readFile(char file[20]) {
@@ -21,16 +20,14 @@ OrderedGraphCost generateGraph(int nrV, int nrE) {
     OrderedGraphCost G(nrV);
     int v1, v2, cost;
     for (int i = 0; i < nrE; ++i) {
-        std::default_random_engine generator;
-        std::uniform_int_distribution<int> distribution(0, nrV);
-        std::uniform_int_distribution<int> distribution1(-100, 100);
-        v1 = distribution(generator);
-        v2 = distribution(generator);
-        cost = distribution1(generator);
+        v1 = rand() % nrV;
+        v2 = rand() % nrV;
+        cost = rand() % 300;
         if (G.isEdge(v1, v2)) {
-            continue;
+            i--;
+        }else {
+            G.addEdge(v1, v2, cost);
         }
-        G.addEdge(v1, v2, cost);
     }
     return G;
 }
@@ -162,6 +159,26 @@ void printMenu(OrderedGraphCost G) {
             G.removeVertex(v1);
             break;
         }
+        case 14: {
+            std::string fileName;
+            std::cout << "File name: ";
+            std::cin >> fileName;
+            std::cout << "The copy of the graph is saved to " << fileName << "...\n";
+            std::ofstream printCopy(fileName);
+            printCopy << G.copyGraph().toString();
+            printCopy.close();
+            break;
+        }
+        case 15:{
+            std::string fileName;
+            std::cout << "File name: ";
+            std::cin >> fileName;
+            std::cout << "The copy of the graph is saved to " << fileName << "...\n";
+            std::ofstream printGraph(fileName);
+            printGraph << G.toString();
+            printGraph.close();
+            break;
+        }
         case 0:
             throw 0;
             break;
@@ -181,9 +198,8 @@ int main() {
         try {
             printMenu(G);
         }catch (int e) {
+            std::cout << "Goodbye\n";
             return 0;
         }
     }
-
-    return 0;
 }

@@ -7,6 +7,12 @@ class UI:
         self._assignments = serviceAssignment
         self._grades = serviceGrade
         self._undo = servicUndo
+        self.string = ''
+
+    # feature lab imre
+    def newFeature(self, string):
+        string = string.replace(self.string,'')
+        return string
 
     @staticmethod
     def printMenu():
@@ -35,6 +41,7 @@ class UI:
     def addStudent(self):
         sid = input('Student ID: ')
         name = input('Student name: ')
+        name = self.newFeature(name)
         group = input('Student group: ')
         self._students.store(sid, name, group)
 
@@ -50,6 +57,7 @@ class UI:
         group = '0'
         if cmd == '1':
             name = input('Name: ')
+            name = self.newFeature(name)
         elif cmd == '2':
             group = input('Group: ')
         elif cmd == '3':
@@ -67,6 +75,7 @@ class UI:
     def addAssignment(self):
         aid = input('Assignment ID: ')
         desc = input('Description: ')
+        desc = self.newFeature(desc)
         day = input('Deadline day: ')
         month = input('Deadline month: ')
         year = input('Deadline year: ')
@@ -84,6 +93,7 @@ class UI:
         cmd = input('Command: ')
         if cmd == '1':
             desc = input('Description: ')
+            desc = self.newFeature(desc)
         elif cmd == '2':
             dd = input('Deadline day: ')
             dm = input('Deadline month: ')
@@ -91,6 +101,7 @@ class UI:
             date = datetime.date(int(dy), int(dm), int(dd))
         elif cmd == '3':
             desc = input('Description: ')
+            desc = self.newFeature(desc)
             dd = input('Deadline day: ')
             dm = input('Deadline month: ')
             dy = input('Deadline year: ')
@@ -151,6 +162,7 @@ class UI:
         #     if reslist[1][reslist[0][i].Id] > 0:
         #         print('Student ' + str(reslist[0][i]) + ' has the average grade ' + str(format(reslist[1][reslist[0][i].Id], '.2f')))
 
+
     def undo(self):
         self._undo.undo()
 
@@ -158,6 +170,7 @@ class UI:
         self._undo.redo()
 
     def start(self):
+        self.string = input("What word do you want to replace? ")
         commands = {'1': self.addStudent,
                     '2': self.removeStudent,
                     '3': self.updateStudent,
@@ -187,6 +200,9 @@ class UI:
                     print(ex)
             else:
                 print('Invalid command')
+
+
+
 
 
 '''

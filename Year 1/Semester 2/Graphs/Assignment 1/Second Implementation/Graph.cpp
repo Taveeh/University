@@ -126,3 +126,16 @@ void OrderedGraphCost::removeVertex(int val) {
         }
     }
 }
+
+OrderedGraphCost OrderedGraphCost::copyGraph() {
+    return *this;
+}
+
+std::string OrderedGraphCost::toString() {
+    std::string str;
+    str += std::to_string(nrVertices()) + " " + std::to_string(nrVertices()) + "\n";
+    for (auto i: costMap) {
+        str += std::to_string(i.first.first) + " " + std::to_string(i.first.second) + " " + std::to_string(i.second) + "\n";
+    }
+    return str;
+}
