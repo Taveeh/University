@@ -25,7 +25,9 @@ void destroyDynamicArray(DynamicArray *dynamicArray) {
     }
     for (int dynamicArrayElementIndex = 0;
          dynamicArrayElementIndex < dynamicArray->numberOfElements; ++dynamicArrayElementIndex) {
-        destroyMap(dynamicArray->dynamicArrayElements[dynamicArrayElementIndex]);
+        if (dynamicArray->dynamicArrayElements[dynamicArrayElementIndex] != NULL) {
+            destroyMap(dynamicArray->dynamicArrayElements[dynamicArrayElementIndex]);
+        }
     }
     free(dynamicArray->dynamicArrayElements);
     dynamicArray->dynamicArrayElements = NULL;

@@ -12,13 +12,9 @@ Map* createMap(int mapCatalogueNumber, char *stateOfDeterioration, char *mapType
     Map* result = (Map*)malloc(sizeof(Map));
     result->mapCatalogueNumber = mapCatalogueNumber;
     result->stateOfDeterioration = (char*)malloc(sizeof(char) * (strlen(stateOfDeterioration) + 1));
-    if (result->stateOfDeterioration != NULL) {
-        strcpy(result->stateOfDeterioration, stateOfDeterioration);
-    }
+    strcpy(result->stateOfDeterioration, stateOfDeterioration);
     result->mapType = (char*)malloc(sizeof(char) * (strlen(mapType) + 1));
-    if (result->mapType != NULL) {
-        strcpy(result->mapType, mapType);
-    }
+    strcpy(result->mapType, mapType);
     result->yearsOfStorage = yearsOfStorage;
     return result;
 }
@@ -77,9 +73,13 @@ int getCatalogueNumber(Map *map) {
 }
 
 void destroyMap(Map *map) {
+    if (map == NULL) {
+        return;
+    }
     free(map->mapType);
     free(map->stateOfDeterioration);
     free(map);
+    map = NULL;
 }
 
 

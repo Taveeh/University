@@ -24,12 +24,11 @@ void undoRepository(Repository* repository) {
         addRedo(repository->undoRedo, getMapFromOperation(lastOperation));
         deleteMapFromRepository(repository, getMapFromOperation(lastOperation)->mapCatalogueNumber);
     }else if (strcmp(getOperationType(lastOperation), "update") == 0) {
-        updateMapFromRepository(repository, getMapFromOperation(lastOperation));
+        updateMapFromRepository(repository, createMap(getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation))));
     }else if (strcmp(getOperationType(lastOperation), "add") == 0) {
         deleteRedo(repository->undoRedo, getMapFromOperation(lastOperation));
-        addMapToRepository(repository, getMapFromOperation(lastOperation));
+        addMapToRepository(repository, createMap(getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation))));
     }
-//    destroyOperation(lastOperation);
     changeFlag(repository->undoRedo, 0);
 }
 
@@ -40,12 +39,11 @@ void redoRepository(Repository* repository) {
         deleteUndo(repository->undoRedo, getMapFromOperation(lastOperation));
         deleteMapFromRepository(repository, getMapFromOperation(lastOperation)->mapCatalogueNumber);
     }else if (strcmp(getOperationType(lastOperation), "update") == 0){
-        updateMapFromRepository(repository, getMapFromOperation(lastOperation));
+        updateMapFromRepository(repository, createMap(getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation))));
     }else if (strcmp(getOperationType(lastOperation), "add") == 0) {
         addUndo(repository->undoRedo, getMapFromOperation(lastOperation));
-        addMapToRepository(repository, getMapFromOperation(lastOperation));
+        addMapToRepository(repository, createMap(getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation))));
     }
-//    destroyOperation(lastOperation);
     changeFlag(repository->undoRedo, 0);
 }
 
@@ -82,7 +80,7 @@ int deleteMapFromRepository(Repository *repository, int mapCatalogueNumber) {
     if (indexMap == -1) {
         return 0;
     }
-    deleteUndo(repository->undoRedo, (getElementOnPosition(repository->listOfMaps, indexMap)));
+    deleteUndo(repository->undoRedo, getElementOnPosition(repository->listOfMaps, indexMap));
     if (getFlag(repository->undoRedo) == 0) {
         clearRedo(repository->undoRedo);
     }
@@ -104,8 +102,10 @@ void destroyRepository(Repository *repository) {
     if (repository == NULL) {
         return;
     }
-    destroyDynamicArray(repository->listOfMaps);
     destroyUndoRedo(repository->undoRedo);
+    repository->undoRedo = NULL;
+    destroyDynamicArray(repository->listOfMaps);
+    repository->listOfMaps = NULL;
     free(repository);
 }
 

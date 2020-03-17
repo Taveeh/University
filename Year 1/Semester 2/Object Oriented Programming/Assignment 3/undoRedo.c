@@ -8,9 +8,15 @@
 
 Operation *createOperation(Map *map, char *typeOfOperation) {
     Operation* result = (Operation*)malloc(sizeof(Operation));
-    result->map = createMap(getCatalogueNumber(map), getStateOfDeterioration(map), getMapType(map), getYearsOfStorage(map));
+    char* aux1 = (char*)malloc(sizeof(char) * strlen(getStateOfDeterioration(map)) + 1);
+    char* aux2 = (char*)malloc(sizeof(char) * strlen(getMapType(map)) + 1 );
+    strcpy(aux1, getStateOfDeterioration(map));
+    strcpy(aux2, getMapType(map));
+    result->map = createMap(getCatalogueNumber(map), aux1, aux2, getYearsOfStorage(map));
     result->typeOfOperation = (char*)malloc(sizeof(char) * (strlen(typeOfOperation) + 1));
     strcpy(result->typeOfOperation, typeOfOperation);
+    free(aux1);
+    free(aux2);
     return result;
 }
 
