@@ -11,6 +11,17 @@ private:
     int lines, cols;
     Triple *array;
     int size = 0, capacity = 2;
+
+    void resize(int val);
+
+    void removeElement(int poz);
+
+    void insertElement(Triple x, int poz);
+
+    std::pair<int, bool> secventialSearch(Triple elem) const;
+
+    std::pair<int, bool> binarySearch(Triple elem) const;
+
 public:
 	//constructor
 	Matrix(int nrLines, int nrCols);
@@ -30,12 +41,7 @@ public:
 	//throws exception if (i,j) is not a valid position in the Matrix
 	TElem modify(int i, int j, TElem e);
 
-	void insertElement(Triple x, int poz);
 
-	void resize(int val);
 
-	void removeElement(int poz);
-
-	std::pair<int, bool> secventialSearch(Triple elem) const;
 
 };

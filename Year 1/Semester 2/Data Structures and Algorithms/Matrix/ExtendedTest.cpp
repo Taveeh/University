@@ -176,7 +176,7 @@ void testAllExtended() {
     start = high_resolution_clock::now();
 	testMix();
     end = high_resolution_clock::now();
-    cout << "The test took " << duration_cast<seconds>(end - start).count() << " seconds\n";
+    cout << "The test took " << duration_cast<milliseconds>(end - start).count() << " milliseconds\n";
     start = high_resolution_clock::now();
 	testExceptions();
     end = high_resolution_clock::now();

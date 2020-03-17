@@ -177,6 +177,60 @@ domain.c.s:
 	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/domain.c.s
 .PHONY : domain.c.s
 
+dynamicArray.o: dynamicArray.c.o
+
+.PHONY : dynamicArray.o
+
+# target to build an object file
+dynamicArray.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/dynamicArray.c.o
+.PHONY : dynamicArray.c.o
+
+dynamicArray.i: dynamicArray.c.i
+
+.PHONY : dynamicArray.i
+
+# target to preprocess a source file
+dynamicArray.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/dynamicArray.c.i
+.PHONY : dynamicArray.c.i
+
+dynamicArray.s: dynamicArray.c.s
+
+.PHONY : dynamicArray.s
+
+# target to generate assembly for a file
+dynamicArray.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/dynamicArray.c.s
+.PHONY : dynamicArray.c.s
+
+functionForFilterAndSort.o: functionForFilterAndSort.c.o
+
+.PHONY : functionForFilterAndSort.o
+
+# target to build an object file
+functionForFilterAndSort.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o
+.PHONY : functionForFilterAndSort.c.o
+
+functionForFilterAndSort.i: functionForFilterAndSort.c.i
+
+.PHONY : functionForFilterAndSort.i
+
+# target to preprocess a source file
+functionForFilterAndSort.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.i
+.PHONY : functionForFilterAndSort.c.i
+
+functionForFilterAndSort.s: functionForFilterAndSort.c.s
+
+.PHONY : functionForFilterAndSort.s
+
+# target to generate assembly for a file
+functionForFilterAndSort.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.s
+.PHONY : functionForFilterAndSort.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -258,6 +312,168 @@ service.c.s:
 	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/service.c.s
 .PHONY : service.c.s
 
+testDomain.o: testDomain.c.o
+
+.PHONY : testDomain.o
+
+# target to build an object file
+testDomain.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testDomain.c.o
+.PHONY : testDomain.c.o
+
+testDomain.i: testDomain.c.i
+
+.PHONY : testDomain.i
+
+# target to preprocess a source file
+testDomain.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testDomain.c.i
+.PHONY : testDomain.c.i
+
+testDomain.s: testDomain.c.s
+
+.PHONY : testDomain.s
+
+# target to generate assembly for a file
+testDomain.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testDomain.c.s
+.PHONY : testDomain.c.s
+
+testDynamicArray.o: testDynamicArray.c.o
+
+.PHONY : testDynamicArray.o
+
+# target to build an object file
+testDynamicArray.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testDynamicArray.c.o
+.PHONY : testDynamicArray.c.o
+
+testDynamicArray.i: testDynamicArray.c.i
+
+.PHONY : testDynamicArray.i
+
+# target to preprocess a source file
+testDynamicArray.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testDynamicArray.c.i
+.PHONY : testDynamicArray.c.i
+
+testDynamicArray.s: testDynamicArray.c.s
+
+.PHONY : testDynamicArray.s
+
+# target to generate assembly for a file
+testDynamicArray.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testDynamicArray.c.s
+.PHONY : testDynamicArray.c.s
+
+testRepository.o: testRepository.c.o
+
+.PHONY : testRepository.o
+
+# target to build an object file
+testRepository.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testRepository.c.o
+.PHONY : testRepository.c.o
+
+testRepository.i: testRepository.c.i
+
+.PHONY : testRepository.i
+
+# target to preprocess a source file
+testRepository.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testRepository.c.i
+.PHONY : testRepository.c.i
+
+testRepository.s: testRepository.c.s
+
+.PHONY : testRepository.s
+
+# target to generate assembly for a file
+testRepository.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testRepository.c.s
+.PHONY : testRepository.c.s
+
+testService.o: testService.c.o
+
+.PHONY : testService.o
+
+# target to build an object file
+testService.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testService.c.o
+.PHONY : testService.c.o
+
+testService.i: testService.c.i
+
+.PHONY : testService.i
+
+# target to preprocess a source file
+testService.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testService.c.i
+.PHONY : testService.c.i
+
+testService.s: testService.c.s
+
+.PHONY : testService.s
+
+# target to generate assembly for a file
+testService.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/testService.c.s
+.PHONY : testService.c.s
+
+tests.o: tests.c.o
+
+.PHONY : tests.o
+
+# target to build an object file
+tests.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/tests.c.o
+.PHONY : tests.c.o
+
+tests.i: tests.c.i
+
+.PHONY : tests.i
+
+# target to preprocess a source file
+tests.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/tests.c.i
+.PHONY : tests.c.i
+
+tests.s: tests.c.s
+
+.PHONY : tests.s
+
+# target to generate assembly for a file
+tests.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/tests.c.s
+.PHONY : tests.c.s
+
+undoRedo.o: undoRedo.c.o
+
+.PHONY : undoRedo.o
+
+# target to build an object file
+undoRedo.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/undoRedo.c.o
+.PHONY : undoRedo.c.o
+
+undoRedo.i: undoRedo.c.i
+
+.PHONY : undoRedo.i
+
+# target to preprocess a source file
+undoRedo.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/undoRedo.c.i
+.PHONY : undoRedo.c.i
+
+undoRedo.s: undoRedo.c.s
+
+.PHONY : undoRedo.s
+
+# target to generate assembly for a file
+undoRedo.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/undoRedo.c.s
+.PHONY : undoRedo.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +489,12 @@ help:
 	@echo "... domain.o"
 	@echo "... domain.i"
 	@echo "... domain.s"
+	@echo "... dynamicArray.o"
+	@echo "... dynamicArray.i"
+	@echo "... dynamicArray.s"
+	@echo "... functionForFilterAndSort.o"
+	@echo "... functionForFilterAndSort.i"
+	@echo "... functionForFilterAndSort.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -282,6 +504,24 @@ help:
 	@echo "... service.o"
 	@echo "... service.i"
 	@echo "... service.s"
+	@echo "... testDomain.o"
+	@echo "... testDomain.i"
+	@echo "... testDomain.s"
+	@echo "... testDynamicArray.o"
+	@echo "... testDynamicArray.i"
+	@echo "... testDynamicArray.s"
+	@echo "... testRepository.o"
+	@echo "... testRepository.i"
+	@echo "... testRepository.s"
+	@echo "... testService.o"
+	@echo "... testService.i"
+	@echo "... testService.s"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
+	@echo "... undoRedo.o"
+	@echo "... undoRedo.i"
+	@echo "... undoRedo.s"
 .PHONY : help
 
 

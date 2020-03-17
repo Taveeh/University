@@ -122,13 +122,125 @@ CMakeFiles/Assignment_3.dir/UI.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/UI.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/UI.c" -o CMakeFiles/Assignment_3.dir/UI.c.s
 
+CMakeFiles/Assignment_3.dir/testDomain.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/testDomain.c.o: ../testDomain.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Assignment_3.dir/testDomain.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/testDomain.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.c"
+
+CMakeFiles/Assignment_3.dir/testDomain.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/testDomain.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.c" > CMakeFiles/Assignment_3.dir/testDomain.c.i
+
+CMakeFiles/Assignment_3.dir/testDomain.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/testDomain.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.c" -o CMakeFiles/Assignment_3.dir/testDomain.c.s
+
+CMakeFiles/Assignment_3.dir/tests.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/tests.c.o: ../tests.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/Assignment_3.dir/tests.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/tests.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.c"
+
+CMakeFiles/Assignment_3.dir/tests.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/tests.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.c" > CMakeFiles/Assignment_3.dir/tests.c.i
+
+CMakeFiles/Assignment_3.dir/tests.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/tests.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.c" -o CMakeFiles/Assignment_3.dir/tests.c.s
+
+CMakeFiles/Assignment_3.dir/dynamicArray.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/dynamicArray.c.o: ../dynamicArray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/Assignment_3.dir/dynamicArray.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/dynamicArray.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.c"
+
+CMakeFiles/Assignment_3.dir/dynamicArray.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/dynamicArray.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.c" > CMakeFiles/Assignment_3.dir/dynamicArray.c.i
+
+CMakeFiles/Assignment_3.dir/dynamicArray.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/dynamicArray.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.c" -o CMakeFiles/Assignment_3.dir/dynamicArray.c.s
+
+CMakeFiles/Assignment_3.dir/testDynamicArray.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/testDynamicArray.c.o: ../testDynamicArray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Assignment_3.dir/testDynamicArray.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/testDynamicArray.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.c"
+
+CMakeFiles/Assignment_3.dir/testDynamicArray.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/testDynamicArray.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.c" > CMakeFiles/Assignment_3.dir/testDynamicArray.c.i
+
+CMakeFiles/Assignment_3.dir/testDynamicArray.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/testDynamicArray.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.c" -o CMakeFiles/Assignment_3.dir/testDynamicArray.c.s
+
+CMakeFiles/Assignment_3.dir/testRepository.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/testRepository.c.o: ../testRepository.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/Assignment_3.dir/testRepository.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/testRepository.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.c"
+
+CMakeFiles/Assignment_3.dir/testRepository.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/testRepository.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.c" > CMakeFiles/Assignment_3.dir/testRepository.c.i
+
+CMakeFiles/Assignment_3.dir/testRepository.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/testRepository.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.c" -o CMakeFiles/Assignment_3.dir/testRepository.c.s
+
+CMakeFiles/Assignment_3.dir/testService.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/testService.c.o: ../testService.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Assignment_3.dir/testService.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/testService.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.c"
+
+CMakeFiles/Assignment_3.dir/testService.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/testService.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.c" > CMakeFiles/Assignment_3.dir/testService.c.i
+
+CMakeFiles/Assignment_3.dir/testService.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/testService.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.c" -o CMakeFiles/Assignment_3.dir/testService.c.s
+
+CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o: ../functionForFilterAndSort.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.c"
+
+CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.c" > CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.i
+
+CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.c" -o CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.s
+
+CMakeFiles/Assignment_3.dir/undoRedo.c.o: CMakeFiles/Assignment_3.dir/flags.make
+CMakeFiles/Assignment_3.dir/undoRedo.c.o: ../undoRedo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Assignment_3.dir/undoRedo.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment_3.dir/undoRedo.c.o   -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.c"
+
+CMakeFiles/Assignment_3.dir/undoRedo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment_3.dir/undoRedo.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.c" > CMakeFiles/Assignment_3.dir/undoRedo.c.i
+
+CMakeFiles/Assignment_3.dir/undoRedo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment_3.dir/undoRedo.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.c" -o CMakeFiles/Assignment_3.dir/undoRedo.c.s
+
 # Object files for target Assignment_3
 Assignment_3_OBJECTS = \
 "CMakeFiles/Assignment_3.dir/main.c.o" \
 "CMakeFiles/Assignment_3.dir/domain.c.o" \
 "CMakeFiles/Assignment_3.dir/repository.c.o" \
 "CMakeFiles/Assignment_3.dir/service.c.o" \
-"CMakeFiles/Assignment_3.dir/UI.c.o"
+"CMakeFiles/Assignment_3.dir/UI.c.o" \
+"CMakeFiles/Assignment_3.dir/testDomain.c.o" \
+"CMakeFiles/Assignment_3.dir/tests.c.o" \
+"CMakeFiles/Assignment_3.dir/dynamicArray.c.o" \
+"CMakeFiles/Assignment_3.dir/testDynamicArray.c.o" \
+"CMakeFiles/Assignment_3.dir/testRepository.c.o" \
+"CMakeFiles/Assignment_3.dir/testService.c.o" \
+"CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o" \
+"CMakeFiles/Assignment_3.dir/undoRedo.c.o"
 
 # External object files for target Assignment_3
 Assignment_3_EXTERNAL_OBJECTS =
@@ -138,9 +250,17 @@ Assignment_3: CMakeFiles/Assignment_3.dir/domain.c.o
 Assignment_3: CMakeFiles/Assignment_3.dir/repository.c.o
 Assignment_3: CMakeFiles/Assignment_3.dir/service.c.o
 Assignment_3: CMakeFiles/Assignment_3.dir/UI.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/testDomain.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/tests.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/dynamicArray.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/testDynamicArray.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/testRepository.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/testService.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o
+Assignment_3: CMakeFiles/Assignment_3.dir/undoRedo.c.o
 Assignment_3: CMakeFiles/Assignment_3.dir/build.make
 Assignment_3: CMakeFiles/Assignment_3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Assignment_3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable Assignment_3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assignment_3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

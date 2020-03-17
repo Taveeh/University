@@ -90,6 +90,18 @@
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/domain.h">
 			<Option target="Assignment_3"/>
 		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.h">
+			<Option target="Assignment_3"/>
+		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/main.c">
 			<Option target="Assignment_3"/>
 		</Unit>
@@ -103,6 +115,42 @@
 			<Option target="Assignment_3"/>
 		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/service.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.h">
 			<Option target="Assignment_3"/>
 		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/CMakeLists.txt">

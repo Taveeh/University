@@ -6,59 +6,80 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+#include <stdlib.h>
 
-Map createMap(int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage) {
-    Map result;
-    result.mapCatalogueNumber = mapCatalogueNumber;
-    strcpy(result.stateOfDeterioration, stateOfDeterioration);
-    strcpy(result.mapType, mapType);
-    result.yearsOfStorage = yearsOfStorage;
+Map* createMap(int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage) {
+    Map* result = (Map*)malloc(sizeof(Map));
+    result->mapCatalogueNumber = mapCatalogueNumber;
+    result->stateOfDeterioration = (char*)malloc(sizeof(char) * (strlen(stateOfDeterioration) + 1));
+    if (result->stateOfDeterioration != NULL) {
+        strcpy(result->stateOfDeterioration, stateOfDeterioration);
+    }
+    result->mapType = (char*)malloc(sizeof(char) * (strlen(mapType) + 1));
+    if (result->mapType != NULL) {
+        strcpy(result->mapType, mapType);
+    }
+    result->yearsOfStorage = yearsOfStorage;
     return result;
 }
 
 void changeStateOfDeterioration(Map *map, char* stateOfDeterioration) {
+    if (map == NULL || strlen(stateOfDeterioration) == 0) {
+        return;
+    }
+    free(map->stateOfDeterioration);
+    map->stateOfDeterioration = (char*)malloc(sizeof(char) * strlen(stateOfDeterioration) + 1);
     strcpy(map->stateOfDeterioration, stateOfDeterioration);
 }
 
 void changeMapType(Map *map, char* mapType) {
+    if (map == NULL || strlen(mapType) == 0) {
+        return;
+    }
+    free(map->mapType);
+    map->mapType = (char*) malloc(sizeof(char) * strlen(mapType) + 1);
     strcpy(map->mapType, mapType);
 }
 
 void changeYearsOfStorage(Map *map, int yearsOfStorage) {
+    if (map == NULL || yearsOfStorage < 0) {
+        return;
+    }
     map->yearsOfStorage = yearsOfStorage;
 }
 
 char *getStateOfDeterioration(Map *map) {
+    if (map == NULL) {
+        return NULL;
+    }
     return map->stateOfDeterioration;
 }
 
 char *getMapType(Map *map) {
+    if (map == NULL) {
+        return NULL;
+    }
     return map->mapType;
 }
 
-int getYearsOfStorage(Map map) {
-    return map.yearsOfStorage;
+int getYearsOfStorage(Map *map) {
+    if (map == NULL) {
+        return -1;
+    }
+    return map->yearsOfStorage;
 }
 
-int getCatalogueNumber(Map map) {
-    return map.mapCatalogueNumber;
+int getCatalogueNumber(Map *map) {
+    if (map == NULL) {
+        return -1;
+    }
+    return map->mapCatalogueNumber;
 }
 
-void testMap() {
-//    printf("Test map start\n");
-    Map mapTest;
-    mapTest = createMap(123, "abc", "def", 456);
-    assert(getCatalogueNumber(mapTest) == 123);
-    assert(getYearsOfStorage(mapTest) == 456);
-    assert(strcmp(getMapType(&mapTest), "def") == 0);
-    assert(strcmp(getStateOfDeterioration(&mapTest), "abc") == 0);
-    changeMapType(&mapTest, "efg");
-    assert(strcmp(getMapType(&mapTest), "efg") == 0);
-    changeStateOfDeterioration(&mapTest, "xyz");
-    assert(strcmp(getStateOfDeterioration(&mapTest), "xyz") == 0);
-    changeYearsOfStorage(&mapTest, 999);
-    assert(getYearsOfStorage(mapTest) == 999);
-//    printf("Test map end\n");
+void destroyMap(Map *map) {
+    free(map->mapType);
+    free(map->stateOfDeterioration);
+    free(map);
 }
 
 

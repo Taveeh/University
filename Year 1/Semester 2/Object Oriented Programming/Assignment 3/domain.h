@@ -4,7 +4,7 @@
 #pragma once
 typedef struct {
     int mapCatalogueNumber;
-    char stateOfDeterioration[50], mapType[50];
+    char *stateOfDeterioration, *mapType;
     int yearsOfStorage;
 } Map;
 
@@ -22,7 +22,7 @@ typedef struct {
  * map - Map
  *
  */
-Map createMap(int mapCatalogueNumber, char stateOfDeterioration[50], char mapType[50], int yearsOfStorage);
+Map* createMap(int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage);
 
 /*
  *
@@ -33,23 +33,80 @@ Map createMap(int mapCatalogueNumber, char stateOfDeterioration[50], char mapTyp
  * stateOfDeterioration - array of characters
  *
  */
-void changeStateOfDeterioration(Map* map, char stateOfDeterioration[50]);
+void changeStateOfDeterioration(Map* map, char *stateOfDeterioration);
 
 /*
  *
  * Change type of a map
- * 
+ * Input:
+ * mapType - Pointer to Char
+ * map - pointer to map
+ * Output:
+ *
  */
-void changeMapType(Map* map, char mapType[50]);
+void changeMapType(Map* map, char *mapType);
 
+/*
+ *
+ * Change years of storage of a map
+ * Input:
+ * map - Pointer to map
+ * yearsOfStorage - int
+ * Output:
+ *
+ */
 void changeYearsOfStorage(Map* map, int yearsOfStorage);
 
-void testMap();
-
+/*
+ *
+ * Get state of deterioration of a map
+ * Input:
+ * map - Pointer to map
+ * Output:
+ * stateOfDeterioration - pointer to char
+ *
+ */
 char* getStateOfDeterioration(Map* map);
 
+/*
+ *
+ * Get type of a map
+ * Input:
+ * map - Pointer to map
+ * Output:
+ * mapType - pointer to char
+ *
+ */
 char* getMapType(Map* map);
 
-int getYearsOfStorage(Map map);
+/*
+ *
+ * Get years of storage of a map
+ * Input:
+ * map - pointer to map
+ * Output:
+ * yearsOfStorage - int
+ *
+ */
+int getYearsOfStorage(Map* map);
 
-int getCatalogueNumber(Map map);
+/*
+ *
+ * Get catalogue number of a map
+ * Input:
+ * map - pointer to map
+ * Output:
+ * catalogueNumber - int
+ *
+ */
+int getCatalogueNumber(Map* map);
+
+/*
+ *
+ * Destructor
+ * Input:
+ * map - pointer to map
+ * Output:
+ *
+ */
+void destroyMap(Map* map);

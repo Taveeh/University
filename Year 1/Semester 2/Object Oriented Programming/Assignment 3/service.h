@@ -4,22 +4,99 @@
 #pragma once
 
 #include "repository.h"
+#include "undoRedo.h"
+
 typedef struct {
     Repository* repository;
 } Service;
 
-Service createService(Repository* repository);
+/*
+ * Constructor
+ */
+Service* createService(Repository* repository);
 
-int addMapService(Service *service, int mapCatalogueNumber, char stateOfDeterioration[50], char mapType[50], int yearsOfStorage);
+/*
+ * Destructor
+ */
+void destroyService(Service* service);
 
-int removeMapService(Service *service, char mapCatalogueNumberString[]);
+/*
+ * Add a map to a service
+ * Input:
+ * Service*
+ * map catalogue number - int
+ * state of deterioration - char*
+ * map type - char*
+ * years of storage - int
+ * Output:
+ * 1 - if added
+ * 0 - otherwise
+ */
+int addMapService(Service *service, int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage);
 
-int updateMapService(Service *service, int mapCatalogueNumber, char stateOfDeterioration[50], char mapType[50], int yearsOfStorage);
+/*
+ * Removes a map from service
+ * Input:
+ * Service*
+ * CatalogueNumberString - char*
+ * Output:
+ * 1 - if removed
+ * 0 - otherwise
+ */
+int removeMapService(Service *service, char *mapCatalogueNumberString);
 
-void listAllMaps(Service *service, char listOfAllMapsString[]);
+/*
+ * Update a map from service
+ * Input:
+ * Service*
+ * map catalogue number - int
+ * state of deterioration - char*
+ * map type - char*
+ * years of storage - int
+ * Output:
+ * 1 - if updated
+ * 0 - otherwise
+ */
+int updateMapService(Service *service, int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage);
 
-void testService();
+/*
+ * Function that gives all maps in service
+ * Input:
+ * Service*
+ * DynamicArray* list of all maps
+ */
+void listAllMaps(Service *service, DynamicArray* listOfAllMapsString);
 
-void listAllMapsByType(Service* service, char mapType[], char listOfAllMapsByPropertyString[]);
+/*
+ * Function that filters maps with given property regarding map type
+ * Input:
+ * Service*
+ * map type - char*
+ * DynamicArray* - list of all maps with given property
+ * property - function returning int
+ */
+void listAllMapsByType(Service* service, char* mapType, DynamicArray* listOfAllMapsByPropertyString,  int (*property)(Map*, char*));
 
-void integerToString(int numberToBeConvertedToString, char convertedString[]);
+/*
+ * Function that sorts elements lower than a given age
+ * Input:
+ * Service*
+ * ageLimit - int
+ * DynamicArray* - sorted list of elements
+ * reverse - function returning int
+ */
+void sortMapsLowerThanAge(Service* service, int ageLimit, DynamicArray* sortedListOfMaps, int (*reverse)(Map*, Map*));
+
+/*
+ * Undo the last operation
+ * Input:
+ * Service*
+ */
+void undoLastOperation(Service* service);
+
+/*
+ * Redo operation
+ * Input:
+ * Service*
+ */
+void redoLastOperation(Service* service);
