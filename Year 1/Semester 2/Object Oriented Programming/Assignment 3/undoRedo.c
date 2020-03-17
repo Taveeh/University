@@ -8,7 +8,7 @@
 
 Operation *createOperation(Map *map, char *typeOfOperation) {
     Operation* result = (Operation*)malloc(sizeof(Operation));
-    result->map = createMap(map->mapCatalogueNumber, map->stateOfDeterioration, map->mapType, map->yearsOfStorage);
+    result->map = createMap(getCatalogueNumber(map), getStateOfDeterioration(map), getMapType(map), getYearsOfStorage(map));
     result->typeOfOperation = (char*)malloc(sizeof(char) * (strlen(typeOfOperation) + 1));
     strcpy(result->typeOfOperation, typeOfOperation);
     return result;
@@ -130,14 +130,14 @@ Operation* getLastUndo(UndoRedo *undoRedo) {
     if (undoRedo->undoSize < 1) {
         return NULL;
     }
-    return undoRedo->undoList[--undoRedo->undoSize];
+    return undoRedo->undoList[undoRedo->undoSize - 1];
 }
 
 Operation *getLastRedo(UndoRedo *undoRedo) {
     if (undoRedo->redoSize < 1) {
         return NULL;
     }
-    return undoRedo->redoList[--undoRedo->redoSize];
+    return undoRedo->redoList[undoRedo->redoSize - 1];
 }
 
 void changeFlag(UndoRedo *undoRedo, int value) {
