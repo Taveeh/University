@@ -6,11 +6,13 @@
 using namespace std;
 
 SortedMultiMap::SortedMultiMap(Relation r) {
-	//TODO - Implementation
+	rel = r;
+	head = nullptr;
 }
 
 void SortedMultiMap::add(TKey c, TValue v) {
-	//TODO - Implementation
+	TElem elem = TElem(c, v);
+
 }
 
 vector<TValue> SortedMultiMap::search(TKey c) const {
@@ -41,3 +43,11 @@ SMMIterator SortedMultiMap::iterator() const {
 SortedMultiMap::~SortedMultiMap() {
 	//TODO - Implementation
 }
+
+void SortedMultiMap::addAfter(SortedMultiMap::SLLNode *node, TElem elem) {
+    auto* newNode = new SLLNode;
+    newNode->info = elem;
+    newNode->next = node->next;
+    node->next = newNode;
+}
+

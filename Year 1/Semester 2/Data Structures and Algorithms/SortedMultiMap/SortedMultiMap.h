@@ -16,13 +16,19 @@ typedef bool(*Relation)(TKey, TValue);
 
 class SortedMultiMap {
 	friend class SMMIterator;
+	struct SLLNode {
+	    TElem info;
+	    SLLNode* next;
+	};
     private:
-		//TODO - Representation
+		Relation rel;
+		SLLNode* head;
+		static void addAfter(SLLNode *node, TElem elem);
 
     public:
 
     // constructor
-    SortedMultiMap(Relation r);
+    explicit SortedMultiMap(Relation r);
 
 	//adds a new key value pair to the sorted multi map
     void add(TKey c, TValue v);
