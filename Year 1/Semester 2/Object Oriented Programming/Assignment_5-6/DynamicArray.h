@@ -18,7 +18,7 @@ public:
 
     explicit DynamicArray(int capacity = 10);
 
-    explicit DynamicArray(const DynamicArray* copyArray);
+    DynamicArray(const DynamicArray& copyArray);
 
     DynamicArray& operator=(const DynamicArray& copyArray);
 
@@ -32,7 +32,7 @@ public:
 
     void setElement(TypeOfElement newElement, int position);
 
-    int getSize();
+    [[nodiscard]] int getSize() const;
 
     ~DynamicArray();
 

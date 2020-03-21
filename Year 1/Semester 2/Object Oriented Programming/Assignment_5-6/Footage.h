@@ -10,11 +10,13 @@ class Date {
 private:
     int day, month, year;
 public:
+    Date();
     Date(int day, int month, int year);
     [[nodiscard]] int getDay() const;
     [[nodiscard]] int getMonth() const;
     [[nodiscard]] int getYear() const;
-    friend bool operator<=(const Date& compareDate1, const Date& compareDate2);
+    friend bool operator<(const Date& compareDate1, const Date& compareDate2);
+    [[nodiscard]] std::string toString() const;
 };
 
 class Footage {
@@ -26,6 +28,8 @@ private:
     std::string link;
 
 public:
+    Footage();
+
     Footage(std::string title, std::string type, Date date, int numberAccessed, std::string link);
 
     void changeType(std::string newType);
@@ -36,15 +40,17 @@ public:
 
     void changeLink(std::string link);
 
-    std::string getTitle() const;
+    [[nodiscard]] std::string getTitle() const;
 
-    std::string getType();
+    std::string getType() const;
 
-    Date getDate();
+    Date getDate() const;
 
-    int getAccessCount();
+    int getAccessCount() const;
 
-    std::string getLink();
+    std::string getLink() const;
+
+    std::string toString() const;
 };
 
 

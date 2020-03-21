@@ -231,6 +231,33 @@ Service.cpp.s:
 	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/Service.cpp.s
 .PHONY : Service.cpp.s
 
+UI.o: UI.cpp.o
+
+.PHONY : UI.o
+
+# target to build an object file
+UI.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/UI.cpp.o
+.PHONY : UI.cpp.o
+
+UI.i: UI.cpp.i
+
+.PHONY : UI.i
+
+# target to preprocess a source file
+UI.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/UI.cpp.i
+.PHONY : UI.cpp.i
+
+UI.s: UI.cpp.s
+
+.PHONY : UI.s
+
+# target to generate assembly for a file
+UI.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/UI.cpp.s
+.PHONY : UI.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... Service.o"
 	@echo "... Service.i"
 	@echo "... Service.s"
+	@echo "... UI.o"
+	@echo "... UI.i"
+	@echo "... UI.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

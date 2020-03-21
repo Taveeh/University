@@ -14,12 +14,18 @@ private:
     DynamicArray<Footage> arrayOfTapes;
 public:
     Repository();
-//    int getSize();
-//    void addFootage(const Footage& newFootage);
-//    void deleteFootage(const std::string& titleToBeRemoved);
-//    void updateFootage(const Footage& newFootage);
-//
+
+    [[nodiscard]] int getSize() const;
+
+    void addFootage(const Footage& newFootage);
+
+    void deleteFootage(const std::string& titleToBeRemoved);
+
+    void updateFootage(const Footage& newFootage);
+
+    DynamicArray<Footage> getAllFootage();
+
 };
-//
-//
+
+
 #endif //ASSIGNMENT_5_6_REPOSITORY_H

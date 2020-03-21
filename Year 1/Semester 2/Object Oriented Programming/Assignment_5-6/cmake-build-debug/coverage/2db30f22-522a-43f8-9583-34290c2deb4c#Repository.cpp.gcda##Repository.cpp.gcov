@@ -1,0 +1,104 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Repository.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "Repository.h"
+        -:    2:
+        -:    3://
+        -:    4:// Created by Octavian Custura on 18/03/2020.
+        -:    5://
+        -:    6:#include <exception>
+        -:    7:
+        4:    8:Repository::Repository() {
+        2:    8-block  0
+        2:    8-block  1
+        2:    9:    arrayOfTapes = DynamicArray<Footage>();
+        2:    9-block  0
+        2:    9-block  1
+    $$$$$:    9-block  2
+        4:   10:}
+        2:   10-block  0
+    $$$$$:   10-block  1
+    $$$$$:   10-block  2
+    $$$$$:   10-block  3
+        2:   10-block  4
+        -:   11:
+        2:   12:int Repository::getSize() const{
+        2:   12-block  0
+        2:   13:    return arrayOfTapes.getSize();
+        2:   13-block  0
+        -:   14:}
+        -:   15:
+        1:   16:void Repository::addFootage(const Footage& newFootage) {
+        1:   16-block  0
+        1:   17:    for (int indexRepository = 0; indexRepository < arrayOfTapes.getSize(); ++indexRepository) {
+        1:   17-block  0
+        1:   17-block  1
+    $$$$$:   17-block  2
+    #####:   18:        if (arrayOfTapes.getElement(indexRepository).getTitle() == newFootage.getTitle()) {
+    $$$$$:   18-block  0
+    $$$$$:   18-block  1
+    $$$$$:   18-block  2
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    #####:   19:            throw std::exception();
+    $$$$$:   19-block  0
+        -:   20:        }
+    #####:   21:    }
+    $$$$$:   21-block  0
+        1:   22:    arrayOfTapes.addElement(newFootage);
+        1:   22-block  0
+    $$$$$:   22-block  1
+        1:   23:}
+    $$$$$:   23-block  0
+        1:   23-block  1
+        -:   24:
+        2:   25:void Repository::deleteFootage(const std::string& titleToBeRemoved) {
+        2:   25-block  0
+        2:   26:    for (int indexRepository = 0; indexRepository < arrayOfTapes.getSize(); ++indexRepository) {
+        2:   26-block  0
+        2:   26-block  1
+    $$$$$:   26-block  2
+        1:   27:        if (arrayOfTapes.getElement(indexRepository).getTitle() == titleToBeRemoved) {
+        1:   27-block  0
+        1:   27-block  1
+    $$$$$:   27-block  2
+    $$$$$:   27-block  3
+        1:   28:            arrayOfTapes.removeElementFromPosition(indexRepository);
+        1:   29:            return;
+        1:   29-block  0
+        -:   30:        }
+    #####:   31:    }
+    $$$$$:   31-block  0
+        1:   32:    throw std::exception();
+        1:   32-block  0
+    #####:   33:}
+        -:   34:
+    #####:   35:void Repository::updateFootage(const Footage &newFootage) {
+    $$$$$:   35-block  0
+    #####:   36:    for (int indexRepository = 0; indexRepository < arrayOfTapes.getSize(); ++indexRepository) {
+    $$$$$:   36-block  0
+    $$$$$:   36-block  1
+    $$$$$:   36-block  2
+    #####:   37:        if (arrayOfTapes.getElement(indexRepository).getTitle() == newFootage.getTitle()) {
+    $$$$$:   37-block  0
+    $$$$$:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+    #####:   38:            arrayOfTapes.setElement(newFootage, indexRepository);
+    $$$$$:   38-block  0
+    $$$$$:   38-block  1
+    #####:   39:            return;
+    $$$$$:   39-block  0
+        -:   40:        }
+    #####:   41:    }
+    $$$$$:   41-block  0
+    #####:   42:    throw std::exception();
+    $$$$$:   42-block  0
+    #####:   43:}
+    $$$$$:   43-block  0
+        -:   44:

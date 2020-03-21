@@ -104,6 +104,12 @@
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Service.h">
 			<Option target="Assignment_5_6"/>
 		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/UI.cpp">
+			<Option target="Assignment_5_6"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/UI.h">
+			<Option target="Assignment_5_6"/>
+		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/main.cpp">
 			<Option target="Assignment_5_6"/>
 		</Unit>

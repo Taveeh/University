@@ -22,12 +22,24 @@ int Date::getYear() const {
     return year;
 }
 
-bool operator<=(const Date &compareDate1, const Date &compareDate2) {
+bool operator<(const Date &compareDate1, const Date &compareDate2) {
     if (compareDate1.getYear() < compareDate2.getYear()) return true;
     if (compareDate1.getYear() > compareDate2.getYear()) return false;
     if (compareDate1.getMonth() < compareDate1.getMonth()) return true;
     if (compareDate1.getMonth() > compareDate1.getMonth()) return false;
     return compareDate1.getDay() <= compareDate1.getDay();
+}
+
+Date::Date() {
+    day = 0;
+    year = 0;
+    month = 0;
+}
+
+std::string Date::toString() const {
+    std::string stringDate;
+    stringDate += std::to_string(day) + "-" + std::to_string(month) + "-" + std::to_string(year);
+    return stringDate;
 }
 
 
@@ -51,22 +63,36 @@ void Footage::changeLink(std::string newLink) {
     link = std::move(newLink);
 }
 
-std::string Footage::getTitle() const{
+std::string Footage::getTitle() const {
     return title;
 }
 
-std::string Footage::getType() {
+std::string Footage::getType() const {
     return type;
 }
 
-Date Footage::getDate() {
+Date Footage::getDate() const {
     return date;
 }
 
-int Footage::getAccessCount() {
+int Footage::getAccessCount() const {
     return numberAccessed;
 }
 
-std::string Footage::getLink() {
+std::string Footage::getLink() const {
     return link;
+}
+
+Footage::Footage() {
+    title = "";
+    type = "";
+    date = Date();
+    numberAccessed = 0;
+    link = "";
+}
+
+std::string Footage::toString() const {
+    std::string stringFootage;
+    stringFootage += "Title: " + title + " Type: " + type + " Date: " + date.toString() + " Access count: " + std::to_string(numberAccessed) + " Link: " + link;
+    return stringFootage;
 }

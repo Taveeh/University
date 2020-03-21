@@ -3,6 +3,7 @@
 
 CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o: ../DynamicArray.cpp
 CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o: ../DynamicArray.h
+CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o: ../Footage.h
 
 CMakeFiles/Assignment_5_6.dir/Footage.cpp.o: ../Footage.cpp
 CMakeFiles/Assignment_5_6.dir/Footage.cpp.o: ../Footage.h
@@ -18,9 +19,17 @@ CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Repository.h
 CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Service.cpp
 CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Service.h
 
+CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../DynamicArray.h
+CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../Footage.h
+CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../Repository.h
+CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../Service.h
+CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../UI.cpp
+CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../UI.h
+
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../DynamicArray.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../Footage.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../Repository.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../Service.h
+CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../UI.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../main.cpp
 

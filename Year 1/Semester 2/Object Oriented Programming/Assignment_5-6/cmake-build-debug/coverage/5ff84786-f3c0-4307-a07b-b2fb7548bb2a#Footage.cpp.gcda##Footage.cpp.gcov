@@ -1,0 +1,151 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Footage.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 18/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "Footage.h"
+        -:    6:
+        -:    7:#include <utility>
+        -:    8:
+        4:    9:Date::Date(int day, int month, int year):day{day}, month{month}, year{year} {
+        2:    9-block  0
+        2:    9-block  1
+        -:   10:
+        4:   11:}
+        2:   11-block  0
+        2:   11-block  1
+        -:   12:
+    #####:   13:int Date::getDay() const {
+    $$$$$:   13-block  0
+    #####:   14:    return day;
+    $$$$$:   14-block  0
+        -:   15:}
+        -:   16:
+    #####:   17:int Date::getMonth() const {
+    $$$$$:   17-block  0
+    #####:   18:    return month;
+    $$$$$:   18-block  0
+        -:   19:}
+        -:   20:
+        4:   21:int Date::getYear() const {
+        4:   21-block  0
+        4:   22:    return year;
+        4:   22-block  0
+        -:   23:}
+        -:   24:
+        1:   25:bool operator<(const Date &compareDate1, const Date &compareDate2) {
+        1:   25-block  0
+        1:   26:    if (compareDate1.getYear() < compareDate2.getYear()) return true;
+        1:   26-block  0
+    $$$$$:   26-block  1
+        1:   27:    if (compareDate1.getYear() > compareDate2.getYear()) return false;
+        1:   27-block  0
+        1:   27-block  1
+    #####:   28:    if (compareDate1.getMonth() < compareDate1.getMonth()) return true;
+    $$$$$:   28-block  0
+    $$$$$:   28-block  1
+    #####:   29:    if (compareDate1.getMonth() > compareDate1.getMonth()) return false;
+    $$$$$:   29-block  0
+    $$$$$:   29-block  1
+    #####:   30:    return compareDate1.getDay() <= compareDate1.getDay();
+    $$$$$:   30-block  0
+        1:   31:}
+        1:   31-block  0
+        -:   32:
+      280:   33:Date::Date() {
+      140:   33-block  0
+      140:   33-block  1
+      140:   34:    day = 0;
+      140:   35:    year = 0;
+      140:   36:    month = 0;
+      280:   37:}
+      140:   37-block  0
+      140:   37-block  1
+        -:   38:
+        -:   39:
+        2:   40:Footage::Footage(std::string title, std::string type, Date date, int numberAccessed, std::string link):title{std::move(title)}, type{std::move(type)}, date{date}, numberAccessed{numberAccessed}, link{std::move(link)} {
+        1:   40-block  0
+        1:   40-block  1
+        -:   41:
+        2:   42:}
+        1:   42-block  0
+        1:   42-block  1
+        -:   43:
+    #####:   44:void Footage::changeType(std::string newType) {
+    $$$$$:   44-block  0
+    #####:   45:    type = std::move(newType);
+    #####:   46:}
+    $$$$$:   46-block  0
+        -:   47:
+    #####:   48:void Footage::changeDate(Date newDate) {
+    $$$$$:   48-block  0
+    #####:   49:    date = newDate;
+    #####:   50:}
+    $$$$$:   50-block  0
+        -:   51:
+    #####:   52:void Footage::changeAccessCount(int newAccessCount) {
+    $$$$$:   52-block  0
+    #####:   53:    numberAccessed = newAccessCount;
+    #####:   54:}
+    $$$$$:   54-block  0
+        -:   55:
+    #####:   56:void Footage::changeLink(std::string newLink) {
+    $$$$$:   56-block  0
+    #####:   57:    link = std::move(newLink);
+    #####:   58:}
+    $$$$$:   58-block  0
+        -:   59:
+        1:   60:std::string Footage::getTitle() const {
+        1:   60-block  0
+        1:   61:    return title;
+        1:   61-block  0
+        -:   62:}
+        -:   63:
+    #####:   64:std::string Footage::getType() const {
+    $$$$$:   64-block  0
+    #####:   65:    return type;
+    $$$$$:   65-block  0
+        -:   66:}
+        -:   67:
+    #####:   68:Date Footage::getDate() const {
+    $$$$$:   68-block  0
+    #####:   69:    return date;
+    $$$$$:   69-block  0
+        -:   70:}
+        -:   71:
+    #####:   72:int Footage::getAccessCount() const {
+    $$$$$:   72-block  0
+    #####:   73:    return numberAccessed;
+    $$$$$:   73-block  0
+        -:   74:}
+        -:   75:
+    #####:   76:std::string Footage::getLink() const {
+    $$$$$:   76-block  0
+    #####:   77:    return link;
+    $$$$$:   77-block  0
+        -:   78:}
+        -:   79:
+      140:   80:Footage::Footage() {
+       70:   80-block  0
+       70:   80-block  1
+       70:   80-block  2
+       70:   81:    title = "";
+       70:   81-block  0
+       70:   82:    type = "";
+       70:   82-block  0
+       70:   83:    date = Date();
+       70:   83-block  0
+       70:   84:    numberAccessed = 0;
+       70:   85:    link = "";
+       70:   85-block  0
+      140:   86:}
+       70:   86-block  0
+    $$$$$:   86-block  1
+    $$$$$:   86-block  2
+    $$$$$:   86-block  3
+    $$$$$:   86-block  4
+       70:   86-block  5

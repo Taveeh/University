@@ -3,7 +3,9 @@
 //
 
 #include "DynamicArray.h"
+#include "Footage.h"
 #include <exception>
+#include <string>
 
 template<class TypeOfElement>
 DynamicArray<TypeOfElement>::DynamicArray(int capacity) {
@@ -83,17 +85,17 @@ TypeOfElement DynamicArray<TypeOfElement>::getElement(int position) {
 }
 
 template<class TypeOfElement>
-int DynamicArray<TypeOfElement>::getSize() {
+int DynamicArray<TypeOfElement>::getSize() const {
     return size;
 }
 
 template<class TypeOfElement>
-DynamicArray<TypeOfElement>::DynamicArray(const DynamicArray *copyArray) {
-    size = copyArray->size;
-    capacity = copyArray->capacity;
+DynamicArray<TypeOfElement>::DynamicArray(const DynamicArray &copyArray) {
+    size = copyArray.size;
+    capacity = copyArray.capacity;
     elements = new TypeOfElement[capacity];
     for (int i = 0; i < size; ++i) {
-        elements[i] = copyArray->elements[i];
+        elements[i] = copyArray.elements[i];
     }
 }
 
@@ -113,5 +115,4 @@ DynamicArray<TypeOfElement>& DynamicArray<TypeOfElement>::operator=(const Dynami
     return *this;
 }
 
-
-
+template class DynamicArray<Footage>;
