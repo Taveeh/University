@@ -15,8 +15,6 @@ private:
 public:
     Repository();
 
-    [[nodiscard]] int getSize() const;
-
     void addFootage(const Footage& newFootage);
 
     void deleteFootage(const std::string& titleToBeRemoved);

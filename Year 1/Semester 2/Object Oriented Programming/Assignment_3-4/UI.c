@@ -117,7 +117,7 @@ void updateMapUI(UI *ui, char *(*parsedArrayOfStrings)) {
 }
 
 void listAllMapsUI(UI *ui, char *(*parsedArrayOfStrings)) {
-    DynamicArray* stringListOfMaps = createDynamicArray(MAX_STRING_SIZE);
+    DynamicArray* stringListOfMaps = createDynamicArray(MAX_STRING_SIZE, &destroyMap);
     listAllMaps(ui->service, stringListOfMaps);
     for (int mapIndex = 0; mapIndex < getLengthOfDynamicArray(stringListOfMaps); ++mapIndex) {
         printf("Map Catalogue Number: %d, State of Deterioration: %s, Map Type: %s, Years of Storage: %d\n", getCatalogueNumber(stringListOfMaps->dynamicArrayElements[mapIndex]), getStateOfDeterioration(stringListOfMaps->dynamicArrayElements[mapIndex]), getMapType(stringListOfMaps->dynamicArrayElements[mapIndex]), getYearsOfStorage(stringListOfMaps->dynamicArrayElements[mapIndex]));
@@ -134,7 +134,7 @@ void listAllMapsUIByType(UI *ui, char *(*parsedArrayOfStrings)) {
     }else {
         functionToFilterList = &selectAllForAmbiguity;
     }
-    DynamicArray* stringListOfMapsByType = createDynamicArray(MAX_STRING_SIZE);
+    DynamicArray* stringListOfMapsByType = createDynamicArray(MAX_STRING_SIZE, &destroyMap);
     listAllMapsByType(ui->service, parsedArrayOfStrings[INDEX_SPECIAL_LIST], stringListOfMapsByType, functionToFilterList);
     for (int mapIndex = 0; mapIndex < getLengthOfDynamicArray(stringListOfMapsByType); ++mapIndex) {
         printf("Map Catalogue Number: %d, State of Deterioration: %s, Map Type: %s, Years of Storage: %d\n", getCatalogueNumber(stringListOfMapsByType->dynamicArrayElements[mapIndex]), getStateOfDeterioration(stringListOfMapsByType->dynamicArrayElements[mapIndex]), getMapType(stringListOfMapsByType->dynamicArrayElements[mapIndex]), getYearsOfStorage(stringListOfMapsByType->dynamicArrayElements[mapIndex]));
@@ -156,17 +156,20 @@ void sortByAgeUI(UI* ui, char** parsedArrayOfStrings) {
     }else {
         functionToSortList = &normalSorting;
     }
-    DynamicArray* sortedArrayOfMapsLowerThanAge = createDynamicArray(MAX_STRING_SIZE);
+    DynamicArray* sortedArrayOfMapsLowerThanAge = createDynamicArray(MAX_STRING_SIZE, &destroyMap);
     sortMapsLowerThanAge(ui->service, ageOfSorting, sortedArrayOfMapsLowerThanAge, functionToSortList);
     for (int mapIndex = 0; mapIndex < getLengthOfDynamicArray(sortedArrayOfMapsLowerThanAge); ++mapIndex) {
         printf("Map Catalogue Number: %d, State of Deterioration: %s, Map Type: %s, Years of Storage: %d\n", getCatalogueNumber(sortedArrayOfMapsLowerThanAge->dynamicArrayElements[mapIndex]), getStateOfDeterioration(sortedArrayOfMapsLowerThanAge->dynamicArrayElements[mapIndex]), getMapType(sortedArrayOfMapsLowerThanAge->dynamicArrayElements[mapIndex]), getYearsOfStorage(sortedArrayOfMapsLowerThanAge->dynamicArrayElements[mapIndex]));
     }
 }
 
-void undoOperationUI(UI *ui) {
-    undoLastOperation(ui->service);
+void undoOperationUI(UI *ui){
+//    undoLastOperation(ui->service);
+    undoLastOperationNew(ui->service);
 }
 
+
 void redoOperationUI(UI* ui) {
-    redoLastOperation(ui->service);
+//    redoLastOperation(ui->service);
+    redoLastOperationNew(ui->service);
 }

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3"
+CMAKE_SOURCE_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Or
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug/CMakeFiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -257,6 +257,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/main.c.s
 .PHONY : main.c.s
+
+newUndoRedo.o: newUndoRedo.c.o
+
+.PHONY : newUndoRedo.o
+
+# target to build an object file
+newUndoRedo.c.o:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/newUndoRedo.c.o
+.PHONY : newUndoRedo.c.o
+
+newUndoRedo.i: newUndoRedo.c.i
+
+.PHONY : newUndoRedo.i
+
+# target to preprocess a source file
+newUndoRedo.c.i:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/newUndoRedo.c.i
+.PHONY : newUndoRedo.c.i
+
+newUndoRedo.s: newUndoRedo.c.s
+
+.PHONY : newUndoRedo.s
+
+# target to generate assembly for a file
+newUndoRedo.c.s:
+	$(MAKE) -f CMakeFiles/Assignment_3.dir/build.make CMakeFiles/Assignment_3.dir/newUndoRedo.c.s
+.PHONY : newUndoRedo.c.s
 
 repository.o: repository.c.o
 
@@ -498,6 +525,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... newUndoRedo.o"
+	@echo "... newUndoRedo.i"
+	@echo "... newUndoRedo.s"
 	@echo "... repository.o"
 	@echo "... repository.i"
 	@echo "... repository.s"

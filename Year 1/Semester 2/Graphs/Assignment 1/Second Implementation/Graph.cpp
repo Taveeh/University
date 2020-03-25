@@ -4,6 +4,7 @@
 
 #include "Graph.h"
 #include <exception>
+#include <iostream>
 
 OrderedGraphCost::OrderedGraphCost(int nrVertices) {
     for (int i = 0; i < nrVertices; ++i) {
@@ -62,7 +63,7 @@ void OrderedGraphCost::changeCost(int x, int y, int val) {
     if (!isEdge(x, y)) {
         throw std::exception();
     }
-    costMap[std::make_pair(x, y)] = val;
+    this->costMap[std::make_pair(x, y)] = val;
 }
 
 std::pair <std::vector<int>::iterator, std::vector<int>::iterator> OrderedGraphCost::inboundEdge(int x) {
@@ -84,7 +85,7 @@ void OrderedGraphCost::removeEdge(int x, int y) {
         }
     }
     inMap[y].erase(std::find(inMap[y].begin(), inMap[y].end(), x));
-    outMap[x].erase(std::find(inMap[x].begin(), inMap[x].end(), y));
+    outMap[x].erase(std::find(outMap[x].begin(), outMap[x].end(), y));
 }
 
 void OrderedGraphCost::addVertex(int val) {
@@ -104,6 +105,7 @@ void OrderedGraphCost::removeVertex(int val) {
         array.push_back(el.first);
     }
     int i = 0;
+    std::map<std::pair<int, int>, int> newCostMap;
     while (i < len) {
         if (array[i].second == val or array[i].first == val) {
             costMap.erase(costMap.find(array[i]));
@@ -111,29 +113,56 @@ void OrderedGraphCost::removeVertex(int val) {
             len--;
             continue;
         }
+        int x = array[i].first;
+        int y = array[i].second;
+        if (x > val) x--;
+        if (y > val) y--;
+        newCostMap[std::make_pair(x, y)] = costMap[array[i]];
         i++;
     }
+    costMap = newCostMap;
+    std::map<int, std::vector<int>> newInMap;
     for (auto el : inMap) {
         auto c = std::find(el.second.begin(), el.second.end(), val);
         if (c != el.second.end()) {
             el.second.erase(c);
         }
     }
+    for (i = 0; i < inMap.size(); ++i) {
+        int x = i;
+        if (x > val) x--;
+        newInMap[x] = inMap[i];
+        for (int j = 0; j < inMap[i].size(); ++j) {
+            if (inMap[i][j] > val) {
+                newInMap[x][j] = inMap[i][j] - 1;
+            }
+        }
+    }
+    std::map<int, std::vector<int>> newOutMap;
     for (auto el : outMap) {
         auto c = std::find(el.second.begin(), el.second.end(), val);
         if (c != el.second.end()) {
             el.second.erase(c);
         }
     }
-}
-
-OrderedGraphCost OrderedGraphCost::copyGraph() {
-    return *this;
+    for (i = 0; i < outMap.size(); ++i) {
+        int x = i;
+        if (x > val) x--;
+        newOutMap[x] = outMap[i];
+        for (int j = 0; j < outMap[i].size(); ++j) {
+            if (outMap[i][j] > val) {
+                newOutMap[x][j] = outMap[i][j] - 1;
+            }
+        }
+    }
+    std::cout << '\n';
+    inMap = newInMap;
+    outMap = newOutMap;
 }
 
 std::string OrderedGraphCost::toString() {
     std::string str;
-    str += std::to_string(nrVertices()) + " " + std::to_string(nrVertices()) + "\n";
+    str += std::to_string(nrVertices()) + " " + std::to_string(nrEdges()) + "\n";
     for (auto i: costMap) {
         str += std::to_string(i.first.first) + " " + std::to_string(i.first.second) + " " + std::to_string(i.second) + "\n";
     }

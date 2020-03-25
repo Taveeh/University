@@ -10,7 +10,6 @@
 
 typedef struct {
     DynamicArray* listOfMaps;
-    UndoRedo* undoRedo;
 } Repository;
 
 /*
@@ -99,3 +98,7 @@ void redoRepository(Repository* repository);
  * Map* - element on position position
  */
 Map* getElementOnPositionRepository(Repository* repository, int position);
+
+void setNewArray(Repository* repository, DynamicArray* dynamicArray);
+
+DynamicArray* getRepositoryElements(Repository* repository);

@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Assignment_3.dir/dynamicArray.c.o"
   "CMakeFiles/Assignment_3.dir/functionForFilterAndSort.c.o"
   "CMakeFiles/Assignment_3.dir/main.c.o"
+  "CMakeFiles/Assignment_3.dir/newUndoRedo.c.o"
   "CMakeFiles/Assignment_3.dir/repository.c.o"
   "CMakeFiles/Assignment_3.dir/service.c.o"
   "CMakeFiles/Assignment_3.dir/testDomain.c.o"

@@ -48,8 +48,6 @@ public:
 
     void removeVertex(int val);
 
-    OrderedGraphCost copyGraph();
-
     std::string toString();
 };
 #endif //SECOND_IMPLEMENTATION_GRAPH_H

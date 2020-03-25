@@ -9,10 +9,6 @@ Repository::Repository() {
     arrayOfTapes = DynamicArray<Footage>();
 }
 
-int Repository::getSize() const{
-    return arrayOfTapes.getSize();
-}
-
 void Repository::addFootage(const Footage& newFootage) {
     for (int indexRepository = 0; indexRepository < arrayOfTapes.getSize(); ++indexRepository) {
         if (arrayOfTapes.getElement(indexRepository).getTitle() == newFootage.getTitle()) {

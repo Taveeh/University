@@ -10,18 +10,21 @@
 class UI {
 private:
     Service service;
-    void addElement(std::string commandParameters);
+    void addElement(const std::string& commandParameters);
 
-    void removeElement(std::string commandParameters);
+    void removeElement(const std::string& commandParameters);
 
-    void updateElement(std::string commandParameters);
+    void updateElement(const std::string& commandParameters);
 
-    void listAllElements(std::string commandParameters);
+    void listAllElements(const std::string& commandParameters);
 
+    void runProgramAdministrator();
 
 public:
     explicit UI(Service& service);
-    void runProgramAdministrator();
+
+    void runProgram();
+
 };
 
 

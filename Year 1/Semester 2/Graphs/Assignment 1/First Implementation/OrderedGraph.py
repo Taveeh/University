@@ -2,7 +2,7 @@ from copy import deepcopy
 
 
 class OrderedGraphCost:
-    def __init__(self, nrV):
+    def __init__(self, nrV):    
         self._dictIn = {}
         self._dictOut = {}
         self._costDict = {}
@@ -95,7 +95,41 @@ class OrderedGraphCost:
         for i in self._dictOut.keys():
             if vertex in self._dictOut[i]:
                 self._dictOut[i].remove(vertex)
-
+        newDict = {}
+        for i in range(len(self._dictIn.keys()) - 1):
+            newDict[i] = []
+        for i in self._dictIn:
+            x = i
+            if (i > vertex):
+                x -= 1
+            newDict[x] = self._dictIn[i]
+            for j in range(len(self._dictIn[i])):
+                if self._dictIn[i][j] > vertex:
+                    newDict[x][j] -= 1
+        self._dictIn = newDict
+        newDict = {}
+        for i in range(len(self._dictIn.keys()) - 1):
+            newDict[i] = []
+        for i in self._dictOut:
+            x = i
+            if i > vertex:
+                x -= 1
+            newDict[x] = self._dictOut[i]
+            for j in range(len(self._dictOut[i])):
+                if self._dictOut[i][j] > vertex:
+                    newDict[x][j] -= 1
+        self._dictOut = newDict
+        newDict = {}
+        for i in self._costDict.keys():
+            x = i[0]
+            y = i[1]
+            if i[0] > vertex:
+                x -= 1
+            if i[1] > vertex:
+                y -= 1
+            newDict[(x, y)] = self._costDict[i]
+        self._costDict = newDict
+            
     def copyGraph(self):
         return deepcopy(self)
 
@@ -113,7 +147,7 @@ class OrderedGraphCost:
 
 
 def readFile():
-    f = open('graph1m.txt', 'r')
+    f = open('graph10k.txt', 'r')
     a = f.readline()
     a = a.strip()
     a = a.split()

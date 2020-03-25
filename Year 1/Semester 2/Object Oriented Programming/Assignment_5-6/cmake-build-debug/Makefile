@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Or
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/193.6494.38/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -231,6 +231,114 @@ Service.cpp.s:
 	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/Service.cpp.s
 .PHONY : Service.cpp.s
 
+TestDynamicArray.o: TestDynamicArray.cpp.o
+
+.PHONY : TestDynamicArray.o
+
+# target to build an object file
+TestDynamicArray.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o
+.PHONY : TestDynamicArray.cpp.o
+
+TestDynamicArray.i: TestDynamicArray.cpp.i
+
+.PHONY : TestDynamicArray.i
+
+# target to preprocess a source file
+TestDynamicArray.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.i
+.PHONY : TestDynamicArray.cpp.i
+
+TestDynamicArray.s: TestDynamicArray.cpp.s
+
+.PHONY : TestDynamicArray.s
+
+# target to generate assembly for a file
+TestDynamicArray.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.s
+.PHONY : TestDynamicArray.cpp.s
+
+TestFootage.o: TestFootage.cpp.o
+
+.PHONY : TestFootage.o
+
+# target to build an object file
+TestFootage.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o
+.PHONY : TestFootage.cpp.o
+
+TestFootage.i: TestFootage.cpp.i
+
+.PHONY : TestFootage.i
+
+# target to preprocess a source file
+TestFootage.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.i
+.PHONY : TestFootage.cpp.i
+
+TestFootage.s: TestFootage.cpp.s
+
+.PHONY : TestFootage.s
+
+# target to generate assembly for a file
+TestFootage.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.s
+.PHONY : TestFootage.cpp.s
+
+TestRepository.o: TestRepository.cpp.o
+
+.PHONY : TestRepository.o
+
+# target to build an object file
+TestRepository.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o
+.PHONY : TestRepository.cpp.o
+
+TestRepository.i: TestRepository.cpp.i
+
+.PHONY : TestRepository.i
+
+# target to preprocess a source file
+TestRepository.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.i
+.PHONY : TestRepository.cpp.i
+
+TestRepository.s: TestRepository.cpp.s
+
+.PHONY : TestRepository.s
+
+# target to generate assembly for a file
+TestRepository.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.s
+.PHONY : TestRepository.cpp.s
+
+TestService.o: TestService.cpp.o
+
+.PHONY : TestService.o
+
+# target to build an object file
+TestService.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestService.cpp.o
+.PHONY : TestService.cpp.o
+
+TestService.i: TestService.cpp.i
+
+.PHONY : TestService.i
+
+# target to preprocess a source file
+TestService.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestService.cpp.i
+.PHONY : TestService.cpp.i
+
+TestService.s: TestService.cpp.s
+
+.PHONY : TestService.s
+
+# target to generate assembly for a file
+TestService.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/TestService.cpp.s
+.PHONY : TestService.cpp.s
+
 UI.o: UI.cpp.o
 
 .PHONY : UI.o
@@ -306,6 +414,18 @@ help:
 	@echo "... Service.o"
 	@echo "... Service.i"
 	@echo "... Service.s"
+	@echo "... TestDynamicArray.o"
+	@echo "... TestDynamicArray.i"
+	@echo "... TestDynamicArray.s"
+	@echo "... TestFootage.o"
+	@echo "... TestFootage.i"
+	@echo "... TestFootage.s"
+	@echo "... TestRepository.o"
+	@echo "... TestRepository.i"
+	@echo "... TestRepository.s"
+	@echo "... TestService.o"
+	@echo "... TestService.i"
+	@echo "... TestService.s"
 	@echo "... UI.o"
 	@echo "... UI.i"
 	@echo "... UI.s"

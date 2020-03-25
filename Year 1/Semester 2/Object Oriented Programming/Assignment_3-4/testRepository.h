@@ -25,10 +25,5 @@ void test_deleteMapFromRepository_ValidID_MapRemoved();
 
 void test_deleteMapFromRepository_InvalidID_MapNotRemoved();
 
-void test_undoAdd_MapAdded_MapRemoved();
-
-void test_undoRemove_MapRemoved_MapAdded();
-
-void test_undoUpdate_MapChanged_MapBack();
 
 #endif //ASSIGNMENT_3_TESTREPOSITORY_H

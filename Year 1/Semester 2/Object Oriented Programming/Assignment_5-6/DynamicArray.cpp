@@ -5,7 +5,6 @@
 #include "DynamicArray.h"
 #include "Footage.h"
 #include <exception>
-#include <string>
 
 template<class TypeOfElement>
 DynamicArray<TypeOfElement>::DynamicArray(int capacity) {
@@ -47,10 +46,11 @@ void DynamicArray<TypeOfElement>::addElementToPosition(TypeOfElement newElement,
     if (size == capacity) {
         resizeArray(2 * capacity);
     }
-    size++;
+
     for (int i = size; i > position; ++i) {
         elements[i] = elements[i - 1];
     }
+    size++;
     elements[position] = newElement;
 }
 

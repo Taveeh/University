@@ -42,15 +42,15 @@ public:
 
     [[nodiscard]] std::string getTitle() const;
 
-    std::string getType() const;
+    [[nodiscard]] std::string getType() const;
 
-    Date getDate() const;
+    [[nodiscard]] Date getDate() const;
 
-    int getAccessCount() const;
+    [[nodiscard]] int getAccessCount() const;
 
-    std::string getLink() const;
+    [[nodiscard]] std::string getLink() const;
 
-    std::string toString() const;
+    [[nodiscard]] std::string toString() const;
 };
 
 

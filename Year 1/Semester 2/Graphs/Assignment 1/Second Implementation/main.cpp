@@ -3,7 +3,7 @@
 #include <fstream>
 #include <exception>
 
-OrderedGraphCost readFile(char file[20]) {
+OrderedGraphCost readFile(char file[200]) {
     std::ifstream fin(file);
     int nrV, nrE;
     fin >> nrV >> nrE;
@@ -41,7 +41,7 @@ OrderedGraphCost readWish() {
     }
     if (cmd == 2) {
         std::cout << "Enter text name: ";
-        char file[20];
+        char file[200];
         std::cin >> file;
         OrderedGraphCost g = readFile(file);
         return g;
@@ -55,8 +55,8 @@ OrderedGraphCost readWish() {
         return g;
     }
 }
-void printMenu(OrderedGraphCost G) {
-    std::cout << "Graph Operations\n1. Get the number of vertices\n2. The set of vertices\n3. Check if there is an edge between 2 vertices\n4. In degree of a vertex\n5. Out degree of a vertex\n6. The outbound edges of a vertex\n7. The inbound edges of a vertex\n8. Get the cost of an edge\n9. Modify the cost of an edge\n10. Add edge\n11. Remove edge\n12. Add vertex\n13. Remove vertex\n14. Copy graph and save it to file\n15. Save graph\n0. Exit\n";
+void printMenu(OrderedGraphCost& G) {
+    std::cout << "Graph Operations\n1. Get the number of vertices\n2. The set of vertices\n3. Check if there is an edge between 2 vertices\n4. In degree of a vertex\n5. Out degree of a vertex\n6. The outbound edges of a vertex\n7. The inbound edges of a vertex\n8. Get the cost of an edge\n9. Modify the cost of an edge\n10. Add edge\n11. Remove edge\n12. Add vertex\n13. Remove vertex\n14. Save graph to file\n0. Exit\n";
     int cmd;
     std::cout << "Command: ";
     std::cin >> cmd;
@@ -146,10 +146,7 @@ void printMenu(OrderedGraphCost G) {
             break;
         }
         case 12: {
-            int v1;
-            std::cout << "Vertex: ";
-            std::cin >> v1;
-            G.addVertex(v1);
+            G.addVertex(G.nrVertices());
             break;
         }
         case 13: {
@@ -165,29 +162,19 @@ void printMenu(OrderedGraphCost G) {
             std::cin >> fileName;
             std::cout << "The copy of the graph is saved to " << fileName << "...\n";
             std::ofstream printCopy(fileName);
-            printCopy << G.copyGraph().toString();
+            printCopy << G.toString();
             printCopy.close();
             break;
         }
-        case 15:{
-            std::string fileName;
-            std::cout << "File name: ";
-            std::cin >> fileName;
-            std::cout << "The copy of the graph is saved to " << fileName << "...\n";
-            std::ofstream printGraph(fileName);
-            printGraph << G.toString();
-            printGraph.close();
-            break;
-        }
         case 0:
-            throw 0;
-            break;
+            throw 0;break;
         default:
             std::cout << "Invalid command\n";
             break;
     }
 }
 int main() {
+    std::ios::sync_with_stdio(false);
     OrderedGraphCost G = OrderedGraphCost(0);
     try {
         G = readWish();

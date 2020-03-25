@@ -23,10 +23,14 @@ int Date::getYear() const {
 }
 
 bool operator<(const Date &compareDate1, const Date &compareDate2) {
-    if (compareDate1.getYear() < compareDate2.getYear()) return true;
-    if (compareDate1.getYear() > compareDate2.getYear()) return false;
-    if (compareDate1.getMonth() < compareDate1.getMonth()) return true;
-    if (compareDate1.getMonth() > compareDate1.getMonth()) return false;
+    if (compareDate1.getYear() < compareDate2.getYear())
+        return true;
+    if (compareDate1.getYear() > compareDate2.getYear())
+        return false;
+    if (compareDate1.getMonth() < compareDate1.getMonth())
+        return true;
+    if (compareDate1.getMonth() > compareDate2.getMonth())
+        return false;
     return compareDate1.getDay() <= compareDate1.getDay();
 }
 

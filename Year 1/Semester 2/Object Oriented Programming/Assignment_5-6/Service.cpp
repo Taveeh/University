@@ -4,7 +4,7 @@
 
 #include "Service.h"
 #include <exception>
-#include <cassert>
+//#include <cassert>
 #include <iostream>
 #include <sstream>
 #include <ctime>
@@ -17,15 +17,12 @@ void Service::addFootage(const std::string &title, const std::string &type,const
     if (dateString.size() != SIZE_OF_DATE + 1) {
         throw std::exception();
     }
-    std::string newTitle = title;
-    newTitle.pop_back();
-    std::string newType = type;
-    newType.pop_back();
-    std::string newNumberAccessedString = numberAccessedString;
-    newNumberAccessedString.pop_back();
-    std::string dayString = dateString.substr(0, 2);
-    std::string monthString = dateString.substr(3, 2);
-    std::string yearString = dateString.substr(6, 4);
+    const std::string& newTitle = title;
+    std::string newType = type.substr(1, type.size() - 1);
+    std::string newNumberAccessedString = numberAccessedString.substr(1, numberAccessedString.size() - 1);
+    std::string monthString = dateString.substr(1, 2);
+    std::string dayString = dateString.substr(4, 2);
+    std::string yearString = dateString.substr(7, 4);
     std::stringstream convertDayStringToInt(dayString);
     std::stringstream convertMonthStringToInt(monthString);
     std::stringstream convertYearStringToInt(yearString);
@@ -91,24 +88,17 @@ void Service::deleteFootage(const std::string& title) {
     }
 }
 
-int Service::getSize() const {
-    return repository.getSize();
-}
-
 void Service::updateFootage(const std::string &title, const std::string &type, const std::string &dateString,
                             const std::string &numberAccessedString, const std::string &link) {
     if (dateString.size() != SIZE_OF_DATE + 1) {
         throw std::exception();
     }
-    std::string newTitle = title;
-    newTitle.pop_back();
-    std::string newType = type;
-    newType.pop_back();
-    std::string newNumberAccessedString = numberAccessedString;
-    newNumberAccessedString.pop_back();
-    std::string dayString = dateString.substr(0, 2);
-    std::string monthString = dateString.substr(3, 2);
-    std::string yearString = dateString.substr(6, 4);
+    const std::string& newTitle = title;
+    std::string newType = type.substr(1, type.size() - 1);
+    std::string newNumberAccessedString = numberAccessedString.substr(1, numberAccessedString.size() - 1);
+    std::string monthString = dateString.substr(1, 2);
+    std::string dayString = dateString.substr(4, 2);
+    std::string yearString = dateString.substr(7, 4);
     std::stringstream convertDayStringToInt(dayString);
     std::stringstream convertMonthStringToInt(monthString);
     std::stringstream convertYearStringToInt(yearString);
@@ -148,23 +138,4 @@ Service::Service() {
     this->repository = Repository();
 }
 
-void testFoo() {
-    auto repo = Repository();
-    auto service = Service(repo);
-    try {
-        service.addFootage("fdasf,", "fdas,", "fdasf,", "fdafds,", "fdaaf");
-        assert(false);
-    }catch(std::exception& e){
-        assert(true);
-    }
-    service.addFootage("F1234,", "Restaurant, ", "12-07-2019,", "13,", "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    assert(service.getSize() == 1);
-    service.deleteFootage("F1234");
-    assert(service.getSize() == 0);
-    try {
-        service.deleteFootage("bla");
-        assert(false);
-    }catch (std::exception & e) {
-        assert(true);
-    }
-}
+

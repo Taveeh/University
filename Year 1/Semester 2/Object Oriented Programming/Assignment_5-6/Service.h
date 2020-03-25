@@ -18,9 +18,7 @@ public:
     void addFootage(const std::string &title, const std::string &type, const std::string &dateString, const std::string &numberAccessedString, const std::string &link);
     void deleteFootage(const std::string& title);
     void updateFootage(const std::string &title, const std::string &type, const std::string &dateString, const std::string &numberAccessedString, const std::string &link);
-    [[nodiscard]] int getSize() const;
     DynamicArray<Footage> getAllElements();
 };
-void testFoo();
 
 #endif //ASSIGNMENT_5_6_SERVICE_H

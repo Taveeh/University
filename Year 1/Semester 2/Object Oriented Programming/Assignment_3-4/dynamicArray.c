@@ -5,7 +5,7 @@
 #include "dynamicArray.h"
 #include <stdlib.h>
 
-DynamicArray *createDynamicArray(int capacity) {
+DynamicArray *createDynamicArray(int capacity, DestroyElementFunctionType destroyElementFunction) {
     DynamicArray* dynamicArray = (DynamicArray*)malloc(sizeof(DynamicArray));
     if (dynamicArray == NULL) {
         return NULL;
@@ -16,6 +16,7 @@ DynamicArray *createDynamicArray(int capacity) {
     if (dynamicArray->dynamicArrayElements == NULL) {
         return NULL;
     }
+    dynamicArray->destroyElementFunction = destroyElementFunction;
     return dynamicArray;
 }
 
@@ -26,7 +27,7 @@ void destroyDynamicArray(DynamicArray *dynamicArray) {
     for (int dynamicArrayElementIndex = 0;
          dynamicArrayElementIndex < dynamicArray->numberOfElements; ++dynamicArrayElementIndex) {
         if (dynamicArray->dynamicArrayElements[dynamicArrayElementIndex] != NULL) {
-            destroyMap(dynamicArray->dynamicArrayElements[dynamicArrayElementIndex]);
+            dynamicArray->destroyElementFunction(dynamicArray->dynamicArrayElements[dynamicArrayElementIndex]);
         }
     }
     free(dynamicArray->dynamicArrayElements);
@@ -94,4 +95,16 @@ int insertElementToPosition(DynamicArray *dynamicArray, int position, TypeOfElem
     dynamicArray->dynamicArrayElements[position] = elementToBeAdded;
     dynamicArray->numberOfElements++;
     return 1;
+}
+
+DynamicArray *copyDynamicArray(DynamicArray *dynamicArray) {
+    DynamicArray *result = (DynamicArray*)malloc(sizeof(DynamicArray));
+    result->capacityOfDynamicArray = dynamicArray->capacityOfDynamicArray;
+    result->numberOfElements = dynamicArray->numberOfElements;
+    result->dynamicArrayElements = (TypeOfElement*)malloc(result->capacityOfDynamicArray * sizeof(TypeOfElement));
+    for (int i = 0; i < dynamicArray->numberOfElements; ++i) {
+        result->dynamicArrayElements[i] = dynamicArray->dynamicArrayElements[i];
+    }
+    result->destroyElementFunction = dynamicArray->destroyElementFunction;
+    return result;
 }

@@ -14,7 +14,7 @@ class UI:
         print('3. Check if there is an edge between 2 vertices')
         print('4. In degree of a vertex')
         print('5. Out degree of a vertex')
-        print('6. The outbound edges of a vertex')
+        print('6. The outboun®d edges of a vertex')
         print('7. The inbound edges of a vertex')
         print('8. Get the cost of an edge')
         print('9. Modify the cost of an edge')
@@ -22,8 +22,7 @@ class UI:
         print('11. Remove edge')
         print('12. Add vertex')
         print('13. Remove vertex')
-        print('14. Copy graph and save it to file')
-        print('15. Save graph')
+        print('14. Save graph to file')
         print('0. Exit')
 
     def nrVert(self):
@@ -65,7 +64,7 @@ class UI:
     def edgeCost(self):
         x = int(input('Vertex 1: '))
         y = int(input('Vertex 2: '))
-        print(self._graph.getCost())
+        print(self._graph.getCost(x, y))
 
     def changeEdge(self):
         x = int(input('Vertex 1: '))
@@ -140,6 +139,7 @@ def generateGraph():
         if G.isEdge(tpl[0], tpl[1]):
             continue
         G.addEdge(tpl[0], tpl[1], tpl[2])
+
         i -= -1
     return G
 

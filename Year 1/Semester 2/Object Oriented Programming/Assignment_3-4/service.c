@@ -6,10 +6,17 @@
 #include "repository.h"
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int addMapService(Service *service,int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage) {
     Map* map = createMap(mapCatalogueNumber, stateOfDeterioration, mapType, yearsOfStorage);
+//    addUndo(service->undoRedo, map);
+//    if (getFlag(service->undoRedo)) {
+//        clearRedo(service->undoRedo);
+//    }
+    addUndoNew(service->undoRedo, copyDynamicArray(getRepositoryElements(service->repository)));
     if (addMapToRepository(service->repository, map) == 0) {
+        undoFunction(service->undoRedo);
         destroyMap(map);
         return 0;
     }
@@ -19,24 +26,45 @@ int addMapService(Service *service,int mapCatalogueNumber, char *stateOfDeterior
 Service* createService(Repository *repository) {
     Service* result = (Service*)malloc(sizeof(Service));
     result->repository = repository;
+//    result->undoRedo = createUndoRedo();
+    result->undoRedo = createUndoRedoNew();
     return result;
+
 }
 
 int removeMapService(Service *service, char *mapCatalogueNumberString) {
     int mapCatalogueNumber = atoi(mapCatalogueNumberString);
+//    deleteUndo(service->undoRedo, createMap(mapCatalogueNumber, "", "", 0));
+//    if (getFlag(service->undoRedo)) {
+//        clearRedo(service->undoRedo);
+//    }
+    addUndoNew(service->undoRedo, copyDynamicArray(getRepositoryElements(service->repository)));
     if (deleteMapFromRepository(service->repository, mapCatalogueNumber)== 0) {
         return 0;
     }
+//    DynamicArray* listOfAllMaps = createDynamicArray(INITIAL_CAPACITY, &destroyMap);
+//    listAllMaps(service, listOfAllMaps);
+//    addUndoNew(service->undoRedo, listOfAllMaps);
+
     return 1;
 }
 
 int updateMapService(Service *service, int mapCatalogueNumber, char *stateOfDeterioration, char *mapType,
                      int yearsOfStorage) {
     Map *map = createMap(mapCatalogueNumber, stateOfDeterioration, mapType, yearsOfStorage);
+//    updateUndo(service->undoRedo, map);
+//    if (getFlag(service->undoRedo)) {
+//        clearRedo(service->undoRedo);
+//    }
+    addUndoNew(service->undoRedo, copyDynamicArray(getRepositoryElements(service->repository)));
     if (updateMapFromRepository(service->repository, map) == 0) {
         destroyMap(map);
         return 0;
     }
+//    DynamicArray* listOfAllMaps = createDynamicArray(INITIAL_CAPACITY, &destroyMap);
+//    listAllMaps(service, listOfAllMaps);
+//    addUndoNew(service->undoRedo, listOfAllMaps);
+
     return 1;
 }
 
@@ -45,6 +73,8 @@ void destroyService(Service *service) {
         return;
     }
     destroyRepository(service->repository);
+//    destroyUndoRedo(service->undoRedo);
+    destroyNewUndoRedo(service->undoRedo);
     free(service);
 }
 
@@ -75,30 +105,69 @@ void sortMapsLowerThanAge(Service *service, int ageLimit, DynamicArray *sortedLi
     }
     for (int mapIndex = 0; mapIndex < getRepositoryLength(service->repository); ++mapIndex) {
         TypeOfElement currentElement = getElementOnPositionRepository(service->repository, mapIndex);
-        if (currentElement->yearsOfStorage < ageLimit) {
+        if (((Map*)currentElement)->yearsOfStorage < ageLimit) {
             TypeOfElement auxiliary = createMap(getCatalogueNumber(currentElement),
                                                 getStateOfDeterioration(currentElement), getMapType(currentElement),
                                                 getYearsOfStorage(currentElement));
             if (getLengthOfDynamicArray(sortedListOfMaps) == 0) {
                 addElementToDynamicArray(sortedListOfMaps, auxiliary);
             } else {
-                    int positionToInsert = getLengthOfDynamicArray(sortedListOfMaps) ;
-                    while (positionToInsert >= 1 && reverse(currentElement, getElementOnPosition(sortedListOfMaps, positionToInsert - 1)) == 1) {
-                        positionToInsert--;
-                    }
-                    insertElementToPosition(sortedListOfMaps, positionToInsert, auxiliary);
+                int positionToInsert = getLengthOfDynamicArray(sortedListOfMaps) ;
+                while (positionToInsert >= 1 && reverse(currentElement, getElementOnPosition(sortedListOfMaps, positionToInsert - 1)) == 1) {
+                    positionToInsert--;
                 }
+                insertElementToPosition(sortedListOfMaps, positionToInsert, auxiliary);
             }
         }
     }
-
-void undoLastOperation(Service *service) {
-    undoRepository(service->repository);
 }
 
-void redoLastOperation(Service *service) {
-    redoRepository(service->repository);
+char* integerToChar(int numberToBeConverted, char* stringConverted) {
+    sprintf(stringConverted, "%d", numberToBeConverted);
+    return stringConverted;
 }
 
+//void undoLastOperation(Service* service) {
+//    changeFlag(service->undoRedo, 1);
+//    Operation* lastOperation = getLastUndo(service->undoRedo);
+//    if (strcmp(getOperationType(lastOperation), "delete") == 0) {
+//        addRedo(service->undoRedo, getMapFromOperation(lastOperation));
+//        char stringToConvert[20];
+//        removeMapService(service, integerToChar(getMapFromOperation(lastOperation)->mapCatalogueNumber, stringToConvert));
+//    }else if (strcmp(getOperationType(lastOperation), "update") == 0) {
+//        updateMapService(service, getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation)));
+//    }else if (strcmp(getOperationType(lastOperation), "add") == 0) {
+//        deleteRedo(service->undoRedo, getMapFromOperation(lastOperation));
+//        addMapService(service, getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation)));
+//    }
+//    changeFlag(service->undoRedo, 0);
+//}
+//
+//void redoLastOperation(Service* service) {
+//    changeFlag(service->undoRedo, 1);
+//    Operation* lastOperation = getLastRedo(service->undoRedo);
+//    if (strcmp(getOperationType(lastOperation), "delete") == 0) {
+//        deleteUndo(service->undoRedo, getMapFromOperation(lastOperation));
+//        char stringToConvert[20];
+//        removeMapService(service, integerToChar(getMapFromOperation(lastOperation)->mapCatalogueNumber, stringToConvert));
+//    }else if (strcmp(getOperationType(lastOperation), "update") == 0){
+//        updateMapService(service, getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation)));
+//    }else if (strcmp(getOperationType(lastOperation), "add") == 0) {
+//        addUndo(service->undoRedo, getMapFromOperation(lastOperation));
+//        addMapService(service, getCatalogueNumber(getMapFromOperation(lastOperation)), getStateOfDeterioration(getMapFromOperation(lastOperation)), getMapType(getMapFromOperation(lastOperation)), getYearsOfStorage(getMapFromOperation(lastOperation)));
+//    }
+//    changeFlag(service->undoRedo, 0);
+//}
+
+void undoLastOperationNew(Service* service) {
+    if (firstCall(service->undoRedo)) {
+        addUndoNew(service->undoRedo, copyDynamicArray(getRepositoryElements(service->repository)));
+    }
+    setNewArray(service->repository, undoFunction(service->undoRedo));
+}
+
+void redoLastOperationNew(Service *service) {
+    setNewArray(service->repository, redoFunction(service->undoRedo));
+}
 
 

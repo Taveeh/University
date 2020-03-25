@@ -7,12 +7,14 @@
 #include "domain.h"
 #define FIRST_CAPACITY 5
 
-typedef Map* TypeOfElement;
+typedef void* TypeOfElement;
+typedef void (*DestroyElementFunctionType)(void*);
 
 typedef struct {
     TypeOfElement* dynamicArrayElements;
     int numberOfElements;
     int capacityOfDynamicArray;
+    DestroyElementFunctionType destroyElementFunction;
 } DynamicArray;
 
 /*
@@ -29,13 +31,14 @@ int deleteElementFromPosition(DynamicArray *dynamicArray, int position);
 /*
  * Constructor
  */
-DynamicArray* createDynamicArray(int capacity);
+DynamicArray* createDynamicArray(int capacity, DestroyElementFunctionType destroyElementFunction);
 
 /*
  * Destructor
  */
 void destroyDynamicArray(DynamicArray* dynamicArray);
 
+DynamicArray *copyDynamicArray(DynamicArray* dynamicArray);
 /*
  * Resize dynamic array
  * Input:
@@ -88,3 +91,4 @@ TypeOfElement getElementOnPosition(DynamicArray* dynamicArray, int position);
  * 0 - otherwise
  */
 int insertElementToPosition(DynamicArray* dynamicArray, int position, TypeOfElement elementToBeAdded);
+

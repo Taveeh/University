@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Assignment_5_6.dir/Footage.cpp.o"
   "CMakeFiles/Assignment_5_6.dir/Repository.cpp.o"
   "CMakeFiles/Assignment_5_6.dir/Service.cpp.o"
+  "CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o"
+  "CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o"
+  "CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o"
+  "CMakeFiles/Assignment_5_6.dir/TestService.cpp.o"
   "CMakeFiles/Assignment_5_6.dir/UI.cpp.o"
   "CMakeFiles/Assignment_5_6.dir/main.cpp.o"
 )

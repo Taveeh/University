@@ -19,6 +19,28 @@ CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Repository.h
 CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Service.cpp
 CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Service.h
 
+CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o: ../DynamicArray.h
+CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o: ../Footage.h
+CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o: ../TestDynamicArray.cpp
+CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o: ../TestDynamicArray.h
+
+CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o: ../Footage.h
+CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o: ../TestFootage.cpp
+CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o: ../TestFootage.h
+
+CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: ../DynamicArray.h
+CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: ../Footage.h
+CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: ../Repository.h
+CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: ../TestRepository.cpp
+CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: ../TestRepository.h
+
+CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../DynamicArray.h
+CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../Footage.h
+CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../Repository.h
+CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../Service.h
+CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../TestService.cpp
+CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../TestService.h
+
 CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../DynamicArray.h
 CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../Footage.h
 CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../Repository.h
@@ -30,6 +52,10 @@ CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../DynamicArray.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../Footage.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../Repository.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../Service.h
+CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../TestDynamicArray.h
+CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../TestFootage.h
+CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../TestRepository.h
+CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../TestService.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../UI.h
 CMakeFiles/Assignment_5_6.dir/main.cpp.o: ../main.cpp
 

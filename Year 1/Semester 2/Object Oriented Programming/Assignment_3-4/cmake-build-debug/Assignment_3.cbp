@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug"/>
+				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug"/>
+				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug"/>
+				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Assignment_3">
-				<Option output="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/Assignment_3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug"/>
+				<Option output="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug/Assignment_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment_3"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment_3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Assignment_3/fast">
-				<Option output="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug/Assignment_3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/cmake-build-debug"/>
+				<Option output="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug/Assignment_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,89 +71,95 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment_3/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment\ 3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment_3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/taveeh/Desktop/University/Year\ 1/Semester\ 2/Object\ Oriented\ Programming/Assignment_3-4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/UI.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/UI.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/UI.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/UI.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/domain.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/domain.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/domain.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/domain.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/dynamicArray.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/dynamicArray.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/dynamicArray.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/functionForFilterAndSort.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/functionForFilterAndSort.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/functionForFilterAndSort.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/main.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/main.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/repository.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/newUndoRedo.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/repository.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/newUndoRedo.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/service.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/repository.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/service.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/repository.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/service.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDomain.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/service.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testDomain.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testDynamicArray.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testDomain.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testDynamicArray.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testRepository.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testDynamicArray.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testRepository.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/testService.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testRepository.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testService.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/tests.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/testService.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.c">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/tests.c">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/undoRedo.h">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/tests.h">
 			<Option target="Assignment_3"/>
 		</Unit>
-		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment 3/CMakeLists.txt">
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/undoRedo.c">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/undoRedo.h">
+			<Option target="Assignment_3"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_3-4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

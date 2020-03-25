@@ -11,6 +11,8 @@ Graph.h
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Graphs/Assignment 1/Second Implementation/Graph.h
 exception
 -
+iostream
+-
 
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Graphs/Assignment 1/Second Implementation/Graph.h
 map
@@ -20,15 +22,5 @@ utility
 vector
 -
 string
--
-
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Graphs/Assignment 1/Second Implementation/main.cpp
-iostream
--
-Graph.h
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Graphs/Assignment 1/Second Implementation/Graph.h
-fstream
--
-exception
 -
 

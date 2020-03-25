@@ -5,9 +5,11 @@
 
 #include "repository.h"
 #include "undoRedo.h"
+#include "newUndoRedo.h"
 
 typedef struct {
     Repository* repository;
+    UndoRedoNew * undoRedo;
 } Service;
 
 /*
@@ -100,3 +102,7 @@ void undoLastOperation(Service* service);
  * Service*
  */
 void redoLastOperation(Service* service);
+
+void undoLastOperationNew(Service* service);
+
+void redoLastOperationNew(Service* service);

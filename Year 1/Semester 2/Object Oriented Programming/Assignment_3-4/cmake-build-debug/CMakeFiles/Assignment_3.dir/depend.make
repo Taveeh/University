@@ -6,6 +6,7 @@ CMakeFiles/Assignment_3.dir/UI.c.o: ../UI.h
 CMakeFiles/Assignment_3.dir/UI.c.o: ../domain.h
 CMakeFiles/Assignment_3.dir/UI.c.o: ../dynamicArray.h
 CMakeFiles/Assignment_3.dir/UI.c.o: ../functionForFilterAndSort.h
+CMakeFiles/Assignment_3.dir/UI.c.o: ../newUndoRedo.h
 CMakeFiles/Assignment_3.dir/UI.c.o: ../repository.h
 CMakeFiles/Assignment_3.dir/UI.c.o: ../service.h
 CMakeFiles/Assignment_3.dir/UI.c.o: ../undoRedo.h
@@ -25,6 +26,7 @@ CMakeFiles/Assignment_3.dir/main.c.o: ../UI.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../domain.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../dynamicArray.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../main.c
+CMakeFiles/Assignment_3.dir/main.c.o: ../newUndoRedo.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../repository.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../service.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../testDomain.h
@@ -34,6 +36,11 @@ CMakeFiles/Assignment_3.dir/main.c.o: ../testService.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../tests.h
 CMakeFiles/Assignment_3.dir/main.c.o: ../undoRedo.h
 
+CMakeFiles/Assignment_3.dir/newUndoRedo.c.o: ../domain.h
+CMakeFiles/Assignment_3.dir/newUndoRedo.c.o: ../dynamicArray.h
+CMakeFiles/Assignment_3.dir/newUndoRedo.c.o: ../newUndoRedo.c
+CMakeFiles/Assignment_3.dir/newUndoRedo.c.o: ../newUndoRedo.h
+
 CMakeFiles/Assignment_3.dir/repository.c.o: ../domain.h
 CMakeFiles/Assignment_3.dir/repository.c.o: ../dynamicArray.h
 CMakeFiles/Assignment_3.dir/repository.c.o: ../repository.c
@@ -42,6 +49,7 @@ CMakeFiles/Assignment_3.dir/repository.c.o: ../undoRedo.h
 
 CMakeFiles/Assignment_3.dir/service.c.o: ../domain.h
 CMakeFiles/Assignment_3.dir/service.c.o: ../dynamicArray.h
+CMakeFiles/Assignment_3.dir/service.c.o: ../newUndoRedo.h
 CMakeFiles/Assignment_3.dir/service.c.o: ../repository.h
 CMakeFiles/Assignment_3.dir/service.c.o: ../service.c
 CMakeFiles/Assignment_3.dir/service.c.o: ../service.h
@@ -66,6 +74,7 @@ CMakeFiles/Assignment_3.dir/testRepository.c.o: ../undoRedo.h
 CMakeFiles/Assignment_3.dir/testService.c.o: ../domain.h
 CMakeFiles/Assignment_3.dir/testService.c.o: ../dynamicArray.h
 CMakeFiles/Assignment_3.dir/testService.c.o: ../functionForFilterAndSort.h
+CMakeFiles/Assignment_3.dir/testService.c.o: ../newUndoRedo.h
 CMakeFiles/Assignment_3.dir/testService.c.o: ../repository.h
 CMakeFiles/Assignment_3.dir/testService.c.o: ../service.h
 CMakeFiles/Assignment_3.dir/testService.c.o: ../testService.c
@@ -74,6 +83,7 @@ CMakeFiles/Assignment_3.dir/testService.c.o: ../undoRedo.h
 
 CMakeFiles/Assignment_3.dir/tests.c.o: ../domain.h
 CMakeFiles/Assignment_3.dir/tests.c.o: ../dynamicArray.h
+CMakeFiles/Assignment_3.dir/tests.c.o: ../newUndoRedo.h
 CMakeFiles/Assignment_3.dir/tests.c.o: ../repository.h
 CMakeFiles/Assignment_3.dir/tests.c.o: ../service.h
 CMakeFiles/Assignment_3.dir/tests.c.o: ../testDomain.h

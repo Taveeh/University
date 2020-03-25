@@ -15,9 +15,9 @@ void testAllRepository() {
     test_updateMapFromRepository_ValidID_MapUpdated();
     test_deleteMapFromRepository_InvalidID_MapNotRemoved();
     test_deleteMapFromRepository_ValidID_MapRemoved();
-    test_undoAdd_MapAdded_MapRemoved();
-    test_undoRemove_MapRemoved_MapAdded();
-    test_undoUpdate_MapChanged_MapBack();
+//    test_undoAdd_MapAdded_MapRemoved();
+//    test_undoRemove_MapRemoved_MapAdded();
+//    test_undoUpdate_MapChanged_MapBack();
 }
 
 void test_searchMapInRepositoryByID_InvalidID_MinusOne() {
@@ -83,38 +83,38 @@ void test_deleteMapFromRepository_InvalidID_MapNotRemoved() {
     deleteMapFromRepository(repository, 123);
     destroyRepository(repository);
 }
-
-void test_undoAdd_MapAdded_MapRemoved() {
-    Repository* repository = createRepository();
-    Map *map = createMap(123, "abc", "def", 456);
-    addMapToRepository(repository, map);
-    undoRepository(repository);
-    assert(getRepositoryLength(repository) == 0);
-    destroyRepository(repository);
-
-}
-
-void test_undoRemove_MapRemoved_MapAdded() {
-    Repository* repository = createRepository();
-    Map *map = createMap(123, "abc", "def", 456);
-    addMapToRepository(repository, map);
-    deleteMapFromRepository(repository, 123);
-    undoRepository(repository);
-    assert(getRepositoryLength(repository) == 1);
-    destroyRepository(repository);
-}
-
-void test_undoUpdate_MapChanged_MapBack() {
-    Repository* repository = createRepository();
-    Map *map = createMap(123, "abc", "def", 456);
-    addMapToRepository(repository, map);
-    Map *map2 = createMap(123, "bcd", "efg", 5436);
-    updateMapFromRepository(repository, map2);
-    undoRepository(repository);
-    assert(getRepositoryLength(repository) == 1);
-    assert(getYearsOfStorage(getElementOnPosition(repository->listOfMaps, 0)) == 456);
-    destroyRepository(repository);
-}
+//
+//void test_undoAdd_MapAdded_MapRemoved() {
+//    Repository* repository = createRepository();
+//    Map *map = createMap(123, "abc", "def", 456);
+//    addMapToRepository(repository, map);
+//    undoRepository(repository);
+//    assert(getRepositoryLength(repository) == 0);
+//    destroyRepository(repository);
+//
+//}
+//
+//void test_undoRemove_MapRemoved_MapAdded() {
+//    Repository* repository = createRepository();
+//    Map *map = createMap(123, "abc", "def", 456);
+//    addMapToRepository(repository, map);
+//    deleteMapFromRepository(repository, 123);
+//    undoRepository(repository);
+//    assert(getRepositoryLength(repository) == 1);
+//    destroyRepository(repository);
+//}
+//
+//void test_undoUpdate_MapChanged_MapBack() {
+//    Repository* repository = createRepository();
+//    Map *map = createMap(123, "abc", "def", 456);
+//    addMapToRepository(repository, map);
+//    Map *map2 = createMap(123, "bcd", "efg", 5436);
+//    updateMapFromRepository(repository, map2);
+//    undoRepository(repository);
+//    assert(getRepositoryLength(repository) == 1);
+//    assert(getYearsOfStorage(getElementOnPosition(repository->listOfMaps, 0)) == 456);
+//    destroyRepository(repository);
+//}
 
 
 

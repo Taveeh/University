@@ -68,7 +68,7 @@ void test_listAllMaps_AnyInput_GetDynamicArrayOfMaps() {
     Repository* repository = createRepository();
     Service* service = createService(repository);
     assert(addMapService(service, 123, "abc", "def", 456) == 1);
-    DynamicArray *testArray = createDynamicArray(2);
+    DynamicArray* testArray = createDynamicArray(2, &destroyMap);
     listAllMaps(service, testArray);
     assert(getLengthOfDynamicArray(testArray) == 1);
     destroyService(service);
@@ -80,7 +80,7 @@ void test_listAllMapsByType_ValidInput_GetFilteredList() {
     Service* service = createService(repository);
     assert(addMapService(service, 123, "abc", "def", 456) == 1);
     assert(addMapService(service, 124, "dasf", "Sdsa", 1243) == 1);
-    DynamicArray *testArray = createDynamicArray(2);
+    DynamicArray* testArray = createDynamicArray(2, &destroyMap);
     listAllMapsByType(service, "def", testArray, &selectIfSameMapType);
     assert(getLengthOfDynamicArray(testArray) == 1);
     destroyService(service);
@@ -92,7 +92,7 @@ void test_listAllMapsByType_InvalidInput_DoNotFilter() {
     Service* service = createService(repository);
     assert(addMapService(service, 123, "abc", "def", 456) == 1);
     assert(addMapService(service, 124, "dasf", "Sdsa", 1243) == 1);
-    DynamicArray *testArray = createDynamicArray(2);
+    DynamicArray* testArray = createDynamicArray(2, &destroyMap);
     char* mapTypeTest = NULL;
     listAllMapsByType(service, mapTypeTest, testArray, &selectIfSameMapType);
     assert(getLengthOfDynamicArray(testArray) == 0);

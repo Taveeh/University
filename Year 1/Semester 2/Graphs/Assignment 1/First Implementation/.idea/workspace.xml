@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="911cf3be-7df9-49d8-9f0d-06cf8886d8e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestDynamicArray.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestDynamicArray.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestFootage.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestFootage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestRepository.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestRepository.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestService.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/TestService.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph1m.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Second_Implementation.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Second_Implementation.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Second_Implementation.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Second_Implementation.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Second_Implementation.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/Second_Implementation.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/Second_Implementation" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/cmake-build-debug/Second_Implementation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Second Implementation/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Second Implementation/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/DynamicArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/DynamicArray.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Footage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Footage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Footage.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Footage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Repository.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Repository.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Repository.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Repository.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Service.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Service.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Service.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/Service.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/UI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/UI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/Assignment_5_6" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/Assignment_5_6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/Assignment_5_6.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/Assignment_5_6.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Footage.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Repository.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Service.cpp.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Service.cpp.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Service.cpp.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Service.cpp.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Service.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/Service.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/main.cpp.gcda" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/main.cpp.gcda" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/main.cpp.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/main.cpp.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Progress/6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/08a6757e-a8a0-44ae-9e80-6ba0a3116db5#Footage.cpp.gcda##__string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/1e081f71-ec67-4873-9585-cd34dc8d29ef#Service.cpp.gcda##algorithm.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/2a4c6c71-7b4d-43b6-9971-4fa04708869a#Service.cpp.gcda##Footage.h.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/2a5a6cc5-5c0e-4348-b11a-da29e3420ed0#DynamicArray.cpp.gcda##exception.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/2ac75a0f-cb0e-4fb8-a3a2-9dcd4e820a3a#Service.cpp.gcda##type_traits.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/2db30f22-522a-43f8-9583-34290c2deb4c#Repository.cpp.gcda##Repository.cpp.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/2f17825d-acd9-4d33-b12b-1da70a727586#Service.cpp.gcda##string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/34a8cdf2-0e1b-42b9-8e3c-43ef399f69e4#Service.cpp.gcda##streambuf.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/3f73440a-2048-43da-bb35-5f22891cab17#main.cpp.gcda##__locale.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/42d0c792-859a-424e-9c61-98472ae82319#Service.cpp.gcda##__string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/466e1ea7-0269-487b-b564-26aaa8920769#Repository.cpp.gcda##type_traits.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/48fdcad9-18b1-4b8b-91e6-3d2766da4f18#Footage.cpp.gcda##string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/50f55db4-4e8b-479c-9924-c28c38ffddc9#DynamicArray.cpp.gcda##Footage.h.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/572098e6-9fb2-4719-864f-6c9250f0a26d#main.cpp.gcda##streambuf.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/5d0803fa-d06c-41d8-a254-ab2dd3a56b69#Service.cpp.gcda##ostream.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/5ff84786-f3c0-4307-a07b-b2fb7548bb2a#Footage.cpp.gcda##Footage.cpp.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/60a9bb48-fed1-4738-8759-d6f0e1cd07be#Footage.cpp.gcda##type_traits.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/6a1eff9b-408d-4115-9f33-e9cc37432a66#Service.cpp.gcda##ios.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/72c01d45-70d5-47ff-8b2c-b0f844129363#Service.cpp.gcda##Repository.h.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/74dc54b8-3572-41ac-a13b-ab66be7803c0#main.cpp.gcda##ostream.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/83d7d752-565d-40ec-adc6-81d300c0e202#Service.cpp.gcda##Service.cpp.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/86b6740c-e407-4581-bb6c-9afeba1261b9#DynamicArray.cpp.gcda##DynamicArray.cpp.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/8b1da57c-7fe4-4ece-a346-2ba4fff56a40#Service.cpp.gcda##memory.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/8cea37c7-b521-4572-96f0-379118942b82#Repository.cpp.gcda##__string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/953ddaf7-cbfc-4a78-89f4-a7d0ede5a7da#Service.cpp.gcda##exception.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/99a3d8b4-9b84-43a2-b209-ed681a9416df#Repository.cpp.gcda##Footage.h.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/a0543ed1-770b-4713-959b-a3195fa05257#Repository.cpp.gcda##string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/a178c7d3-7c0b-4dca-b97a-2b69bdbf9e3e#Repository.cpp.gcda##exception.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/a58fca7d-ec23-4613-810b-1a4b4b34fa40#main.cpp.gcda##locale.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/a7babbdd-c15e-4e29-bf24-67d4db9b6786#Service.cpp.gcda##istream.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/a9b95503-f25f-4319-8310-ec5e6ab63332#main.cpp.gcda##ios.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/aaec0ea1-98dd-47b6-8210-9ca57db45714#Service.cpp.gcda##Service.h.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/aafc5df9-b34a-441c-9eca-7483da689d29#main.cpp.gcda##__string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/b76c6f25-0b22-4a48-ac1f-e8dd19416eef#main.cpp.gcda##main.cpp.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/b8a09fb6-e894-43c1-bfd5-f9c63948ea5a#Repository.cpp.gcda##memory.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/bbb8e379-02dd-4feb-8fc2-3c1c3645b667#Footage.cpp.gcda##new.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/c1130f65-0e97-4a34-9948-2446334e1613#main.cpp.gcda##iterator.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/c2f62039-6e67-4160-8fbc-cdbb1b86b697#main.cpp.gcda##type_traits.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/ca2e8752-f211-4901-902e-f893c6cc044f#Service.cpp.gcda##sstream.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/d79923ff-929f-45bf-a65d-ac248c55fd32#Footage.cpp.gcda##memory.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/e274f171-8cb0-4790-b88c-4f651363065b#main.cpp.gcda##memory.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/ea51fa00-01b0-4177-ac25-9b34a50ec953#Service.cpp.gcda##iosfwd.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/cmake-build-debug/coverage/f59f2664-c2c3-4d62-b0e1-f55e822e794e#main.cpp.gcda##string.gcov" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Object Oriented Programming/Assignment_5-6/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1ZafgaRTq07l3eI5rI7sGGSex4o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="911cf3be-7df9-49d8-9f0d-06cf8886d8e2" name="Default Changelist" comment="" />
+      <created>1585082238463</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585082238463</updated>
+      <workItem from="1585082243894" duration="39000" />
+    </task>
+    <servers />
+  </component>
+</project>
