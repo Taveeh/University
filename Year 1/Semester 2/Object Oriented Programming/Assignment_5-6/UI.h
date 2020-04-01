@@ -20,6 +20,18 @@ private:
 
     void runProgramAdministrator();
 
+    void changeMode(const std::string& commandParameters);
+
+    void runProgramFieldAgent();
+
+    void nextElement(const std::string& commandParameters);
+
+    void saveTitle(const std::string& commandParameters);
+
+    void listProperty(const std::string& commandParameters);
+
+    void myList(const std::string& commandParameters);
+
 public:
     explicit UI(Service& service);
 

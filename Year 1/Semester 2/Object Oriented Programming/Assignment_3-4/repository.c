@@ -17,8 +17,6 @@ int searchMapInRepositoryByID(Repository *repository, int mapCatalogueNumber) {
     return -1;
 }
 
-
-
 int addMapToRepository(Repository *repository, Map *map) {
     int indexMap = searchMapInRepositoryByID(repository, getCatalogueNumber(map));
     if (indexMap != -1) {
@@ -66,7 +64,7 @@ Repository* createRepository() {
     if (result == NULL) {
         return NULL;
     }
-    result->listOfMaps = createDynamicArray(FIRST_CAPACITY, &destroyMap);
+    result->listOfMaps = createDynamicArray(FIRST_CAPACITY, &destroyMap, &copyMap);
     return result;
 }
 
@@ -84,7 +82,8 @@ int getRepositoryLength(Repository *repository) {
 }
 
 void setNewArray(Repository *repository, DynamicArray *dynamicArray) {
-    repository->listOfMaps = dynamicArray;
+    repository->listOfMaps = copyDynamicArray(dynamicArray);
+//    repository->listOfMaps = dynamicArray;
 }
 
 DynamicArray *getRepositoryElements(Repository *repository) {

@@ -70,22 +70,9 @@ CMakeFiles/Assignment_5_6.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_5_6.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/main.cpp" -o CMakeFiles/Assignment_5_6.dir/main.cpp.s
 
-CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
-CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o: ../DynamicArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/DynamicArray.cpp"
-
-CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/DynamicArray.cpp" > CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.i
-
-CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/DynamicArray.cpp" -o CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.s
-
 CMakeFiles/Assignment_5_6.dir/Footage.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/Footage.cpp.o: ../Footage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Assignment_5_6.dir/Footage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment_5_6.dir/Footage.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/Footage.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Footage.cpp"
 
 CMakeFiles/Assignment_5_6.dir/Footage.cpp.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/Assignment_5_6.dir/Footage.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/Repository.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/Repository.cpp.o: ../Repository.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Assignment_5_6.dir/Repository.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Assignment_5_6.dir/Repository.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/Repository.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Repository.cpp"
 
 CMakeFiles/Assignment_5_6.dir/Repository.cpp.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/Assignment_5_6.dir/Repository.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/Service.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/Service.cpp.o: ../Service.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Assignment_5_6.dir/Service.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Assignment_5_6.dir/Service.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/Service.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Service.cpp"
 
 CMakeFiles/Assignment_5_6.dir/Service.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/Assignment_5_6.dir/Service.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/UI.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/UI.cpp.o: ../UI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Assignment_5_6.dir/UI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Assignment_5_6.dir/UI.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/UI.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/UI.cpp"
 
 CMakeFiles/Assignment_5_6.dir/UI.cpp.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/Assignment_5_6.dir/UI.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o: ../TestFootage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestFootage.cpp"
 
 CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/Assignment_5_6.dir/TestFootage.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o: ../TestDynamicArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestDynamicArray.cpp"
 
 CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o: ../TestRepository.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestRepository.cpp"
 
 CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.i: cmake_force
@@ -176,7 +163,7 @@ CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.s: cmake_force
 
 CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: CMakeFiles/Assignment_5_6.dir/flags.make
 CMakeFiles/Assignment_5_6.dir/TestService.cpp.o: ../TestService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Assignment_5_6.dir/TestService.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_5_6.dir/TestService.cpp.o -c "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestService.cpp"
 
 CMakeFiles/Assignment_5_6.dir/TestService.cpp.i: cmake_force
@@ -190,7 +177,6 @@ CMakeFiles/Assignment_5_6.dir/TestService.cpp.s: cmake_force
 # Object files for target Assignment_5_6
 Assignment_5_6_OBJECTS = \
 "CMakeFiles/Assignment_5_6.dir/main.cpp.o" \
-"CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o" \
 "CMakeFiles/Assignment_5_6.dir/Footage.cpp.o" \
 "CMakeFiles/Assignment_5_6.dir/Repository.cpp.o" \
 "CMakeFiles/Assignment_5_6.dir/Service.cpp.o" \
@@ -204,7 +190,6 @@ Assignment_5_6_OBJECTS = \
 Assignment_5_6_EXTERNAL_OBJECTS =
 
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/main.cpp.o
-Assignment_5_6: CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/Footage.cpp.o
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/Repository.cpp.o
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/Service.cpp.o
@@ -215,7 +200,7 @@ Assignment_5_6: CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.o
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/TestService.cpp.o
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/build.make
 Assignment_5_6: CMakeFiles/Assignment_5_6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Assignment_5_6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Assignment_5_6"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assignment_5_6.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

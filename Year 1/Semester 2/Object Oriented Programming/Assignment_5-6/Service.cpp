@@ -11,6 +11,7 @@
 
 Service::Service(Repository &newRepository) {
     repository = newRepository;
+    myListRepository = Repository();
 }
 
 void Service::addFootage(const std::string &title, const std::string &type,const std::string &dateString, const std::string &numberAccessedString, const std::string &link) {
@@ -136,6 +137,43 @@ DynamicArray<Footage> Service::getAllElements() {
 
 Service::Service() {
     this->repository = Repository();
+}
+
+Footage Service::getCurrent() {
+    return repository.getCurrentElement();
+}
+
+void Service::addToMyList(const std::string &title) {
+    auto arrayOfTapes = repository.getAllFootage();
+    for (int indexFootage = 0; indexFootage < arrayOfTapes.getSize(); ++indexFootage) {
+        if (arrayOfTapes.getElement(indexFootage).getTitle() == title) {
+            myListRepository.addFootage(arrayOfTapes.getElement(indexFootage));
+            return;
+        }
+    }
+    throw std::exception();
+}
+
+DynamicArray<Footage> Service::getMyList() {
+    return myListRepository.getAllFootage();
+}
+
+DynamicArray<Footage> Service::getFilteredList(const std::string &type, const std::string &maximumAccessCount) {
+    auto arrayOfTapes = repository.getAllFootage();
+    std::string newNumberAccessedString = maximumAccessCount.substr(1, maximumAccessCount.size() - 1);
+    std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
+    int numberAccessed;
+    convertNumberAccessedStringToInt >> numberAccessed;
+    if (numberAccessed < 0) {
+        throw std::exception();
+    }
+    DynamicArray<Footage> filteredList = DynamicArray<Footage>();
+    for (int i = 0; i < arrayOfTapes.getSize(); ++i) {
+        if (arrayOfTapes.getElement(i).getType() == type and arrayOfTapes.getElement(i).getAccessCount() < numberAccessed) {
+            filteredList.addElement(arrayOfTapes.getElement(i));
+        }
+    }
+    return filteredList;
 }
 
 

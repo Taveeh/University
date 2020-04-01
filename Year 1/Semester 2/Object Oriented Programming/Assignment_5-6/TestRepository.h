@@ -22,6 +22,7 @@ private:
     static void test_updateFootage_ValidInput_FootageChanged();
 
     static void test_updateFootage_Inexistent_FootageNotChanged();
+
 };
 
 

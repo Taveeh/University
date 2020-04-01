@@ -5,7 +5,7 @@
 #include "dynamicArray.h"
 #include <stdlib.h>
 
-DynamicArray *createDynamicArray(int capacity, DestroyElementFunctionType destroyElementFunction) {
+DynamicArray *createDynamicArray(int capacity, DestroyElementFunctionType destroyElementFunction, copyElementFunctionType copyElementFunction) {
     DynamicArray* dynamicArray = (DynamicArray*)malloc(sizeof(DynamicArray));
     if (dynamicArray == NULL) {
         return NULL;
@@ -17,6 +17,7 @@ DynamicArray *createDynamicArray(int capacity, DestroyElementFunctionType destro
         return NULL;
     }
     dynamicArray->destroyElementFunction = destroyElementFunction;
+    dynamicArray->copyElementFunction = copyElementFunction;
     return dynamicArray;
 }
 
@@ -102,8 +103,9 @@ DynamicArray *copyDynamicArray(DynamicArray *dynamicArray) {
     result->capacityOfDynamicArray = dynamicArray->capacityOfDynamicArray;
     result->numberOfElements = dynamicArray->numberOfElements;
     result->dynamicArrayElements = (TypeOfElement*)malloc(result->capacityOfDynamicArray * sizeof(TypeOfElement));
+    result->copyElementFunction = dynamicArray->copyElementFunction;
     for (int i = 0; i < dynamicArray->numberOfElements; ++i) {
-        result->dynamicArrayElements[i] = dynamicArray->dynamicArrayElements[i];
+        result->dynamicArrayElements[i] = result->copyElementFunction(dynamicArray->dynamicArrayElements[i]);
     }
     result->destroyElementFunction = dynamicArray->destroyElementFunction;
     return result;

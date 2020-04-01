@@ -1,0 +1,38 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/Repository.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestService.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestService.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 18/03/2020.
+        -:    3://
+        -:    4://
+        -:    5:#ifndef ASSIGNMENT_5_6_REPOSITORY_H
+        -:    6:#define ASSIGNMENT_5_6_REPOSITORY_H
+        -:    7://
+        -:    8://
+        -:    9:#include "DynamicArray.h"
+        -:   10:#include "Footage.h"
+        -:   11://
+    #####:   12:class Repository {
+    $$$$$:   12-block  0
+    $$$$$:   12-block  1
+    $$$$$:   12-block  2
+    $$$$$:   12-block  3
+        -:   13:private:
+        -:   14:    DynamicArray<Footage> arrayOfTapes;
+        -:   15:public:
+        -:   16:    Repository();
+        -:   17:
+        -:   18:    void addFootage(const Footage& newFootage);
+        -:   19:
+        -:   20:    void deleteFootage(const std::string& titleToBeRemoved);
+        -:   21:
+        -:   22:    void updateFootage(const Footage& newFootage);
+        -:   23:
+        -:   24:    DynamicArray<Footage> getAllFootage();
+        -:   25:
+        -:   26:};
+        -:   27:
+        -:   28:
+        -:   29:#endif //ASSIGNMENT_5_6_REPOSITORY_H

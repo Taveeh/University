@@ -82,4 +82,8 @@ void destroyMap(Map *map) {
     map = NULL;
 }
 
+Map *copyMap(Map *map) {
+    return createMap(getCatalogueNumber(map), getStateOfDeterioration(map), getMapType(map), getYearsOfStorage(map));
+}
+
 

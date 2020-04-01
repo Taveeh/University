@@ -8,7 +8,11 @@
 void TestFootage::test_all() {
     test_compareDate_IncreasingDates();
     test_dateToString_emptyDate_zeroDate();
-    test_FootageGetterSetter_ValidFootage();
+    test_changeType_ValidInput_FootageChanged();
+    test_changeAccessCount_ValidInput_FootageChanged();
+    test_changeDate_ValidInput_FootageChanged();
+    test_changeLink_ValidInput_FootageChanged();
+
 }
 
 void TestFootage::test_compareDate_IncreasingDates() {
@@ -22,24 +26,26 @@ void TestFootage::test_dateToString_emptyDate_zeroDate() {
     assert(date.toString() == "0-0-0");
 }
 
-void TestFootage::test_FootageGetterSetter_ValidFootage() {
+void TestFootage::test_changeType_ValidInput_FootageChanged() {
     Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    assert(footage.getTitle() == "abc");
-    assert(footage.getType() == "def");
     footage.changeType("efg");
     assert(footage.getType() == "efg");
-    assert(footage.getDate().getDay() == 2);
-    assert(footage.getDate().getMonth() == 2);
-    assert(footage.getDate().getYear() == 2020);
+}
+
+void TestFootage::test_changeLink_ValidInput_FootageChanged() {
+    Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    footage.changeLink("Never gonna give you up");
+    assert(footage.getLink() == "Never gonna give you up");
+}
+
+void TestFootage::test_changeDate_ValidInput_FootageChanged() {
+    Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     footage.changeDate(Date(3, 3, 2019));
     assert(footage.getDate().getDay() == 3);
-    assert(footage.getDate().getMonth() == 3);
-    assert(footage.getDate().getYear() == 2019);
-    assert(footage.getAccessCount() == 8);
+}
+
+void TestFootage::test_changeAccessCount_ValidInput_FootageChanged() {
+    Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     footage.changeAccessCount(9);
     assert(footage.getAccessCount() == 9);
-    assert(footage.getLink() == "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    footage.changeLink("You got Rickrolled");
-    assert(footage.getLink() == "You got Rickrolled");
-    assert(footage.toString().size() != 0);
 }

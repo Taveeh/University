@@ -1,0 +1,710 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestService.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestService.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestService.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 24/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "TestService.h"
+        -:    6:#include "Service.h"
+        -:    7:#include <exception>
+        -:    8:
+        1:    9:void TestService::test_all() {
+        1:   10:    test_addFootage_ValidInput_FootageAdded();
+        1:   10-block  0
+        1:   11:    test_addFootage_InvalidDateFormat_FootageNotAdded();
+        1:   12:    test_addFootage_InvalidDate_FootageNotAdded();
+        1:   13:    test_addFootage_FutureDate_FootageNotAdded();
+        1:   14:    test_addFootage_InvalidAccessCount_FootageNotAdded();
+        1:   15:    test_addFootage_DuplicateFootage_FootageNotAdded();
+        -:   16:
+        1:   17:    test_deleteFootage_ValidInput_FootageRemoved();
+        1:   18:    test_deleteFootage_Inexistent_FootageNotRemoved();
+        -:   19:
+        1:   20:    test_updateFootage_ValidInput_FootageChanged();
+        1:   21:    test_updateFootage_InvalidDateFormat_FootageNotChanged();
+        1:   22:    test_updateFootage_InvalidDate_FootageNotChanged();
+        1:   23:    test_updateFootage_FutureDate_FootageNotChanged();
+        1:   24:    test_updateFootage_InvalidAccessCount_FootageNotChanged();
+        -:   25:
+        1:   26:}
+        1:   26-block  0
+        -:   27:
+        1:   28:void TestService::test_addFootage_ValidInput_FootageAdded() {
+        1:   29:    auto repository = Repository();
+        1:   29-block  0
+        1:   30:    auto service = Service(repository);
+        1:   30-block  0
+        1:   31:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:   31-block  0
+        1:   31-block  1
+        1:   31-block  2
+        1:   31-block  3
+        1:   31-block  4
+        1:   31-block  5
+    $$$$$:   31-block  6
+    $$$$$:   31-block  7
+    $$$$$:   31-block  8
+    $$$$$:   31-block  9
+    $$$$$:   31-block 10
+        1:   32:    assert(service.getAllElements().getSize() == 1);
+        1:   32-block  0
+        1:   32-block  1
+        1:   32-block  2
+    $$$$$:   32-block  3
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
+    $$$$$:   32-block  6
+        1:   32-block  7
+        1:   33:    assert(service.getAllElements().getElement(0).getTitle() == "abc");
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+    $$$$$:   33-block  4
+    $$$$$:   33-block  5
+    $$$$$:   33-block  6
+    $$$$$:   33-block  7
+        1:   33-block  8
+    $$$$$:   33-block  9
+    $$$$$:   33-block 10
+        1:   34:}
+    $$$$$:   34-block  0
+    $$$$$:   34-block  1
+    $$$$$:   34-block  2
+    $$$$$:   34-block  3
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+    $$$$$:   34-block  6
+    $$$$$:   34-block  7
+        1:   34-block  8
+    $$$$$:   34-block  9
+    $$$$$:   34-block 10
+    $$$$$:   34-block 11
+        -:   35:
+        1:   36:void TestService::test_addFootage_InvalidDateFormat_FootageNotAdded() {
+        1:   37:    auto repository = Repository();
+        1:   37-block  0
+        1:   38:    auto service = Service(repository);
+        1:   38-block  0
+        -:   39:    try {
+        1:   40:        service.addFootage("abc", " def", " 02-02-2020dfsads", " 7", " link");
+        1:   40-block  0
+        1:   40-block  1
+        1:   40-block  2
+        1:   40-block  3
+        1:   40-block  4
+        1:   40-block  5
+        1:   40-block  6
+        1:   40-block  7
+        1:   40-block  8
+        1:   40-block  9
+        1:   40-block 10
+    #####:   41:        assert(false);
+    $$$$$:   41-block  0
+    $$$$$:   41-block  1
+        1:   42:    }catch (std::exception&) {
+        1:   42-block  0
+        -:   43:        static_assert(true);
+        1:   44:    }
+        1:   44-block  0
+        1:   44-block  1
+        2:   45:}
+    $$$$$:   45-block  0
+    $$$$$:   45-block  1
+    $$$$$:   45-block  2
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+        1:   45-block  6
+    $$$$$:   45-block  7
+    $$$$$:   45-block  8
+    $$$$$:   45-block  9
+    $$$$$:   45-block 10
+        -:   46:
+        1:   47:void TestService::test_addFootage_InvalidDate_FootageNotAdded() {
+        1:   48:    auto repository = Repository();
+        1:   48-block  0
+        1:   49:    auto service = Service(repository);
+        1:   49-block  0
+        -:   50:    try {
+        1:   51:        service.addFootage("abc", " def", " 2020-02-02", " 7", " link");
+        1:   51-block  0
+        1:   51-block  1
+        1:   51-block  2
+        1:   51-block  3
+        1:   51-block  4
+        1:   51-block  5
+        1:   51-block  6
+        1:   51-block  7
+        1:   51-block  8
+        1:   51-block  9
+        1:   51-block 10
+    #####:   52:        assert(false);
+    $$$$$:   52-block  0
+    $$$$$:   52-block  1
+        1:   53:    }catch (std::exception&) {
+        1:   53-block  0
+        -:   54:        static_assert(true);
+        1:   55:    }
+        1:   55-block  0
+        1:   55-block  1
+        2:   56:}
+    $$$$$:   56-block  0
+    $$$$$:   56-block  1
+    $$$$$:   56-block  2
+    $$$$$:   56-block  3
+    $$$$$:   56-block  4
+    $$$$$:   56-block  5
+        1:   56-block  6
+    $$$$$:   56-block  7
+    $$$$$:   56-block  8
+    $$$$$:   56-block  9
+    $$$$$:   56-block 10
+        -:   57:
+        1:   58:void TestService::test_addFootage_FutureDate_FootageNotAdded() {
+        1:   59:    auto repository = Repository();
+        1:   59-block  0
+        1:   60:    auto service = Service(repository);
+        1:   60-block  0
+        -:   61:    try {
+        1:   62:        service.addFootage("abc", " def", " 02-02-2021", " 7", " link");
+        1:   62-block  0
+        1:   62-block  1
+        1:   62-block  2
+        1:   62-block  3
+        1:   62-block  4
+        1:   62-block  5
+        1:   62-block  6
+        1:   62-block  7
+        1:   62-block  8
+        1:   62-block  9
+        1:   62-block 10
+    #####:   63:        assert(false);
+    $$$$$:   63-block  0
+    $$$$$:   63-block  1
+        1:   64:    }catch (std::exception&) {
+        1:   64-block  0
+        -:   65:        static_assert(true);
+        1:   66:    }
+        1:   66-block  0
+        1:   66-block  1
+        2:   67:}
+    $$$$$:   67-block  0
+    $$$$$:   67-block  1
+    $$$$$:   67-block  2
+    $$$$$:   67-block  3
+    $$$$$:   67-block  4
+    $$$$$:   67-block  5
+        1:   67-block  6
+    $$$$$:   67-block  7
+    $$$$$:   67-block  8
+    $$$$$:   67-block  9
+    $$$$$:   67-block 10
+        -:   68:
+        1:   69:void TestService::test_addFootage_InvalidAccessCount_FootageNotAdded() {
+        1:   70:    auto repository = Repository();
+        1:   70-block  0
+        1:   71:    auto service = Service(repository);
+        1:   71-block  0
+        -:   72:    try {
+        1:   73:        service.addFootage("abc", " def", " 02-02-2020", " -2", " link");
+        1:   73-block  0
+        1:   73-block  1
+        1:   73-block  2
+        1:   73-block  3
+        1:   73-block  4
+        1:   73-block  5
+        1:   73-block  6
+        1:   73-block  7
+        1:   73-block  8
+        1:   73-block  9
+        1:   73-block 10
+    #####:   74:        assert(false);
+    $$$$$:   74-block  0
+    $$$$$:   74-block  1
+        1:   75:    }catch (std::exception&) {
+        1:   75-block  0
+        -:   76:        static_assert(1);
+        1:   77:    }
+        1:   77-block  0
+        1:   77-block  1
+        -:   78:
+        2:   79:}
+    $$$$$:   79-block  0
+    $$$$$:   79-block  1
+    $$$$$:   79-block  2
+    $$$$$:   79-block  3
+    $$$$$:   79-block  4
+    $$$$$:   79-block  5
+        1:   79-block  6
+    $$$$$:   79-block  7
+    $$$$$:   79-block  8
+    $$$$$:   79-block  9
+    $$$$$:   79-block 10
+        -:   80:
+        1:   81:void TestService::test_addFootage_DuplicateFootage_FootageNotAdded() {
+        1:   82:    auto repository = Repository();
+        1:   82-block  0
+        1:   83:    auto service = Service(repository);
+        1:   83-block  0
+        1:   84:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:   84-block  0
+        1:   84-block  1
+        1:   84-block  2
+        1:   84-block  3
+        1:   84-block  4
+        1:   84-block  5
+    $$$$$:   84-block  6
+    $$$$$:   84-block  7
+    $$$$$:   84-block  8
+    $$$$$:   84-block  9
+    $$$$$:   84-block 10
+        -:   85:    try {
+        1:   86:        service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:   86-block  0
+        1:   86-block  1
+        1:   86-block  2
+        1:   86-block  3
+        1:   86-block  4
+        1:   86-block  5
+        1:   86-block  6
+        1:   86-block  7
+        1:   86-block  8
+        1:   86-block  9
+        1:   86-block 10
+    #####:   87:        assert(false);
+    $$$$$:   87-block  0
+    $$$$$:   87-block  1
+        1:   88:    }catch (std::exception&) {
+        1:   88-block  0
+        -:   89:        static_assert(1);
+        1:   90:    }
+        1:   90-block  0
+        1:   90-block  1
+        2:   91:}
+    $$$$$:   91-block  0
+    $$$$$:   91-block  1
+    $$$$$:   91-block  2
+    $$$$$:   91-block  3
+    $$$$$:   91-block  4
+    $$$$$:   91-block  5
+    $$$$$:   91-block  6
+    $$$$$:   91-block  7
+    $$$$$:   91-block  8
+    $$$$$:   91-block  9
+    $$$$$:   91-block 10
+        1:   91-block 11
+    $$$$$:   91-block 12
+    $$$$$:   91-block 13
+    $$$$$:   91-block 14
+        -:   92:
+        1:   93:void TestService::test_deleteFootage_ValidInput_FootageRemoved() {
+        1:   94:    auto repository = Repository();
+        1:   94-block  0
+        1:   95:    auto service = Service(repository);
+        1:   95-block  0
+        1:   96:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:   96-block  0
+        1:   96-block  1
+        1:   96-block  2
+        1:   96-block  3
+        1:   96-block  4
+        1:   96-block  5
+    $$$$$:   96-block  6
+    $$$$$:   96-block  7
+    $$$$$:   96-block  8
+    $$$$$:   96-block  9
+    $$$$$:   96-block 10
+        1:   97:    assert(service.getAllElements().getSize() == 1);
+        1:   97-block  0
+        1:   97-block  1
+        1:   97-block  2
+    $$$$$:   97-block  3
+    $$$$$:   97-block  4
+    $$$$$:   97-block  5
+    $$$$$:   97-block  6
+        1:   97-block  7
+        1:   98:    service.deleteFootage("abc");
+        1:   98-block  0
+        1:   98-block  1
+    $$$$$:   98-block  2
+        1:   99:    assert(service.getAllElements().getSize() == 0);
+        1:   99-block  0
+        1:   99-block  1
+        1:   99-block  2
+    $$$$$:   99-block  3
+    $$$$$:   99-block  4
+    $$$$$:   99-block  5
+    $$$$$:   99-block  6
+        1:   99-block  7
+        1:  100:}
+    $$$$$:  100-block  0
+    $$$$$:  100-block  1
+    $$$$$:  100-block  2
+    $$$$$:  100-block  3
+    $$$$$:  100-block  4
+    $$$$$:  100-block  5
+        1:  100-block  6
+    $$$$$:  100-block  7
+    $$$$$:  100-block  8
+    $$$$$:  100-block  9
+        -:  101:
+        1:  102:void TestService::test_deleteFootage_Inexistent_FootageNotRemoved() {
+        1:  103:    auto repository = Repository();
+        1:  103-block  0
+        1:  104:    auto service = Service(repository);
+        1:  104-block  0
+        -:  105:    try {
+        1:  106:        service.deleteFootage("abc");
+        1:  106-block  0
+        1:  106-block  1
+        1:  106-block  2
+    #####:  107:        assert(false);
+    $$$$$:  107-block  0
+    $$$$$:  107-block  1
+        1:  108:    }catch (std::exception&) {
+        1:  108-block  0
+        -:  109:        static_assert(true);
+        1:  110:    }
+        1:  110-block  0
+        1:  110-block  1
+        2:  111:}
+    $$$$$:  111-block  0
+    $$$$$:  111-block  1
+        1:  111-block  2
+    $$$$$:  111-block  3
+    $$$$$:  111-block  4
+    $$$$$:  111-block  5
+    $$$$$:  111-block  6
+        -:  112:
+        1:  113:void TestService::test_updateFootage_ValidInput_FootageChanged() {
+        1:  114:    auto repository = Repository();
+        1:  114-block  0
+        1:  115:    auto service = Service(repository);
+        1:  115-block  0
+        1:  116:    service.addFootage(" abc", " def", " 02-02-2020", " 7", " link");
+        1:  116-block  0
+        1:  116-block  1
+        1:  116-block  2
+        1:  116-block  3
+        1:  116-block  4
+        1:  116-block  5
+    $$$$$:  116-block  6
+    $$$$$:  116-block  7
+    $$$$$:  116-block  8
+    $$$$$:  116-block  9
+    $$$$$:  116-block 10
+        1:  117:    assert(service.getAllElements().getSize() == 1);
+        1:  117-block  0
+        1:  117-block  1
+        1:  117-block  2
+    $$$$$:  117-block  3
+    $$$$$:  117-block  4
+    $$$$$:  117-block  5
+    $$$$$:  117-block  6
+        1:  117-block  7
+        1:  118:    service.updateFootage(" abc", " efg", " 03-03-2019", " 9", " link2");
+        1:  118-block  0
+        1:  118-block  1
+        1:  118-block  2
+        1:  118-block  3
+        1:  118-block  4
+        1:  118-block  5
+    $$$$$:  118-block  6
+    $$$$$:  118-block  7
+    $$$$$:  118-block  8
+    $$$$$:  118-block  9
+    $$$$$:  118-block 10
+        1:  119:    assert(service.getAllElements().getElement(0).getType() == "efg");
+        1:  119-block  0
+        1:  119-block  1
+        1:  119-block  2
+        1:  119-block  3
+    $$$$$:  119-block  4
+    $$$$$:  119-block  5
+    $$$$$:  119-block  6
+    $$$$$:  119-block  7
+        1:  119-block  8
+    $$$$$:  119-block  9
+    $$$$$:  119-block 10
+        1:  120:}
+    $$$$$:  120-block  0
+    $$$$$:  120-block  1
+    $$$$$:  120-block  2
+    $$$$$:  120-block  3
+    $$$$$:  120-block  4
+    $$$$$:  120-block  5
+    $$$$$:  120-block  6
+    $$$$$:  120-block  7
+    $$$$$:  120-block  8
+    $$$$$:  120-block  9
+    $$$$$:  120-block 10
+    $$$$$:  120-block 11
+        1:  120-block 12
+    $$$$$:  120-block 13
+    $$$$$:  120-block 14
+    $$$$$:  120-block 15
+        -:  121:
+        1:  122:void TestService::test_updateFootage_InvalidDateFormat_FootageNotChanged() {
+        1:  123:    auto repository = Repository();
+        1:  123-block  0
+        1:  124:    auto service = Service(repository);
+        1:  124-block  0
+        1:  125:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  125-block  0
+        1:  125-block  1
+        1:  125-block  2
+        1:  125-block  3
+        1:  125-block  4
+        1:  125-block  5
+    $$$$$:  125-block  6
+    $$$$$:  125-block  7
+    $$$$$:  125-block  8
+    $$$$$:  125-block  9
+    $$$$$:  125-block 10
+        1:  126:    assert(service.getAllElements().getSize() == 1);
+        1:  126-block  0
+        1:  126-block  1
+        1:  126-block  2
+    $$$$$:  126-block  3
+    $$$$$:  126-block  4
+    $$$$$:  126-block  5
+    $$$$$:  126-block  6
+        1:  126-block  7
+        -:  127:    try {
+        1:  128:        service.updateFootage("abc", " efg", " 02-02-2020dfsfa", " 9", " link2");
+        1:  128-block  0
+        1:  128-block  1
+        1:  128-block  2
+        1:  128-block  3
+        1:  128-block  4
+        1:  128-block  5
+        1:  128-block  6
+        1:  128-block  7
+        1:  128-block  8
+        1:  128-block  9
+        1:  128-block 10
+    #####:  129:        assert(false);
+    $$$$$:  129-block  0
+    $$$$$:  129-block  1
+        1:  130:    }catch (std::exception&) {
+        1:  130-block  0
+        -:  131:        static_assert(true);
+        1:  132:    }
+        1:  132-block  0
+        1:  132-block  1
+        2:  133:}
+    $$$$$:  133-block  0
+    $$$$$:  133-block  1
+    $$$$$:  133-block  2
+    $$$$$:  133-block  3
+    $$$$$:  133-block  4
+    $$$$$:  133-block  5
+    $$$$$:  133-block  6
+    $$$$$:  133-block  7
+    $$$$$:  133-block  8
+    $$$$$:  133-block  9
+    $$$$$:  133-block 10
+        1:  133-block 11
+    $$$$$:  133-block 12
+    $$$$$:  133-block 13
+    $$$$$:  133-block 14
+        -:  134:
+        1:  135:void TestService::test_updateFootage_InvalidDate_FootageNotChanged() {
+        1:  136:    auto repository = Repository();
+        1:  136-block  0
+        1:  137:    auto service = Service(repository);
+        1:  137-block  0
+        1:  138:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  138-block  0
+        1:  138-block  1
+        1:  138-block  2
+        1:  138-block  3
+        1:  138-block  4
+        1:  138-block  5
+    $$$$$:  138-block  6
+    $$$$$:  138-block  7
+    $$$$$:  138-block  8
+    $$$$$:  138-block  9
+    $$$$$:  138-block 10
+        1:  139:    assert(service.getAllElements().getSize() == 1);
+        1:  139-block  0
+        1:  139-block  1
+        1:  139-block  2
+    $$$$$:  139-block  3
+    $$$$$:  139-block  4
+    $$$$$:  139-block  5
+    $$$$$:  139-block  6
+        1:  139-block  7
+        -:  140:    try {
+        1:  141:        service.updateFootage("abc", " efg", " 2020-02-02", " 9", " link2");
+        1:  141-block  0
+        1:  141-block  1
+        1:  141-block  2
+        1:  141-block  3
+        1:  141-block  4
+        1:  141-block  5
+        1:  141-block  6
+        1:  141-block  7
+        1:  141-block  8
+        1:  141-block  9
+        1:  141-block 10
+    #####:  142:        assert(false);
+    $$$$$:  142-block  0
+    $$$$$:  142-block  1
+        1:  143:    }catch (std::exception&) {
+        1:  143-block  0
+        -:  144:        static_assert(true);
+        1:  145:    }
+        1:  145-block  0
+        1:  145-block  1
+        2:  146:}
+    $$$$$:  146-block  0
+    $$$$$:  146-block  1
+    $$$$$:  146-block  2
+    $$$$$:  146-block  3
+    $$$$$:  146-block  4
+    $$$$$:  146-block  5
+    $$$$$:  146-block  6
+    $$$$$:  146-block  7
+    $$$$$:  146-block  8
+    $$$$$:  146-block  9
+    $$$$$:  146-block 10
+        1:  146-block 11
+    $$$$$:  146-block 12
+    $$$$$:  146-block 13
+    $$$$$:  146-block 14
+        -:  147:
+        1:  148:void TestService::test_updateFootage_FutureDate_FootageNotChanged() {
+        1:  149:    auto repository = Repository();
+        1:  149-block  0
+        1:  150:    auto service = Service(repository);
+        1:  150-block  0
+        1:  151:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  151-block  0
+        1:  151-block  1
+        1:  151-block  2
+        1:  151-block  3
+        1:  151-block  4
+        1:  151-block  5
+    $$$$$:  151-block  6
+    $$$$$:  151-block  7
+    $$$$$:  151-block  8
+    $$$$$:  151-block  9
+    $$$$$:  151-block 10
+        1:  152:    assert(service.getAllElements().getSize() == 1);
+        1:  152-block  0
+        1:  152-block  1
+        1:  152-block  2
+    $$$$$:  152-block  3
+    $$$$$:  152-block  4
+    $$$$$:  152-block  5
+    $$$$$:  152-block  6
+        1:  152-block  7
+        -:  153:    try {
+        1:  154:        service.updateFootage("abc", " efg", " 03-03-2021", " 9", " link2");
+        1:  154-block  0
+        1:  154-block  1
+        1:  154-block  2
+        1:  154-block  3
+        1:  154-block  4
+        1:  154-block  5
+        1:  154-block  6
+        1:  154-block  7
+        1:  154-block  8
+        1:  154-block  9
+        1:  154-block 10
+    #####:  155:        assert(false);
+    $$$$$:  155-block  0
+    $$$$$:  155-block  1
+        1:  156:    }catch (std::exception&) {
+        1:  156-block  0
+        -:  157:        static_assert(true);
+        1:  158:    }
+        1:  158-block  0
+        1:  158-block  1
+        2:  159:}
+    $$$$$:  159-block  0
+    $$$$$:  159-block  1
+    $$$$$:  159-block  2
+    $$$$$:  159-block  3
+    $$$$$:  159-block  4
+    $$$$$:  159-block  5
+    $$$$$:  159-block  6
+    $$$$$:  159-block  7
+    $$$$$:  159-block  8
+    $$$$$:  159-block  9
+    $$$$$:  159-block 10
+        1:  159-block 11
+    $$$$$:  159-block 12
+    $$$$$:  159-block 13
+    $$$$$:  159-block 14
+        -:  160:
+        1:  161:void TestService::test_updateFootage_InvalidAccessCount_FootageNotChanged() {
+        1:  162:    auto repository = Repository();
+        1:  162-block  0
+        1:  163:    auto service = Service(repository);
+        1:  163-block  0
+        1:  164:    service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  164-block  0
+        1:  164-block  1
+        1:  164-block  2
+        1:  164-block  3
+        1:  164-block  4
+        1:  164-block  5
+    $$$$$:  164-block  6
+    $$$$$:  164-block  7
+    $$$$$:  164-block  8
+    $$$$$:  164-block  9
+    $$$$$:  164-block 10
+        1:  165:    assert(service.getAllElements().getSize() == 1);
+        1:  165-block  0
+        1:  165-block  1
+        1:  165-block  2
+    $$$$$:  165-block  3
+    $$$$$:  165-block  4
+    $$$$$:  165-block  5
+    $$$$$:  165-block  6
+        1:  165-block  7
+        -:  166:    try {
+        1:  167:        service.updateFootage("abc", " efg", " 2020-02-02", " -9", " link2");
+        1:  167-block  0
+        1:  167-block  1
+        1:  167-block  2
+        1:  167-block  3
+        1:  167-block  4
+        1:  167-block  5
+        1:  167-block  6
+        1:  167-block  7
+        1:  167-block  8
+        1:  167-block  9
+        1:  167-block 10
+    #####:  168:        assert(false);
+    $$$$$:  168-block  0
+    $$$$$:  168-block  1
+        1:  169:    }catch (std::exception&) {
+        1:  169-block  0
+        -:  170:        static_assert(true);
+        1:  171:    }
+        1:  171-block  0
+        1:  171-block  1
+        2:  172:}
+    $$$$$:  172-block  0
+    $$$$$:  172-block  1
+    $$$$$:  172-block  2
+    $$$$$:  172-block  3
+    $$$$$:  172-block  4
+    $$$$$:  172-block  5
+    $$$$$:  172-block  6
+    $$$$$:  172-block  7
+    $$$$$:  172-block  8
+    $$$$$:  172-block  9
+    $$$$$:  172-block 10
+        1:  172-block 11
+    $$$$$:  172-block 12
+    $$$$$:  172-block 13
+    $$$$$:  172-block 14
+        -:  173:

@@ -24,6 +24,8 @@ typedef struct {
  */
 Map* createMap(int mapCatalogueNumber, char *stateOfDeterioration, char *mapType, int yearsOfStorage);
 
+Map* copyMap(Map* map);
+
 /*
  *
  * Changes the state of deterioration of a map

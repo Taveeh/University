@@ -44,10 +44,10 @@ SortedMultiMap::~SortedMultiMap() {
 	//TODO - Implementation
 }
 
-void SortedMultiMap::addAfter(SortedMultiMap::SLLNode *node, TElem elem) {
-    auto* newNode = new SLLNode;
-    newNode->info = elem;
-    newNode->next = node->next;
-    node->next = newNode;
-}
+//void SortedMultiMap::addAfter(SortedMultiMap::SLLNode *node, TElem elem) {
+//    auto* newNode = new SLLNode;
+//    newNode->info = elem;
+//    newNode->next = node->next;
+//    node->next = newNode;
+//}
 

@@ -23,6 +23,8 @@ public:
 
     DynamicArray<Footage> getAllFootage();
 
+    Footage getCurrentElement() ;
+
 };
 
 

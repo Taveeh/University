@@ -8,13 +8,17 @@
 #define FIRST_CAPACITY 5
 
 typedef void* TypeOfElement;
+
 typedef void (*DestroyElementFunctionType)(void*);
+
+typedef TypeOfElement (*copyElementFunctionType)(TypeOfElement);
 
 typedef struct {
     TypeOfElement* dynamicArrayElements;
     int numberOfElements;
     int capacityOfDynamicArray;
     DestroyElementFunctionType destroyElementFunction;
+    copyElementFunctionType copyElementFunction;
 } DynamicArray;
 
 /*
@@ -31,7 +35,7 @@ int deleteElementFromPosition(DynamicArray *dynamicArray, int position);
 /*
  * Constructor
  */
-DynamicArray* createDynamicArray(int capacity, DestroyElementFunctionType destroyElementFunction);
+DynamicArray* createDynamicArray(int capacity, DestroyElementFunctionType destroyElementFunction, copyElementFunctionType copyElementFunction);
 
 /*
  * Destructor

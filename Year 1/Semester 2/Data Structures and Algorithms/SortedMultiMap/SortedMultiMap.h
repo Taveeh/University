@@ -12,18 +12,23 @@ typedef std::pair<TKey, TValue> TElem;
 using namespace std;
 class SMMIterator;
 typedef bool(*Relation)(TKey, TValue);
-
+struct SLLNode {
+    TElem info;
+    SLLNode* next;
+};
+struct SLLList {
+    SLLNode* head;
+};
 
 class SortedMultiMap {
 	friend class SMMIterator;
-	struct SLLNode {
-	    TElem info;
-	    SLLNode* next;
-	};
+
     private:
 		Relation rel;
+
 		SLLNode* head;
-		static void addAfter(SLLNode *node, TElem elem);
+
+//		static void addAfter(SLLNode *node, TElem elem);
 
     public:
 

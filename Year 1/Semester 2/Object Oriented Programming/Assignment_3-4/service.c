@@ -26,7 +26,6 @@ int addMapService(Service *service,int mapCatalogueNumber, char *stateOfDeterior
 Service* createService(Repository *repository) {
     Service* result = (Service*)malloc(sizeof(Service));
     result->repository = repository;
-//    result->undoRedo = createUndoRedo();
     result->undoRedo = createUndoRedoNew();
     return result;
 
@@ -34,18 +33,11 @@ Service* createService(Repository *repository) {
 
 int removeMapService(Service *service, char *mapCatalogueNumberString) {
     int mapCatalogueNumber = atoi(mapCatalogueNumberString);
-//    deleteUndo(service->undoRedo, createMap(mapCatalogueNumber, "", "", 0));
-//    if (getFlag(service->undoRedo)) {
-//        clearRedo(service->undoRedo);
-//    }
     addUndoNew(service->undoRedo, copyDynamicArray(getRepositoryElements(service->repository)));
     if (deleteMapFromRepository(service->repository, mapCatalogueNumber)== 0) {
+        undoFunction(service->undoRedo);
         return 0;
     }
-//    DynamicArray* listOfAllMaps = createDynamicArray(INITIAL_CAPACITY, &destroyMap);
-//    listAllMaps(service, listOfAllMaps);
-//    addUndoNew(service->undoRedo, listOfAllMaps);
-
     return 1;
 }
 
@@ -58,12 +50,10 @@ int updateMapService(Service *service, int mapCatalogueNumber, char *stateOfDete
 //    }
     addUndoNew(service->undoRedo, copyDynamicArray(getRepositoryElements(service->repository)));
     if (updateMapFromRepository(service->repository, map) == 0) {
+        undoFunction(service->undoRedo);
         destroyMap(map);
         return 0;
     }
-//    DynamicArray* listOfAllMaps = createDynamicArray(INITIAL_CAPACITY, &destroyMap);
-//    listAllMaps(service, listOfAllMaps);
-//    addUndoNew(service->undoRedo, listOfAllMaps);
 
     return 1;
 }
@@ -126,7 +116,7 @@ char* integerToChar(int numberToBeConverted, char* stringConverted) {
     sprintf(stringConverted, "%d", numberToBeConverted);
     return stringConverted;
 }
-
+//
 //void undoLastOperation(Service* service) {
 //    changeFlag(service->undoRedo, 1);
 //    Operation* lastOperation = getLastUndo(service->undoRedo);

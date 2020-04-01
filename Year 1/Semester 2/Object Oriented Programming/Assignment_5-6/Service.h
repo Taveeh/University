@@ -11,6 +11,7 @@
 class Service {
 private:
     Repository repository;
+    Repository myListRepository;
     static bool validateNewDate(int day, int month, int year);
 public:
     Service();
@@ -19,6 +20,11 @@ public:
     void deleteFootage(const std::string& title);
     void updateFootage(const std::string &title, const std::string &type, const std::string &dateString, const std::string &numberAccessedString, const std::string &link);
     DynamicArray<Footage> getAllElements();
+    [[nodiscard]] Footage getCurrent();
+    void addToMyList(const std::string& title);
+    DynamicArray<Footage> getMyList();
+    DynamicArray<Footage> getFilteredList(const std::string& type, const std::string& maximumAccessCount);
+
 };
 
 #endif //ASSIGNMENT_5_6_SERVICE_H

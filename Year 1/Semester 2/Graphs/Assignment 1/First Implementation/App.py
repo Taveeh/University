@@ -122,6 +122,7 @@ class UI:
                 return 0
             elif cmd in d.keys():
                 d[cmd]()
+                print(str(self._graph))
             else:
                 print('Invalid command')
 

@@ -9,7 +9,7 @@ UndoRedoNew *createUndoRedoNew() {
     UndoRedoNew* result = (UndoRedoNew*)malloc(sizeof(UndoRedoNew));
     result->current = 0;
     result->maximum = 0;
-    result->undoRedo = createDynamicArray(5, &destroyDynamicArray);
+    result->undoRedo = createDynamicArray(5, &destroyDynamicArray, &copyDynamicArray);
     return result;
 }
 

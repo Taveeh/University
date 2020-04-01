@@ -1,0 +1,311 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/UI.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/UI.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/UI.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 20/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "UI.h"
+        -:    6:#include <iostream>
+        -:    7:#include <map>
+        -:    8:#include <utility>
+        -:    9:#include <functional>
+        -:   10://typedef void (UI::*function)(const std::string& parameters);
+        -:   11:#define MAX_PARAMETERS 5
+        2:   12:UI::UI(Service& service) {
+        1:   12-block  0
+        1:   12-block  1
+        1:   13:    this->service = service;
+        1:   13-block  0
+        2:   14:}
+        1:   14-block  0
+    $$$$$:   14-block  1
+    $$$$$:   14-block  2
+        1:   14-block  3
+        -:   15:
+        1:   16:void UI::runProgramAdministrator() {
+        1:   16-block  0
+        1:   17:    std::map<std::string, std::function<void(UI&, std::string)>> mapOfChoices;
+        1:   18:    mapOfChoices["add"] = &UI::addElement;
+        1:   18-block  0
+        1:   18-block  1
+        1:   18-block  2
+    $$$$$:   18-block  3
+        1:   19:    mapOfChoices["delete"] = &UI::removeElement;
+        1:   19-block  0
+        1:   19-block  1
+        1:   19-block  2
+    $$$$$:   19-block  3
+        1:   20:    mapOfChoices["update"] = &UI::updateElement;
+        1:   20-block  0
+        1:   20-block  1
+        1:   20-block  2
+    $$$$$:   20-block  3
+        1:   21:    mapOfChoices["list"] = &UI::listAllElements;
+        1:   21-block  0
+        1:   21-block  1
+        1:   21-block  2
+    $$$$$:   21-block  3
+        1:   22:    while(true) {
+        1:   22-block  0
+        1:   22-block  1
+    $$$$$:   22-block  2
+        1:   23:        std::string stringLine;
+        1:   24:        std::getline(std::cin, stringLine);
+        1:   24-block  0
+        1:   25:        std::string command;
+        1:   26:        bool isCommand = true;
+        1:   27:        std::string parameters;
+        5:   28:        for (char stringLineIndex : stringLine) {
+        1:   28-block  0
+        5:   28-block  1
+        4:   28-block  2
+        4:   28-block  3
+        4:   29:            if (isCommand and stringLineIndex != ' ') {
+        4:   29-block  0
+        4:   29-block  1
+        4:   30:                command += stringLineIndex;
+        4:   30-block  0
+        4:   31:            } else if (isCommand) {
+        4:   31-block  0
+    $$$$$:   31-block  1
+    #####:   32:                isCommand = false;
+    #####:   33:            }else {
+    $$$$$:   33-block  0
+    #####:   34:                parameters += stringLineIndex;
+    $$$$$:   34-block  0
+        -:   35:            }
+        -:   36:        }
+        1:   37:        if (command == "exit") {
+        1:   37-block  0
+        1:   38:            return;
+        1:   38-block  0
+        -:   39:        }
+    #####:   40:        auto currentChoice = mapOfChoices.find(command);
+    $$$$$:   40-block  0
+    #####:   41:        if (currentChoice == mapOfChoices.end()) {
+    $$$$$:   41-block  0
+    $$$$$:   41-block  1
+    #####:   42:            std::cout << "Invalid command\n";
+    $$$$$:   42-block  0
+    #####:   43:        }else {
+    $$$$$:   43-block  0
+    #####:   44:            mapOfChoices[command](*this, parameters);
+    $$$$$:   44-block  0
+    $$$$$:   44-block  1
+    $$$$$:   44-block  2
+    $$$$$:   44-block  3
+    $$$$$:   44-block  4
+        -:   45:        }
+        1:   46:    }
+    $$$$$:   46-block  0
+        1:   46-block  1
+    $$$$$:   46-block  2
+    $$$$$:   46-block  3
+        1:   47:}
+    $$$$$:   47-block  0
+    $$$$$:   47-block  1
+    $$$$$:   47-block  2
+        1:   47-block  3
+    $$$$$:   47-block  4
+    $$$$$:   47-block  5
+        -:   48:
+    #####:   49:void UI::addElement(const std::string& commandParameters) {
+    $$$$$:   49-block  0
+    #####:   50:    std::string ArrayOfParameters[MAX_PARAMETERS];
+    $$$$$:   50-block  0
+    $$$$$:   50-block  1
+    #####:   51:    int currentCommand = 0;
+    #####:   52:    for (auto commandParametersElement: commandParameters) {
+    $$$$$:   52-block  0
+    $$$$$:   52-block  1
+    $$$$$:   52-block  2
+    $$$$$:   52-block  3
+    #####:   53:        if (commandParametersElement != ',') {
+    $$$$$:   53-block  0
+    #####:   54:            ArrayOfParameters[currentCommand] += commandParametersElement;
+    $$$$$:   54-block  0
+    #####:   55:        }else {
+    $$$$$:   55-block  0
+    #####:   56:            currentCommand++;
+    $$$$$:   56-block  0
+        -:   57:        }
+        -:   58:    }
+        -:   59:    try {
+    #####:   60:        service.addFootage(ArrayOfParameters[0], ArrayOfParameters[1], ArrayOfParameters[2], ArrayOfParameters[3], ArrayOfParameters[4]);
+    $$$$$:   60-block  0
+    #####:   61:    }catch (std::exception& exception) {
+    $$$$$:   61-block  0
+    $$$$$:   61-block  1
+    #####:   62:        std::cout << "Invalid parameters\n";
+    $$$$$:   62-block  0
+    #####:   63:    }
+    $$$$$:   63-block  0
+    $$$$$:   63-block  1
+    $$$$$:   63-block  2
+    $$$$$:   63-block  3
+    $$$$$:   63-block  4
+    #####:   64:}
+    $$$$$:   64-block  0
+    $$$$$:   64-block  1
+    $$$$$:   64-block  2
+    $$$$$:   64-block  3
+    $$$$$:   64-block  4
+    $$$$$:   64-block  5
+    $$$$$:   64-block  6
+    $$$$$:   64-block  7
+    $$$$$:   64-block  8
+        -:   65:
+    #####:   66:void UI::removeElement(const std::string &commandParameters) {
+    $$$$$:   66-block  0
+        -:   67:    try {
+    #####:   68:        service.deleteFootage(commandParameters);
+    $$$$$:   68-block  0
+    #####:   69:    }catch (std::exception& exception){
+    $$$$$:   69-block  0
+    $$$$$:   69-block  1
+    $$$$$:   69-block  2
+    #####:   70:        std::cout << "Invalid parameters\n";
+    $$$$$:   70-block  0
+    #####:   71:    }
+    $$$$$:   71-block  0
+    $$$$$:   71-block  1
+    $$$$$:   71-block  2
+    $$$$$:   71-block  3
+    #####:   72:}
+    $$$$$:   72-block  0
+    $$$$$:   72-block  1
+        -:   73:
+    #####:   74:void UI::updateElement(const std::string &commandParameters) {
+    $$$$$:   74-block  0
+    #####:   75:    std::string ArrayOfParameters[MAX_PARAMETERS];
+    $$$$$:   75-block  0
+    $$$$$:   75-block  1
+    #####:   76:    int currentCommand = 0;
+    #####:   77:    for (auto commandParametersElement: commandParameters) {
+    $$$$$:   77-block  0
+    $$$$$:   77-block  1
+    $$$$$:   77-block  2
+    $$$$$:   77-block  3
+    #####:   78:        if (commandParametersElement != ',') {
+    $$$$$:   78-block  0
+    #####:   79:            ArrayOfParameters[currentCommand] += commandParametersElement;
+    $$$$$:   79-block  0
+    #####:   80:        }else {
+    $$$$$:   80-block  0
+    #####:   81:            currentCommand++;
+    $$$$$:   81-block  0
+        -:   82:        }
+        -:   83:    }
+        -:   84:    try {
+    #####:   85:        service.updateFootage(ArrayOfParameters[0], ArrayOfParameters[1], ArrayOfParameters[2], ArrayOfParameters[3], ArrayOfParameters[4]);
+    $$$$$:   85-block  0
+    #####:   86:    }catch (std::exception& exception) {
+    $$$$$:   86-block  0
+    $$$$$:   86-block  1
+    #####:   87:        std::cout << "Invalid parameters\n";
+    $$$$$:   87-block  0
+    #####:   88:    }
+    $$$$$:   88-block  0
+    $$$$$:   88-block  1
+    $$$$$:   88-block  2
+    $$$$$:   88-block  3
+    $$$$$:   88-block  4
+    #####:   89:}
+    $$$$$:   89-block  0
+    $$$$$:   89-block  1
+    $$$$$:   89-block  2
+    $$$$$:   89-block  3
+    $$$$$:   89-block  4
+    $$$$$:   89-block  5
+    $$$$$:   89-block  6
+    $$$$$:   89-block  7
+    $$$$$:   89-block  8
+        -:   90:
+    #####:   91:void UI::listAllElements(const std::string &commandParameters) {
+    $$$$$:   91-block  0
+    #####:   92:    DynamicArray<Footage> arrayOfFootage = service.getAllElements();
+    #####:   93:    if (arrayOfFootage.getSize() == 0) {
+    $$$$$:   93-block  0
+    $$$$$:   93-block  1
+    #####:   94:        std::cout << "There are no footage in the list\n";
+    $$$$$:   94-block  0
+    #####:   95:        return;
+    $$$$$:   95-block  0
+        -:   96:    }
+    #####:   97:    for (int arrayOfFootageIndex = 0; arrayOfFootageIndex < arrayOfFootage.getSize(); ++arrayOfFootageIndex) {
+    $$$$$:   97-block  0
+    $$$$$:   97-block  1
+    $$$$$:   97-block  2
+    $$$$$:   97-block  3
+    #####:   98:        std::cout << arrayOfFootage.getElement(arrayOfFootageIndex).toString() << "\n";
+    $$$$$:   98-block  0
+    $$$$$:   98-block  1
+    $$$$$:   98-block  2
+    $$$$$:   98-block  3
+    $$$$$:   98-block  4
+    $$$$$:   98-block  5
+    #####:   99:    }
+    $$$$$:   99-block  0
+    #####:  100:}
+    $$$$$:  100-block  0
+    $$$$$:  100-block  1
+    $$$$$:  100-block  2
+    $$$$$:  100-block  3
+    $$$$$:  100-block  4
+    $$$$$:  100-block  5
+    $$$$$:  100-block  6
+        -:  101:
+        1:  102:void UI::runProgram() {
+        1:  102-block  0
+        1:  103:    std::string modeLine;
+        1:  104:    std::getline(std::cin, modeLine);
+        1:  104-block  0
+        1:  105:    std::string command, mode;
+        1:  106:    bool isCommand = true;
+        7:  107:    for (auto modeLineIndex: modeLine) {
+        1:  107-block  0
+        7:  107-block  1
+        6:  107-block  2
+        6:  107-block  3
+        6:  108:        if (isCommand and modeLineIndex != ' ') {
+        6:  108-block  0
+        5:  108-block  1
+        4:  109:            command += modeLineIndex;
+        4:  109-block  0
+        6:  110:        }else if (isCommand) {
+        4:  110-block  0
+        2:  110-block  1
+        1:  111:            isCommand = false;
+        2:  112:        }else if (modeLineIndex != ' ') {
+        1:  112-block  0
+        1:  112-block  1
+        1:  113:            mode += modeLineIndex;
+        1:  113-block  0
+        1:  114:        }
+        1:  114-block  0
+        -:  115:    }
+        1:  116:    if (command != "mode") {
+        1:  116-block  0
+    #####:  117:        std::cout << "Invalid command\n";
+    $$$$$:  117-block  0
+    #####:  118:    }else {
+    $$$$$:  118-block  0
+        1:  119:        if (mode == "A") {
+        1:  119-block  0
+        1:  120:            runProgramAdministrator();
+        1:  120-block  0
+        1:  121:        } else {
+        1:  121-block  0
+    #####:  122:            std::cout << "Invalid mode\n";
+    $$$$$:  122-block  0
+        -:  123:        }
+        -:  124:    }
+        1:  125:}
+    $$$$$:  125-block  0
+    $$$$$:  125-block  1
+        1:  125-block  2
+    $$$$$:  125-block  3
+    $$$$$:  125-block  4

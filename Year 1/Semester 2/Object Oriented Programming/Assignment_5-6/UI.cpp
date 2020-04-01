@@ -5,9 +5,7 @@
 #include "UI.h"
 #include <iostream>
 #include <map>
-#include <utility>
 #include <functional>
-//typedef void (UI::*function)(const std::string& parameters);
 #define MAX_PARAMETERS 5
 UI::UI(Service& service) {
     this->service = service;
@@ -19,6 +17,7 @@ void UI::runProgramAdministrator() {
     mapOfChoices["delete"] = &UI::removeElement;
     mapOfChoices["update"] = &UI::updateElement;
     mapOfChoices["list"] = &UI::listAllElements;
+    mapOfChoices["mode"] = &UI::changeMode;
     while(true) {
         std::string stringLine;
         std::getline(std::cin, stringLine);
@@ -35,7 +34,41 @@ void UI::runProgramAdministrator() {
             }
         }
         if (command == "exit") {
-            return;
+            exit(0);
+        }
+        auto currentChoice = mapOfChoices.find(command);
+        if (currentChoice == mapOfChoices.end()) {
+            std::cout << "Invalid command\n";
+        }else {
+            mapOfChoices[command](*this, parameters);
+        }
+    }
+}
+
+void UI::runProgramFieldAgent() {
+    std::map<std::string, std::function<void(UI&, std::string)>> mapOfChoices;
+    mapOfChoices["next"] = &UI::nextElement;
+    mapOfChoices["save"] = &UI::saveTitle;
+    mapOfChoices["list"] = &UI::listProperty;
+    mapOfChoices["mylist"] = &UI::myList;
+    mapOfChoices["mode"] = &UI::changeMode;
+    while(true) {
+        std::string stringLine;
+        std::getline(std::cin, stringLine);
+        std::string command;
+        bool isCommand = true;
+        std::string parameters;
+        for (char stringLineIndex : stringLine) {
+            if (isCommand and stringLineIndex != ' ') {
+                command += stringLineIndex;
+            } else if (isCommand) {
+                isCommand = false;
+            }else {
+                parameters += stringLineIndex;
+            }
+        }
+        if (command == "exit") {
+            exit(0);
         }
         auto currentChoice = mapOfChoices.find(command);
         if (currentChoice == mapOfChoices.end()) {
@@ -115,10 +148,64 @@ void UI::runProgram() {
     }
     if (command != "mode") {
         std::cout << "Invalid command\n";
-    }
-    if (mode == "A") {
-        runProgramAdministrator();
     }else {
-        std::cout << "Invalid mode\n";
+        changeMode(mode);
     }
 }
+
+void UI::changeMode(const std::string &commandParameters) {
+    if (commandParameters == "A") {
+        runProgramAdministrator();
+    }else if (commandParameters == "B") {
+        runProgramFieldAgent();
+    } else {
+            std::cout <<"Invalid mode\n";
+    }
+}
+
+void UI::nextElement(const std::string &commandParameters) {
+    Footage currentFootage = service.getCurrent();
+    std::cout << currentFootage.toString() << '\n';
+}
+
+void UI::saveTitle(const std::string &commandParameters) {
+    try {
+        service.addToMyList(commandParameters);
+    }catch (std::exception&) {
+        std::cout << "Invalid title" << '\n';
+    }
+}
+
+void UI::myList(const std::string &commandParameters) {
+    auto myListFootage = service.getMyList();
+    for (int myListIndex = 0; myListIndex < myListFootage.getSize(); ++myListIndex) {
+        std::cout << myListFootage.getElement(myListIndex).toString() << '\n';
+    }
+}
+
+void UI::listProperty(const std::string &commandParameters) {
+    std::string ArrayOfParameters[MAX_PARAMETERS];
+    int currentCommand = 0;
+    for (auto commandParametersElement: commandParameters) {
+        if (commandParametersElement != ',') {
+            ArrayOfParameters[currentCommand] += commandParametersElement;
+        }else {
+            currentCommand++;
+        }
+    }
+    DynamicArray<Footage> filteredListOfFootage;
+    try {
+        filteredListOfFootage = service.getFilteredList(ArrayOfParameters[0], ArrayOfParameters[1]);
+    }catch (std::exception&) {
+        std::cout << "Invalid parameters\n";
+    }
+    if (filteredListOfFootage.getSize() == 0) {
+        std::cout << "There are no elements with given property\n";
+    }else {
+        for (int filteredListIndex = 0; filteredListIndex < filteredListOfFootage.getSize(); ++filteredListIndex) {
+            std::cout << filteredListOfFootage.getElement(filteredListIndex).toString() << '\n';
+        }
+    }
+}
+
+

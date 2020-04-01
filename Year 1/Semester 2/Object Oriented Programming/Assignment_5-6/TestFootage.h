@@ -11,7 +11,13 @@ private:
 
     static void test_dateToString_emptyDate_zeroDate();
 
-    static void test_FootageGetterSetter_ValidFootage();
+    static void test_changeType_ValidInput_FootageChanged();
+
+    static void test_changeDate_ValidInput_FootageChanged();
+
+    static void test_changeAccessCount_ValidInput_FootageChanged();
+
+    static void test_changeLink_ValidInput_FootageChanged();
 
 public:
     static void test_all();

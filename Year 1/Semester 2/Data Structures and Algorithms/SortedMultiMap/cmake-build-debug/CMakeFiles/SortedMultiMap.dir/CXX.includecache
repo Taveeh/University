@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/App.cpp
+iostream
+-
+ShortTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ShortTest.h
+ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ExtendedTest.h
+List.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/List.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ExtendedTest.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/List.cpp
+List.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/List.h
+exception
+-
+iostream
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/List.h
+ListIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ListIterator.h
+SortedMultiMap.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/SortedMultiMap.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ListIterator.cpp
+ListIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ListIterator.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ListIterator.h
+List.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/List.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/ShortTest.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/SortedMultiMap.h
+vector
+-
+utility
+-
+

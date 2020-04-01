@@ -46,3 +46,7 @@ DynamicArray<Footage> Repository::getAllFootage() {
     return arrayOfFootage;
 }
 
+Footage Repository::getCurrentElement()  {
+    return arrayOfTapes.getCurrentElement();
+}
+

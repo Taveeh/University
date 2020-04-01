@@ -1,0 +1,361 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestRepository.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 24/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "TestRepository.h"
+        -:    6:#include "Repository.h"
+        -:    7:#include <exception>
+        1:    8:void TestRepository::test_addFootage_ValidInput_FootageAdded() {
+        1:    9:    auto repository = Repository();
+        1:    9-block  0
+        1:   10:    auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   10-block  0
+        1:   10-block  1
+        1:   10-block  2
+        1:   10-block  3
+        1:   10-block  4
+    $$$$$:   10-block  5
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+        1:   11:    repository.addFootage(testFootage);
+        1:   11-block  0
+        1:   12:    assert(repository.getAllFootage().getSize() == 1);
+        1:   12-block  0
+        1:   12-block  1
+        1:   12-block  2
+    $$$$$:   12-block  3
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+    $$$$$:   12-block  6
+        1:   12-block  7
+        1:   13:}
+    $$$$$:   13-block  0
+    $$$$$:   13-block  1
+    $$$$$:   13-block  2
+    $$$$$:   13-block  3
+        1:   13-block  4
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+        -:   14:
+        1:   15:void TestRepository::test_all() {
+        1:   16:    test_addFootage_ValidInput_FootageAdded();
+        1:   16-block  0
+        1:   17:    test_addFootage_Duplicate_FootageNotAdded();
+        1:   18:    test_deleteFootage_ValidInput_FootageRemoved();
+        1:   19:    test_deleteFootage_Inexistent_FootageNotRemoved();
+        1:   20:    test_updateFootage_Inexistent_FootageNotChanged();
+        1:   21:    test_updateFootage_ValidInput_FootageChanged();
+        1:   22:}
+        1:   22-block  0
+        -:   23:
+        1:   24:void TestRepository::test_addFootage_Duplicate_FootageNotAdded() {
+        1:   25:    auto repository = Repository();
+        1:   25-block  0
+        1:   26:    auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   26-block  0
+        1:   26-block  1
+        1:   26-block  2
+        1:   26-block  3
+        1:   26-block  4
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+        1:   27:    repository.addFootage(testFootage);
+        1:   27-block  0
+        1:   28:    assert(repository.getAllFootage().getSize() == 1);
+        1:   28-block  0
+        1:   28-block  1
+        1:   28-block  2
+    $$$$$:   28-block  3
+    $$$$$:   28-block  4
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+        1:   28-block  7
+        1:   29:    auto testFootage2 = Footage("abc", "efg", Date(3, 3, 2020), 9, "link2");
+        1:   29-block  0
+        1:   29-block  1
+        1:   29-block  2
+        1:   29-block  3
+        1:   29-block  4
+    $$$$$:   29-block  5
+    $$$$$:   29-block  6
+    $$$$$:   29-block  7
+        -:   30:    try {
+        1:   31:        repository.addFootage(testFootage2);
+        1:   31-block  0
+    #####:   32:        assert(false);
+    $$$$$:   32-block  0
+    $$$$$:   32-block  1
+        1:   33:    }catch (std::exception&) {
+        1:   33-block  0
+        -:   34:        static_assert(true);
+        1:   35:    }
+        1:   35-block  0
+        1:   35-block  1
+        1:   36:    assert(repository.getAllFootage().getSize() == 1);
+        1:   36-block  0
+        1:   36-block  1
+        1:   36-block  2
+    $$$$$:   36-block  3
+    $$$$$:   36-block  4
+    $$$$$:   36-block  5
+    $$$$$:   36-block  6
+        1:   36-block  7
+        2:   37:}
+    $$$$$:   37-block  0
+    $$$$$:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+        1:   37-block  6
+    $$$$$:   37-block  7
+        1:   37-block  8
+    $$$$$:   37-block  9
+    $$$$$:   37-block 10
+    $$$$$:   37-block 11
+    $$$$$:   37-block 12
+        -:   38:
+        1:   39:void TestRepository::test_deleteFootage_ValidInput_FootageRemoved() {
+        1:   40:    auto repository = Repository();
+        1:   40-block  0
+        1:   41:    auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   41-block  0
+        1:   41-block  1
+        1:   41-block  2
+        1:   41-block  3
+        1:   41-block  4
+    $$$$$:   41-block  5
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+        1:   42:    repository.addFootage(testFootage);
+        1:   42-block  0
+        1:   43:    assert(repository.getAllFootage().getSize() == 1);
+        1:   43-block  0
+        1:   43-block  1
+        1:   43-block  2
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+    $$$$$:   43-block  6
+        1:   43-block  7
+        1:   44:    repository.deleteFootage("abc");
+        1:   44-block  0
+        1:   44-block  1
+    $$$$$:   44-block  2
+        1:   45:    assert(repository.getAllFootage().getSize() == 0);
+        1:   45-block  0
+        1:   45-block  1
+        1:   45-block  2
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+    $$$$$:   45-block  6
+        1:   45-block  7
+        1:   46:}
+    $$$$$:   46-block  0
+    $$$$$:   46-block  1
+    $$$$$:   46-block  2
+    $$$$$:   46-block  3
+        1:   46-block  4
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+    $$$$$:   46-block  7
+        -:   47:
+        1:   48:void TestRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
+        1:   49:    auto repository = Repository();
+        1:   49-block  0
+        1:   50:    auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   50-block  0
+        1:   50-block  1
+        1:   50-block  2
+        1:   50-block  3
+        1:   50-block  4
+    $$$$$:   50-block  5
+    $$$$$:   50-block  6
+    $$$$$:   50-block  7
+        1:   51:    repository.addFootage(testFootage);
+        1:   51-block  0
+        1:   52:    assert(repository.getAllFootage().getSize() == 1);
+        1:   52-block  0
+        1:   52-block  1
+        1:   52-block  2
+    $$$$$:   52-block  3
+    $$$$$:   52-block  4
+    $$$$$:   52-block  5
+    $$$$$:   52-block  6
+        1:   52-block  7
+        -:   53:    try {
+        1:   54:        repository.deleteFootage("abd");
+        1:   54-block  0
+        1:   54-block  1
+        1:   54-block  2
+    #####:   55:        assert(false);
+    $$$$$:   55-block  0
+    $$$$$:   55-block  1
+        1:   56:    }catch (std::exception&) {
+        1:   56-block  0
+        -:   57:        static_assert(true);
+        1:   58:    }
+        1:   58-block  0
+        1:   58-block  1
+        1:   59:    assert(repository.getAllFootage().getSize() == 1);
+        1:   59-block  0
+        1:   59-block  1
+        1:   59-block  2
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+    $$$$$:   59-block  6
+        1:   59-block  7
+        2:   60:}
+    $$$$$:   60-block  0
+    $$$$$:   60-block  1
+    $$$$$:   60-block  2
+    $$$$$:   60-block  3
+    $$$$$:   60-block  4
+        1:   60-block  5
+    $$$$$:   60-block  6
+    $$$$$:   60-block  7
+    $$$$$:   60-block  8
+        -:   61:
+        1:   62:void TestRepository::test_updateFootage_ValidInput_FootageChanged() {
+        1:   63:    auto repository = Repository();
+        1:   63-block  0
+        1:   64:    auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   64-block  0
+        1:   64-block  1
+        1:   64-block  2
+        1:   64-block  3
+        1:   64-block  4
+    $$$$$:   64-block  5
+    $$$$$:   64-block  6
+    $$$$$:   64-block  7
+        1:   65:    repository.addFootage(testFootage);
+        1:   65-block  0
+        1:   66:    assert(repository.getAllFootage().getSize() == 1);
+        1:   66-block  0
+        1:   66-block  1
+        1:   66-block  2
+    $$$$$:   66-block  3
+    $$$$$:   66-block  4
+    $$$$$:   66-block  5
+    $$$$$:   66-block  6
+        1:   66-block  7
+        1:   67:    auto testFootage2 = Footage("abc", "efg", Date(3, 3, 2020), 9, "link2");
+        1:   67-block  0
+        1:   67-block  1
+        1:   67-block  2
+        1:   67-block  3
+        1:   67-block  4
+    $$$$$:   67-block  5
+    $$$$$:   67-block  6
+    $$$$$:   67-block  7
+        1:   68:    repository.updateFootage(testFootage2);
+        1:   68-block  0
+        1:   69:    assert(repository.getAllFootage().getElement(0).getType() == "efg");
+        1:   69-block  0
+        1:   69-block  1
+        1:   69-block  2
+        1:   69-block  3
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+    $$$$$:   69-block  6
+    $$$$$:   69-block  7
+        1:   69-block  8
+    $$$$$:   69-block  9
+    $$$$$:   69-block 10
+        1:   70:}
+    $$$$$:   70-block  0
+    $$$$$:   70-block  1
+    $$$$$:   70-block  2
+    $$$$$:   70-block  3
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+    $$$$$:   70-block  6
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+        1:   70-block  9
+    $$$$$:   70-block 10
+    $$$$$:   70-block 11
+    $$$$$:   70-block 12
+    $$$$$:   70-block 13
+        -:   71:
+        1:   72:void TestRepository::test_updateFootage_Inexistent_FootageNotChanged() {
+        1:   73:    auto repository = Repository();
+        1:   73-block  0
+        1:   74:    auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   74-block  0
+        1:   74-block  1
+        1:   74-block  2
+        1:   74-block  3
+        1:   74-block  4
+    $$$$$:   74-block  5
+    $$$$$:   74-block  6
+    $$$$$:   74-block  7
+        1:   75:    repository.addFootage(testFootage);
+        1:   75-block  0
+        1:   76:    assert(repository.getAllFootage().getSize() == 1);
+        1:   76-block  0
+        1:   76-block  1
+        1:   76-block  2
+    $$$$$:   76-block  3
+    $$$$$:   76-block  4
+    $$$$$:   76-block  5
+    $$$$$:   76-block  6
+        1:   76-block  7
+        1:   77:    auto testFootage2 = Footage("abd", "efg", Date(3, 3, 2020), 9, "link2");
+        1:   77-block  0
+        1:   77-block  1
+        1:   77-block  2
+        1:   77-block  3
+        1:   77-block  4
+    $$$$$:   77-block  5
+    $$$$$:   77-block  6
+    $$$$$:   77-block  7
+        -:   78:    try {
+        1:   79:        repository.updateFootage(testFootage2);
+        1:   79-block  0
+    #####:   80:        assert(false);
+    $$$$$:   80-block  0
+    $$$$$:   80-block  1
+        1:   81:    }catch (std::exception&) {
+        1:   81-block  0
+        -:   82:        static_assert(true);
+        1:   83:    }
+        1:   83-block  0
+        1:   83-block  1
+        1:   84:    assert(repository.getAllFootage().getElement(0).getType() != "efg");
+        1:   84-block  0
+        1:   84-block  1
+        1:   84-block  2
+        1:   84-block  3
+    $$$$$:   84-block  4
+    $$$$$:   84-block  5
+    $$$$$:   84-block  6
+    $$$$$:   84-block  7
+        1:   84-block  8
+    $$$$$:   84-block  9
+    $$$$$:   84-block 10
+        2:   85:}
+    $$$$$:   85-block  0
+    $$$$$:   85-block  1
+    $$$$$:   85-block  2
+    $$$$$:   85-block  3
+    $$$$$:   85-block  4
+    $$$$$:   85-block  5
+        1:   85-block  6
+    $$$$$:   85-block  7
+    $$$$$:   85-block  8
+    $$$$$:   85-block  9
+        1:   85-block 10
+    $$$$$:   85-block 11
+    $$$$$:   85-block 12
+    $$$$$:   85-block 13
+    $$$$$:   85-block 14

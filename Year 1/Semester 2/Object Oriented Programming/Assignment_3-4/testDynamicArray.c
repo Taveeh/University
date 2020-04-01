@@ -7,7 +7,7 @@
 #include <assert.h>
 
 void test_createDynamicArray_ValidInput_CreateDynamicArrayGivenCapacity() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, &copyMap);
     if (dynamicArray == NULL) {
         assert(0);
     }
@@ -18,7 +18,7 @@ void test_createDynamicArray_ValidInput_CreateDynamicArrayGivenCapacity() {
 }
 
 void test_addElementToDynamicArray_ValidMap_MapAddedToArray() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, &copyMap);
     Map* map = createMap(123, "abc", "def", 456);
     assert(addElementToDynamicArray(dynamicArray, map) == 1);
     assert(getLengthOfDynamicArray(dynamicArray) == 1);
@@ -26,7 +26,7 @@ void test_addElementToDynamicArray_ValidMap_MapAddedToArray() {
 }
 
 void test_addElementToDynamicArray_ManyElements_CapacityDoubles() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map1 = createMap(123, "abc", "def", 456);
     assert(addElementToDynamicArray(dynamicArray, map1) == 1);
     Map* map2 = createMap(124, "asa", "si asa", 32144);
@@ -39,7 +39,7 @@ void test_addElementToDynamicArray_ManyElements_CapacityDoubles() {
 }
 
 void test_getElementOnPosition_ValidInput_GetAMap() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map1 = createMap(123, "abc", "def", 456);
     assert(addElementToDynamicArray(dynamicArray, map1) == 1);
     assert(getElementOnPosition(dynamicArray, 0) == map1);
@@ -47,7 +47,7 @@ void test_getElementOnPosition_ValidInput_GetAMap() {
 }
 
 void test_getElementOnPosition_InvalidInput_GetNULL() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map1 = createMap(123, "abc", "def", 456);
     assert(addElementToDynamicArray(dynamicArray, map1) == 1);
     assert(getElementOnPosition(dynamicArray, 2) == NULL);
@@ -55,7 +55,7 @@ void test_getElementOnPosition_InvalidInput_GetNULL() {
 }
 
 void test_deleteElementFromPosition_ValidInput_ElementRemoved() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map = createMap(123, "abc", "def", 456);
     assert(addElementToDynamicArray(dynamicArray, map) == 1);
     assert(deleteElementFromPosition(dynamicArray, 0) == 1);
@@ -64,7 +64,7 @@ void test_deleteElementFromPosition_ValidInput_ElementRemoved() {
 
 
 void test_deleteElementFromPosition_RemovedTooManyItems_CapacityBecomesSmaller() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map1 = createMap(123, "abc", "def", 456);
     assert(addElementToDynamicArray(dynamicArray, map1) == 1);
     Map* map2 = createMap(124, "asa", "si asa", 32144);
@@ -100,14 +100,14 @@ void testAllDynamicArray() {
 }
 
 void test_insertElementToPosition_ValidPosition_ElementAdded() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map1 = createMap(123, "abc", "def", 456);
     assert(insertElementToPosition(dynamicArray, 0, map1) == 1);
     destroyDynamicArray(dynamicArray);
 }
 
 void test_insertElementToPosition_InvalidPosition_ElementNotAdded() {
-    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap);
+    DynamicArray* dynamicArray = createDynamicArray(2, &destroyMap, copyMap);
     Map* map1 = createMap(123, "abc", "def", 456);
     assert(insertElementToPosition(dynamicArray, 1, map1) == 0);
     destroyMap(map1);

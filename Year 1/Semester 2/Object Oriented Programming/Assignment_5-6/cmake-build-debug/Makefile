@@ -123,33 +123,6 @@ Assignment_5_6/fast:
 	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/build
 .PHONY : Assignment_5_6/fast
 
-DynamicArray.o: DynamicArray.cpp.o
-
-.PHONY : DynamicArray.o
-
-# target to build an object file
-DynamicArray.cpp.o:
-	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.o
-.PHONY : DynamicArray.cpp.o
-
-DynamicArray.i: DynamicArray.cpp.i
-
-.PHONY : DynamicArray.i
-
-# target to preprocess a source file
-DynamicArray.cpp.i:
-	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.i
-.PHONY : DynamicArray.cpp.i
-
-DynamicArray.s: DynamicArray.cpp.s
-
-.PHONY : DynamicArray.s
-
-# target to generate assembly for a file
-DynamicArray.cpp.s:
-	$(MAKE) -f CMakeFiles/Assignment_5_6.dir/build.make CMakeFiles/Assignment_5_6.dir/DynamicArray.cpp.s
-.PHONY : DynamicArray.cpp.s
-
 Footage.o: Footage.cpp.o
 
 .PHONY : Footage.o
@@ -402,9 +375,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Assignment_5_6"
-	@echo "... DynamicArray.o"
-	@echo "... DynamicArray.i"
-	@echo "... DynamicArray.s"
 	@echo "... Footage.o"
 	@echo "... Footage.i"
 	@echo "... Footage.s"

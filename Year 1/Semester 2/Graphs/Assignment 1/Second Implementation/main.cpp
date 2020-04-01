@@ -184,6 +184,7 @@ int main() {
     while (true) {
         try {
             printMenu(G);
+            std::cout << G.toString() << '\n';
         }catch (int e) {
             std::cout << "Goodbye\n";
             return 0;

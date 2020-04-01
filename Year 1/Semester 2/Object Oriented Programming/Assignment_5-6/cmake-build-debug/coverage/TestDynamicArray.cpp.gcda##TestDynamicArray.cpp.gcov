@@ -1,0 +1,415 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/TestDynamicArray.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-6/cmake-build-debug/CMakeFiles/Assignment_5_6.dir/TestDynamicArray.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 23/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "TestDynamicArray.h"
+        -:    6:#include "DynamicArray.h"
+        -:    7:#include "Footage.h"
+        -:    8:#include <exception>
+        -:    9:
+        1:   10:void TestDynamicArray::test_CopyConstructor_ValidArray_AllAreTheSame() {
+        1:   11:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   11-block  0
+        1:   12:    auto testFootage = Footage();
+        1:   12-block  0
+        1:   13:    dynamicArray1.addElement(testFootage);
+        1:   13-block  0
+        1:   13-block  1
+    $$$$$:   13-block  2
+        1:   14:    DynamicArray<Footage> dynamicArray2 = DynamicArray(dynamicArray1);
+        1:   14-block  0
+        1:   15:    assert(dynamicArray1.getSize() == 1);
+        1:   15-block  0
+        1:   15-block  1
+    $$$$$:   15-block  2
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+        1:   15-block  5
+        1:   16:    assert(dynamicArray2.getSize() == 1);
+        1:   16-block  0
+        1:   16-block  1
+    $$$$$:   16-block  2
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+        1:   16-block  5
+        1:   17:}
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+        1:   17-block  3
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+    $$$$$:   17-block  6
+        -:   18:
+        1:   19:void TestDynamicArray::test_all() {
+        1:   20:    test_CopyConstructor_ValidArray_AllAreTheSame();
+        1:   20-block  0
+        1:   21:    test_AssignmentOperator_ValidArray_AllAreTheSame();
+        1:   22:    test_addElement_ValidElement_ElementAdded();
+        1:   23:    test_addElementToPosition_ValidPosition_ElementAdded();
+        1:   24:    test_addElementToPosition_NegativePosition_Exception();
+        1:   25:    test_removeElementFromPosition_ValidPosition_ElementRemoved();
+        1:   26:    test_removeElementFromPosition_NegativePosition_Exception();
+        1:   27:    test_setElement_ValidPosition_ElementSet();
+        1:   28:    test_setElement_NegativePosition_Exception();
+        1:   29:}
+        1:   29-block  0
+        -:   30:
+        1:   31:void TestDynamicArray::test_AssignmentOperator_ValidArray_AllAreTheSame() {
+        1:   32:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   32-block  0
+        1:   33:    auto testFootage = Footage();
+        1:   33-block  0
+        1:   34:    dynamicArray1.addElement(testFootage);
+        1:   34-block  0
+        1:   34-block  1
+    $$$$$:   34-block  2
+        1:   35:    DynamicArray<Footage> dynamicArray2, dynamicArray3;
+        1:   35-block  0
+        1:   35-block  1
+        1:   36:    dynamicArray3 = dynamicArray2 = dynamicArray1;
+        1:   36-block  0
+        1:   36-block  1
+        1:   37:    assert(dynamicArray3.getSize() == 1);
+        1:   37-block  0
+        1:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+        1:   37-block  5
+        1:   38:    assert(dynamicArray2.getSize() == 1);
+        1:   38-block  0
+        1:   38-block  1
+    $$$$$:   38-block  2
+    $$$$$:   38-block  3
+    $$$$$:   38-block  4
+        1:   38-block  5
+        1:   39:    assert(dynamicArray1.getSize() == 1);
+        1:   39-block  0
+        1:   39-block  1
+    $$$$$:   39-block  2
+    $$$$$:   39-block  3
+    $$$$$:   39-block  4
+        1:   39-block  5
+        1:   40:}
+    $$$$$:   40-block  0
+    $$$$$:   40-block  1
+    $$$$$:   40-block  2
+    $$$$$:   40-block  3
+        1:   40-block  4
+    $$$$$:   40-block  5
+    $$$$$:   40-block  6
+    $$$$$:   40-block  7
+    $$$$$:   40-block  8
+        -:   41:
+        1:   42:void TestDynamicArray::test_addElement_ValidElement_ElementAdded() {
+        1:   43:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   43-block  0
+        1:   44:    assert(dynamicArray1.getSize() == 0);
+        1:   44-block  0
+        1:   44-block  1
+    $$$$$:   44-block  2
+    $$$$$:   44-block  3
+    $$$$$:   44-block  4
+        1:   44-block  5
+        1:   45:    auto testFootage = Footage();
+        1:   45-block  0
+        1:   46:    dynamicArray1.addElement(testFootage);
+        1:   46-block  0
+        1:   46-block  1
+    $$$$$:   46-block  2
+        1:   47:    assert(dynamicArray1.getSize() == 1);
+        1:   47-block  0
+        1:   47-block  1
+    $$$$$:   47-block  2
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+        1:   47-block  5
+        1:   48:}
+    $$$$$:   48-block  0
+    $$$$$:   48-block  1
+        1:   48-block  2
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+    $$$$$:   48-block  5
+        -:   49:
+        1:   50:void TestDynamicArray::test_addElementToPosition_ValidPosition_ElementAdded() {
+        1:   51:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   51-block  0
+        1:   52:    assert(dynamicArray1.getSize() == 0);
+        1:   52-block  0
+        1:   52-block  1
+    $$$$$:   52-block  2
+    $$$$$:   52-block  3
+    $$$$$:   52-block  4
+        1:   52-block  5
+        1:   53:    auto testFootage = Footage("abc", "def", Date(), 1, "ghi");
+        1:   53-block  0
+        1:   53-block  1
+        1:   53-block  2
+        1:   53-block  3
+        1:   53-block  4
+    $$$$$:   53-block  5
+    $$$$$:   53-block  6
+    $$$$$:   53-block  7
+        1:   54:    dynamicArray1.addElementToPosition(testFootage, 0);
+        1:   54-block  0
+        1:   54-block  1
+    $$$$$:   54-block  2
+        1:   55:    assert(dynamicArray1.getElement(0).getTitle() == "abc");
+        1:   55-block  0
+        1:   55-block  1
+        1:   55-block  2
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+    $$$$$:   55-block  5
+    $$$$$:   55-block  6
+        1:   55-block  7
+    $$$$$:   55-block  8
+        1:   56:}
+    $$$$$:   56-block  0
+    $$$$$:   56-block  1
+    $$$$$:   56-block  2
+    $$$$$:   56-block  3
+    $$$$$:   56-block  4
+        1:   56-block  5
+    $$$$$:   56-block  6
+    $$$$$:   56-block  7
+    $$$$$:   56-block  8
+        -:   57:
+        1:   58:void TestDynamicArray::test_addElementToPosition_NegativePosition_Exception() {
+        1:   59:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   59-block  0
+        1:   60:    assert(dynamicArray1.getSize() == 0);
+        1:   60-block  0
+        1:   60-block  1
+    $$$$$:   60-block  2
+    $$$$$:   60-block  3
+    $$$$$:   60-block  4
+        1:   60-block  5
+        1:   61:    auto testFootage = Footage();
+        1:   61-block  0
+        -:   62:    try {
+        1:   63:        dynamicArray1.addElementToPosition(testFootage, -1);
+        1:   63-block  0
+        1:   63-block  1
+        1:   63-block  2
+    #####:   64:        assert(false);
+    $$$$$:   64-block  0
+    $$$$$:   64-block  1
+        1:   65:    }catch (std::exception&) {
+        1:   65-block  0
+        -:   66:        static_assert(true);
+        1:   67:    }
+        1:   67-block  0
+        1:   67-block  1
+        1:   68:    assert(dynamicArray1.getSize() == 0);
+        1:   68-block  0
+        1:   68-block  1
+    $$$$$:   68-block  2
+    $$$$$:   68-block  3
+    $$$$$:   68-block  4
+        1:   68-block  5
+        2:   69:}
+    $$$$$:   69-block  0
+    $$$$$:   69-block  1
+    $$$$$:   69-block  2
+        1:   69-block  3
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+    $$$$$:   69-block  6
+        -:   70:
+        1:   71:void TestDynamicArray::test_removeElementFromPosition_ValidPosition_ElementRemoved() {
+        1:   72:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   72-block  0
+        1:   73:    assert(dynamicArray1.getSize() == 0);
+        1:   73-block  0
+        1:   73-block  1
+    $$$$$:   73-block  2
+    $$$$$:   73-block  3
+    $$$$$:   73-block  4
+        1:   73-block  5
+        1:   74:    auto testFootage = Footage();
+        1:   74-block  0
+        1:   75:    dynamicArray1.addElementToPosition(testFootage, 0);
+        1:   75-block  0
+        1:   75-block  1
+    $$$$$:   75-block  2
+        1:   76:    assert(dynamicArray1.getSize() == 1);
+        1:   76-block  0
+        1:   76-block  1
+    $$$$$:   76-block  2
+    $$$$$:   76-block  3
+    $$$$$:   76-block  4
+        1:   76-block  5
+        1:   77:    dynamicArray1.removeElementFromPosition(0);
+        1:   77-block  0
+        1:   78:    assert(dynamicArray1.getSize() == 0);
+        1:   78-block  0
+        1:   78-block  1
+    $$$$$:   78-block  2
+    $$$$$:   78-block  3
+    $$$$$:   78-block  4
+        1:   78-block  5
+        1:   79:}
+    $$$$$:   79-block  0
+    $$$$$:   79-block  1
+        1:   79-block  2
+    $$$$$:   79-block  3
+    $$$$$:   79-block  4
+    $$$$$:   79-block  5
+        -:   80:
+        1:   81:void TestDynamicArray::test_removeElementFromPosition_NegativePosition_Exception() {
+        1:   82:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   82-block  0
+        1:   83:    assert(dynamicArray1.getSize() == 0);
+        1:   83-block  0
+        1:   83-block  1
+    $$$$$:   83-block  2
+    $$$$$:   83-block  3
+    $$$$$:   83-block  4
+        1:   83-block  5
+        1:   84:    auto testFootage = Footage();
+        1:   84-block  0
+        1:   85:    dynamicArray1.addElementToPosition(testFootage, 0);
+        1:   85-block  0
+        1:   85-block  1
+    $$$$$:   85-block  2
+        1:   86:    assert(dynamicArray1.getSize() == 1);
+        1:   86-block  0
+        1:   86-block  1
+    $$$$$:   86-block  2
+    $$$$$:   86-block  3
+    $$$$$:   86-block  4
+        1:   86-block  5
+        -:   87:    try {
+        1:   88:        dynamicArray1.removeElementFromPosition(-1);
+        1:   88-block  0
+    #####:   89:        assert(false);
+    $$$$$:   89-block  0
+    $$$$$:   89-block  1
+        1:   90:    }catch (std::exception &) {
+        1:   90-block  0
+        -:   91:        static_assert(true);
+        1:   92:    }
+        1:   92-block  0
+        1:   92-block  1
+        1:   93:    assert(dynamicArray1.getSize() == 1);
+        1:   93-block  0
+        1:   93-block  1
+    $$$$$:   93-block  2
+    $$$$$:   93-block  3
+    $$$$$:   93-block  4
+        1:   93-block  5
+        2:   94:}
+    $$$$$:   94-block  0
+    $$$$$:   94-block  1
+        1:   94-block  2
+        1:   94-block  3
+    $$$$$:   94-block  4
+    $$$$$:   94-block  5
+    $$$$$:   94-block  6
+        -:   95:
+        1:   96:void TestDynamicArray::test_setElement_ValidPosition_ElementSet() {
+        1:   97:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:   97-block  0
+        1:   98:    assert(dynamicArray1.getSize() == 0);
+        1:   98-block  0
+        1:   98-block  1
+    $$$$$:   98-block  2
+    $$$$$:   98-block  3
+    $$$$$:   98-block  4
+        1:   98-block  5
+        1:   99:    auto testFootage = Footage();
+        1:   99-block  0
+        1:  100:    dynamicArray1.addElementToPosition(testFootage, 0);
+        1:  100-block  0
+        1:  100-block  1
+    $$$$$:  100-block  2
+        1:  101:    dynamicArray1.setElement(Footage("abc", "def", Date(), 7, "ghi"), 0);
+        1:  101-block  0
+        1:  101-block  1
+        1:  101-block  2
+        1:  101-block  3
+        1:  101-block  4
+        1:  101-block  5
+    $$$$$:  101-block  6
+    $$$$$:  101-block  7
+    $$$$$:  101-block  8
+    $$$$$:  101-block  9
+        1:  102:    assert(dynamicArray1.getElement(0).getTitle() == "abc");
+        1:  102-block  0
+        1:  102-block  1
+        1:  102-block  2
+    $$$$$:  102-block  3
+    $$$$$:  102-block  4
+    $$$$$:  102-block  5
+    $$$$$:  102-block  6
+        1:  102-block  7
+    $$$$$:  102-block  8
+        1:  103:}
+    $$$$$:  103-block  0
+    $$$$$:  103-block  1
+    $$$$$:  103-block  2
+    $$$$$:  103-block  3
+    $$$$$:  103-block  4
+    $$$$$:  103-block  5
+        1:  103-block  6
+    $$$$$:  103-block  7
+    $$$$$:  103-block  8
+    $$$$$:  103-block  9
+        -:  104:
+        1:  105:void TestDynamicArray::test_setElement_NegativePosition_Exception() {
+        1:  106:    auto dynamicArray1 = DynamicArray<Footage>();
+        1:  106-block  0
+        1:  107:    assert(dynamicArray1.getSize() == 0);
+        1:  107-block  0
+        1:  107-block  1
+    $$$$$:  107-block  2
+    $$$$$:  107-block  3
+    $$$$$:  107-block  4
+        1:  107-block  5
+        1:  108:    auto testFootage = Footage();
+        1:  108-block  0
+        1:  109:    dynamicArray1.addElementToPosition(testFootage, 0);
+        1:  109-block  0
+        1:  109-block  1
+    $$$$$:  109-block  2
+        -:  110:    try {
+        1:  111:        dynamicArray1.setElement(Footage("abc", "def", Date(), 7, "ghi"), -1);
+        1:  111-block  0
+        1:  111-block  1
+        1:  111-block  2
+        1:  111-block  3
+        1:  111-block  4
+        1:  111-block  5
+        1:  111-block  6
+        1:  111-block  7
+        1:  111-block  8
+        1:  111-block  9
+    #####:  112:        assert(false);
+    $$$$$:  112-block  0
+    $$$$$:  112-block  1
+        1:  113:    }catch (std::exception&) {
+        1:  113-block  0
+        -:  114:        static_assert(true);
+        1:  115:    }
+        1:  115-block  0
+        1:  115-block  1
+        2:  116:}
+    $$$$$:  116-block  0
+    $$$$$:  116-block  1
+    $$$$$:  116-block  2
+    $$$$$:  116-block  3
+    $$$$$:  116-block  4
+    $$$$$:  116-block  5
+        1:  116-block  6
+    $$$$$:  116-block  7
+    $$$$$:  116-block  8
+    $$$$$:  116-block  9
+        -:  117:

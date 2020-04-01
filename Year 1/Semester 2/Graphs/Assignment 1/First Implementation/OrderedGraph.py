@@ -147,7 +147,7 @@ class OrderedGraphCost:
 
 
 def readFile():
-    f = open('graph10k.txt', 'r')
+    f = open('graph1k.txt', 'r')
     a = f.readline()
     a = a.strip()
     a = a.split()
