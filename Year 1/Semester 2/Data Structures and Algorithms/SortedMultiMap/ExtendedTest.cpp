@@ -49,8 +49,14 @@ bool rel5(TKey c1, TKey c2) {
 }
 
 void testIteratorSteps(SortedMultiMap& m) {
-	int c = 0;
 	SMMIterator smmi = m.iterator();
+	int count = m.size();
+	for (int i = 0; i < count / 2; i++) {
+		smmi.next();
+	}
+	smmi.first();
+	int c = 0;
+	
 	while (smmi.valid()) {
 		c++;
 		smmi.next();
@@ -195,6 +201,20 @@ void testIterator(Relation r) {
 	SortedMultiMap smm = SortedMultiMap(r);
 	SMMIterator it = smm.iterator();
 	assert(!it.valid());
+	try {
+		it.next();
+		assert(false);
+	}
+	catch (exception& ex) {
+		assert(true);
+	}
+	try {
+		it.getCurrent();
+		assert(false);
+	}
+	catch (exception& ex) {
+		assert(true);
+	}
 	it.first();
 	assert(!it.valid());
 	int cMin = 100;

@@ -2,7 +2,11 @@
 #include "SortedMultiMap.h"
 
 SMMIterator::SMMIterator(const SortedMultiMap& d) : map(d){
-	//TODO - Implementation
+	currentKey = d.head;
+	itList = nullptr;
+	if (currentKey != nullptr) {
+		itList = SortedMultiMap::IteratorSLLList(currentKey->list);
+	}
 }
 
 void SMMIterator::first(){

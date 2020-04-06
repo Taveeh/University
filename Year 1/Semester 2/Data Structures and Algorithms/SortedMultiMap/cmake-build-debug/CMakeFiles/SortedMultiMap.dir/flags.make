@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/." 
+CXX_INCLUDES = -I/Users/taveeh/Desktop/SortedMultiMap/. 
 

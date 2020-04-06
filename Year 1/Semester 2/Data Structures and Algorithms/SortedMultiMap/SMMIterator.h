@@ -8,9 +8,9 @@ class SMMIterator{
 private:
 	//DO NOT CHANGE THIS PART
 	const SortedMultiMap& map;
-	SMMIterator(const SortedMultiMap& map);
-
-	//TODO - Representation
+	explicit SMMIterator(const SortedMultiMap& map);
+	SortedMultiMap::SMMNode* currentKey;
+	SortedMultiMap::IteratorSLLList itList;
 
 public:
 	void first();

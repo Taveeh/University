@@ -12,23 +12,56 @@ typedef std::pair<TKey, TValue> TElem;
 using namespace std;
 class SMMIterator;
 typedef bool(*Relation)(TKey, TValue);
-struct SLLNode {
-    TElem info;
-    SLLNode* next;
-};
-struct SLLList {
-    SLLNode* head;
-};
 
 class SortedMultiMap {
 	friend class SMMIterator;
-
+	struct SLLNode {
+	    TValue value;
+	    SLLNode* next;
+	};
+	struct SLLList {
+	    SLLNode* head;
+	    int size;
+	    SLLList() {
+	        head = nullptr;
+	        size = 0;
+	    }
+	};
+	struct IteratorSLLList {
+	    SLLList* list;
+	    SLLNode* current;
+	    explicit IteratorSLLList(SLLList* list1): list(list1) {
+	      current = list->head;
+	    }
+	};
+	struct SMMNode {
+	    TKey key;
+	    SLLList* list;
+	    SMMNode* next;
+	    SMMNode() {
+	        next = nullptr;
+	        list = new SLLList;
+	    }
+	};
     private:
-		Relation rel;
+		SMMNode* head;
+        Relation rel;
 
-		SLLNode* head;
+        void addList(SMMNode*, TValue val);
 
-//		static void addAfter(SLLNode *node, TElem elem);
+        bool removeList(SMMNode* node,  TValue val);
+
+        int sizeList(SMMNode* node) const;
+
+        IteratorSLLList iteratorList(SMMNode* node);
+
+        void firstList(IteratorSLLList& it);
+
+        bool validList(IteratorSLLList& it);
+
+        void nextList(IteratorSLLList& it);
+
+        TValue getCurrentList(IteratorSLLList& it);
 
     public:
 

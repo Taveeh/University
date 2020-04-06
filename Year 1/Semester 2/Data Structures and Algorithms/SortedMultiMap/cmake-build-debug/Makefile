@@ -48,10 +48,10 @@ RM = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap"
+CMAKE_SOURCE_DIR = /Users/taveeh/Desktop/SortedMultiMap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/taveeh/Desktop/SortedMultiMap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/cmake-build-debug/CMakeFiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/taveeh/Desktop/SortedMultiMap/cmake-build-debug/CMakeFiles /Users/taveeh/Desktop/SortedMultiMap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMultiMap/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/taveeh/Desktop/SortedMultiMap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,60 +176,6 @@ ExtendedTest.s: ExtendedTest.cpp.s
 ExtendedTest.cpp.s:
 	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/ExtendedTest.cpp.s
 .PHONY : ExtendedTest.cpp.s
-
-List.o: List.cpp.o
-
-.PHONY : List.o
-
-# target to build an object file
-List.cpp.o:
-	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/List.cpp.o
-.PHONY : List.cpp.o
-
-List.i: List.cpp.i
-
-.PHONY : List.i
-
-# target to preprocess a source file
-List.cpp.i:
-	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/List.cpp.i
-.PHONY : List.cpp.i
-
-List.s: List.cpp.s
-
-.PHONY : List.s
-
-# target to generate assembly for a file
-List.cpp.s:
-	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/List.cpp.s
-.PHONY : List.cpp.s
-
-ListIterator.o: ListIterator.cpp.o
-
-.PHONY : ListIterator.o
-
-# target to build an object file
-ListIterator.cpp.o:
-	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/ListIterator.cpp.o
-.PHONY : ListIterator.cpp.o
-
-ListIterator.i: ListIterator.cpp.i
-
-.PHONY : ListIterator.i
-
-# target to preprocess a source file
-ListIterator.cpp.i:
-	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/ListIterator.cpp.i
-.PHONY : ListIterator.cpp.i
-
-ListIterator.s: ListIterator.cpp.s
-
-.PHONY : ListIterator.s
-
-# target to generate assembly for a file
-ListIterator.cpp.s:
-	$(MAKE) -f CMakeFiles/SortedMultiMap.dir/build.make CMakeFiles/SortedMultiMap.dir/ListIterator.cpp.s
-.PHONY : ListIterator.cpp.s
 
 SMMIterator.o: SMMIterator.cpp.o
 
@@ -327,12 +273,6 @@ help:
 	@echo "... ExtendedTest.o"
 	@echo "... ExtendedTest.i"
 	@echo "... ExtendedTest.s"
-	@echo "... List.o"
-	@echo "... List.i"
-	@echo "... List.s"
-	@echo "... ListIterator.o"
-	@echo "... ListIterator.i"
-	@echo "... ListIterator.s"
 	@echo "... SMMIterator.o"
 	@echo "... SMMIterator.i"
 	@echo "... SMMIterator.s"
