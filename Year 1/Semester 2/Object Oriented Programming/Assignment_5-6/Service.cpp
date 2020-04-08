@@ -4,7 +4,6 @@
 
 #include "Service.h"
 #include <exception>
-//#include <cassert>
 #include <iostream>
 #include <sstream>
 #include <ctime>

@@ -34,14 +34,23 @@ Year 1:
           - PyUnit Tests
           - Backtracking (Recursive + Iterative)
       
-      2nd semester:
+    2nd semester:
       
         1. Data structures and Algorithms (C++):
-            - ADT Sparse Matrix
+            - ADT Sparse Matrix - Dynamic Array
+            - ADT Sorted Multi Map - Singly Linked List with Dynamic Allocation
             
         2. Object Oriented Programming (C/C++):
             - Basic algorithms
-            - Modular Programming (Layered Architecture Design Pattern).
+            - Layered Architecture Design Pattern
+            - Templated Dynamic Array
             
         3. Graph Algorithms:
             - Add/Remove Vertex/Edge
+            - Shortest path in directed graph using BFS
+            - Kosaraju's Algorithm for Strongly Connected Components
+        
+        4. Operating Systems (Bash / C):
+            - C programming in VIM
+            - Grep/Sed/Awk
+            - Bash scripts
