@@ -1,0 +1,107 @@
+        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/MemoryRepository.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 12/04/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "MemoryRepository.h"
+        -:    6:
+      106:    7:MemoryRepository::MemoryRepository(): currentElement(0) {
+       53:    7-block  0
+       53:    7-block  1
+       53:    8:	arrayOfTapes = std::vector<Footage>();
+      106:    9:}
+       53:    9-block  0
+       53:    9-block  1
+        -:   10:
+       10:   11:void MemoryRepository::addFootage(const Footage &newFootage) {
+       10:   11-block  0
+       11:   12:	for (auto & arrayOfTape : arrayOfTapes) {
+       10:   12-block  0
+       11:   12-block  1
+        1:   12-block  2
+        1:   12-block  3
+        2:   13:		if (arrayOfTape.getTitle() == newFootage.getTitle()) {
+        2:   13-block  0
+        2:   13-block  1
+    $$$$$:   13-block  2
+    $$$$$:   13-block  3
+        1:   14:			throw std::exception();
+        1:   14-block  0
+        -:   15:		}
+        -:   16:	}
+        9:   17:	arrayOfTapes.push_back(newFootage);
+        9:   18:}
+        9:   18-block  0
+        -:   19:
+        2:   20:void MemoryRepository::deleteFootage(const std::string &titleToBeRemoved) {
+        2:   20-block  0
+        3:   21:	for (auto iteratorRepository = arrayOfTapes.begin(); iteratorRepository != arrayOfTapes.end(); ++iteratorRepository) {
+        2:   21-block  0
+        3:   21-block  1
+        1:   21-block  2
+        2:   22:		if (iteratorRepository->getTitle() == titleToBeRemoved) {
+        2:   22-block  0
+        1:   23:			arrayOfTapes.erase(iteratorRepository);
+        1:   24:			return;
+        1:   24-block  0
+        -:   25:		}
+        1:   26:	}
+        1:   26-block  0
+        1:   27:	throw std::exception();
+        1:   27-block  0
+        -:   28:}
+        -:   29:
+        2:   30:void MemoryRepository::updateFootage(const Footage &newFootage) {
+        2:   30-block  0
+        3:   31:	for (auto & arrayOfTape : arrayOfTapes) {
+        2:   31-block  0
+        3:   31-block  1
+        1:   31-block  2
+        1:   31-block  3
+        2:   32:		if (arrayOfTape.getTitle() == newFootage.getTitle()) {
+        2:   32-block  0
+        2:   32-block  1
+    $$$$$:   32-block  2
+    $$$$$:   32-block  3
+        1:   33:			arrayOfTape = newFootage;
+        1:   34:			return;
+        1:   34-block  0
+        -:   35:		}
+        -:   36:	}
+        1:   37:	throw std::exception();}
+        1:   37-block  0
+        -:   38:
+        4:   39:std::vector<Footage> MemoryRepository::getAllFootage() {
+        4:   39-block  0
+        4:   40:	auto arrayOfFootage = std::vector<Footage>();
+        7:   41:	for (auto & arrayOfTape : arrayOfTapes) {
+        4:   41-block  0
+        7:   41-block  1
+        3:   41-block  2
+        3:   41-block  3
+        3:   42:		arrayOfFootage.push_back(arrayOfTape);
+        3:   42-block  0
+        -:   43:	}
+        4:   44:	return arrayOfFootage;
+        4:   45:}
+    $$$$$:   45-block  0
+        4:   45-block  1
+    $$$$$:   45-block  2
+        4:   45-block  3
+    $$$$$:   45-block  4
+        -:   46:
+        3:   47:Footage MemoryRepository::getCurrentElement() {
+        3:   47-block  0
+        3:   48:	if (currentElement == arrayOfTapes.size()) {
+        3:   48-block  0
+        1:   49:		currentElement = 0;
+        1:   50:	}
+        1:   50-block  0
+        3:   51:	return *(arrayOfTapes.begin() + currentElement++);
+        3:   51-block  0
+        -:   52:}
+        -:   53:

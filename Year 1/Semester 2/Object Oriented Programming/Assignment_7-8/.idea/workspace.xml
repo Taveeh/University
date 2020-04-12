@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Assignment_7_8" targetName="Assignment_7_8" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b3cbb6b-9af3-45e7-946a-7c33948d7f8c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="167" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1aR4puu8ayPLKTcya7iFgvK66aR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Assignment_7_8" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment_7_8" TARGET_NAME="Assignment_7_8" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Assignment_7_8" RUN_TARGET_NAME="Assignment_7_8">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b3cbb6b-9af3-45e7-946a-7c33948d7f8c" name="Default Changelist" comment="" />
+      <created>1586685258524</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586685258524</updated>
+      <workItem from="1586685260248" duration="16766000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1373" height="247" key="GridCell.Tab.0.bottom" timestamp="1586705413322">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.0.bottom/0.23.1440.782@0.23.1440.782" timestamp="1586705413322" />
+    <state width="1373" height="247" key="GridCell.Tab.0.center" timestamp="1586705413322">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.0.center/0.23.1440.782@0.23.1440.782" timestamp="1586705413322" />
+    <state width="1373" height="247" key="GridCell.Tab.0.left" timestamp="1586705413321">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.0.left/0.23.1440.782@0.23.1440.782" timestamp="1586705413321" />
+    <state width="1373" height="247" key="GridCell.Tab.0.right" timestamp="1586705413322">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.0.right/0.23.1440.782@0.23.1440.782" timestamp="1586705413322" />
+    <state width="1373" height="247" key="GridCell.Tab.1.bottom" timestamp="1586705413324">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.1.bottom/0.23.1440.782@0.23.1440.782" timestamp="1586705413324" />
+    <state width="1373" height="247" key="GridCell.Tab.1.center" timestamp="1586705413323">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.1.center/0.23.1440.782@0.23.1440.782" timestamp="1586705413323" />
+    <state width="1373" height="247" key="GridCell.Tab.1.left" timestamp="1586705413323">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.1.left/0.23.1440.782@0.23.1440.782" timestamp="1586705413323" />
+    <state width="1373" height="247" key="GridCell.Tab.1.right" timestamp="1586705413323">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state width="1373" height="247" key="GridCell.Tab.1.right/0.23.1440.782@0.23.1440.782" timestamp="1586705413323" />
+    <state x="397" y="129" width="670" height="676" key="search.everywhere.popup" timestamp="1586698661811">
+      <screen x="0" y="23" width="1440" height="782" />
+    </state>
+    <state x="397" y="129" width="670" height="676" key="search.everywhere.popup/0.23.1440.782@0.23.1440.782" timestamp="1586698661811" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../Desktop/Info/OOP/Assignment_7-8/cmake-build-debug" NAME="Assignment_7_8 Coverage Results" MODIFIED="1586705385376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

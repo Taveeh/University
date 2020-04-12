@@ -1,0 +1,25 @@
+#include <iostream>
+#include "UI.h"
+#include "TestFootage.h"
+#include "TestMemoryRepository.h"
+#include "TestService.h"
+#include "TestFileRepository.h"
+
+void callTestFunctions();
+int main() {
+	callTestFunctions();
+	std::string namePath;
+	FileRepository fileRepository = FileRepository(namePath);
+	Service service = Service(fileRepository);
+	UI ui = UI(service);
+	ui.runProgram();
+	return 0;
+}
+
+void callTestFunctions() {
+	TestFootage::test_all();
+	TestMemoryRepository::test_all();
+	TestService::test_all();
+	TestFileRepository::test_all();
+//	std::cout << "Tests finished\n";
+}

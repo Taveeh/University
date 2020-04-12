@@ -1,0 +1,73 @@
+        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/MemoryRepository.h
+        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 12/04/2020.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef ASSIGNMENT_7_8_MEMORYREPOSITORY_H
+        -:    6:#define ASSIGNMENT_7_8_MEMORYREPOSITORY_H
+        -:    7:
+        -:    8:#include "Repository.h"
+        -:    9:#include "Footage.h"
+        -:   10:
+    #####:   11:class MemoryRepository: public Repository {
+    $$$$$:   11-block  0
+    $$$$$:   11-block  1
+    $$$$$:   11-block  2
+    $$$$$:   11-block  3
+        -:   12:private:
+        -:   13:	std::vector<Footage> arrayOfTapes;
+        -:   14:	int currentElement;
+        -:   15:public:
+        -:   16:	MemoryRepository();
+        -:   17:	/*
+        -:   18:	 * Adds footage to the repository
+        -:   19:	 * Input:
+        -:   20:	 * newFootage - const Footage&
+        -:   21:	 * Throws:
+        -:   22:	 * std::exception() if same title exists
+        -:   23:	 */
+        -:   24:	void addFootage(const Footage& newFootage) override;
+        -:   25:
+        -:   26:	/*
+        -:   27:	 * Removes a footage from the repository
+        -:   28:	 * Input:
+        -:   29:	 * titleToBeRemoved - const std::string&
+        -:   30:	 * Throws:
+        -:   31:	 * std::exception() if title does not exist
+        -:   32:	 */
+        -:   33:	void deleteFootage(const std::string& titleToBeRemoved) override;
+        -:   34:
+        -:   35:	/*
+        -:   36:	 * Updates a footage from the repository
+        -:   37:	 * Input:
+        -:   38:	 * newFootage - const Footage&
+        -:   39:	 * Throws:
+        -:   40:	 * std::exception() if title does not exist
+        -:   41:	 */
+        -:   42:	void updateFootage(const Footage& newFootage) override;
+        -:   43:
+        -:   44:	/*
+        -:   45:	 * Function that gets all the footage from the repository
+        -:   46:	 * Input:
+        -:   47:	 *
+        -:   48:	 * Output:
+        -:   49:	 * std::vector<Footage> - vector of elements
+        -:   50:	 */
+        -:   51:	std::vector<Footage> getAllFootage() override;
+        -:   52:
+        -:   53:	/*
+        -:   54:	 * Function that returns the current element from the repository
+        -:   55:	 * Input:
+        -:   56:	 *
+        -:   57:	 * Ouput:
+        -:   58:	 * Footage - current element from repository
+        -:   59:	 */
+        -:   60:	Footage getCurrentElement() override;
+        -:   61:};
+        -:   62:
+        -:   63:
+        -:   64:#endif //ASSIGNMENT_7_8_MEMORYREPOSITORY_H

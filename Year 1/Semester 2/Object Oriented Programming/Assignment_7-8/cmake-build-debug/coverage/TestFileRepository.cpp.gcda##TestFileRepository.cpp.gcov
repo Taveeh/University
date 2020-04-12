@@ -1,0 +1,341 @@
+        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/TestFileRepository.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestFileRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestFileRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 24/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "TestFileRepository.h"
+        -:    6:#include "Footage.h"
+        -:    7:#include "FileRepository.h"
+        -:    8:#include <exception>
+        -:    9:#include <cassert>
+        -:   10:
+        1:   11:void TestFileRepository::test_addFootage_ValidInput_FootageAdded() {
+        1:   12:	std::string file = "test.txt";
+        1:   12-block  0
+        1:   13:	auto repository = FileRepository(file);
+        1:   13-block  0
+        1:   14:	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   14-block  0
+        1:   14-block  1
+        1:   14-block  2
+        1:   14-block  3
+        1:   14-block  4
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+    $$$$$:   14-block  7
+        1:   15:	repository.addFootage(testFootage);
+        1:   15-block  0
+        1:   16:	assert(repository.getAllFootage().size() == 1);
+        1:   16-block  0
+        1:   16-block  1
+    $$$$$:   16-block  2
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+        1:   16-block  6
+        1:   17:}
+    $$$$$:   17-block  0
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+        1:   17-block  5
+    $$$$$:   17-block  6
+    $$$$$:   17-block  7
+    $$$$$:   17-block  8
+    $$$$$:   17-block  9
+        -:   18:
+        1:   19:void TestFileRepository::test_all() {
+        1:   20:	test_addFootage_ValidInput_FootageAdded();
+        1:   20-block  0
+        1:   21:	test_addFootage_Duplicate_FootageNotAdded();
+        1:   22:	test_deleteFootage_ValidInput_FootageRemoved();
+        1:   23:	test_deleteFootage_Inexistent_FootageNotRemoved();
+        1:   24:	test_updateFootage_Inexistent_FootageNotChanged();
+        1:   25:	test_updateFootage_ValidInput_FootageChanged();
+        1:   26:	test_getCurrentElement_EndOfArray_FirstElement();
+        1:   27:}
+        1:   27-block  0
+        -:   28:
+        1:   29:void TestFileRepository::test_addFootage_Duplicate_FootageNotAdded() {
+        1:   30:	std::string file = "test.txt";
+        1:   30-block  0
+        1:   31:	auto repository = FileRepository(file);	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   31-block  0
+        1:   31-block  1
+        1:   31-block  2
+        1:   31-block  3
+        1:   31-block  4
+        1:   31-block  5
+    $$$$$:   31-block  6
+    $$$$$:   31-block  7
+    $$$$$:   31-block  8
+        1:   32:	repository.addFootage(testFootage);
+        1:   32-block  0
+        1:   33:	auto testFootage2 = Footage("abc", "efg", Date(3, 3, 2020), 9, "link2");
+        1:   33-block  0
+        1:   33-block  1
+        1:   33-block  2
+        1:   33-block  3
+        1:   33-block  4
+    $$$$$:   33-block  5
+    $$$$$:   33-block  6
+    $$$$$:   33-block  7
+        -:   34:	try {
+        1:   35:		repository.addFootage(testFootage2);
+        1:   35-block  0
+        1:   36:	}catch (std::exception&) {
+    $$$$$:   36-block  0
+        1:   36-block  1
+        -:   37:		assert(true);
+        1:   38:	}
+        1:   38-block  0
+        1:   38-block  1
+        2:   39:}
+    $$$$$:   39-block  0
+    $$$$$:   39-block  1
+    $$$$$:   39-block  2
+    $$$$$:   39-block  3
+    $$$$$:   39-block  4
+    $$$$$:   39-block  5
+    $$$$$:   39-block  6
+        1:   39-block  7
+        1:   39-block  8
+    $$$$$:   39-block  9
+    $$$$$:   39-block 10
+    $$$$$:   39-block 11
+    $$$$$:   39-block 12
+    $$$$$:   39-block 13
+    $$$$$:   39-block 14
+        -:   40:
+        1:   41:void TestFileRepository::test_deleteFootage_ValidInput_FootageRemoved() {
+        1:   42:	std::string file = "test.txt";
+        1:   42-block  0
+        1:   43:	auto repository = FileRepository(file);
+        1:   43-block  0
+        1:   44:	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   44-block  0
+        1:   44-block  1
+        1:   44-block  2
+        1:   44-block  3
+        1:   44-block  4
+    $$$$$:   44-block  5
+    $$$$$:   44-block  6
+    $$$$$:   44-block  7
+        1:   45:	repository.addFootage(testFootage);
+        1:   45-block  0
+        1:   46:	repository.deleteFootage("abc");
+        1:   46-block  0
+        1:   46-block  1
+    $$$$$:   46-block  2
+        1:   47:	assert(repository.getAllFootage().size() == 0);
+        1:   47-block  0
+        1:   47-block  1
+    $$$$$:   47-block  2
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+    $$$$$:   47-block  5
+        1:   47-block  6
+        1:   48:}
+    $$$$$:   48-block  0
+    $$$$$:   48-block  1
+    $$$$$:   48-block  2
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+        1:   48-block  5
+    $$$$$:   48-block  6
+    $$$$$:   48-block  7
+    $$$$$:   48-block  8
+    $$$$$:   48-block  9
+        -:   49:
+        1:   50:void TestFileRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
+        1:   51:	std::string file = "test.txt";
+        1:   51-block  0
+        1:   52:	auto repository = FileRepository(file);
+        1:   52-block  0
+        1:   53:	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   53-block  0
+        1:   53-block  1
+        1:   53-block  2
+        1:   53-block  3
+        1:   53-block  4
+    $$$$$:   53-block  5
+    $$$$$:   53-block  6
+    $$$$$:   53-block  7
+        1:   54:	repository.addFootage(testFootage);
+        1:   54-block  0
+        -:   55:	try {
+        1:   56:		repository.deleteFootage("abd");
+        1:   56-block  0
+        1:   56-block  1
+        1:   56-block  2
+        1:   57:	}catch (std::exception&) {
+    $$$$$:   57-block  0
+        1:   57-block  1
+        -:   58:		assert(true);
+        1:   59:	}
+        1:   59-block  0
+        1:   59-block  1
+        2:   60:}
+    $$$$$:   60-block  0
+    $$$$$:   60-block  1
+    $$$$$:   60-block  2
+    $$$$$:   60-block  3
+    $$$$$:   60-block  4
+    $$$$$:   60-block  5
+        1:   60-block  6
+    $$$$$:   60-block  7
+    $$$$$:   60-block  8
+    $$$$$:   60-block  9
+    $$$$$:   60-block 10
+        -:   61:
+        1:   62:void TestFileRepository::test_updateFootage_ValidInput_FootageChanged() {
+        1:   63:	std::string file = "test.txt";
+        1:   63-block  0
+        1:   64:	auto repository = FileRepository(file);
+        1:   64-block  0
+        1:   65:	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   65-block  0
+        1:   65-block  1
+        1:   65-block  2
+        1:   65-block  3
+        1:   65-block  4
+    $$$$$:   65-block  5
+    $$$$$:   65-block  6
+    $$$$$:   65-block  7
+        1:   66:	repository.addFootage(testFootage);
+        1:   66-block  0
+        1:   67:	auto testFootage2 = Footage("abc", "efg", Date(3, 3, 2020), 9, "link2");
+        1:   67-block  0
+        1:   67-block  1
+        1:   67-block  2
+        1:   67-block  3
+        1:   67-block  4
+    $$$$$:   67-block  5
+    $$$$$:   67-block  6
+    $$$$$:   67-block  7
+        1:   68:	repository.updateFootage(testFootage2);
+        1:   68-block  0
+        1:   69:	assert(repository.getAllFootage()[0].getType() == "efg");
+        1:   69-block  0
+        1:   69-block  1
+        1:   69-block  2
+        1:   69-block  3
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+    $$$$$:   69-block  6
+    $$$$$:   69-block  7
+        1:   69-block  8
+    $$$$$:   69-block  9
+        1:   70:}
+    $$$$$:   70-block  0
+    $$$$$:   70-block  1
+    $$$$$:   70-block  2
+    $$$$$:   70-block  3
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+    $$$$$:   70-block  6
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+        1:   70-block  9
+    $$$$$:   70-block 10
+    $$$$$:   70-block 11
+    $$$$$:   70-block 12
+    $$$$$:   70-block 13
+    $$$$$:   70-block 14
+        -:   71:
+        1:   72:void TestFileRepository::test_updateFootage_Inexistent_FootageNotChanged() {
+        1:   73:	std::string file = "test.txt";
+        1:   73-block  0
+        1:   74:	auto repository = FileRepository(file);
+        1:   74-block  0
+        1:   75:	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   75-block  0
+        1:   75-block  1
+        1:   75-block  2
+        1:   75-block  3
+        1:   75-block  4
+    $$$$$:   75-block  5
+    $$$$$:   75-block  6
+    $$$$$:   75-block  7
+        1:   76:	repository.addFootage(testFootage);
+        1:   76-block  0
+        1:   77:	auto testFootage2 = Footage("abd", "efg", Date(3, 3, 2020), 9, "link2");
+        1:   77-block  0
+        1:   77-block  1
+        1:   77-block  2
+        1:   77-block  3
+        1:   77-block  4
+    $$$$$:   77-block  5
+    $$$$$:   77-block  6
+    $$$$$:   77-block  7
+        -:   78:	try {
+        1:   79:		repository.updateFootage(testFootage2);
+        1:   79-block  0
+        1:   80:	}catch (std::exception&) {
+    $$$$$:   80-block  0
+        1:   80-block  1
+        -:   81:		assert(true);
+        1:   82:	}
+        1:   82-block  0
+        1:   82-block  1
+        2:   83:}
+    $$$$$:   83-block  0
+    $$$$$:   83-block  1
+    $$$$$:   83-block  2
+    $$$$$:   83-block  3
+    $$$$$:   83-block  4
+    $$$$$:   83-block  5
+    $$$$$:   83-block  6
+        1:   83-block  7
+        1:   83-block  8
+    $$$$$:   83-block  9
+    $$$$$:   83-block 10
+    $$$$$:   83-block 11
+    $$$$$:   83-block 12
+    $$$$$:   83-block 13
+    $$$$$:   83-block 14
+        -:   84:
+        1:   85:void TestFileRepository::test_getCurrentElement_EndOfArray_FirstElement() {
+        1:   86:	std::string file = "test.txt";
+        1:   86-block  0
+        1:   87:	auto repository = FileRepository(file);
+        1:   87-block  0
+        1:   88:	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
+        1:   88-block  0
+        1:   88-block  1
+        1:   88-block  2
+        1:   88-block  3
+        1:   88-block  4
+    $$$$$:   88-block  5
+    $$$$$:   88-block  6
+    $$$$$:   88-block  7
+        1:   89:	repository.addFootage(testFootage);
+        1:   89-block  0
+        1:   90:	testFootage = repository.getCurrentElement();
+        1:   90-block  0
+        1:   91:	testFootage = repository.getCurrentElement();
+        1:   91-block  0
+        1:   92:	assert(testFootage.getTitle() == "abc");
+        1:   92-block  0
+        1:   92-block  1
+    $$$$$:   92-block  2
+    $$$$$:   92-block  3
+    $$$$$:   92-block  4
+    $$$$$:   92-block  5
+        1:   92-block  6
+        1:   93:}
+    $$$$$:   93-block  0
+    $$$$$:   93-block  1
+    $$$$$:   93-block  2
+    $$$$$:   93-block  3
+    $$$$$:   93-block  4
+        1:   93-block  5
+    $$$$$:   93-block  6
+    $$$$$:   93-block  7
+    $$$$$:   93-block  8
+    $$$$$:   93-block  9
