@@ -1,6 +1,6 @@
-        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/Footage.h
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcda
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Footage.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1://
@@ -186,10 +186,25 @@
         -:  159:	 */
         -:  160:	[[nodiscard]] std::string toString() const;
         -:  161:
-        -:  162:	friend std::istream& operator>>(std::istream& inputStream, Footage& footage);
-        -:  163:
-        -:  164:	friend std::ostream& operator<<(std::ostream& outputStream, const Footage& footage);
-        -:  165:};
-        -:  166:
-        -:  167:
-        -:  168:#endif //ASSIGNMENT_5_6_FOOTAGE_H
+        -:  162:	/*
+        -:  163:	 * Reads a whole footage from the stream
+        -:  164:	 * Input:
+        -:  165:	 *  std::istream - input stream
+        -:  166:	 *  Footage& - footage to be read
+        -:  167:	 * Output:
+        -:  168:	 *  std::istream
+        -:  169:	 */
+        -:  170:	friend std::istream& operator>>(std::istream& inputStream, Footage& footage);
+        -:  171:	/*
+        -:  172:	 * Writes a footage to the stream
+        -:  173:	 * Input:
+        -:  174:	 *  std::ostream& - output stream
+        -:  175:	 *  const Footage& - footage to be written
+        -:  176:	 * Output:
+        -:  177:	 *  std::ostream&
+        -:  178:	 */
+        -:  179:	friend std::ostream& operator<<(std::ostream& outputStream, const Footage& footage);
+        -:  180:};
+        -:  181:
+        -:  182:
+        -:  183:#endif //ASSIGNMENT_5_6_FOOTAGE_H

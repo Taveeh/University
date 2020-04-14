@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -1069,13 +1069,13 @@
         -: 1064:private:
         -: 1065:    streambuf_type* __sbuf_;
         -: 1066:public:
-      722: 1067:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(ostream_type& __s) _NOEXCEPT
-      361: 1067-block  0
-      361: 1067-block  1
-      722: 1068:        : __sbuf_(__s.rdbuf()) {}
-      361: 1068-block  0
-      361: 1068-block  1
-      361: 1068-block  2
+      720: 1067:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(ostream_type& __s) _NOEXCEPT
+      360: 1067-block  0
+      360: 1067-block  1
+      720: 1068:        : __sbuf_(__s.rdbuf()) {}
+      360: 1068-block  0
+      360: 1068-block  1
+      360: 1068-block  2
     $$$$$: 1068-block  3
         -: 1069:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator(streambuf_type* __s) _NOEXCEPT
         -: 1070:        : __sbuf_(__s) {}
@@ -1088,9 +1088,9 @@
         -: 1077:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator*()     {return *this;}
         -: 1078:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator++()    {return *this;}
         -: 1079:    _LIBCPP_INLINE_VISIBILITY ostreambuf_iterator& operator++(int) {return *this;}
-      361: 1080:    _LIBCPP_INLINE_VISIBILITY bool failed() const _NOEXCEPT {return __sbuf_ == 0;}
-      361: 1080-block  0
-      361: 1080-block  1
+      360: 1080:    _LIBCPP_INLINE_VISIBILITY bool failed() const _NOEXCEPT {return __sbuf_ == 0;}
+      360: 1080-block  0
+      360: 1080-block  1
         -: 1081:
         -: 1082:#if !defined(__APPLE__) || \
         -: 1083:    (defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && __MAC_OS_X_VERSION_MIN_REQUIRED > __MAC_10_8) || \

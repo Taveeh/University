@@ -1,4 +1,3 @@
-#include <iostream>
 #include "UI.h"
 #include "TestFootage.h"
 #include "TestMemoryRepository.h"
@@ -8,11 +7,9 @@
 void callTestFunctions();
 int main() {
 	callTestFunctions();
-	std::string namePath;
-	FileRepository fileRepository = FileRepository(namePath);
-	Service service = Service(fileRepository);
-	UI ui = UI(service);
-	ui.runProgram();
+//	Service service = Service();
+//	UI ui = UI(service);
+//	ui.runProgram();
 	return 0;
 }
 

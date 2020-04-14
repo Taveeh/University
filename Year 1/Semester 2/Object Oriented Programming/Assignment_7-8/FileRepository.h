@@ -8,13 +8,13 @@
 #include "Repository.h"
 class FileRepository: public Repository {
 private:
-	std::string& fileName;
+	const std::string& fileName;
 	int currentElement;
 public:
 
-	void setPath(const std::string& newFileName);
+//	void setPath(const std::string& newFileName);
 
-	explicit FileRepository(std::string& fileName);
+	explicit FileRepository(const std::string& fileName);
 	/*
 	 * Adds footage to the repository
 	 * Input:

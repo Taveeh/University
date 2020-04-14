@@ -1,6 +1,6 @@
-        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/TestMemoryRepository.cpp
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestMemoryRepository.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestMemoryRepository.cpp.gcda
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/TestMemoryRepository.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestMemoryRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestMemoryRepository.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1://
@@ -85,7 +85,7 @@
         1:   34:	}catch (std::exception&) {
     $$$$$:   34-block  0
         1:   34-block  1
-        -:   35:		assert(true);
+        -:   35:		static_assert(true, "");
         1:   36:	}
         1:   36-block  0
         1:   36-block  1
@@ -122,7 +122,7 @@
         1:   43-block  0
         1:   43-block  1
     $$$$$:   43-block  2
-        1:   44:	assert(repository.getAllFootage().size() == 0);
+        1:   44:	assert(repository.getAllFootage().empty());
         1:   44-block  0
         1:   44-block  1
     $$$$$:   44-block  2
@@ -162,7 +162,7 @@
         1:   53:	}catch (std::exception&) {
     $$$$$:   53-block  0
         1:   53-block  1
-        -:   54:		assert(true);
+        -:   54:		static_assert(true, "");
         1:   55:	}
         1:   55-block  0
         1:   55-block  1
@@ -257,7 +257,7 @@
         1:   74:	}catch (std::exception&) {
     $$$$$:   74-block  0
         1:   74-block  1
-        -:   75:		assert(true);
+        -:   75:		static_assert(true, "");
         1:   76:	}
         1:   76-block  0
         1:   76-block  1
@@ -301,9 +301,9 @@
     $$$$$:   83-block  7
         1:   84:	repository.addFootage(testFootage);
         1:   84-block  0
-        1:   85:	testFootage = repository.getCurrentElement();
+        1:   85:	repository.getCurrentElement();
         1:   85-block  0
-        1:   86:	testFootage = repository.getCurrentElement();
+        1:   86:	repository.getCurrentElement();
         1:   86-block  0
         1:   87:	testFootage = repository.getCurrentElement();
         1:   87-block  0

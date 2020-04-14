@@ -1,6 +1,6 @@
-        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/Repository.h
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcda
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Repository.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/MemoryRepository.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1://
@@ -13,31 +13,34 @@
         -:    8:#include "Footage.h"
         -:    9:#include <vector>
         -:   10:
-       83:   11:class Repository {
-       83:   11-block  0
-       83:   11-block  1
-        -:   12:public:
-    #####:   13:	virtual ~Repository() = default;
-    $$$$$:   13-block  0
-    $$$$$:   13-block  1
-    $$$$$:   13-block  2
-    $$$$$:   13-block  3
-    $$$$$:   13-block  4
-    $$$$$:   13-block  5
-    $$$$$:   13-block  6
-    $$$$$:   13-block  7
-        -:   14:
-        -:   15:	virtual void addFootage(const Footage& newFootage) = 0;
-        -:   16:
-        -:   17:	virtual void deleteFootage(const std::string& titleToBeRemoved) = 0;
-        -:   18:
-        -:   19:	virtual void updateFootage(const Footage& newFootage) = 0;
-        -:   20:
-        -:   21:	virtual std::vector<Footage> getAllFootage() = 0;
-        -:   22:
-        -:   23:	virtual Footage getCurrentElement() = 0;
-        -:   24:};
+       54:   11:class Repository {
+       54:   11-block  0
+       54:   11-block  1
+        -:   12:	/*
+        -:   13:	 * Repository Interface
+        -:   14:	 */
+        -:   15:public:
+       54:   16:	virtual ~Repository() = default;
+    $$$$$:   16-block  0
+    $$$$$:   16-block  1
+    $$$$$:   16-block  2
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+       54:   16-block  6
+       54:   16-block  7
+        -:   17:
+        -:   18:	virtual void addFootage(const Footage& newFootage) = 0;
+        -:   19:
+        -:   20:	virtual void deleteFootage(const std::string& titleToBeRemoved) = 0;
+        -:   21:
+        -:   22:	virtual void updateFootage(const Footage& newFootage) = 0;
+        -:   23:
+        -:   24:	virtual std::vector<Footage> getAllFootage() = 0;
         -:   25:
-        -:   26:
-        -:   27:
-        -:   28:#endif //ASSIGNMENT_7_8_REPOSITORY_H
+        -:   26:	virtual Footage getCurrentElement() = 0;
+        -:   27:};
+        -:   28:
+        -:   29:
+        -:   30:
+        -:   31:#endif //ASSIGNMENT_7_8_REPOSITORY_H

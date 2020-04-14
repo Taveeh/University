@@ -32,7 +32,7 @@ void TestMemoryRepository::test_addFootage_Duplicate_FootageNotAdded() {
 	try {
 		repository.addFootage(testFootage2);
 	}catch (std::exception&) {
-		assert(true);
+		static_assert(true, "");
 	}
 }
 
@@ -41,7 +41,7 @@ void TestMemoryRepository::test_deleteFootage_ValidInput_FootageRemoved() {
 	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
 	repository.addFootage(testFootage);
 	repository.deleteFootage("abc");
-	assert(repository.getAllFootage().size() == 0);
+	assert(repository.getAllFootage().empty());
 }
 
 void TestMemoryRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
@@ -51,7 +51,7 @@ void TestMemoryRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
 	try {
 		repository.deleteFootage("abd");
 	}catch (std::exception&) {
-		assert(true);
+		static_assert(true, "");
 	}
 }
 
@@ -72,7 +72,7 @@ void TestMemoryRepository::test_updateFootage_Inexistent_FootageNotChanged() {
 	try {
 		repository.updateFootage(testFootage2);
 	}catch (std::exception&) {
-		assert(true);
+		static_assert(true, "");
 	}
 }
 
@@ -82,8 +82,8 @@ void TestMemoryRepository::test_getCurrentElement_EndOfArray_FirstElement() {
 	repository.addFootage(testFootage);
 	testFootage = Footage("abd", "def", Date(2, 2, 2020), 7, "link");
 	repository.addFootage(testFootage);
-	testFootage = repository.getCurrentElement();
-	testFootage = repository.getCurrentElement();
+	repository.getCurrentElement();
+	repository.getCurrentElement();
 	testFootage = repository.getCurrentElement();
 	assert(testFootage.getTitle() == "abc");
 }

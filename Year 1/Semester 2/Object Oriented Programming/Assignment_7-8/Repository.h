@@ -9,6 +9,9 @@
 #include <vector>
 
 class Repository {
+	/*
+	 * Repository Interface
+	 */
 public:
 	virtual ~Repository() = default;
 

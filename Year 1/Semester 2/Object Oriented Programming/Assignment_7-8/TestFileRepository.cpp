@@ -5,6 +5,7 @@
 #include "TestFileRepository.h"
 #include "Footage.h"
 #include "FileRepository.h"
+#include <fstream>
 #include <exception>
 #include <cassert>
 
@@ -17,12 +18,27 @@ void TestFileRepository::test_addFootage_ValidInput_FootageAdded() {
 }
 
 void TestFileRepository::test_all() {
+	std::ofstream clearFile;
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_addFootage_ValidInput_FootageAdded();
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_addFootage_Duplicate_FootageNotAdded();
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_deleteFootage_ValidInput_FootageRemoved();
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_deleteFootage_Inexistent_FootageNotRemoved();
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_updateFootage_Inexistent_FootageNotChanged();
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_updateFootage_ValidInput_FootageChanged();
+	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+	clearFile.close();
 	test_getCurrentElement_EndOfArray_FirstElement();
 }
 
@@ -34,7 +50,7 @@ void TestFileRepository::test_addFootage_Duplicate_FootageNotAdded() {
 	try {
 		repository.addFootage(testFootage2);
 	}catch (std::exception&) {
-		assert(true);
+		static_assert(true, "");
 	}
 }
 
@@ -44,7 +60,7 @@ void TestFileRepository::test_deleteFootage_ValidInput_FootageRemoved() {
 	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
 	repository.addFootage(testFootage);
 	repository.deleteFootage("abc");
-	assert(repository.getAllFootage().size() == 0);
+	assert(repository.getAllFootage().empty());
 }
 
 void TestFileRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
@@ -55,7 +71,7 @@ void TestFileRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
 	try {
 		repository.deleteFootage("abd");
 	}catch (std::exception&) {
-		assert(true);
+		static_assert(true, "");
 	}
 }
 
@@ -78,7 +94,7 @@ void TestFileRepository::test_updateFootage_Inexistent_FootageNotChanged() {
 	try {
 		repository.updateFootage(testFootage2);
 	}catch (std::exception&) {
-		assert(true);
+		static_assert(true, "");
 	}
 }
 
@@ -87,7 +103,7 @@ void TestFileRepository::test_getCurrentElement_EndOfArray_FirstElement() {
 	auto repository = FileRepository(file);
 	auto testFootage = Footage("abc", "def", Date(2, 2, 2020), 7, "link");
 	repository.addFootage(testFootage);
-	testFootage = repository.getCurrentElement();
+	repository.getCurrentElement();
 	testFootage = repository.getCurrentElement();
 	assert(testFootage.getTitle() == "abc");
 }

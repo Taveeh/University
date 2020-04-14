@@ -4,7 +4,6 @@
 
 #include "Footage.h"
 #include <sstream>
-#include <iostream>
 #include <utility>
 #define MAX_PARAMETERS_FOOTAGE 5
 #define TITLE 0
@@ -29,14 +28,10 @@ int Date::getYear() const {
 }
 
 bool operator<(const Date &compareDate1, const Date &compareDate2) {
-	if (compareDate1.getYear() < compareDate2.getYear())
-		return true;
-	if (compareDate1.getYear() > compareDate2.getYear())
-		return false;
-	if (compareDate1.getMonth() < compareDate1.getMonth())
-		return true;
-	if (compareDate1.getMonth() > compareDate2.getMonth())
-		return false;
+	if (compareDate1.getYear() < compareDate2.getYear()) return true;
+	if (compareDate1.getYear() > compareDate2.getYear()) return false;
+	if (compareDate1.getMonth() < compareDate1.getMonth()) return true;
+	if (compareDate1.getMonth() > compareDate2.getMonth()) return false;
 	return compareDate1.getDay() <= compareDate1.getDay();
 }
 
@@ -61,7 +56,7 @@ std::istream &operator>>(std::istream &inputStream, Date &date) {
 	std::stringstream convertDayStringToInt(dayString);
 	std::stringstream convertMonthStringToInt(monthString);
 	std::stringstream convertYearStringToInt(yearString);
-	int newDay, newMonth, newYear;
+	int newDay = 0, newMonth = 0, newYear = 0;
 	convertDayStringToInt >> newDay;
 	convertMonthStringToInt >> newMonth;
 	convertYearStringToInt >> newYear;
@@ -157,7 +152,7 @@ std::istream &operator>>(std::istream &inputStream, Footage &footage) {
 		std::string newTitle = ArrayOfParameters[TITLE], newType = ArrayOfParameters[TYPE].substr(1);
 		std::string newLink = ArrayOfParameters[LINK].substr(1);
 		std::stringstream accessCountStream(ArrayOfParameters[ACCESS_COUNT].substr(1));
-		int accessCount;
+		int accessCount = 0;
 		accessCountStream >> accessCount;
 		footage = Footage(newTitle, newType, newDate, accessCount, newLink);
 	}

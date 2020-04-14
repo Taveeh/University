@@ -159,8 +159,23 @@ public:
 	 */
 	[[nodiscard]] std::string toString() const;
 
+	/*
+	 * Reads a whole footage from the stream
+	 * Input:
+	 *  std::istream - input stream
+	 *  Footage& - footage to be read
+	 * Output:
+	 *  std::istream
+	 */
 	friend std::istream& operator>>(std::istream& inputStream, Footage& footage);
-
+	/*
+	 * Writes a footage to the stream
+	 * Input:
+	 *  std::ostream& - output stream
+	 *  const Footage& - footage to be written
+	 * Output:
+	 *  std::ostream&
+	 */
 	friend std::ostream& operator<<(std::ostream& outputStream, const Footage& footage);
 };
 

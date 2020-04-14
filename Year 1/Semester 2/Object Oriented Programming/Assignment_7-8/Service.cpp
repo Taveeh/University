@@ -10,8 +10,10 @@
 #include <algorithm>
 #include <vector>
 
-Service::Service(FileRepository &newRepository): repository(newRepository) {
-	myListRepository = MemoryRepository();}
+Service::Service() {
+	repository = nullptr;
+	myListRepository = new MemoryRepository();
+}
 
 void Service::addFootage(const std::string &title, const std::string &type,const std::string &dateString, const std::string &numberAccessedString, const std::string &link) {
 	if (dateString.size() != SIZE_OF_DATE + 1) {
@@ -26,7 +28,7 @@ void Service::addFootage(const std::string &title, const std::string &type,const
 	std::stringstream convertDayStringToInt(dayString);
 	std::stringstream convertMonthStringToInt(monthString);
 	std::stringstream convertYearStringToInt(yearString);
-	int newDay, newMonth, newYear;
+	int newDay = 0, newMonth = 0, newYear = 0;
 	convertDayStringToInt >> newDay;
 	convertMonthStringToInt >> newMonth;
 	convertYearStringToInt >> newYear;
@@ -41,14 +43,14 @@ void Service::addFootage(const std::string &title, const std::string &type,const
 		throw std::exception();
 	}
 	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
-	int numberAccessed;
+	int numberAccessed = 0;
 	convertNumberAccessedStringToInt >> numberAccessed;
 	if (numberAccessed < 0) {
 		throw std::exception();
 	}
 	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
 	try {
-		repository.addFootage(newFootage);
+		repository->addFootage(newFootage);
 	}catch (std::exception& exception) {
 		throw std::exception();
 	}
@@ -65,7 +67,7 @@ bool Service::validateNewDate(int day, int month, int year) {
 	if (month == JUNE or month == APRIL or month == SEPTEMBER or month == NOVEMBER)
 		if (day > 30) return false;
 #define FEBRUARY 2
-# define isLeapYear(year) (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
+# define isLeapYear(year) (((year) % 4 == 0 and (year) % 100 != 0) or (year) % 400 == 0)
 	if (month == FEBRUARY) {
 		if (isLeapYear(year)) {
 			if (day > 29) return false;
@@ -77,7 +79,7 @@ bool Service::validateNewDate(int day, int month, int year) {
 
 void Service::deleteFootage(const std::string& title) {
 	try {
-		repository.deleteFootage(title);
+		repository->deleteFootage(title);
 	}catch (std::exception& e) {
 		throw std::exception();
 	}
@@ -97,7 +99,7 @@ void Service::updateFootage(const std::string &title, const std::string &type, c
 	std::stringstream convertDayStringToInt(dayString);
 	std::stringstream convertMonthStringToInt(monthString);
 	std::stringstream convertYearStringToInt(yearString);
-	int newDay, newMonth, newYear;
+	int newDay = 0, newMonth = 0, newYear = 0;
 	convertDayStringToInt >> newDay;
 	convertMonthStringToInt >> newMonth;
 	convertYearStringToInt >> newYear;
@@ -112,17 +114,17 @@ void Service::updateFootage(const std::string &title, const std::string &type, c
 		throw std::exception();
 	}
 	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
-	int numberAccessed;
+	int numberAccessed = 0;
 	convertNumberAccessedStringToInt >> numberAccessed;
 	if (numberAccessed < 0) throw std::exception();
 	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
 	try {
-		repository.updateFootage(newFootage);
+		repository->updateFootage(newFootage);
 	}catch (std::exception & exception) {throw exception;}
 }
 
 std::vector<Footage> Service::getAllElements() {
-	return repository.getAllFootage();
+	return repository->getAllFootage();
 }
 
 //Service::Service(): repository(FileRepository(std::to_string(0))) {
@@ -130,14 +132,14 @@ std::vector<Footage> Service::getAllElements() {
 //}
 
 Footage Service::getCurrent() {
-	return repository.getCurrentElement();
+	return repository->getCurrentElement();
 }
 
 void Service::addToMyList(const std::string &title) {
-	auto arrayOfTapes = repository.getAllFootage();
+	auto arrayOfTapes = repository->getAllFootage();
 	for (auto & arrayOfTape : arrayOfTapes) {
 		if (arrayOfTape.getTitle() == title) {
-			myListRepository.addFootage(arrayOfTape);
+			myListRepository->addFootage(arrayOfTape);
 			return;
 		}
 	}
@@ -145,14 +147,14 @@ void Service::addToMyList(const std::string &title) {
 }
 
 std::vector<Footage> Service::getMyList() {
-	return myListRepository.getAllFootage();
+	return myListRepository->getAllFootage();
 }
 
 std::vector<Footage> Service::getFilteredList(const std::string &type, const std::string &maximumAccessCount) {
-	auto arrayOfTapes = repository.getAllFootage();
+	auto arrayOfTapes = repository->getAllFootage();
 	std::string newNumberAccessedString = maximumAccessCount.substr(1, maximumAccessCount.size() - 1);
 	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
-	int numberAccessed;
+	int numberAccessed = 0;
 	convertNumberAccessedStringToInt >> numberAccessed;
 	if (numberAccessed < 0) {
 		throw std::exception();
@@ -165,7 +167,12 @@ std::vector<Footage> Service::getFilteredList(const std::string &type, const std
 }
 
 void Service::setPath(const std::string& fileName) {
-	repository.setPath(fileName);
+	repository = new FileRepository(fileName);
+}
+
+Service::~Service() {
+	delete repository;
+	delete myListRepository;
 }
 
 

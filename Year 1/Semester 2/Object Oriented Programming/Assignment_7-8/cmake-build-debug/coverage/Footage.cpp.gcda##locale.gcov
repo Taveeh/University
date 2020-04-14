@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -1385,27 +1385,27 @@
         -: 1380:template <class _CharT, class _Traits>
         -: 1381:_LIBCPP_HIDDEN
         -: 1382:ostreambuf_iterator<_CharT, _Traits>
-      361: 1383:__pad_and_output(ostreambuf_iterator<_CharT, _Traits> __s,
-      361: 1383-block  0
+      360: 1383:__pad_and_output(ostreambuf_iterator<_CharT, _Traits> __s,
+      360: 1383-block  0
         -: 1384:                 const _CharT* __ob, const _CharT* __op, const _CharT* __oe,
         -: 1385:                 ios_base& __iob, _CharT __fl)
         -: 1386:{
-      361: 1387:    if (__s.__sbuf_ == nullptr)
-      361: 1387-block  0
+      360: 1387:    if (__s.__sbuf_ == nullptr)
+      360: 1387-block  0
     #####: 1388:        return __s;
     $$$$$: 1388-block  0
-      361: 1389:    streamsize __sz = __oe - __ob;
-      361: 1390:    streamsize __ns = __iob.width();
-      361: 1391:    if (__ns > __sz)
-      361: 1391-block  0
+      360: 1389:    streamsize __sz = __oe - __ob;
+      360: 1390:    streamsize __ns = __iob.width();
+      360: 1391:    if (__ns > __sz)
+      360: 1391-block  0
     #####: 1392:        __ns -= __sz;
     $$$$$: 1392-block  0
         -: 1393:    else
-      361: 1394:        __ns = 0;
-      361: 1394-block  0
-      361: 1395:    streamsize __np = __op - __ob;
-      361: 1396:    if (__np > 0)
-      361: 1396-block  0
+      360: 1394:        __ns = 0;
+      360: 1394-block  0
+      360: 1395:    streamsize __np = __op - __ob;
+      360: 1396:    if (__np > 0)
+      360: 1396-block  0
         -: 1397:    {
     #####: 1398:        if (__s.__sbuf_->sputn(__ob, __np) != __np)
     $$$$$: 1398-block  0
@@ -1416,8 +1416,8 @@
         -: 1402:        }
     #####: 1403:    }
     $$$$$: 1403-block  0
-      361: 1404:    if (__ns > 0)
-      361: 1404-block  0
+      360: 1404:    if (__ns > 0)
+      360: 1404-block  0
         -: 1405:    {
     #####: 1406:        basic_string<_CharT, _Traits> __sp(__ns, __fl);
     #####: 1407:        if (__s.__sbuf_->sputn(__sp.data(), __ns) != __ns)
@@ -1434,24 +1434,24 @@
     $$$$$: 1412-block  2
     $$$$$: 1412-block  3
     $$$$$: 1412-block  4
-      361: 1413:    __np = __oe - __op;
-      361: 1414:    if (__np > 0)
-      361: 1414-block  0
+      360: 1413:    __np = __oe - __op;
+      360: 1414:    if (__np > 0)
+      360: 1414-block  0
         -: 1415:    {
-      361: 1416:        if (__s.__sbuf_->sputn(__op, __np) != __np)
-      361: 1416-block  0
+      360: 1416:        if (__s.__sbuf_->sputn(__op, __np) != __np)
+      360: 1416-block  0
         -: 1417:        {
     #####: 1418:            __s.__sbuf_ = nullptr;
     #####: 1419:            return __s;
     $$$$$: 1419-block  0
         -: 1420:        }
-      361: 1421:    }
-      361: 1421-block  0
-      361: 1422:    __iob.width(0);
-      361: 1423:    return __s;
-      361: 1423-block  0
-      361: 1424:}
-      361: 1424-block  0
+      360: 1421:    }
+      360: 1421-block  0
+      360: 1422:    __iob.width(0);
+      360: 1423:    return __s;
+      360: 1423-block  0
+      360: 1424:}
+      360: 1424-block  0
         -: 1425:
         -: 1426:#endif
         -: 1427:

@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -279,12 +279,12 @@
         -:  272:  }
         -:  273:
         -:  274: private:
-    #####:  275:  static inline void __do_deallocate_handle_size(void *__ptr, size_t __size) {
-    $$$$$:  275-block  0
+       69:  275:  static inline void __do_deallocate_handle_size(void *__ptr, size_t __size) {
+       69:  275-block  0
         -:  276:#ifdef _LIBCPP_HAS_NO_SIZED_DEALLOCATION
         -:  277:    ((void)__size);
-    #####:  278:    return __do_call(__ptr);
-    $$$$$:  278-block  0
+       69:  278:    return __do_call(__ptr);
+       69:  278-block  0
         -:  279:#else
         -:  280:    return __do_call(__ptr, __size);
         -:  281:#endif
@@ -322,13 +322,13 @@
         -:  313:#endif
         -:  314:  }
         -:  315:
-    #####:  316:  static inline void __do_call(void *__ptr) {
-    $$$$$:  316-block  0
+       69:  316:  static inline void __do_call(void *__ptr) {
+       69:  316-block  0
         -:  317:#ifdef _LIBCPP_HAS_NO_BUILTIN_OPERATOR_NEW_DELETE
         -:  318:    return ::operator delete(__ptr);
         -:  319:#else
-    #####:  320:    return __builtin_operator_delete(__ptr);
-    $$$$$:  320-block  0
+       69:  320:    return __builtin_operator_delete(__ptr);
+       69:  320-block  0
         -:  321:#endif
         -:  322:  }
         -:  323:};

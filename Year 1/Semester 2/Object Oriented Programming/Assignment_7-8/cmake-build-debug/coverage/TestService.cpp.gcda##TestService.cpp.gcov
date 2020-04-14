@@ -1,6 +1,6 @@
-        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/TestService.cpp
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcda
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/TestService.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1://
@@ -11,237 +11,206 @@
         -:    6:#include "Service.h"
         -:    7:#include <exception>
         -:    8:#include <cassert>
-        -:    9:
+        -:    9:#include <fstream>
         1:   10:void TestService::test_all() {
-        1:   11:	test_addFootage_ValidInput_FootageAdded();
+        1:   11:	std::ofstream clearFile;
         1:   11-block  0
-        1:   12:	test_addFootage_InvalidDateFormat_FootageNotAdded();
-        1:   13:	test_addFootage_InvalidDate_FootageNotAdded();
-        1:   14:	test_addFootage_FutureDate_FootageNotAdded();
-        1:   15:	test_addFootage_InvalidAccessCount_FootageNotAdded();
-        1:   16:	test_addFootage_DuplicateFootage_FootageNotAdded();
-        -:   17:
-        1:   18:	test_deleteFootage_ValidInput_FootageRemoved();
-        1:   19:	test_deleteFootage_Inexistent_FootageNotRemoved();
-        -:   20:
-        1:   21:	test_updateFootage_ValidInput_FootageChanged();
-        1:   22:	test_updateFootage_InvalidDateFormat_FootageNotChanged();
-        1:   23:	test_updateFootage_InvalidDate_FootageNotChanged();
-        1:   24:	test_updateFootage_FutureDate_FootageNotChanged();
-        1:   25:	test_updateFootage_InvalidAccessCount_FootageNotChanged();
-        -:   26:
-        1:   27:	test_getCurrent_ValidInput_GetCurrentElement();
-        -:   28:
-        1:   29:	test_addToMyList_InvalidInput_ThrowsException();
-        1:   30:	test_addToMyList_ValidInput_ElementAdded();
-        -:   31:
-        1:   32:	test_getFilteredList_NegativeAccessed_ThrowsException();
-        1:   33:	test_getFilteredList_ValidInput_GetsList();
-        -:   34:
-        1:   35:	test_setPath_InvalidInput_ThrowsException();
-        1:   36:	test_setPath_ValidInput_PathChanged();
-        -:   37:
-        1:   38:	test_addFootage_InvalidDateFebruary31st_FootageNotAdded();
-        1:   39:	test_addFootage_InvalidDateNovember31st_FootageNotAdded();
-        -:   40:
-        1:   41:}
+        1:   12:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   12-block  0
+        1:   13:	clearFile.close();
+        1:   13-block  0
+        1:   14:	test_addFootage_ValidInput_FootageAdded();
+        1:   14-block  0
+        1:   15:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   15-block  0
+        1:   16:	clearFile.close();
+        1:   16-block  0
+        1:   17:	test_addFootage_InvalidDateFormat_FootageNotAdded();
+        1:   17-block  0
+        1:   18:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   18-block  0
+        1:   19:	clearFile.close();
+        1:   19-block  0
+        1:   20:	test_addFootage_InvalidDate_FootageNotAdded();
+        1:   20-block  0
+        1:   21:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   21-block  0
+        1:   22:	clearFile.close();
+        1:   22-block  0
+        1:   23:	test_addFootage_FutureDate_FootageNotAdded();
+        1:   23-block  0
+        1:   24:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   24-block  0
+        1:   25:	clearFile.close();
+        1:   25-block  0
+        1:   26:	test_addFootage_InvalidAccessCount_FootageNotAdded();
+        1:   26-block  0
+        1:   27:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   27-block  0
+        1:   28:	clearFile.close();
+        1:   28-block  0
+        1:   29:	test_addFootage_DuplicateFootage_FootageNotAdded();
+        1:   29-block  0
+        1:   30:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   30-block  0
+        1:   31:	clearFile.close();
+        1:   31-block  0
+        1:   32:	test_deleteFootage_ValidInput_FootageRemoved();
+        1:   32-block  0
+        1:   33:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   33-block  0
+        1:   34:	clearFile.close();
+        1:   34-block  0
+        1:   35:	test_deleteFootage_Inexistent_FootageNotRemoved();
+        1:   35-block  0
+        1:   36:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   36-block  0
+        1:   37:	clearFile.close();
+        1:   37-block  0
+        1:   38:	test_updateFootage_ValidInput_FootageChanged();
+        1:   38-block  0
+        1:   39:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   39-block  0
+        1:   40:	clearFile.close();
+        1:   40-block  0
+        1:   41:	test_updateFootage_InvalidDateFormat_FootageNotChanged();
         1:   41-block  0
-        -:   42:
-        1:   43:void TestService::test_addFootage_ValidInput_FootageAdded() {
-        1:   44:	std::string file = "test.txt";
+        1:   42:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   42-block  0
+        1:   43:	clearFile.close();
+        1:   43-block  0
+        1:   44:	test_updateFootage_InvalidDate_FootageNotChanged();
         1:   44-block  0
-        1:   45:	auto repository = FileRepository(file);
+        1:   45:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
         1:   45-block  0
-        1:   46:	auto service = Service(repository);
+        1:   46:	clearFile.close();
         1:   46-block  0
-        1:   47:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:   47:	test_updateFootage_FutureDate_FootageNotChanged();
         1:   47-block  0
-        1:   47-block  1
-        1:   47-block  2
-        1:   47-block  3
-        1:   47-block  4
-        1:   47-block  5
-    $$$$$:   47-block  6
-    $$$$$:   47-block  7
-    $$$$$:   47-block  8
-    $$$$$:   47-block  9
-    $$$$$:   47-block 10
-        1:   48:	assert(service.getAllElements().size() == 1);
+        1:   48:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
         1:   48-block  0
-        1:   48-block  1
-    $$$$$:   48-block  2
-    $$$$$:   48-block  3
-    $$$$$:   48-block  4
-    $$$$$:   48-block  5
-        1:   48-block  6
-        1:   49:}
-    $$$$$:   49-block  0
-    $$$$$:   49-block  1
-    $$$$$:   49-block  2
-    $$$$$:   49-block  3
-    $$$$$:   49-block  4
-    $$$$$:   49-block  5
-    $$$$$:   49-block  6
-        1:   49-block  7
-    $$$$$:   49-block  8
-    $$$$$:   49-block  9
-    $$$$$:   49-block 10
-    $$$$$:   49-block 11
-        -:   50:
-        1:   51:void TestService::test_addFootage_InvalidDateFormat_FootageNotAdded() {
-        1:   52:	std::string file = "test.txt";
+        1:   49:	clearFile.close();
+        1:   49-block  0
+        1:   50:	test_updateFootage_InvalidAccessCount_FootageNotChanged();
+        1:   50-block  0
+        1:   51:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   51-block  0
+        1:   52:	clearFile.close();
         1:   52-block  0
-        1:   53:	auto repository = FileRepository(file);
+        1:   53:	test_getCurrent_ValidInput_GetCurrentElement();
         1:   53-block  0
-        1:   54:	auto service = Service(repository);
+        1:   54:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
         1:   54-block  0
-        -:   55:	try {
-        1:   56:		service.addFootage("abc", " def", " 02-02-2020dfsads", " 7", " link");
+        1:   55:	clearFile.close();
+        1:   55-block  0
+        1:   56:	test_addToMyList_InvalidInput_ThrowsException();
         1:   56-block  0
-        1:   56-block  1
-        1:   56-block  2
-        1:   56-block  3
-        1:   56-block  4
-        1:   56-block  5
-        1:   56-block  6
-        1:   56-block  7
-        1:   56-block  8
-        1:   56-block  9
-        1:   56-block 10
-        1:   57:	}catch (std::exception&) {
-    $$$$$:   57-block  0
-        1:   57-block  1
-        -:   58:		assert(true);
-        1:   59:	}
+        1:   57:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   57-block  0
+        1:   58:	clearFile.close();
+        1:   58-block  0
+        1:   59:	test_addToMyList_ValidInput_ElementAdded();
         1:   59-block  0
-        1:   59-block  1
-        2:   60:}
-    $$$$$:   60-block  0
-    $$$$$:   60-block  1
-    $$$$$:   60-block  2
-    $$$$$:   60-block  3
-    $$$$$:   60-block  4
-    $$$$$:   60-block  5
-    $$$$$:   60-block  6
-        1:   60-block  7
-    $$$$$:   60-block  8
-    $$$$$:   60-block  9
-    $$$$$:   60-block 10
-    $$$$$:   60-block 11
-    $$$$$:   60-block 12
-        -:   61:
-        1:   62:void TestService::test_addFootage_InvalidDate_FootageNotAdded() {
-        1:   63:	std::string file = "test.txt";
+        1:   60:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   60-block  0
+        1:   61:	clearFile.close();
+        1:   61-block  0
+        1:   62:	test_getFilteredList_NegativeAccessed_ThrowsException();
+        1:   62-block  0
+        1:   63:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
         1:   63-block  0
-        1:   64:	auto repository = FileRepository(file);
+        1:   64:	clearFile.close();
         1:   64-block  0
-        1:   65:	auto service = Service(repository);
+        1:   65:	test_getFilteredList_ValidInput_GetsList();
         1:   65-block  0
-        -:   66:	try {
-        1:   67:		service.addFootage("abc", " def", " 2020-02-02", " 7", " link");
+        1:   66:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   66-block  0
+        1:   67:	clearFile.close();
         1:   67-block  0
-        1:   67-block  1
-        1:   67-block  2
-        1:   67-block  3
-        1:   67-block  4
-        1:   67-block  5
-        1:   67-block  6
-        1:   67-block  7
-        1:   67-block  8
-        1:   67-block  9
-        1:   67-block 10
-        1:   68:	}catch (std::exception&) {
-    $$$$$:   68-block  0
-        1:   68-block  1
-        -:   69:		assert(true);
-        1:   70:	}
+        1:   68:	test_addFootage_InvalidDateFebruary31st_FootageNotAdded();
+        1:   68-block  0
+        1:   69:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   69-block  0
+        1:   70:	clearFile.close();
         1:   70-block  0
-        1:   70-block  1
-        2:   71:}
-    $$$$$:   71-block  0
-    $$$$$:   71-block  1
-    $$$$$:   71-block  2
-    $$$$$:   71-block  3
-    $$$$$:   71-block  4
-    $$$$$:   71-block  5
-    $$$$$:   71-block  6
-        1:   71-block  7
-    $$$$$:   71-block  8
-    $$$$$:   71-block  9
-    $$$$$:   71-block 10
-    $$$$$:   71-block 11
-    $$$$$:   71-block 12
-        -:   72:
-        1:   73:void TestService::test_addFootage_FutureDate_FootageNotAdded() {
-        1:   74:	std::string file = "test.txt";
-        1:   74-block  0
-        1:   75:	auto repository = FileRepository(file);
+        1:   71:	test_addFootage_InvalidDateNovember31st_FootageNotAdded();
+        1:   71-block  0
+        1:   72:	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
+        1:   72-block  0
+        1:   73:	clearFile.close();
+        1:   73-block  0
+        -:   74:
+        1:   75:}
         1:   75-block  0
-        1:   76:	auto service = Service(repository);
-        1:   76-block  0
-        -:   77:	try {
-        1:   78:		service.addFootage("abc", " def", " 02-02-2021", " 7", " link");
+    $$$$$:   75-block  1
+    $$$$$:   75-block  2
+        -:   76:
+        1:   77:void TestService::test_addFootage_ValidInput_FootageAdded() {
+        1:   78:	std::string file = "test.txt";
         1:   78-block  0
-        1:   78-block  1
-        1:   78-block  2
-        1:   78-block  3
-        1:   78-block  4
-        1:   78-block  5
-        1:   78-block  6
-        1:   78-block  7
-        1:   78-block  8
-        1:   78-block  9
-        1:   78-block 10
-        1:   79:	}catch (std::exception&) {
-    $$$$$:   79-block  0
-        1:   79-block  1
-        -:   80:		assert(true);
-        1:   81:	}
+        1:   79:	auto service = Service();
+        1:   79-block  0
+        1:   80:	service.setPath(file);
+        1:   80-block  0
+        1:   81:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:   81-block  0
         1:   81-block  1
-        2:   82:}
-    $$$$$:   82-block  0
-    $$$$$:   82-block  1
+        1:   81-block  2
+        1:   81-block  3
+        1:   81-block  4
+        1:   81-block  5
+    $$$$$:   81-block  6
+    $$$$$:   81-block  7
+    $$$$$:   81-block  8
+    $$$$$:   81-block  9
+    $$$$$:   81-block 10
+        1:   82:	assert(service.getAllElements().size() == 1);
+        1:   82-block  0
+        1:   82-block  1
     $$$$$:   82-block  2
     $$$$$:   82-block  3
     $$$$$:   82-block  4
     $$$$$:   82-block  5
-    $$$$$:   82-block  6
-        1:   82-block  7
-    $$$$$:   82-block  8
-    $$$$$:   82-block  9
-    $$$$$:   82-block 10
-    $$$$$:   82-block 11
-    $$$$$:   82-block 12
-        -:   83:
-        1:   84:void TestService::test_addFootage_InvalidAccessCount_FootageNotAdded() {
-        1:   85:	std::string file = "test.txt";
-        1:   85-block  0
-        1:   86:	auto repository = FileRepository(file);
+        1:   82-block  6
+        1:   83:}
+    $$$$$:   83-block  0
+    $$$$$:   83-block  1
+    $$$$$:   83-block  2
+    $$$$$:   83-block  3
+    $$$$$:   83-block  4
+    $$$$$:   83-block  5
+        1:   83-block  6
+    $$$$$:   83-block  7
+    $$$$$:   83-block  8
+    $$$$$:   83-block  9
+        -:   84:
+        1:   85:void TestService::test_addFootage_InvalidDateFormat_FootageNotAdded() {
+        1:   86:	std::string file = "test.txt";
         1:   86-block  0
-        1:   87:	auto service = Service(repository);
+        1:   87:	auto service = Service();
         1:   87-block  0
-        -:   88:	try {
-        1:   89:		service.addFootage("abc", " def", " 02-02-2020", " -2", " link");
-        1:   89-block  0
-        1:   89-block  1
-        1:   89-block  2
-        1:   89-block  3
-        1:   89-block  4
-        1:   89-block  5
-        1:   89-block  6
-        1:   89-block  7
-        1:   89-block  8
-        1:   89-block  9
-        1:   89-block 10
-        1:   90:	}catch (std::exception&) {
-    $$$$$:   90-block  0
+        1:   88:	service.setPath(file);
+        1:   88-block  0
+        -:   89:	try {
+        1:   90:		service.addFootage("abc", " def", " 02-02-2020dfsads", " 7", " link");
+        1:   90-block  0
         1:   90-block  1
-        -:   91:		assert(true);
-        1:   92:	}
-        1:   92-block  0
-        1:   92-block  1
-        -:   93:
+        1:   90-block  2
+        1:   90-block  3
+        1:   90-block  4
+        1:   90-block  5
+        1:   90-block  6
+        1:   90-block  7
+        1:   90-block  8
+        1:   90-block  9
+        1:   90-block 10
+        1:   91:	}catch (std::exception&) {
+    $$$$$:   91-block  0
+        1:   91-block  1
+        -:   92:		static_assert(true, "");
+        1:   93:	}
+        1:   93-block  0
+        1:   93-block  1
         2:   94:}
     $$$$$:   94-block  0
     $$$$$:   94-block  1
@@ -254,652 +223,631 @@
     $$$$$:   94-block  8
     $$$$$:   94-block  9
     $$$$$:   94-block 10
-    $$$$$:   94-block 11
-    $$$$$:   94-block 12
         -:   95:
-        1:   96:void TestService::test_addFootage_DuplicateFootage_FootageNotAdded() {
+        1:   96:void TestService::test_addFootage_InvalidDate_FootageNotAdded() {
         1:   97:	std::string file = "test.txt";
         1:   97-block  0
-        1:   98:	auto repository = FileRepository(file);
+        1:   98:	auto service = Service();
         1:   98-block  0
-        1:   99:	auto service = Service(repository);
+        1:   99:	service.setPath(file);
         1:   99-block  0
-        1:  100:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
-        1:  100-block  0
-        1:  100-block  1
-        1:  100-block  2
-        1:  100-block  3
-        1:  100-block  4
-        1:  100-block  5
-    $$$$$:  100-block  6
-    $$$$$:  100-block  7
-    $$$$$:  100-block  8
-    $$$$$:  100-block  9
-    $$$$$:  100-block 10
-        -:  101:	try {
-        1:  102:		service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
-        1:  102-block  0
+        -:  100:	try {
+        1:  101:		service.addFootage("abc", " def", " 2020-02-02", " 7", " link");
+        1:  101-block  0
+        1:  101-block  1
+        1:  101-block  2
+        1:  101-block  3
+        1:  101-block  4
+        1:  101-block  5
+        1:  101-block  6
+        1:  101-block  7
+        1:  101-block  8
+        1:  101-block  9
+        1:  101-block 10
+        1:  102:	}catch (std::exception&) {
+    $$$$$:  102-block  0
         1:  102-block  1
-        1:  102-block  2
-        1:  102-block  3
-        1:  102-block  4
-        1:  102-block  5
-        1:  102-block  6
-        1:  102-block  7
-        1:  102-block  8
-        1:  102-block  9
-        1:  102-block 10
-        1:  103:	}catch (std::exception&) {
-    $$$$$:  103-block  0
-        1:  103-block  1
-        -:  104:		assert(true);
-        1:  105:	}
-        1:  105-block  0
-        1:  105-block  1
-        2:  106:}
-    $$$$$:  106-block  0
-    $$$$$:  106-block  1
-    $$$$$:  106-block  2
-    $$$$$:  106-block  3
-    $$$$$:  106-block  4
-    $$$$$:  106-block  5
-    $$$$$:  106-block  6
-    $$$$$:  106-block  7
-    $$$$$:  106-block  8
-    $$$$$:  106-block  9
-    $$$$$:  106-block 10
-    $$$$$:  106-block 11
-        1:  106-block 12
-    $$$$$:  106-block 13
-    $$$$$:  106-block 14
-    $$$$$:  106-block 15
-    $$$$$:  106-block 16
-        -:  107:
-        1:  108:void TestService::test_deleteFootage_ValidInput_FootageRemoved() {
-        1:  109:	std::string file = "test.txt";
+        -:  103:		static_assert(true, "");
+        1:  104:	}
+        1:  104-block  0
+        1:  104-block  1
+        2:  105:}
+    $$$$$:  105-block  0
+    $$$$$:  105-block  1
+    $$$$$:  105-block  2
+    $$$$$:  105-block  3
+    $$$$$:  105-block  4
+    $$$$$:  105-block  5
+    $$$$$:  105-block  6
+        1:  105-block  7
+    $$$$$:  105-block  8
+    $$$$$:  105-block  9
+    $$$$$:  105-block 10
+        -:  106:
+        1:  107:void TestService::test_addFootage_FutureDate_FootageNotAdded() {
+        1:  108:	std::string file = "test.txt";
+        1:  108-block  0
+        1:  109:	auto service = Service();
         1:  109-block  0
-        1:  110:	auto repository = FileRepository(file);
+        1:  110:	service.setPath(file);
         1:  110-block  0
-        1:  111:	auto service = Service(repository);
-        1:  111-block  0
-        1:  112:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        -:  111:	try {
+        1:  112:		service.addFootage("abc", " def", " 02-02-2021", " 7", " link");
         1:  112-block  0
         1:  112-block  1
         1:  112-block  2
         1:  112-block  3
         1:  112-block  4
         1:  112-block  5
-    $$$$$:  112-block  6
-    $$$$$:  112-block  7
-    $$$$$:  112-block  8
-    $$$$$:  112-block  9
-    $$$$$:  112-block 10
-        1:  113:	service.deleteFootage("abc");
-        1:  113-block  0
+        1:  112-block  6
+        1:  112-block  7
+        1:  112-block  8
+        1:  112-block  9
+        1:  112-block 10
+        1:  113:	}catch (std::exception&) {
+    $$$$$:  113-block  0
         1:  113-block  1
-    $$$$$:  113-block  2
-        1:  114:	assert(service.getAllElements().empty());
-        1:  114-block  0
-        1:  114-block  1
-    $$$$$:  114-block  2
-    $$$$$:  114-block  3
-    $$$$$:  114-block  4
-    $$$$$:  114-block  5
-        1:  114-block  6
-        1:  115:}
-    $$$$$:  115-block  0
-    $$$$$:  115-block  1
-    $$$$$:  115-block  2
-    $$$$$:  115-block  3
-    $$$$$:  115-block  4
-    $$$$$:  115-block  5
-    $$$$$:  115-block  6
-        1:  115-block  7
-    $$$$$:  115-block  8
-    $$$$$:  115-block  9
-    $$$$$:  115-block 10
-    $$$$$:  115-block 11
-        -:  116:
-        1:  117:void TestService::test_deleteFootage_Inexistent_FootageNotRemoved() {
-        1:  118:	std::string file = "test.txt";
-        1:  118-block  0
-        1:  119:	auto repository = FileRepository(file);
+        -:  114:		static_assert(true, "");
+        1:  115:	}
+        1:  115-block  0
+        1:  115-block  1
+        2:  116:}
+    $$$$$:  116-block  0
+    $$$$$:  116-block  1
+    $$$$$:  116-block  2
+    $$$$$:  116-block  3
+    $$$$$:  116-block  4
+    $$$$$:  116-block  5
+    $$$$$:  116-block  6
+        1:  116-block  7
+    $$$$$:  116-block  8
+    $$$$$:  116-block  9
+    $$$$$:  116-block 10
+        -:  117:
+        1:  118:void TestService::test_addFootage_InvalidAccessCount_FootageNotAdded() {
+        1:  119:	std::string file = "test.txt";
         1:  119-block  0
-        1:  120:	auto service = Service(repository);
+        1:  120:	auto service = Service();
         1:  120-block  0
-        -:  121:	try {
-        1:  122:		service.deleteFootage("abc");
-        1:  122-block  0
-        1:  122-block  1
-        1:  122-block  2
-        1:  123:	}catch (std::exception&) {
-    $$$$$:  123-block  0
+        1:  121:	service.setPath(file);
+        1:  121-block  0
+        -:  122:	try {
+        1:  123:		service.addFootage("abc", " def", " 02-02-2020", " -2", " link");
+        1:  123-block  0
         1:  123-block  1
-        -:  124:		assert(true);
-        1:  125:	}
-        1:  125-block  0
-        1:  125-block  1
-        2:  126:}
-    $$$$$:  126-block  0
-    $$$$$:  126-block  1
-    $$$$$:  126-block  2
-        1:  126-block  3
-    $$$$$:  126-block  4
-    $$$$$:  126-block  5
-    $$$$$:  126-block  6
-    $$$$$:  126-block  7
-    $$$$$:  126-block  8
+        1:  123-block  2
+        1:  123-block  3
+        1:  123-block  4
+        1:  123-block  5
+        1:  123-block  6
+        1:  123-block  7
+        1:  123-block  8
+        1:  123-block  9
+        1:  123-block 10
+        1:  124:	}catch (std::exception&) {
+    $$$$$:  124-block  0
+        1:  124-block  1
+        -:  125:		static_assert(true, "");
+        1:  126:	}
+        1:  126-block  0
+        1:  126-block  1
         -:  127:
-        1:  128:void TestService::test_updateFootage_ValidInput_FootageChanged() {
-        1:  129:	std::string file = "test.txt";
-        1:  129-block  0
-        1:  130:	auto repository = FileRepository(file);
-        1:  130-block  0
-        1:  131:	auto service = Service(repository);
+        2:  128:}
+    $$$$$:  128-block  0
+    $$$$$:  128-block  1
+    $$$$$:  128-block  2
+    $$$$$:  128-block  3
+    $$$$$:  128-block  4
+    $$$$$:  128-block  5
+    $$$$$:  128-block  6
+        1:  128-block  7
+    $$$$$:  128-block  8
+    $$$$$:  128-block  9
+    $$$$$:  128-block 10
+        -:  129:
+        1:  130:void TestService::test_addFootage_DuplicateFootage_FootageNotAdded() {
+        1:  131:	std::string file = "test.txt";
         1:  131-block  0
-        1:  132:	service.addFootage(" abc", " def", " 02-02-2020", " 7", " link");
+        1:  132:	auto service = Service();
         1:  132-block  0
-        1:  132-block  1
-        1:  132-block  2
-        1:  132-block  3
-        1:  132-block  4
-        1:  132-block  5
-    $$$$$:  132-block  6
-    $$$$$:  132-block  7
-    $$$$$:  132-block  8
-    $$$$$:  132-block  9
-    $$$$$:  132-block 10
-        1:  133:	service.updateFootage(" abc", " efg", " 03-03-2019", " 9", " link2");
+        1:  133:	service.setPath(file);
         1:  133-block  0
-        1:  133-block  1
-        1:  133-block  2
-        1:  133-block  3
-        1:  133-block  4
-        1:  133-block  5
-    $$$$$:  133-block  6
-    $$$$$:  133-block  7
-    $$$$$:  133-block  8
-    $$$$$:  133-block  9
-    $$$$$:  133-block 10
-        1:  134:	assert(service.getAllElements()[0].getType() == "efg");
+        1:  134:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  134-block  0
         1:  134-block  1
         1:  134-block  2
         1:  134-block  3
-    $$$$$:  134-block  4
-    $$$$$:  134-block  5
+        1:  134-block  4
+        1:  134-block  5
     $$$$$:  134-block  6
     $$$$$:  134-block  7
-        1:  134-block  8
+    $$$$$:  134-block  8
     $$$$$:  134-block  9
-        1:  135:}
-    $$$$$:  135-block  0
-    $$$$$:  135-block  1
-    $$$$$:  135-block  2
-    $$$$$:  135-block  3
-    $$$$$:  135-block  4
-    $$$$$:  135-block  5
-    $$$$$:  135-block  6
-    $$$$$:  135-block  7
-    $$$$$:  135-block  8
-    $$$$$:  135-block  9
-    $$$$$:  135-block 10
-    $$$$$:  135-block 11
-        1:  135-block 12
-    $$$$$:  135-block 13
-    $$$$$:  135-block 14
-    $$$$$:  135-block 15
-    $$$$$:  135-block 16
-        -:  136:
-        1:  137:void TestService::test_updateFootage_InvalidDateFormat_FootageNotChanged() {
-        1:  138:	std::string file = "test.txt";
-        1:  138-block  0
-        1:  139:	auto repository = FileRepository(file);
+    $$$$$:  134-block 10
+        -:  135:	try {
+        1:  136:		service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  136-block  0
+        1:  136-block  1
+        1:  136-block  2
+        1:  136-block  3
+        1:  136-block  4
+        1:  136-block  5
+        1:  136-block  6
+        1:  136-block  7
+        1:  136-block  8
+        1:  136-block  9
+        1:  136-block 10
+        1:  137:	}catch (std::exception&) {
+    $$$$$:  137-block  0
+        1:  137-block  1
+        -:  138:		static_assert(true, "");
+        1:  139:	}
         1:  139-block  0
-        1:  140:	auto service = Service(repository);
-        1:  140-block  0
-        1:  141:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
-        1:  141-block  0
-        1:  141-block  1
-        1:  141-block  2
-        1:  141-block  3
-        1:  141-block  4
-        1:  141-block  5
-    $$$$$:  141-block  6
-    $$$$$:  141-block  7
-    $$$$$:  141-block  8
-    $$$$$:  141-block  9
-    $$$$$:  141-block 10
-        -:  142:	try {
-        1:  143:		service.updateFootage("abc", " efg", " 02-02-2020dfsfa", " 9", " link2");
+        1:  139-block  1
+        2:  140:}
+    $$$$$:  140-block  0
+    $$$$$:  140-block  1
+    $$$$$:  140-block  2
+    $$$$$:  140-block  3
+    $$$$$:  140-block  4
+    $$$$$:  140-block  5
+    $$$$$:  140-block  6
+    $$$$$:  140-block  7
+    $$$$$:  140-block  8
+    $$$$$:  140-block  9
+    $$$$$:  140-block 10
+        1:  140-block 11
+    $$$$$:  140-block 12
+    $$$$$:  140-block 13
+    $$$$$:  140-block 14
+        -:  141:
+        1:  142:void TestService::test_deleteFootage_ValidInput_FootageRemoved() {
+        1:  143:	std::string file = "test.txt";
         1:  143-block  0
-        1:  143-block  1
-        1:  143-block  2
-        1:  143-block  3
-        1:  143-block  4
-        1:  143-block  5
-        1:  143-block  6
-        1:  143-block  7
-        1:  143-block  8
-        1:  143-block  9
-        1:  143-block 10
-        1:  144:	}catch (std::exception&) {
-    $$$$$:  144-block  0
-        1:  144-block  1
-        -:  145:		assert(true);
-        1:  146:	}
+        1:  144:	auto service = Service();
+        1:  144-block  0
+        1:  145:	service.setPath(file);
+        1:  145-block  0
+        1:  146:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  146-block  0
         1:  146-block  1
-        2:  147:}
-    $$$$$:  147-block  0
-    $$$$$:  147-block  1
+        1:  146-block  2
+        1:  146-block  3
+        1:  146-block  4
+        1:  146-block  5
+    $$$$$:  146-block  6
+    $$$$$:  146-block  7
+    $$$$$:  146-block  8
+    $$$$$:  146-block  9
+    $$$$$:  146-block 10
+        1:  147:	service.deleteFootage("abc");
+        1:  147-block  0
+        1:  147-block  1
     $$$$$:  147-block  2
-    $$$$$:  147-block  3
-    $$$$$:  147-block  4
-    $$$$$:  147-block  5
-    $$$$$:  147-block  6
-    $$$$$:  147-block  7
-    $$$$$:  147-block  8
-    $$$$$:  147-block  9
-    $$$$$:  147-block 10
-    $$$$$:  147-block 11
-        1:  147-block 12
-    $$$$$:  147-block 13
-    $$$$$:  147-block 14
-    $$$$$:  147-block 15
-    $$$$$:  147-block 16
-        -:  148:
-        1:  149:void TestService::test_updateFootage_InvalidDate_FootageNotChanged() {
-        1:  150:	std::string file = "test.txt";
-        1:  150-block  0
-        1:  151:	auto repository = FileRepository(file);
-        1:  151-block  0
-        1:  152:	auto service = Service(repository);
+        1:  148:	assert(service.getAllElements().empty());
+        1:  148-block  0
+        1:  148-block  1
+    $$$$$:  148-block  2
+    $$$$$:  148-block  3
+    $$$$$:  148-block  4
+    $$$$$:  148-block  5
+        1:  148-block  6
+        1:  149:}
+    $$$$$:  149-block  0
+    $$$$$:  149-block  1
+    $$$$$:  149-block  2
+    $$$$$:  149-block  3
+    $$$$$:  149-block  4
+    $$$$$:  149-block  5
+        1:  149-block  6
+    $$$$$:  149-block  7
+    $$$$$:  149-block  8
+    $$$$$:  149-block  9
+        -:  150:
+        1:  151:void TestService::test_deleteFootage_Inexistent_FootageNotRemoved() {
+        1:  152:	std::string file = "test.txt";
         1:  152-block  0
-        1:  153:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  153:	auto service = Service();
         1:  153-block  0
-        1:  153-block  1
-        1:  153-block  2
-        1:  153-block  3
-        1:  153-block  4
-        1:  153-block  5
-    $$$$$:  153-block  6
-    $$$$$:  153-block  7
-    $$$$$:  153-block  8
-    $$$$$:  153-block  9
-    $$$$$:  153-block 10
-        -:  154:	try {
-        1:  155:		service.updateFootage("abc", " efg", " 2020-02-02", " 9", " link2");
-        1:  155-block  0
-        1:  155-block  1
-        1:  155-block  2
-        1:  155-block  3
-        1:  155-block  4
-        1:  155-block  5
-        1:  155-block  6
-        1:  155-block  7
-        1:  155-block  8
-        1:  155-block  9
-        1:  155-block 10
-        1:  156:	}catch (std::exception&) {
-    $$$$$:  156-block  0
+        1:  154:	service.setPath(file);
+        1:  154-block  0
+        -:  155:	try {
+        1:  156:		service.deleteFootage("abc");
+        1:  156-block  0
         1:  156-block  1
-        -:  157:		assert(true);
-        1:  158:	}
-        1:  158-block  0
-        1:  158-block  1
-        2:  159:}
-    $$$$$:  159-block  0
-    $$$$$:  159-block  1
-    $$$$$:  159-block  2
-    $$$$$:  159-block  3
-    $$$$$:  159-block  4
-    $$$$$:  159-block  5
-    $$$$$:  159-block  6
-    $$$$$:  159-block  7
-    $$$$$:  159-block  8
-    $$$$$:  159-block  9
-    $$$$$:  159-block 10
-    $$$$$:  159-block 11
-        1:  159-block 12
-    $$$$$:  159-block 13
-    $$$$$:  159-block 14
-    $$$$$:  159-block 15
-    $$$$$:  159-block 16
-        -:  160:
-        1:  161:void TestService::test_updateFootage_FutureDate_FootageNotChanged() {
-        1:  162:	std::string file = "test.txt";
-        1:  162-block  0
-        1:  163:	auto repository = FileRepository(file);
+        1:  156-block  2
+        1:  157:	}catch (std::exception&) {
+    $$$$$:  157-block  0
+        1:  157-block  1
+        -:  158:		static_assert(true, "");
+        1:  159:	}
+        1:  159-block  0
+        1:  159-block  1
+        2:  160:}
+    $$$$$:  160-block  0
+    $$$$$:  160-block  1
+    $$$$$:  160-block  2
+        1:  160-block  3
+    $$$$$:  160-block  4
+    $$$$$:  160-block  5
+    $$$$$:  160-block  6
+        -:  161:
+        1:  162:void TestService::test_updateFootage_ValidInput_FootageChanged() {
+        1:  163:	std::string file = "test.txt";
         1:  163-block  0
-        1:  164:	auto service = Service(repository);
+        1:  164:	auto service = Service();
         1:  164-block  0
-        1:  165:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  165:	service.setPath(file);
         1:  165-block  0
-        1:  165-block  1
-        1:  165-block  2
-        1:  165-block  3
-        1:  165-block  4
-        1:  165-block  5
-    $$$$$:  165-block  6
-    $$$$$:  165-block  7
-    $$$$$:  165-block  8
-    $$$$$:  165-block  9
-    $$$$$:  165-block 10
-        -:  166:	try {
-        1:  167:		service.updateFootage("abc", " efg", " 03-03-2021", " 9", " link2");
+        1:  166:	service.addFootage(" abc", " def", " 02-02-2020", " 7", " link");
+        1:  166-block  0
+        1:  166-block  1
+        1:  166-block  2
+        1:  166-block  3
+        1:  166-block  4
+        1:  166-block  5
+    $$$$$:  166-block  6
+    $$$$$:  166-block  7
+    $$$$$:  166-block  8
+    $$$$$:  166-block  9
+    $$$$$:  166-block 10
+        1:  167:	service.updateFootage(" abc", " efg", " 03-03-2019", " 9", " link2");
         1:  167-block  0
         1:  167-block  1
         1:  167-block  2
         1:  167-block  3
         1:  167-block  4
         1:  167-block  5
-        1:  167-block  6
-        1:  167-block  7
-        1:  167-block  8
-        1:  167-block  9
-        1:  167-block 10
-        1:  168:	}catch (std::exception&) {
-    $$$$$:  168-block  0
+    $$$$$:  167-block  6
+    $$$$$:  167-block  7
+    $$$$$:  167-block  8
+    $$$$$:  167-block  9
+    $$$$$:  167-block 10
+        1:  168:	assert(service.getAllElements()[0].getType() == "efg");
+        1:  168-block  0
         1:  168-block  1
-        -:  169:		assert(true);
-        1:  170:	}
-        1:  170-block  0
-        1:  170-block  1
-        2:  171:}
-    $$$$$:  171-block  0
-    $$$$$:  171-block  1
-    $$$$$:  171-block  2
-    $$$$$:  171-block  3
-    $$$$$:  171-block  4
-    $$$$$:  171-block  5
-    $$$$$:  171-block  6
-    $$$$$:  171-block  7
-    $$$$$:  171-block  8
-    $$$$$:  171-block  9
-    $$$$$:  171-block 10
-    $$$$$:  171-block 11
-        1:  171-block 12
-    $$$$$:  171-block 13
-    $$$$$:  171-block 14
-    $$$$$:  171-block 15
-    $$$$$:  171-block 16
-        -:  172:
-        1:  173:void TestService::test_updateFootage_InvalidAccessCount_FootageNotChanged() {
-        1:  174:	std::string file = "test.txt";
+        1:  168-block  2
+        1:  168-block  3
+    $$$$$:  168-block  4
+    $$$$$:  168-block  5
+    $$$$$:  168-block  6
+    $$$$$:  168-block  7
+        1:  168-block  8
+    $$$$$:  168-block  9
+        1:  169:}
+    $$$$$:  169-block  0
+    $$$$$:  169-block  1
+    $$$$$:  169-block  2
+    $$$$$:  169-block  3
+    $$$$$:  169-block  4
+    $$$$$:  169-block  5
+    $$$$$:  169-block  6
+    $$$$$:  169-block  7
+    $$$$$:  169-block  8
+    $$$$$:  169-block  9
+    $$$$$:  169-block 10
+        1:  169-block 11
+    $$$$$:  169-block 12
+    $$$$$:  169-block 13
+    $$$$$:  169-block 14
+        -:  170:
+        1:  171:void TestService::test_updateFootage_InvalidDateFormat_FootageNotChanged() {
+        1:  172:	std::string file = "test.txt";
+        1:  172-block  0
+        1:  173:	auto service = Service();
+        1:  173-block  0
+        1:  174:	service.setPath(file);
         1:  174-block  0
-        1:  175:	auto repository = FileRepository(file);
+        1:  175:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  175-block  0
-        1:  176:	auto service = Service(repository);
-        1:  176-block  0
-        1:  177:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  175-block  1
+        1:  175-block  2
+        1:  175-block  3
+        1:  175-block  4
+        1:  175-block  5
+    $$$$$:  175-block  6
+    $$$$$:  175-block  7
+    $$$$$:  175-block  8
+    $$$$$:  175-block  9
+    $$$$$:  175-block 10
+        -:  176:	try {
+        1:  177:		service.updateFootage("abc", " efg", " 02-02-2020dfsfa", " 9", " link2");
         1:  177-block  0
         1:  177-block  1
         1:  177-block  2
         1:  177-block  3
         1:  177-block  4
         1:  177-block  5
-    $$$$$:  177-block  6
-    $$$$$:  177-block  7
-    $$$$$:  177-block  8
-    $$$$$:  177-block  9
-    $$$$$:  177-block 10
-        -:  178:	try {
-        1:  179:		service.updateFootage("abc", " efg", " 2020-02-02", " -9", " link2");
-        1:  179-block  0
-        1:  179-block  1
-        1:  179-block  2
-        1:  179-block  3
-        1:  179-block  4
-        1:  179-block  5
-        1:  179-block  6
-        1:  179-block  7
-        1:  179-block  8
-        1:  179-block  9
-        1:  179-block 10
-        1:  180:	}catch (std::exception&) {
-    $$$$$:  180-block  0
+        1:  177-block  6
+        1:  177-block  7
+        1:  177-block  8
+        1:  177-block  9
+        1:  177-block 10
+        1:  178:	}catch (std::exception&) {
+    $$$$$:  178-block  0
+        1:  178-block  1
+        -:  179:		static_assert(true, "");
+        1:  180:	}
+        1:  180-block  0
         1:  180-block  1
-        -:  181:		assert(true);
-        1:  182:	}
-        1:  182-block  0
-        1:  182-block  1
-        2:  183:}
-    $$$$$:  183-block  0
-    $$$$$:  183-block  1
-    $$$$$:  183-block  2
-    $$$$$:  183-block  3
-    $$$$$:  183-block  4
-    $$$$$:  183-block  5
-    $$$$$:  183-block  6
-    $$$$$:  183-block  7
-    $$$$$:  183-block  8
-    $$$$$:  183-block  9
-    $$$$$:  183-block 10
-    $$$$$:  183-block 11
-        1:  183-block 12
-    $$$$$:  183-block 13
-    $$$$$:  183-block 14
-    $$$$$:  183-block 15
-    $$$$$:  183-block 16
-        -:  184:
-        1:  185:void TestService::test_getCurrent_ValidInput_GetCurrentElement() {
-        1:  186:	std::string file = "test.txt";
+        2:  181:}
+    $$$$$:  181-block  0
+    $$$$$:  181-block  1
+    $$$$$:  181-block  2
+    $$$$$:  181-block  3
+    $$$$$:  181-block  4
+    $$$$$:  181-block  5
+    $$$$$:  181-block  6
+    $$$$$:  181-block  7
+    $$$$$:  181-block  8
+    $$$$$:  181-block  9
+    $$$$$:  181-block 10
+        1:  181-block 11
+    $$$$$:  181-block 12
+    $$$$$:  181-block 13
+    $$$$$:  181-block 14
+        -:  182:
+        1:  183:void TestService::test_updateFootage_InvalidDate_FootageNotChanged() {
+        1:  184:	std::string file = "test.txt";
+        1:  184-block  0
+        1:  185:	auto service = Service();
+        1:  185-block  0
+        1:  186:	service.setPath(file);
         1:  186-block  0
-        1:  187:	auto repository = FileRepository(file);
+        1:  187:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  187-block  0
-        1:  188:	auto service = Service(repository);
-        1:  188-block  0
-        1:  189:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  187-block  1
+        1:  187-block  2
+        1:  187-block  3
+        1:  187-block  4
+        1:  187-block  5
+    $$$$$:  187-block  6
+    $$$$$:  187-block  7
+    $$$$$:  187-block  8
+    $$$$$:  187-block  9
+    $$$$$:  187-block 10
+        -:  188:	try {
+        1:  189:		service.updateFootage("abc", " efg", " 2020-02-02", " 9", " link2");
         1:  189-block  0
         1:  189-block  1
         1:  189-block  2
         1:  189-block  3
         1:  189-block  4
         1:  189-block  5
-    $$$$$:  189-block  6
-    $$$$$:  189-block  7
-    $$$$$:  189-block  8
-    $$$$$:  189-block  9
-    $$$$$:  189-block 10
-        1:  190:	assert(service.getCurrent().getTitle() == "abc");
-        1:  190-block  0
+        1:  189-block  6
+        1:  189-block  7
+        1:  189-block  8
+        1:  189-block  9
+        1:  189-block 10
+        1:  190:	}catch (std::exception&) {
+    $$$$$:  190-block  0
         1:  190-block  1
-        1:  190-block  2
-    $$$$$:  190-block  3
-    $$$$$:  190-block  4
-    $$$$$:  190-block  5
-    $$$$$:  190-block  6
-        1:  190-block  7
-    $$$$$:  190-block  8
-        1:  191:}
-    $$$$$:  191-block  0
-    $$$$$:  191-block  1
-    $$$$$:  191-block  2
-    $$$$$:  191-block  3
-    $$$$$:  191-block  4
-    $$$$$:  191-block  5
-    $$$$$:  191-block  6
-    $$$$$:  191-block  7
-        1:  191-block  8
-    $$$$$:  191-block  9
-    $$$$$:  191-block 10
-    $$$$$:  191-block 11
-    $$$$$:  191-block 12
-        -:  192:
-        1:  193:void TestService::test_addToMyList_ValidInput_ElementAdded() {
-        1:  194:	std::string file = "test.txt";
-        1:  194-block  0
-        1:  195:	auto repository = FileRepository(file);
-        1:  195-block  0
-        1:  196:	auto service = Service(repository);
+        -:  191:		static_assert(true, "");
+        1:  192:	}
+        1:  192-block  0
+        1:  192-block  1
+        2:  193:}
+    $$$$$:  193-block  0
+    $$$$$:  193-block  1
+    $$$$$:  193-block  2
+    $$$$$:  193-block  3
+    $$$$$:  193-block  4
+    $$$$$:  193-block  5
+    $$$$$:  193-block  6
+    $$$$$:  193-block  7
+    $$$$$:  193-block  8
+    $$$$$:  193-block  9
+    $$$$$:  193-block 10
+        1:  193-block 11
+    $$$$$:  193-block 12
+    $$$$$:  193-block 13
+    $$$$$:  193-block 14
+        -:  194:
+        1:  195:void TestService::test_updateFootage_FutureDate_FootageNotChanged() {
+        1:  196:	std::string file = "test.txt";
         1:  196-block  0
-        1:  197:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  197:	auto service = Service();
         1:  197-block  0
-        1:  197-block  1
-        1:  197-block  2
-        1:  197-block  3
-        1:  197-block  4
-        1:  197-block  5
-    $$$$$:  197-block  6
-    $$$$$:  197-block  7
-    $$$$$:  197-block  8
-    $$$$$:  197-block  9
-    $$$$$:  197-block 10
-        1:  198:	service.addToMyList("abc");
+        1:  198:	service.setPath(file);
         1:  198-block  0
-        1:  198-block  1
-    $$$$$:  198-block  2
-        1:  199:	assert(service.getMyList().size() == 1);
+        1:  199:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  199-block  0
         1:  199-block  1
-    $$$$$:  199-block  2
-    $$$$$:  199-block  3
-    $$$$$:  199-block  4
-    $$$$$:  199-block  5
-        1:  199-block  6
-        1:  200:}
-    $$$$$:  200-block  0
-    $$$$$:  200-block  1
-    $$$$$:  200-block  2
-    $$$$$:  200-block  3
-    $$$$$:  200-block  4
-    $$$$$:  200-block  5
-    $$$$$:  200-block  6
-        1:  200-block  7
-    $$$$$:  200-block  8
-    $$$$$:  200-block  9
-    $$$$$:  200-block 10
-    $$$$$:  200-block 11
-        -:  201:
-        1:  202:void TestService::test_addToMyList_InvalidInput_ThrowsException() {
-        1:  203:	std::string file = "test.txt";
-        1:  203-block  0
-        1:  204:	auto repository = FileRepository(file);
+        1:  199-block  2
+        1:  199-block  3
+        1:  199-block  4
+        1:  199-block  5
+    $$$$$:  199-block  6
+    $$$$$:  199-block  7
+    $$$$$:  199-block  8
+    $$$$$:  199-block  9
+    $$$$$:  199-block 10
+        -:  200:	try {
+        1:  201:		service.updateFootage("abc", " efg", " 03-03-2021", " 9", " link2");
+        1:  201-block  0
+        1:  201-block  1
+        1:  201-block  2
+        1:  201-block  3
+        1:  201-block  4
+        1:  201-block  5
+        1:  201-block  6
+        1:  201-block  7
+        1:  201-block  8
+        1:  201-block  9
+        1:  201-block 10
+        1:  202:	}catch (std::exception&) {
+    $$$$$:  202-block  0
+        1:  202-block  1
+        -:  203:		static_assert(true, "");
+        1:  204:	}
         1:  204-block  0
-        1:  205:	auto service = Service(repository);
-        1:  205-block  0
-        1:  206:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
-        1:  206-block  0
-        1:  206-block  1
-        1:  206-block  2
-        1:  206-block  3
-        1:  206-block  4
-        1:  206-block  5
-    $$$$$:  206-block  6
-    $$$$$:  206-block  7
-    $$$$$:  206-block  8
-    $$$$$:  206-block  9
-    $$$$$:  206-block 10
-        -:  207:	try {
-        1:  208:		service.addToMyList("bcd");
+        1:  204-block  1
+        2:  205:}
+    $$$$$:  205-block  0
+    $$$$$:  205-block  1
+    $$$$$:  205-block  2
+    $$$$$:  205-block  3
+    $$$$$:  205-block  4
+    $$$$$:  205-block  5
+    $$$$$:  205-block  6
+    $$$$$:  205-block  7
+    $$$$$:  205-block  8
+    $$$$$:  205-block  9
+    $$$$$:  205-block 10
+        1:  205-block 11
+    $$$$$:  205-block 12
+    $$$$$:  205-block 13
+    $$$$$:  205-block 14
+        -:  206:
+        1:  207:void TestService::test_updateFootage_InvalidAccessCount_FootageNotChanged() {
+        1:  208:	std::string file = "test.txt";
         1:  208-block  0
-        1:  208-block  1
-        1:  208-block  2
-        1:  209:	}catch (std::exception&) {
-    $$$$$:  209-block  0
-        1:  209-block  1
-        -:  210:		assert(true);
-        1:  211:	}
+        1:  209:	auto service = Service();
+        1:  209-block  0
+        1:  210:	service.setPath(file);
+        1:  210-block  0
+        1:  211:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  211-block  0
         1:  211-block  1
-        2:  212:}
-    $$$$$:  212-block  0
-    $$$$$:  212-block  1
-    $$$$$:  212-block  2
-    $$$$$:  212-block  3
-    $$$$$:  212-block  4
-    $$$$$:  212-block  5
-    $$$$$:  212-block  6
-    $$$$$:  212-block  7
-        1:  212-block  8
-    $$$$$:  212-block  9
-    $$$$$:  212-block 10
-    $$$$$:  212-block 11
-    $$$$$:  212-block 12
-        -:  213:
-        1:  214:void TestService::test_setPath_ValidInput_PathChanged() {
-        1:  215:	std::string file = " ";
-        1:  215-block  0
-        1:  216:	auto repository = FileRepository(file);
+        1:  211-block  2
+        1:  211-block  3
+        1:  211-block  4
+        1:  211-block  5
+    $$$$$:  211-block  6
+    $$$$$:  211-block  7
+    $$$$$:  211-block  8
+    $$$$$:  211-block  9
+    $$$$$:  211-block 10
+        -:  212:	try {
+        1:  213:		service.updateFootage("abc", " efg", " 2020-02-02", " -9", " link2");
+        1:  213-block  0
+        1:  213-block  1
+        1:  213-block  2
+        1:  213-block  3
+        1:  213-block  4
+        1:  213-block  5
+        1:  213-block  6
+        1:  213-block  7
+        1:  213-block  8
+        1:  213-block  9
+        1:  213-block 10
+        1:  214:	}catch (std::exception&) {
+    $$$$$:  214-block  0
+        1:  214-block  1
+        -:  215:		static_assert(true, "");
+        1:  216:	}
         1:  216-block  0
-        1:  217:	auto service = Service(repository);
-        1:  217-block  0
-        1:  218:	file = "test.txt";
-        1:  218-block  0
-        1:  219:	service.setPath(file);
-        1:  219-block  0
-        1:  220:}
+        1:  216-block  1
+        2:  217:}
+    $$$$$:  217-block  0
+    $$$$$:  217-block  1
+    $$$$$:  217-block  2
+    $$$$$:  217-block  3
+    $$$$$:  217-block  4
+    $$$$$:  217-block  5
+    $$$$$:  217-block  6
+    $$$$$:  217-block  7
+    $$$$$:  217-block  8
+    $$$$$:  217-block  9
+    $$$$$:  217-block 10
+        1:  217-block 11
+    $$$$$:  217-block 12
+    $$$$$:  217-block 13
+    $$$$$:  217-block 14
+        -:  218:
+        1:  219:void TestService::test_getCurrent_ValidInput_GetCurrentElement() {
+        1:  220:	std::string file = "test.txt";
         1:  220-block  0
-    $$$$$:  220-block  1
-    $$$$$:  220-block  2
-    $$$$$:  220-block  3
-    $$$$$:  220-block  4
-    $$$$$:  220-block  5
-    $$$$$:  220-block  6
-        -:  221:
-        1:  222:void TestService::test_setPath_InvalidInput_ThrowsException() {
-        1:  223:	std::string file = "test.txt";
+        1:  221:	auto service = Service();
+        1:  221-block  0
+        1:  222:	service.setPath(file);
+        1:  222-block  0
+        1:  223:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  223-block  0
-        1:  224:	auto repository = FileRepository(file);
+        1:  223-block  1
+        1:  223-block  2
+        1:  223-block  3
+        1:  223-block  4
+        1:  223-block  5
+    $$$$$:  223-block  6
+    $$$$$:  223-block  7
+    $$$$$:  223-block  8
+    $$$$$:  223-block  9
+    $$$$$:  223-block 10
+        1:  224:	assert(service.getCurrent().getTitle() == "abc");
         1:  224-block  0
-        1:  225:	auto service = Service(repository);
-        1:  225-block  0
-        1:  226:	file = " ";
-        1:  226-block  0
-        -:  227:	try {
-        1:  228:		service.setPath(file);
+        1:  224-block  1
+        1:  224-block  2
+    $$$$$:  224-block  3
+    $$$$$:  224-block  4
+    $$$$$:  224-block  5
+    $$$$$:  224-block  6
+        1:  224-block  7
+    $$$$$:  224-block  8
+        1:  225:}
+    $$$$$:  225-block  0
+    $$$$$:  225-block  1
+    $$$$$:  225-block  2
+    $$$$$:  225-block  3
+    $$$$$:  225-block  4
+    $$$$$:  225-block  5
+    $$$$$:  225-block  6
+        1:  225-block  7
+    $$$$$:  225-block  8
+    $$$$$:  225-block  9
+    $$$$$:  225-block 10
+        -:  226:
+        1:  227:void TestService::test_addToMyList_ValidInput_ElementAdded() {
+        1:  228:	std::string file = "test.txt";
         1:  228-block  0
-        1:  229:	}catch (std::exception&) {
-    $$$$$:  229-block  0
-        1:  229-block  1
-        -:  230:		assert(true);
-        1:  231:	}
+        1:  229:	auto service = Service();
+        1:  229-block  0
+        1:  230:	service.setPath(file);
+        1:  230-block  0
+        1:  231:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  231-block  0
         1:  231-block  1
-        2:  232:}
-    $$$$$:  232-block  0
-    $$$$$:  232-block  1
+        1:  231-block  2
+        1:  231-block  3
+        1:  231-block  4
+        1:  231-block  5
+    $$$$$:  231-block  6
+    $$$$$:  231-block  7
+    $$$$$:  231-block  8
+    $$$$$:  231-block  9
+    $$$$$:  231-block 10
+        1:  232:	service.addToMyList("abc");
+        1:  232-block  0
+        1:  232-block  1
     $$$$$:  232-block  2
-        1:  232-block  3
-        1:  232-block  4
-    $$$$$:  232-block  5
-    $$$$$:  232-block  6
-    $$$$$:  232-block  7
-    $$$$$:  232-block  8
-        -:  233:
-        1:  234:void TestService::test_getFilteredList_NegativeAccessed_ThrowsException() {
-        1:  235:	std::string file = "test.txt";
-        1:  235-block  0
-        1:  236:	auto repository = FileRepository(file);
-        1:  236-block  0
-        1:  237:	auto service = Service(repository);
+        1:  233:	assert(service.getMyList().size() == 1);
+        1:  233-block  0
+        1:  233-block  1
+    $$$$$:  233-block  2
+    $$$$$:  233-block  3
+    $$$$$:  233-block  4
+    $$$$$:  233-block  5
+        1:  233-block  6
+        1:  234:}
+    $$$$$:  234-block  0
+    $$$$$:  234-block  1
+    $$$$$:  234-block  2
+    $$$$$:  234-block  3
+    $$$$$:  234-block  4
+    $$$$$:  234-block  5
+        1:  234-block  6
+    $$$$$:  234-block  7
+    $$$$$:  234-block  8
+    $$$$$:  234-block  9
+        -:  235:
+        1:  236:void TestService::test_addToMyList_InvalidInput_ThrowsException() {
+        1:  237:	std::string file = "test.txt";
         1:  237-block  0
-        1:  238:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  238:	auto service = Service();
         1:  238-block  0
-        1:  238-block  1
-        1:  238-block  2
-        1:  238-block  3
-        1:  238-block  4
-        1:  238-block  5
-    $$$$$:  238-block  6
-    $$$$$:  238-block  7
-    $$$$$:  238-block  8
-    $$$$$:  238-block  9
-    $$$$$:  238-block 10
-        1:  239:	service.addFootage("bcd", " def", " 02-02-2020", " 10", " link");
+        1:  239:	service.setPath(file);
         1:  239-block  0
-        1:  239-block  1
-        1:  239-block  2
-        1:  239-block  3
-        1:  239-block  4
-        1:  239-block  5
-    $$$$$:  239-block  6
-    $$$$$:  239-block  7
-    $$$$$:  239-block  8
-    $$$$$:  239-block  9
-    $$$$$:  239-block 10
-        1:  240:	service.addFootage("cde", " ghi", " 02-02-2020", " 7", " link");
+        1:  240:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  240-block  0
         1:  240-block  1
         1:  240-block  2
@@ -911,68 +859,51 @@
     $$$$$:  240-block  8
     $$$$$:  240-block  9
     $$$$$:  240-block 10
-        1:  241:	service.addFootage("efg", " ghi", " 02-02-2020", " 10", " link");
-        1:  241-block  0
-        1:  241-block  1
-        1:  241-block  2
-        1:  241-block  3
-        1:  241-block  4
-        1:  241-block  5
-    $$$$$:  241-block  6
-    $$$$$:  241-block  7
-    $$$$$:  241-block  8
-    $$$$$:  241-block  9
-    $$$$$:  241-block 10
-        -:  242:	try {
-        1:  243:		auto filteredList = service.getFilteredList("def", " -1");
-        1:  243-block  0
+        -:  241:	try {
+        1:  242:		service.addToMyList("bcd");
+        1:  242-block  0
+        1:  242-block  1
+        1:  242-block  2
+        1:  243:	}catch (std::exception&) {
+    $$$$$:  243-block  0
         1:  243-block  1
-        1:  243-block  2
-        1:  243-block  3
-        1:  243-block  4
-        1:  244:	}catch (std::exception&) {
-    $$$$$:  244-block  0
-        1:  244-block  1
-        -:  245:		assert(true);
-        1:  246:	}
-        1:  246-block  0
-        1:  246-block  1
-        2:  247:}
-    $$$$$:  247-block  0
-    $$$$$:  247-block  1
-    $$$$$:  247-block  2
-    $$$$$:  247-block  3
-    $$$$$:  247-block  4
-    $$$$$:  247-block  5
-    $$$$$:  247-block  6
-    $$$$$:  247-block  7
-    $$$$$:  247-block  8
-    $$$$$:  247-block  9
-    $$$$$:  247-block 10
-    $$$$$:  247-block 11
-    $$$$$:  247-block 12
-    $$$$$:  247-block 13
-    $$$$$:  247-block 14
-    $$$$$:  247-block 15
-    $$$$$:  247-block 16
-    $$$$$:  247-block 17
-    $$$$$:  247-block 18
-    $$$$$:  247-block 19
-    $$$$$:  247-block 20
-        1:  247-block 21
-    $$$$$:  247-block 22
-    $$$$$:  247-block 23
-    $$$$$:  247-block 24
-    $$$$$:  247-block 25
-        -:  248:
-        1:  249:void TestService::test_getFilteredList_ValidInput_GetsList() {
-        1:  250:	std::string file = "test.txt";
+        -:  244:		static_assert(true, "");
+        1:  245:	}
+        1:  245-block  0
+        1:  245-block  1
+        2:  246:}
+    $$$$$:  246-block  0
+    $$$$$:  246-block  1
+    $$$$$:  246-block  2
+    $$$$$:  246-block  3
+    $$$$$:  246-block  4
+    $$$$$:  246-block  5
+    $$$$$:  246-block  6
+        1:  246-block  7
+    $$$$$:  246-block  8
+    $$$$$:  246-block  9
+    $$$$$:  246-block 10
+        -:  247:
+        1:  248:void TestService::test_getFilteredList_NegativeAccessed_ThrowsException() {
+        1:  249:	std::string file = "test.txt";
+        1:  249-block  0
+        1:  250:	auto service = Service();
         1:  250-block  0
-        1:  251:	auto repository = FileRepository(file);
+        1:  251:	service.setPath(file);
         1:  251-block  0
-        1:  252:	auto service = Service(repository);
+        1:  252:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
         1:  252-block  0
-        1:  253:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  252-block  1
+        1:  252-block  2
+        1:  252-block  3
+        1:  252-block  4
+        1:  252-block  5
+    $$$$$:  252-block  6
+    $$$$$:  252-block  7
+    $$$$$:  252-block  8
+    $$$$$:  252-block  9
+    $$$$$:  252-block 10
+        1:  253:	service.addFootage("bcd", " def", " 02-02-2020", " 10", " link");
         1:  253-block  0
         1:  253-block  1
         1:  253-block  2
@@ -984,7 +915,7 @@
     $$$$$:  253-block  8
     $$$$$:  253-block  9
     $$$$$:  253-block 10
-        1:  254:	service.addFootage("bcd", " def", " 02-02-2020", " 10", " link");
+        1:  254:	service.addFootage("cde", " ghi", " 02-02-2020", " 7", " link");
         1:  254-block  0
         1:  254-block  1
         1:  254-block  2
@@ -996,7 +927,7 @@
     $$$$$:  254-block  8
     $$$$$:  254-block  9
     $$$$$:  254-block 10
-        1:  255:	service.addFootage("cde", " ghi", " 02-02-2020", " 7", " link");
+        1:  255:	service.addFootage("efg", " ghi", " 02-02-2020", " 10", " link");
         1:  255-block  0
         1:  255-block  1
         1:  255-block  2
@@ -1008,142 +939,219 @@
     $$$$$:  255-block  8
     $$$$$:  255-block  9
     $$$$$:  255-block 10
-        1:  256:	service.addFootage("efg", " ghi", " 02-02-2020", " 10", " link");
-        1:  256-block  0
-        1:  256-block  1
-        1:  256-block  2
-        1:  256-block  3
-        1:  256-block  4
-        1:  256-block  5
-    $$$$$:  256-block  6
-    $$$$$:  256-block  7
-    $$$$$:  256-block  8
-    $$$$$:  256-block  9
-    $$$$$:  256-block 10
-        1:  257:	assert(service.getFilteredList("def", " 9").size() == 1);
+        -:  256:	try {
+        1:  257:		auto filteredList = service.getFilteredList("def", " -1");
         1:  257-block  0
         1:  257-block  1
         1:  257-block  2
         1:  257-block  3
-    $$$$$:  257-block  4
-    $$$$$:  257-block  5
-    $$$$$:  257-block  6
-    $$$$$:  257-block  7
-        1:  257-block  8
-    $$$$$:  257-block  9
-    $$$$$:  257-block 10
-        1:  258:}
+        1:  257-block  4
+        1:  258:	}catch (std::exception&) {
     $$$$$:  258-block  0
-    $$$$$:  258-block  1
-    $$$$$:  258-block  2
-    $$$$$:  258-block  3
-    $$$$$:  258-block  4
-    $$$$$:  258-block  5
-    $$$$$:  258-block  6
-    $$$$$:  258-block  7
-    $$$$$:  258-block  8
-    $$$$$:  258-block  9
-    $$$$$:  258-block 10
-    $$$$$:  258-block 11
-    $$$$$:  258-block 12
-    $$$$$:  258-block 13
-    $$$$$:  258-block 14
-    $$$$$:  258-block 15
-    $$$$$:  258-block 16
-    $$$$$:  258-block 17
-    $$$$$:  258-block 18
-    $$$$$:  258-block 19
-    $$$$$:  258-block 20
-        1:  258-block 21
-    $$$$$:  258-block 22
-    $$$$$:  258-block 23
-    $$$$$:  258-block 24
-    $$$$$:  258-block 25
-        -:  259:
-        1:  260:void TestService::test_addFootage_InvalidDateNovember31st_FootageNotAdded() {
-        1:  261:	std::string file = "test.txt";
-        1:  261-block  0
-        1:  262:	auto repository = FileRepository(file);
-        1:  262-block  0
-        1:  263:	auto service = Service(repository);
-        1:  263-block  0
-        -:  264:	try {
-        1:  265:		service.addFootage("abc", " def", " 11-31-2019", " 7", " link");
+        1:  258-block  1
+        -:  259:		static_assert(true, "");
+        1:  260:	}
+        1:  260-block  0
+        1:  260-block  1
+        2:  261:}
+    $$$$$:  261-block  0
+    $$$$$:  261-block  1
+    $$$$$:  261-block  2
+    $$$$$:  261-block  3
+    $$$$$:  261-block  4
+    $$$$$:  261-block  5
+    $$$$$:  261-block  6
+    $$$$$:  261-block  7
+    $$$$$:  261-block  8
+    $$$$$:  261-block  9
+    $$$$$:  261-block 10
+    $$$$$:  261-block 11
+    $$$$$:  261-block 12
+    $$$$$:  261-block 13
+    $$$$$:  261-block 14
+    $$$$$:  261-block 15
+    $$$$$:  261-block 16
+    $$$$$:  261-block 17
+    $$$$$:  261-block 18
+    $$$$$:  261-block 19
+        1:  261-block 20
+    $$$$$:  261-block 21
+    $$$$$:  261-block 22
+    $$$$$:  261-block 23
+        -:  262:
+        1:  263:void TestService::test_getFilteredList_ValidInput_GetsList() {
+        1:  264:	std::string file = "test.txt";
+        1:  264-block  0
+        1:  265:	auto service = Service();
         1:  265-block  0
-        1:  265-block  1
-        1:  265-block  2
-        1:  265-block  3
-        1:  265-block  4
-        1:  265-block  5
-        1:  265-block  6
-        1:  265-block  7
-        1:  265-block  8
-        1:  265-block  9
-        1:  265-block 10
-        1:  266:	}catch(std::exception&) {
-    $$$$$:  266-block  0
-        1:  266-block  1
-        -:  267:		assert(true);
-        1:  268:	}
+        1:  266:	service.setPath(file);
+        1:  266-block  0
+        1:  267:	service.addFootage("abc", " def", " 02-02-2020", " 7", " link");
+        1:  267-block  0
+        1:  267-block  1
+        1:  267-block  2
+        1:  267-block  3
+        1:  267-block  4
+        1:  267-block  5
+    $$$$$:  267-block  6
+    $$$$$:  267-block  7
+    $$$$$:  267-block  8
+    $$$$$:  267-block  9
+    $$$$$:  267-block 10
+        1:  268:	service.addFootage("bcd", " def", " 02-02-2020", " 10", " link");
         1:  268-block  0
         1:  268-block  1
-        2:  269:}
-    $$$$$:  269-block  0
-    $$$$$:  269-block  1
-    $$$$$:  269-block  2
-    $$$$$:  269-block  3
-    $$$$$:  269-block  4
-    $$$$$:  269-block  5
+        1:  268-block  2
+        1:  268-block  3
+        1:  268-block  4
+        1:  268-block  5
+    $$$$$:  268-block  6
+    $$$$$:  268-block  7
+    $$$$$:  268-block  8
+    $$$$$:  268-block  9
+    $$$$$:  268-block 10
+        1:  269:	service.addFootage("cde", " ghi", " 02-02-2020", " 7", " link");
+        1:  269-block  0
+        1:  269-block  1
+        1:  269-block  2
+        1:  269-block  3
+        1:  269-block  4
+        1:  269-block  5
     $$$$$:  269-block  6
-        1:  269-block  7
+    $$$$$:  269-block  7
     $$$$$:  269-block  8
     $$$$$:  269-block  9
     $$$$$:  269-block 10
-    $$$$$:  269-block 11
-    $$$$$:  269-block 12
-        -:  270:
-        1:  271:void TestService::test_addFootage_InvalidDateFebruary31st_FootageNotAdded() {
-        1:  272:	std::string file = "test.txt";
-        1:  272-block  0
-        1:  273:	auto repository = FileRepository(file);
-        1:  273-block  0
-        1:  274:	auto service = Service(repository);
-        1:  274-block  0
-        -:  275:	try {
-        1:  276:		service.addFootage("abc", " def", " 02-31-2019", " 7", " link");
+        1:  270:	service.addFootage("efg", " ghi", " 02-02-2020", " 10", " link");
+        1:  270-block  0
+        1:  270-block  1
+        1:  270-block  2
+        1:  270-block  3
+        1:  270-block  4
+        1:  270-block  5
+    $$$$$:  270-block  6
+    $$$$$:  270-block  7
+    $$$$$:  270-block  8
+    $$$$$:  270-block  9
+    $$$$$:  270-block 10
+        1:  271:	assert(service.getFilteredList("def", " 9").size() == 1);
+        1:  271-block  0
+        1:  271-block  1
+        1:  271-block  2
+        1:  271-block  3
+    $$$$$:  271-block  4
+    $$$$$:  271-block  5
+    $$$$$:  271-block  6
+    $$$$$:  271-block  7
+        1:  271-block  8
+    $$$$$:  271-block  9
+    $$$$$:  271-block 10
+        1:  272:}
+    $$$$$:  272-block  0
+    $$$$$:  272-block  1
+    $$$$$:  272-block  2
+    $$$$$:  272-block  3
+    $$$$$:  272-block  4
+    $$$$$:  272-block  5
+    $$$$$:  272-block  6
+    $$$$$:  272-block  7
+    $$$$$:  272-block  8
+    $$$$$:  272-block  9
+    $$$$$:  272-block 10
+    $$$$$:  272-block 11
+    $$$$$:  272-block 12
+    $$$$$:  272-block 13
+    $$$$$:  272-block 14
+    $$$$$:  272-block 15
+    $$$$$:  272-block 16
+    $$$$$:  272-block 17
+    $$$$$:  272-block 18
+    $$$$$:  272-block 19
+        1:  272-block 20
+    $$$$$:  272-block 21
+    $$$$$:  272-block 22
+    $$$$$:  272-block 23
+        -:  273:
+        1:  274:void TestService::test_addFootage_InvalidDateNovember31st_FootageNotAdded() {
+        1:  275:	std::string file = "test.txt";
+        1:  275-block  0
+        1:  276:	auto service = Service();
         1:  276-block  0
-        1:  276-block  1
-        1:  276-block  2
-        1:  276-block  3
-        1:  276-block  4
-        1:  276-block  5
-        1:  276-block  6
-        1:  276-block  7
-        1:  276-block  8
-        1:  276-block  9
-        1:  276-block 10
-        1:  277:	}catch(std::exception&) {
-    $$$$$:  277-block  0
-        1:  277-block  1
-        -:  278:		assert(true);
-        1:  279:	}
+        1:  277:	service.setPath(file);
+        1:  277-block  0
+        -:  278:	try {
+        1:  279:		service.addFootage("abc", " def", " 11-31-2019", " 7", " link");
         1:  279-block  0
         1:  279-block  1
-        2:  280:}
+        1:  279-block  2
+        1:  279-block  3
+        1:  279-block  4
+        1:  279-block  5
+        1:  279-block  6
+        1:  279-block  7
+        1:  279-block  8
+        1:  279-block  9
+        1:  279-block 10
+        1:  280:	}catch(std::exception&) {
     $$$$$:  280-block  0
-    $$$$$:  280-block  1
-    $$$$$:  280-block  2
-    $$$$$:  280-block  3
-    $$$$$:  280-block  4
-    $$$$$:  280-block  5
-    $$$$$:  280-block  6
-        1:  280-block  7
-    $$$$$:  280-block  8
-    $$$$$:  280-block  9
-    $$$$$:  280-block 10
-    $$$$$:  280-block 11
-    $$$$$:  280-block 12
-        -:  281:
-        -:  282:
-        -:  283:
+        1:  280-block  1
+        -:  281:		static_assert(true, "");
+        1:  282:	}
+        1:  282-block  0
+        1:  282-block  1
+        2:  283:}
+    $$$$$:  283-block  0
+    $$$$$:  283-block  1
+    $$$$$:  283-block  2
+    $$$$$:  283-block  3
+    $$$$$:  283-block  4
+    $$$$$:  283-block  5
+    $$$$$:  283-block  6
+        1:  283-block  7
+    $$$$$:  283-block  8
+    $$$$$:  283-block  9
+    $$$$$:  283-block 10
         -:  284:
+        1:  285:void TestService::test_addFootage_InvalidDateFebruary31st_FootageNotAdded() {
+        1:  286:	std::string file = "test.txt";
+        1:  286-block  0
+        1:  287:	auto service = Service();
+        1:  287-block  0
+        1:  288:	service.setPath(file);
+        1:  288-block  0
+        -:  289:	try {
+        1:  290:		service.addFootage("abc", " def", " 02-31-2019", " 7", " link");
+        1:  290-block  0
+        1:  290-block  1
+        1:  290-block  2
+        1:  290-block  3
+        1:  290-block  4
+        1:  290-block  5
+        1:  290-block  6
+        1:  290-block  7
+        1:  290-block  8
+        1:  290-block  9
+        1:  290-block 10
+        1:  291:	}catch(std::exception&) {
+    $$$$$:  291-block  0
+        1:  291-block  1
+        -:  292:		static_assert(true, "");
+        1:  293:	}
+        1:  293-block  0
+        1:  293-block  1
+        2:  294:}
+    $$$$$:  294-block  0
+    $$$$$:  294-block  1
+    $$$$$:  294-block  2
+    $$$$$:  294-block  3
+    $$$$$:  294-block  4
+    $$$$$:  294-block  5
+    $$$$$:  294-block  6
+        1:  294-block  7
+    $$$$$:  294-block  8
+    $$$$$:  294-block  9
+    $$$$$:  294-block 10
+        -:  295:
+        -:  296:
+        -:  297:
+        -:  298:

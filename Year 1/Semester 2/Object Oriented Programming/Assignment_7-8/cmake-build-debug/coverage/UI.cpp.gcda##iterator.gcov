@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/UI.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/UI.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/UI.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/UI.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -1378,8 +1378,8 @@
         -: 1365:        __get_db()->__erase_i(this);
         -: 1366:    }
         -: 1367:#endif
-        3: 1368:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG reference operator*() const _NOEXCEPT_DEBUG
-        3: 1368-block  0
+    #####: 1368:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG reference operator*() const _NOEXCEPT_DEBUG
+    $$$$$: 1368-block  0
     $$$$$: 1368-block  1
     $$$$$: 1368-block  2
         -: 1369:    {
@@ -1387,8 +1387,8 @@
         -: 1371:        _LIBCPP_ASSERT(__get_const_db()->__dereferenceable(this),
         -: 1372:                       "Attempted to dereference a non-dereferenceable iterator");
         -: 1373:#endif
-        3: 1374:        return *__i;
-        3: 1374-block  0
+    #####: 1374:        return *__i;
+    $$$$$: 1374-block  0
     $$$$$: 1374-block  1
     $$$$$: 1374-block  2
         -: 1375:    }
@@ -1400,8 +1400,8 @@
         -: 1381:#endif
         -: 1382:        return (pointer)_VSTD::addressof(*__i);
         -: 1383:    }
-        3: 1384:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG __wrap_iter& operator++() _NOEXCEPT_DEBUG
-        3: 1384-block  0
+    #####: 1384:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG __wrap_iter& operator++() _NOEXCEPT_DEBUG
+    $$$$$: 1384-block  0
     $$$$$: 1384-block  1
     $$$$$: 1384-block  2
         -: 1385:    {
@@ -1409,9 +1409,9 @@
         -: 1387:        _LIBCPP_ASSERT(__get_const_db()->__dereferenceable(this),
         -: 1388:                       "Attempted to increment non-incrementable iterator");
         -: 1389:#endif
-        3: 1390:        ++__i;
-        3: 1391:        return *this;
-        3: 1391-block  0
+    #####: 1390:        ++__i;
+    #####: 1391:        return *this;
+    $$$$$: 1391-block  0
     $$$$$: 1391-block  1
     $$$$$: 1391-block  2
         -: 1392:    }
@@ -1453,9 +1453,9 @@
         -: 1428:        return __i[__n];
         -: 1429:    }
         -: 1430:
-        8: 1431:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG iterator_type base() const _NOEXCEPT_DEBUG {return __i;}
-        8: 1431-block  0
-        8: 1431-block  1
+    #####: 1431:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG iterator_type base() const _NOEXCEPT_DEBUG {return __i;}
+    $$$$$: 1431-block  0
+    $$$$$: 1431-block  1
     $$$$$: 1431-block  2
     $$$$$: 1431-block  3
     $$$$$: 1431-block  4
@@ -1468,11 +1468,11 @@
         -: 1437:        __get_db()->__insert_ic(this, __p);
         -: 1438:    }
         -: 1439:#else
-        4: 1440:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG __wrap_iter(iterator_type __x) _NOEXCEPT_DEBUG : __i(__x) {}
-        2: 1440-block  0
-        2: 1440-block  1
-        2: 1440-block  2
-        2: 1440-block  3
+    #####: 1440:    _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG __wrap_iter(iterator_type __x) _NOEXCEPT_DEBUG : __i(__x) {}
+    $$$$$: 1440-block  0
+    $$$$$: 1440-block  1
+    $$$$$: 1440-block  2
+    $$$$$: 1440-block  3
     $$$$$: 1440-block  4
     $$$$$: 1440-block  5
     $$$$$: 1440-block  6
@@ -1565,13 +1565,13 @@
         -: 1522:template <class _Iter1, class _Iter2>
         -: 1523:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG
         -: 1524:bool
-        4: 1525:operator==(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
-        4: 1525-block  0
+    #####: 1525:operator==(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT_DEBUG
+    $$$$$: 1525-block  0
     $$$$$: 1525-block  1
     $$$$$: 1525-block  2
         -: 1526:{
-        4: 1527:    return __x.base() == __y.base();
-        4: 1527-block  0
+    #####: 1527:    return __x.base() == __y.base();
+    $$$$$: 1527-block  0
     $$$$$: 1527-block  1
     $$$$$: 1527-block  2
         -: 1528:}
@@ -1623,13 +1623,13 @@
         -: 1574:template <class _Iter1>
         -: 1575:inline _LIBCPP_INLINE_VISIBILITY _LIBCPP_CONSTEXPR_IF_NODEBUG
         -: 1576:bool
-        4: 1577:operator!=(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter1>& __y) _NOEXCEPT_DEBUG
-        4: 1577-block  0
+    #####: 1577:operator!=(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter1>& __y) _NOEXCEPT_DEBUG
+    $$$$$: 1577-block  0
     $$$$$: 1577-block  1
     $$$$$: 1577-block  2
         -: 1578:{
-        4: 1579:    return !(__x == __y);
-        4: 1579-block  0
+    #####: 1579:    return !(__x == __y);
+    $$$$$: 1579-block  0
     $$$$$: 1579-block  1
     $$$$$: 1579-block  2
         -: 1580:}

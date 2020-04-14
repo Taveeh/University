@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/fstream
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/FileRepository.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/FileRepository.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/FileRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/FileRepository.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -216,7 +216,7 @@
         -:  211:    typedef typename traits_type::state_type state_type;
         -:  212:
         -:  213:    // 27.9.1.2 Constructors/destructor:
-      108:  214:    basic_filebuf();
+      107:  214:    basic_filebuf();
         -:  215:#ifndef _LIBCPP_CXX03_LANG
         -:  216:    basic_filebuf(basic_filebuf&& __rhs);
         -:  217:#endif
@@ -291,42 +291,42 @@
         -:  286:};
         -:  287:
         -:  288:template <class _CharT, class _Traits>
-      216:  289:basic_filebuf<_CharT, _Traits>::basic_filebuf()
-      108:  289-block  0
-      108:  289-block  1
-      108:  290:    : __extbuf_(0),
-      108:  291:      __extbufnext_(0),
-      108:  292:      __extbufend_(0),
-      108:  293:      __ebs_(0),
-      108:  294:      __intbuf_(0),
-      108:  295:      __ibs_(0),
-      108:  296:      __file_(0),
-      108:  297:      __cv_(nullptr),
-      108:  298:      __st_(),
-      108:  299:      __st_last_(),
-      108:  300:      __om_(0),
-      108:  301:      __cm_(0),
-      108:  302:      __owns_eb_(false),
-      108:  303:      __owns_ib_(false),
-      108:  304:      __always_noconv_(false)
-      324:  305:{
-      108:  306:    if (has_facet<codecvt<char_type, char, state_type> >(this->getloc()))
-      108:  306-block  0
-      108:  306-block  1
+      214:  289:basic_filebuf<_CharT, _Traits>::basic_filebuf()
+      107:  289-block  0
+      107:  289-block  1
+      107:  290:    : __extbuf_(0),
+      107:  291:      __extbufnext_(0),
+      107:  292:      __extbufend_(0),
+      107:  293:      __ebs_(0),
+      107:  294:      __intbuf_(0),
+      107:  295:      __ibs_(0),
+      107:  296:      __file_(0),
+      107:  297:      __cv_(nullptr),
+      107:  298:      __st_(),
+      107:  299:      __st_last_(),
+      107:  300:      __om_(0),
+      107:  301:      __cm_(0),
+      107:  302:      __owns_eb_(false),
+      107:  303:      __owns_ib_(false),
+      107:  304:      __always_noconv_(false)
+      321:  305:{
+      107:  306:    if (has_facet<codecvt<char_type, char, state_type> >(this->getloc()))
+      107:  306-block  0
+      107:  306-block  1
         -:  307:    {
-      108:  308:        __cv_ = &use_facet<codecvt<char_type, char, state_type> >(this->getloc());
-      108:  308-block  0
-      108:  308-block  1
+      107:  308:        __cv_ = &use_facet<codecvt<char_type, char, state_type> >(this->getloc());
+      107:  308-block  0
+      107:  308-block  1
     $$$$$:  308-block  2
-      108:  309:        __always_noconv_ = __cv_->always_noconv();
-      108:  310:    }
-      108:  310-block  0
-      108:  311:    setbuf(0, 4096);
-      108:  311-block  0
-      216:  312:}
-      108:  312-block  0
+      107:  309:        __always_noconv_ = __cv_->always_noconv();
+      107:  310:    }
+      107:  310-block  0
+      107:  311:    setbuf(0, 4096);
+      107:  311-block  0
+      214:  312:}
+      107:  312-block  0
     $$$$$:  312-block  1
-      108:  312-block  2
+      107:  312-block  2
     $$$$$:  312-block  3
     $$$$$:  312-block  4
         -:  313:
@@ -409,43 +409,43 @@
         -:  390:#endif  // _LIBCPP_CXX03_LANG
         -:  391:
         -:  392:template <class _CharT, class _Traits>
-      216:  393:basic_filebuf<_CharT, _Traits>::~basic_filebuf()
-      108:  393-block  0
-      108:  393-block  1
+      214:  393:basic_filebuf<_CharT, _Traits>::~basic_filebuf()
+      107:  393-block  0
+      107:  393-block  1
     $$$$$:  393-block  2
-      216:  394:{
+      214:  394:{
         -:  395:#ifndef _LIBCPP_NO_EXCEPTIONS
         -:  396:    try
         -:  397:    {
         -:  398:#endif  // _LIBCPP_NO_EXCEPTIONS
-      108:  399:        close();
-      108:  399-block  0
+      107:  399:        close();
+      107:  399-block  0
         -:  400:#ifndef _LIBCPP_NO_EXCEPTIONS
-      108:  401:    }
-      108:  401-block  0
+      107:  401:    }
+      107:  401-block  0
         -:  402:    catch (...)
         -:  403:    {
     #####:  404:    }
     $$$$$:  404-block  0
     $$$$$:  404-block  1
         -:  405:#endif  // _LIBCPP_NO_EXCEPTIONS
-      108:  406:    if (__owns_eb_)
-      108:  406-block  0
-        1:  407:        delete [] __extbuf_;
-        1:  407-block  0
-        1:  407-block  1
-        1:  407-block  2
-      108:  408:    if (__owns_ib_)
-      108:  408-block  0
+      107:  406:    if (__owns_eb_)
+      107:  406-block  0
+    #####:  407:        delete [] __extbuf_;
+    $$$$$:  407-block  0
+    $$$$$:  407-block  1
+    $$$$$:  407-block  2
+      107:  408:    if (__owns_ib_)
+      107:  408-block  0
     #####:  409:        delete [] __intbuf_;
     $$$$$:  409-block  0
     $$$$$:  409-block  1
     $$$$$:  409-block  2
-      216:  410:}
-      108:  410-block  0
+      214:  410:}
+      107:  410-block  0
     $$$$$:  410-block  1
     $$$$$:  410-block  2
-      108:  410-block  3
+      107:  410-block  3
     $$$$$:  410-block  4
     $$$$$:  410-block  5
         -:  411:
@@ -544,22 +544,22 @@
         -:  504:}
         -:  505:
         -:  506:template <class _CharT, class _Traits>
-      108:  507:const char* basic_filebuf<_CharT, _Traits>::__make_mdstring(
-      108:  507-block  0
+      133:  507:const char* basic_filebuf<_CharT, _Traits>::__make_mdstring(
+      133:  507-block  0
         -:  508:    ios_base::openmode __mode) _NOEXCEPT {
-      108:  509:  switch (__mode & ~ios_base::ate) {
-      108:  509-block  0
+      133:  509:  switch (__mode & ~ios_base::ate) {
+      133:  509-block  0
         -:  510:  case ios_base::out:
         -:  511:  case ios_base::out | ios_base::trunc:
-       60:  512:    return "w";
-       60:  512-block  0
+       58:  512:    return "w";
+       58:  512-block  0
         -:  513:  case ios_base::out | ios_base::app:
         -:  514:  case ios_base::app:
     #####:  515:    return "a";
     $$$$$:  515-block  0
         -:  516:  case ios_base::in:
-       48:  517:    return "r";
-       48:  517-block  0
+       75:  517:    return "r";
+       75:  517-block  0
         -:  518:  case ios_base::in | ios_base::out:
     #####:  519:    return "r+";
     $$$$$:  519-block  0
@@ -596,28 +596,28 @@
     $$$$$:  541-block  0
         -:  542:  }
         -:  543:  _LIBCPP_UNREACHABLE();
-      108:  544:}
-      108:  544-block  0
+      133:  544:}
+      133:  544-block  0
         -:  545:
         -:  546:#ifndef _LIBCPP_HAS_NO_GLOBAL_FILESYSTEM_NAMESPACE
         -:  547:template <class _CharT, class _Traits>
         -:  548:basic_filebuf<_CharT, _Traits>*
-      108:  549:basic_filebuf<_CharT, _Traits>::open(const char* __s, ios_base::openmode __mode)
-      108:  549-block  0
+      133:  549:basic_filebuf<_CharT, _Traits>::open(const char* __s, ios_base::openmode __mode)
+      133:  549-block  0
         -:  550:{
-      108:  551:    basic_filebuf<_CharT, _Traits>* __rt = 0;
-      108:  552:    if (__file_ == 0)
-      108:  552-block  0
+      133:  551:    basic_filebuf<_CharT, _Traits>* __rt = 0;
+      133:  552:    if (__file_ == 0)
+      133:  552-block  0
         -:  553:    {
-      108:  554:      if (const char* __mdstr = __make_mdstring(__mode)) {
-      108:  554-block  0
-      108:  555:        __rt = this;
-      108:  556:        __file_ = fopen(__s, __mdstr);
-      108:  557:        if (__file_) {
-      108:  557-block  0
-      107:  558:          __om_ = __mode;
-      107:  559:          if (__mode & ios_base::ate) {
-      107:  559-block  0
+      133:  554:      if (const char* __mdstr = __make_mdstring(__mode)) {
+      133:  554-block  0
+      133:  555:        __rt = this;
+      133:  556:        __file_ = fopen(__s, __mdstr);
+      133:  557:        if (__file_) {
+      133:  557-block  0
+      133:  558:          __om_ = __mode;
+      133:  559:          if (__mode & ios_base::ate) {
+      133:  559-block  0
     #####:  560:            if (fseek(__file_, 0, SEEK_END)) {
     $$$$$:  560-block  0
     #####:  561:              fclose(__file_);
@@ -627,16 +627,16 @@
     $$$$$:  564-block  0
     #####:  565:          }
     $$$$$:  565-block  0
-      107:  566:        } else
-      107:  566-block  0
-        1:  567:          __rt = 0;
-        1:  567-block  0
-      108:  568:      }
-      108:  568-block  0
-      108:  569:    }
-      108:  569-block  0
-      108:  570:    return __rt;
-      108:  570-block  0
+      133:  566:        } else
+      133:  566-block  0
+    #####:  567:          __rt = 0;
+    $$$$$:  567-block  0
+      133:  568:      }
+      133:  568-block  0
+      133:  569:    }
+      133:  569-block  0
+      133:  570:    return __rt;
+      133:  570-block  0
         -:  571:}
         -:  572:
         -:  573:template <class _CharT, class _Traits>
@@ -750,46 +750,46 @@
         -:  681:template <class _CharT, class _Traits>
         -:  682:inline
         -:  683:basic_filebuf<_CharT, _Traits>*
-      108:  684:basic_filebuf<_CharT, _Traits>::open(const string& __s, ios_base::openmode __mode)
-      108:  684-block  0
+      105:  684:basic_filebuf<_CharT, _Traits>::open(const string& __s, ios_base::openmode __mode)
+      105:  684-block  0
         -:  685:{
-      108:  686:    return open(__s.c_str(), __mode);
-      108:  686-block  0
+      105:  686:    return open(__s.c_str(), __mode);
+      105:  686-block  0
         -:  687:}
         -:  688:#endif
         -:  689:
         -:  690:template <class _CharT, class _Traits>
         -:  691:basic_filebuf<_CharT, _Traits>*
-      198:  692:basic_filebuf<_CharT, _Traits>::close()
-      198:  692-block  0
+      222:  692:basic_filebuf<_CharT, _Traits>::close()
+      222:  692-block  0
         -:  693:{
-      198:  694:    basic_filebuf<_CharT, _Traits>* __rt = 0;
-      198:  695:    if (__file_)
-      198:  695-block  0
+      222:  694:    basic_filebuf<_CharT, _Traits>* __rt = 0;
+      222:  695:    if (__file_)
+      222:  695-block  0
         -:  696:    {
-      107:  697:        __rt = this;
-      107:  698:        unique_ptr<FILE, int(*)(FILE*)> __h(__file_, fclose);
-      107:  699:        if (sync())
-      107:  699-block  0
-      107:  699-block  1
+      133:  697:        __rt = this;
+      133:  698:        unique_ptr<FILE, int(*)(FILE*)> __h(__file_, fclose);
+      133:  699:        if (sync())
+      133:  699-block  0
+      133:  699-block  1
     #####:  700:            __rt = 0;
     $$$$$:  700-block  0
-      107:  701:        if (fclose(__h.release()) == 0)
-      107:  701-block  0
-      107:  701-block  1
-      107:  702:            __file_ = 0;
-      107:  702-block  0
+      133:  701:        if (fclose(__h.release()) == 0)
+      133:  701-block  0
+      133:  701-block  1
+      133:  702:            __file_ = 0;
+      133:  702-block  0
         -:  703:        else
     #####:  704:            __rt = 0;
     $$$$$:  704-block  0
-      107:  705:        setbuf(0, 0);
-      107:  705-block  0
-      107:  706:    }
+      133:  705:        setbuf(0, 0);
+      133:  705-block  0
+      133:  706:    }
     $$$$$:  706-block  0
-      107:  706-block  1
+      133:  706-block  1
     $$$$$:  706-block  2
-      198:  707:    return __rt;
-      198:  707-block  0
+      222:  707:    return __rt;
+      222:  707-block  0
     #####:  708:}
         -:  709:
         -:  710:template <class _CharT, class _Traits>
@@ -1028,30 +1028,30 @@
         -:  866:
         -:  867:template <class _CharT, class _Traits>
         -:  868:basic_streambuf<_CharT, _Traits>*
-      215:  869:basic_filebuf<_CharT, _Traits>::setbuf(char_type* __s, streamsize __n)
-      215:  869-block  0
+      240:  869:basic_filebuf<_CharT, _Traits>::setbuf(char_type* __s, streamsize __n)
+      240:  869-block  0
         -:  870:{
-      215:  871:    this->setg(0, 0, 0);
-      215:  872:    this->setp(0, 0);
-      215:  873:    if (__owns_eb_)
-      215:  873-block  0
+      240:  871:    this->setg(0, 0, 0);
+      240:  872:    this->setp(0, 0);
+      240:  873:    if (__owns_eb_)
+      240:  873-block  0
       107:  874:        delete [] __extbuf_;
       107:  874-block  0
       107:  874-block  1
       107:  874-block  2
-      215:  875:    if (__owns_ib_)
-      215:  875-block  0
+      240:  875:    if (__owns_ib_)
+      240:  875-block  0
     #####:  876:        delete [] __intbuf_;
     $$$$$:  876-block  0
     $$$$$:  876-block  1
     $$$$$:  876-block  2
-      215:  877:    __ebs_ = __n;
-      215:  878:    if (__ebs_ > sizeof(__extbuf_min_))
-      215:  878-block  0
+      240:  877:    __ebs_ = __n;
+      240:  878:    if (__ebs_ > sizeof(__extbuf_min_))
+      240:  878-block  0
         -:  879:    {
-      108:  880:        if (__always_noconv_ && __s)
-      108:  880-block  0
-      108:  880-block  1
+      107:  880:        if (__always_noconv_ && __s)
+      107:  880-block  0
+      107:  880-block  1
         -:  881:        {
     #####:  882:            __extbuf_ = (char*)__s;
     #####:  883:            __owns_eb_ = false;
@@ -1059,21 +1059,21 @@
     $$$$$:  884-block  0
         -:  885:        else
         -:  886:        {
-      108:  887:            __extbuf_ = new char[__ebs_];
-      108:  888:            __owns_eb_ = true;
-      108:  888-block  0
+      107:  887:            __extbuf_ = new char[__ebs_];
+      107:  888:            __owns_eb_ = true;
+      107:  888-block  0
         -:  889:        }
-      108:  890:    }
-      108:  890-block  0
+      107:  890:    }
+      107:  890-block  0
         -:  891:    else
         -:  892:    {
-      107:  893:        __extbuf_ = __extbuf_min_;
-      107:  894:        __ebs_ = sizeof(__extbuf_min_);
-      107:  895:        __owns_eb_ = false;
-      107:  895-block  0
+      133:  893:        __extbuf_ = __extbuf_min_;
+      133:  894:        __ebs_ = sizeof(__extbuf_min_);
+      133:  895:        __owns_eb_ = false;
+      133:  895-block  0
         -:  896:    }
-      215:  897:    if (!__always_noconv_)
-      215:  897-block  0
+      240:  897:    if (!__always_noconv_)
+      240:  897-block  0
         -:  898:    {
     #####:  899:        __ibs_ = max<streamsize>(__n, sizeof(__extbuf_min_));
     #####:  900:        if (__s && __ibs_ >= sizeof(__extbuf_min_))
@@ -1094,13 +1094,13 @@
     $$$$$:  910-block  0
         -:  911:    else
         -:  912:    {
-      215:  913:        __ibs_ = 0;
-      215:  914:        __intbuf_ = 0;
-      215:  915:        __owns_ib_ = false;
-      215:  915-block  0
+      240:  913:        __ibs_ = 0;
+      240:  914:        __intbuf_ = 0;
+      240:  915:        __owns_ib_ = false;
+      240:  915-block  0
         -:  916:    }
-      215:  917:    return this;
-      215:  917-block  0
+      240:  917:    return this;
+      240:  917-block  0
         -:  918:}
         -:  919:
         -:  920:template <class _CharT, class _Traits>
@@ -1190,20 +1190,20 @@
         -:  976:
         -:  977:template <class _CharT, class _Traits>
         -:  978:int
-      147:  979:basic_filebuf<_CharT, _Traits>::sync()
-      147:  979-block  0
+      173:  979:basic_filebuf<_CharT, _Traits>::sync()
+      173:  979-block  0
         -:  980:{
-      147:  981:    if (__file_ == 0)
-      147:  981-block  0
+      173:  981:    if (__file_ == 0)
+      173:  981-block  0
     #####:  982:        return 0;
     $$$$$:  982-block  0
-      147:  983:    if (!__cv_)
-      147:  983-block  0
+      173:  983:    if (!__cv_)
+      173:  983-block  0
     #####:  984:        __throw_bad_cast();
     $$$$$:  984-block  0
         -:  985:
-      147:  986:    if (__cm_ & ios_base::out)
-      147:  986-block  0
+      173:  986:    if (__cm_ & ios_base::out)
+      173:  986-block  0
         -:  987:    {
        68:  988:        if (this->pptr() != this->pbase())
        68:  988-block  0
@@ -1236,8 +1236,8 @@
     $$$$$: 1003-block  0
        68: 1004:    }
        68: 1004-block  0
-       79: 1005:    else if (__cm_ & ios_base::in)
-       79: 1005-block  0
+      105: 1005:    else if (__cm_ & ios_base::in)
+      105: 1005-block  0
         -: 1006:    {
         -: 1007:        off_type __c;
        48: 1008:        state_type __state = __st_last_;
@@ -1286,10 +1286,10 @@
        48: 1041:        __cm_ = 0;
        48: 1042:    }
        48: 1042-block  0
-      147: 1043:    return 0;
-      147: 1043-block  0
-      147: 1044:}
-      147: 1044-block  0
+      173: 1043:    return 0;
+      173: 1043-block  0
+      173: 1044:}
+      173: 1044-block  0
         -: 1045:
         -: 1046:template <class _CharT, class _Traits>
         -: 1047:void
@@ -1432,8 +1432,8 @@
         -: 1150:    explicit basic_ifstream(const wchar_t* __s, ios_base::openmode __mode = ios_base::in);
         -: 1151:#endif
         -: 1152:    _LIBCPP_INLINE_VISIBILITY
-       48: 1153:    explicit basic_ifstream(const string& __s, ios_base::openmode __mode = ios_base::in);
-       48: 1153-block  0
+       75: 1153:    explicit basic_ifstream(const string& __s, ios_base::openmode __mode = ios_base::in);
+       75: 1153-block  0
         -: 1154:#if _LIBCPP_STD_VER >= 17
         -: 1155:    _LIBCPP_AVAILABILITY_FILESYSTEM _LIBCPP_INLINE_VISIBILITY
         -: 1156:    explicit basic_ifstream(const filesystem::path& __p, ios_base::openmode __mode = ios_base::in)
@@ -1508,22 +1508,22 @@
         -: 1225:
         -: 1226:template <class _CharT, class _Traits>
         -: 1227:inline
-       48: 1228:basic_ifstream<_CharT, _Traits>::basic_ifstream(const string& __s, ios_base::openmode __mode)
-       48: 1228-block  0
-       48: 1229:    : basic_istream<char_type, traits_type>(&__sb_)
-       48: 1229-block  0
-       96: 1230:{
-       48: 1231:    if (__sb_.open(__s, __mode | ios_base::in) == 0)
-       48: 1231-block  0
-       48: 1231-block  1
+       75: 1228:basic_ifstream<_CharT, _Traits>::basic_ifstream(const string& __s, ios_base::openmode __mode)
+       75: 1228-block  0
+       75: 1229:    : basic_istream<char_type, traits_type>(&__sb_)
+       75: 1229-block  0
+      150: 1230:{
+       75: 1231:    if (__sb_.open(__s, __mode | ios_base::in) == 0)
+       75: 1231-block  0
+       75: 1231-block  1
     #####: 1232:        this->setstate(ios_base::failbit);
     $$$$$: 1232-block  0
     $$$$$: 1232-block  1
-       48: 1233:}
+       75: 1233:}
     $$$$$: 1233-block  0
     $$$$$: 1233-block  1
     $$$$$: 1233-block  2
-       48: 1233-block  3
+       75: 1233-block  3
     $$$$$: 1233-block  4
     $$$$$: 1233-block  5
     $$$$$: 1233-block  6
@@ -1631,15 +1631,15 @@
         -: 1335:template <class _CharT, class _Traits>
         -: 1336:inline
         -: 1337:void
-       30: 1338:basic_ifstream<_CharT, _Traits>::close()
-       30: 1338-block  0
+       57: 1338:basic_ifstream<_CharT, _Traits>::close()
+       57: 1338-block  0
         -: 1339:{
-       30: 1340:    if (__sb_.close() == 0)
-       30: 1340-block  0
+       57: 1340:    if (__sb_.close() == 0)
+       57: 1340-block  0
     #####: 1341:        this->setstate(ios_base::failbit);
     $$$$$: 1341-block  0
-       30: 1342:}
-       30: 1342-block  0
+       57: 1342:}
+       57: 1342-block  0
         -: 1343:
         -: 1344:// basic_ofstream
         -: 1345:
@@ -1663,8 +1663,8 @@
         -: 1363:    explicit basic_ofstream(const wchar_t* __s, ios_base::openmode __mode = ios_base::out);
         -: 1364:#endif
         -: 1365:    _LIBCPP_INLINE_VISIBILITY
-       60: 1366:    explicit basic_ofstream(const string& __s, ios_base::openmode __mode = ios_base::out);
-       60: 1366-block  0
+       30: 1366:    explicit basic_ofstream(const string& __s, ios_base::openmode __mode = ios_base::out);
+       30: 1366-block  0
         -: 1367:
         -: 1368:#if _LIBCPP_STD_VER >= 17
         -: 1369:    _LIBCPP_AVAILABILITY_FILESYSTEM _LIBCPP_INLINE_VISIBILITY
@@ -1739,22 +1739,22 @@
         -: 1438:
         -: 1439:template <class _CharT, class _Traits>
         -: 1440:inline
-       60: 1441:basic_ofstream<_CharT, _Traits>::basic_ofstream(const string& __s, ios_base::openmode __mode)
-       60: 1441-block  0
-       60: 1442:    : basic_ostream<char_type, traits_type>(&__sb_)
-       60: 1442-block  0
-      120: 1443:{
-       60: 1444:    if (__sb_.open(__s, __mode | ios_base::out) == 0)
-       60: 1444-block  0
-       60: 1444-block  1
-        1: 1445:        this->setstate(ios_base::failbit);
-        1: 1445-block  0
-        1: 1445-block  1
-       60: 1446:}
+       30: 1441:basic_ofstream<_CharT, _Traits>::basic_ofstream(const string& __s, ios_base::openmode __mode)
+       30: 1441-block  0
+       30: 1442:    : basic_ostream<char_type, traits_type>(&__sb_)
+       30: 1442-block  0
+       60: 1443:{
+       30: 1444:    if (__sb_.open(__s, __mode | ios_base::out) == 0)
+       30: 1444-block  0
+       30: 1444-block  1
+    #####: 1445:        this->setstate(ios_base::failbit);
+    $$$$$: 1445-block  0
+    $$$$$: 1445-block  1
+       30: 1446:}
     $$$$$: 1446-block  0
     $$$$$: 1446-block  1
     $$$$$: 1446-block  2
-       60: 1446-block  3
+       30: 1446-block  3
     $$$$$: 1446-block  4
     $$$$$: 1446-block  5
     $$$$$: 1446-block  6
@@ -1862,15 +1862,15 @@
         -: 1548:template <class _CharT, class _Traits>
         -: 1549:inline
         -: 1550:void
-       60: 1551:basic_ofstream<_CharT, _Traits>::close()
-       60: 1551-block  0
+       30: 1551:basic_ofstream<_CharT, _Traits>::close()
+       30: 1551-block  0
         -: 1552:{
-       60: 1553:    if (__sb_.close() == 0)
-       60: 1553-block  0
-        1: 1554:        this->setstate(ios_base::failbit);
-        1: 1554-block  0
-       60: 1555:}
-       60: 1555-block  0
+       30: 1553:    if (__sb_.close() == 0)
+       30: 1553-block  0
+    #####: 1554:        this->setstate(ios_base::failbit);
+    $$$$$: 1554-block  0
+       30: 1555:}
+       30: 1555-block  0
         -: 1556:
         -: 1557:// basic_fstream
         -: 1558:

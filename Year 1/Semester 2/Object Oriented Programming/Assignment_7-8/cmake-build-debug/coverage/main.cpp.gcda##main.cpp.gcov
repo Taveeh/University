@@ -1,46 +1,31 @@
-        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/main.cpp
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/main.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/main.cpp.gcda
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/main.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/main.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/main.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
-        -:    1:#include <iostream>
-        -:    2:#include "UI.h"
-        -:    3:#include "TestFootage.h"
-        -:    4:#include "TestMemoryRepository.h"
-        -:    5:#include "TestService.h"
-        -:    6:#include "TestFileRepository.h"
-        -:    7:
-        -:    8:void callTestFunctions();
-        1:    9:int main() {
-        1:    9-block  0
-        1:   10:	callTestFunctions();
-        1:   11:	std::string namePath;
-        1:   12:	FileRepository fileRepository = FileRepository(namePath);
-        1:   12-block  0
-        1:   13:	Service service = Service(fileRepository);
+        -:    1:#include "UI.h"
+        -:    2:#include "TestFootage.h"
+        -:    3:#include "TestMemoryRepository.h"
+        -:    4:#include "TestService.h"
+        -:    5:#include "TestFileRepository.h"
+        -:    6:
+        -:    7:void callTestFunctions();
+        1:    8:int main() {
+        1:    8-block  0
+        1:    9:	callTestFunctions();
+        -:   10://	Service service = Service();
+        -:   11://	UI ui = UI(service);
+        -:   12://	ui.runProgram();
+        1:   13:	return 0;
         1:   13-block  0
-        1:   14:	UI ui = UI(service);
-        1:   14-block  0
-        1:   15:	ui.runProgram();
-        1:   15-block  0
-        1:   16:	return 0;
-        1:   17:}
+        -:   14:}
+        -:   15:
+        1:   16:void callTestFunctions() {
+        1:   17:	TestFootage::test_all();
         1:   17-block  0
-    $$$$$:   17-block  1
-    $$$$$:   17-block  2
-    $$$$$:   17-block  3
-    $$$$$:   17-block  4
-    $$$$$:   17-block  5
-    $$$$$:   17-block  6
-    $$$$$:   17-block  7
-    $$$$$:   17-block  8
-        -:   18:
-        1:   19:void callTestFunctions() {
-        1:   20:	TestFootage::test_all();
-        1:   20-block  0
-        1:   21:	TestMemoryRepository::test_all();
-        1:   22:	TestService::test_all();
-        1:   23:	TestFileRepository::test_all();
-        -:   24://	std::cout << "Tests finished\n";
-        1:   25:}
-        1:   25-block  0
+        1:   18:	TestMemoryRepository::test_all();
+        1:   19:	TestService::test_all();
+        1:   20:	TestFileRepository::test_all();
+        -:   21://	std::cout << "Tests finished\n";
+        1:   22:}
+        1:   22-block  0

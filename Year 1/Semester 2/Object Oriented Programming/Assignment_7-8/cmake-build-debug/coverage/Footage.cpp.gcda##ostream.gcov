@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Footage.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -261,9 +261,9 @@
         -:  252:
         -:  253:    _LIBCPP_INLINE_VISIBILITY
         -:  254:        _LIBCPP_EXPLICIT
-      361:  255:        operator bool() const {return __ok_;}
-      361:  255-block  0
-      361:  255-block  1
+      360:  255:        operator bool() const {return __ok_;}
+      360:  255-block  0
+      360:  255-block  1
         -:  256:};
         -:  257:
         -:  258:template <class _CharT, class _Traits>
@@ -723,46 +723,46 @@
         -:  712:
         -:  713:template<class _CharT, class _Traits>
         -:  714:basic_ostream<_CharT, _Traits>&
-      361:  715:__put_character_sequence(basic_ostream<_CharT, _Traits>& __os,
-      361:  715-block  0
+      360:  715:__put_character_sequence(basic_ostream<_CharT, _Traits>& __os,
+      360:  715-block  0
         -:  716:                          const _CharT* __str, size_t __len)
         -:  717:{
         -:  718:#ifndef _LIBCPP_NO_EXCEPTIONS
         -:  719:    try
         -:  720:    {
         -:  721:#endif  // _LIBCPP_NO_EXCEPTIONS
-      361:  722:        typename basic_ostream<_CharT, _Traits>::sentry __s(__os);
-      361:  722-block  0
-      361:  723:        if (__s)
-      361:  723-block  0
-      361:  723-block  1
+      360:  722:        typename basic_ostream<_CharT, _Traits>::sentry __s(__os);
+      360:  722-block  0
+      360:  723:        if (__s)
+      360:  723-block  0
+      360:  723-block  1
         -:  724:        {
         -:  725:            typedef ostreambuf_iterator<_CharT, _Traits> _Ip;
-      722:  726:            if (__pad_and_output(_Ip(__os),
-      361:  726-block  0
-      361:  726-block  1
-      361:  726-block  2
-      361:  727:                                 __str,
-      361:  728:                                 (__os.flags() & ios_base::adjustfield) == ios_base::left ?
-      361:  728-block  0
-      361:  728-block  1
+      720:  726:            if (__pad_and_output(_Ip(__os),
+      360:  726-block  0
+      360:  726-block  1
+      360:  726-block  2
+      360:  727:                                 __str,
+      360:  728:                                 (__os.flags() & ios_base::adjustfield) == ios_base::left ?
+      360:  728-block  0
+      360:  728-block  1
     $$$$$:  728-block  2
-      361:  728-block  3
+      360:  728-block  3
     #####:  729:                                     __str + __len :
-      361:  730:                                     __str,
-      361:  731:                                 __str + __len,
-      361:  732:                                 __os,
-      722:  733:                                 __os.fill()).failed())
-      361:  733-block  0
+      360:  730:                                     __str,
+      360:  731:                                 __str + __len,
+      360:  732:                                 __os,
+      720:  733:                                 __os.fill()).failed())
+      360:  733-block  0
     #####:  734:                __os.setstate(ios_base::badbit | ios_base::failbit);
     $$$$$:  734-block  0
     $$$$$:  734-block  1
-      361:  735:        }
-      361:  735-block  0
+      360:  735:        }
+      360:  735-block  0
         -:  736:#ifndef _LIBCPP_NO_EXCEPTIONS
-      361:  737:    }
+      360:  737:    }
     $$$$$:  737-block  0
-      361:  737-block  1
+      360:  737-block  1
         -:  738:    catch (...)
         -:  739:    {
     #####:  740:        __os.__set_badbit_and_consider_rethrow();
@@ -774,8 +774,8 @@
     $$$$$:  741-block  3
     $$$$$:  741-block  4
         -:  742:#endif  // _LIBCPP_NO_EXCEPTIONS
-      361:  743:    return __os;
-      361:  743-block  0
+      360:  743:    return __os;
+      360:  743-block  0
     #####:  744:}
     $$$$$:  744-block  0
         -:  745:
@@ -898,11 +898,11 @@
         -:  860:
         -:  861:template<class _Traits>
         -:  862:basic_ostream<char, _Traits>&
-      161:  863:operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
-      161:  863-block  0
+      160:  863:operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+      160:  863-block  0
         -:  864:{
-      161:  865:    return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));
-      161:  865-block  0
+      160:  865:    return _VSTD::__put_character_sequence(__os, __str, _Traits::length(__str));
+      160:  865-block  0
         -:  866:}
         -:  867:
         -:  868:template<class _Traits>

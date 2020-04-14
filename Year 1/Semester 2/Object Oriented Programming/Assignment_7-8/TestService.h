@@ -40,9 +40,6 @@ private:
 	static void test_addToMyList_ValidInput_ElementAdded();
 	static void test_addToMyList_InvalidInput_ThrowsException();
 
-	static void test_setPath_ValidInput_PathChanged();
-	static void test_setPath_InvalidInput_ThrowsException();
-
 	static void test_getFilteredList_NegativeAccessed_ThrowsException();
 	static void test_getFilteredList_ValidInput_GetsList();
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/taveeh/Desktop/Info/OOP/Assignment_7-8
+# Install script for directory: /Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

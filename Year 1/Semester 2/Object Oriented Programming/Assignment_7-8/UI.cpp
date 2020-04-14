@@ -6,7 +6,6 @@
 #include <iostream>
 #include <map>
 #include <functional>
-#include <fstream>
 #define MAX_PARAMETERS 5
 UI::UI(Service& newService):service(newService) {
 }
@@ -148,7 +147,7 @@ void UI::runProgram() {
 	}
 	if (commandFile != "fileLocation") {
 		std::cout << "Invalid command";
-		return;
+		exit(0);
 	}
 	service.setPath(path);
 

@@ -1,6 +1,6 @@
         -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcda
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/TestService.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:// -*- C++ -*-
@@ -546,12 +546,22 @@
         -:  541:    _StateT __st_;
         -:  542:    streamoff __off_;
         -:  543:public:
-        -:  544:    _LIBCPP_INLINE_VISIBILITY fpos(streamoff __off = streamoff()) : __st_(), __off_(__off) {}
+    #####:  544:    _LIBCPP_INLINE_VISIBILITY fpos(streamoff __off = streamoff()) : __st_(), __off_(__off) {}
+    $$$$$:  544-block  0
+    $$$$$:  544-block  1
+    $$$$$:  544-block  2
+    $$$$$:  544-block  3
         -:  545:
-        -:  546:    _LIBCPP_INLINE_VISIBILITY operator streamoff() const {return __off_;}
+    #####:  546:    _LIBCPP_INLINE_VISIBILITY operator streamoff() const {return __off_;}
+    $$$$$:  546-block  0
+    $$$$$:  546-block  1
         -:  547:
-        -:  548:    _LIBCPP_INLINE_VISIBILITY _StateT state() const {return __st_;}
-        -:  549:    _LIBCPP_INLINE_VISIBILITY void state(_StateT __st) {__st_ = __st;}
+    #####:  548:    _LIBCPP_INLINE_VISIBILITY _StateT state() const {return __st_;}
+    $$$$$:  548-block  0
+    $$$$$:  548-block  1
+    #####:  549:    _LIBCPP_INLINE_VISIBILITY void state(_StateT __st) {__st_ = __st;}
+    $$$$$:  549-block  0
+    $$$$$:  549-block  1
         -:  550:
         -:  551:    _LIBCPP_INLINE_VISIBILITY fpos& operator+=(streamoff __off) {__off_ += __off; return *this;}
         -:  552:    _LIBCPP_INLINE_VISIBILITY fpos  operator+ (streamoff __off) const {fpos __t(*this); __t += __off; return __t;}
@@ -820,17 +830,17 @@
         -:  815:
         -:  816:    template <class = typename enable_if<__is_allocator<_Allocator>::value, nullptr_t>::type>
         -:  817:    _LIBCPP_INLINE_VISIBILITY
-      370:  818:    basic_string(const _CharT* __s) {
-      185:  818-block  0
-      185:  818-block  1
+      366:  818:    basic_string(const _CharT* __s) {
+      183:  818-block  0
+      183:  818-block  1
         -:  819:      _LIBCPP_ASSERT(__s != nullptr, "basic_string(const char*) detected nullptr");
-      185:  820:      __init(__s, traits_type::length(__s));
+      183:  820:      __init(__s, traits_type::length(__s));
         -:  821:#   if _LIBCPP_DEBUG_LEVEL >= 2
         -:  822:      __get_db()->__insert_c(this);
         -:  823:#   endif
-      370:  824:    }
-      185:  824-block  0
-      185:  824-block  1
+      366:  824:    }
+      183:  824-block  0
+      183:  824-block  1
         -:  825:
         -:  826:    template <class = typename enable_if<__is_allocator<_Allocator>::value, nullptr_t>::type>
         -:  827:        _LIBCPP_INLINE_VISIBILITY
@@ -897,9 +907,7 @@
         -:  888:     _LIBCPP_INLINE_VISIBILITY
         -:  889:    basic_string& operator=(initializer_list<value_type> __il) {return assign(__il.begin(), __il.size());}
         -:  890:#endif
-        2:  891:    _LIBCPP_INLINE_VISIBILITY basic_string& operator=(const value_type* __s) {return assign(__s);}
-        2:  891-block  0
-        2:  891-block  1
+        -:  891:    _LIBCPP_INLINE_VISIBILITY basic_string& operator=(const value_type* __s) {return assign(__s);}
         -:  892:    basic_string& operator=(value_type __c);
         -:  893:
         -:  894:#if _LIBCPP_DEBUG_LEVEL >= 2

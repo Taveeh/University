@@ -6,13 +6,14 @@
 #include <fstream>
 #include <vector>
 #include <iostream>
-#include <sstream>
 
-FileRepository::FileRepository(std::string& file): fileName(file), currentElement(0) {
-	if (fileName != " ") {
-		std::ofstream createFileIfNotExist(fileName);
-		createFileIfNotExist.close();
+FileRepository::FileRepository(const std::string& file): fileName(file), currentElement(0) {
+	std::ifstream doesFileExist(file);
+	if (!doesFileExist) {
+		std::ofstream createFileToExist(file);
+		createFileToExist.close();
 	}
+	doesFileExist.close();
 }
 
 void FileRepository::addFootage(const Footage &newFootage) {
@@ -91,14 +92,14 @@ Footage FileRepository::getCurrentElement() {
 	return *(arrayOfTapes.begin() + currentElement++);
 }
 
-void FileRepository::setPath(const std::string& newFileName) {
-	if (fileName == " ") {
-		throw std::exception();
-	}
-	std::ofstream createFileIfNotExist(fileName);
-	createFileIfNotExist.close();
-	fileName = newFileName;
-}
-
+//void FileRepository::setPath(const std::string& newFileName) {
+//	if (fileName == " ") {
+//		throw std::exception();
+//	}
+//	std::ofstream createFileIfNotExist(fileName);
+//	createFileIfNotExist.close();
+//	fileName = newFileName;
+//}
+//
 
 

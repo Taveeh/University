@@ -1,6 +1,6 @@
-        -:    0:Source:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/Service.cpp
-        -:    0:Graph:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Service.cpp.gcno
-        -:    0:Data:/Users/taveeh/Desktop/Info/OOP/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Service.cpp.gcda
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Service.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Service.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug/CMakeFiles/Assignment_7_8.dir/Service.cpp.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1://
@@ -15,381 +15,396 @@
         -:   10:#include <algorithm>
         -:   11:#include <vector>
         -:   12:
-       46:   13:Service::Service(FileRepository &newRepository): repository(newRepository) {
-       23:   13-block  0
-       23:   13-block  1
-       23:   13-block  2
-       46:   14:	myListRepository = MemoryRepository();}
-       23:   14-block  0
-       23:   14-block  1
-    $$$$$:   14-block  2
-    $$$$$:   14-block  3
-    $$$$$:   14-block  4
-    $$$$$:   14-block  5
-       23:   14-block  6
-        -:   15:
-       26:   16:void Service::addFootage(const std::string &title, const std::string &type,const std::string &dateString, const std::string &numberAccessedString, const std::string &link) {
-       26:   16-block  0
-       26:   17:	if (dateString.size() != SIZE_OF_DATE + 1) {
-       26:   17-block  0
-        1:   18:		throw std::exception();
-        1:   18-block  0
-        -:   19:	}
-       25:   20:	const std::string& newTitle = title;
-       25:   21:	std::string newType = type.substr(1, type.size() - 1);
-       25:   22:	std::string newNumberAccessedString = numberAccessedString.substr(1, numberAccessedString.size() - 1);
-       25:   22-block  0
-       25:   23:	std::string monthString = dateString.substr(1, 2);
-       25:   23-block  0
-       25:   24:	std::string dayString = dateString.substr(4, 2);
+       40:   13:Service::Service() {
+       20:   13-block  0
+       20:   13-block  1
+       20:   14:	repository = nullptr;
+       20:   15:	myListRepository = new MemoryRepository();
+       20:   15-block  0
+    $$$$$:   15-block  1
+    $$$$$:   15-block  2
+       40:   16:}
+       20:   16-block  0
+       20:   16-block  1
+        -:   17:
+       26:   18:void Service::addFootage(const std::string &title, const std::string &type,const std::string &dateString, const std::string &numberAccessedString, const std::string &link) {
+       26:   18-block  0
+       26:   19:	if (dateString.size() != SIZE_OF_DATE + 1) {
+       26:   19-block  0
+        1:   20:		throw std::exception();
+        1:   20-block  0
+        -:   21:	}
+       25:   22:	const std::string& newTitle = title;
+       25:   23:	std::string newType = type.substr(1, type.size() - 1);
+       25:   24:	std::string newNumberAccessedString = numberAccessedString.substr(1, numberAccessedString.size() - 1);
        25:   24-block  0
-       25:   25:	std::string yearString = dateString.substr(7, 4);
+       25:   25:	std::string monthString = dateString.substr(1, 2);
        25:   25-block  0
-       25:   26:	std::stringstream convertDayStringToInt(dayString);
+       25:   26:	std::string dayString = dateString.substr(4, 2);
        25:   26-block  0
-       25:   27:	std::stringstream convertMonthStringToInt(monthString);
+       25:   27:	std::string yearString = dateString.substr(7, 4);
        25:   27-block  0
-       25:   28:	std::stringstream convertYearStringToInt(yearString);
+       25:   28:	std::stringstream convertDayStringToInt(dayString);
        25:   28-block  0
-        -:   29:	int newDay, newMonth, newYear;
-       25:   30:	convertDayStringToInt >> newDay;
+       25:   29:	std::stringstream convertMonthStringToInt(monthString);
+       25:   29-block  0
+       25:   30:	std::stringstream convertYearStringToInt(yearString);
        25:   30-block  0
-       25:   31:	convertMonthStringToInt >> newMonth;
-       25:   31-block  0
-       25:   32:	convertYearStringToInt >> newYear;
+       25:   31:	int newDay = 0, newMonth = 0, newYear = 0;
+       25:   32:	convertDayStringToInt >> newDay;
        25:   32-block  0
-       25:   33:	time_t currentTime = time(nullptr);
+       25:   33:	convertMonthStringToInt >> newMonth;
        25:   33-block  0
-       25:   34:	tm* currentTimePointer = localtime(&currentTime);
+       25:   34:	convertYearStringToInt >> newYear;
        25:   34-block  0
-       25:   35:	if (!validateNewDate(newDay, newMonth, newYear)) {
+       25:   35:	time_t currentTime = time(nullptr);
        25:   35-block  0
-       25:   35-block  1
-        3:   36:		throw std::exception();
-        3:   36-block  0
-        -:   37:	}
-       22:   38:	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
-       22:   38-block  0
-       22:   39:	auto newDate = Date(newDay, newMonth, newYear);
-       22:   39-block  0
-       22:   40:	if (currentDate < newDate) {
+       25:   36:	tm* currentTimePointer = localtime(&currentTime);
+       25:   36-block  0
+       25:   37:	if (!validateNewDate(newDay, newMonth, newYear)) {
+       25:   37-block  0
+       25:   37-block  1
+        3:   38:		throw std::exception();
+        3:   38-block  0
+        -:   39:	}
+       22:   40:	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
        22:   40-block  0
-       22:   40-block  1
-        1:   41:		throw std::exception();
-        1:   41-block  0
-        -:   42:	}
-       21:   43:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
-       21:   43-block  0
-        -:   44:	int numberAccessed;
-       21:   45:	convertNumberAccessedStringToInt >> numberAccessed;
+       22:   41:	auto newDate = Date(newDay, newMonth, newYear);
+       22:   41-block  0
+       22:   42:	if (currentDate < newDate) {
+       22:   42-block  0
+       22:   42-block  1
+        1:   43:		throw std::exception();
+        1:   43-block  0
+        -:   44:	}
+       21:   45:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
        21:   45-block  0
-       21:   46:	if (numberAccessed < 0) {
-       21:   46-block  0
-        1:   47:		throw std::exception();
-        1:   47-block  0
-        -:   48:	}
-       20:   49:	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
-       20:   49-block  0
-       20:   49-block  1
-       20:   49-block  2
-       20:   49-block  3
-    $$$$$:   49-block  4
-    $$$$$:   49-block  5
-    $$$$$:   49-block  6
-        -:   50:	try {
-       20:   51:		repository.addFootage(newFootage);
+       21:   46:	int numberAccessed = 0;
+       21:   47:	convertNumberAccessedStringToInt >> numberAccessed;
+       21:   47-block  0
+       21:   48:	if (numberAccessed < 0) {
+       21:   48-block  0
+        1:   49:		throw std::exception();
+        1:   49-block  0
+        -:   50:	}
+       20:   51:	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
        20:   51-block  0
-       20:   52:	}catch (std::exception& exception) {
-       19:   52-block  0
-        1:   52-block  1
-        1:   53:		throw std::exception();
-        1:   53-block  0
-        1:   54:	}
-        1:   54-block  0
+       20:   51-block  1
+       20:   51-block  2
+       20:   51-block  3
+    $$$$$:   51-block  4
+    $$$$$:   51-block  5
+    $$$$$:   51-block  6
+        -:   52:	try {
+       20:   53:		repository->addFootage(newFootage);
+       20:   53-block  0
+       20:   54:	}catch (std::exception& exception) {
+       19:   54-block  0
         1:   54-block  1
-    $$$$$:   54-block  2
-       27:   55:}
-    $$$$$:   55-block  0
-    $$$$$:   55-block  1
-    $$$$$:   55-block  2
-    $$$$$:   55-block  3
-    $$$$$:   55-block  4
-    $$$$$:   55-block  5
-    $$$$$:   55-block  6
-        4:   55-block  7
-        1:   55-block  8
-    $$$$$:   55-block  9
-    $$$$$:   55-block 10
-        1:   55-block 11
-       19:   55-block 12
-        1:   55-block 13
-        2:   55-block 14
-        6:   55-block 15
-        6:   55-block 16
-        6:   55-block 17
-        6:   55-block 18
-        6:   55-block 19
-        6:   55-block 20
-        6:   55-block 21
-        6:   55-block 22
-        6:   55-block 23
-        -:   56:
-       29:   57:bool Service::validateNewDate(int day, int month, int year) {
-       29:   57-block  0
-       29:   58:	if (day > 31 or month > 12) {
-       29:   58-block  0
-       29:   58-block  1
-        3:   59:		return false;
-        3:   59-block  0
-        -:   60:	}
-        -:   61:#define JUNE 6
-        -:   62:#define APRIL 4
-        -:   63:#define SEPTEMBER 9
-        -:   64:#define NOVEMBER 11
-       26:   65:	if (month == JUNE or month == APRIL or month == SEPTEMBER or month == NOVEMBER)
-       26:   65-block  0
-       26:   65-block  1
-       26:   65-block  2
-       26:   65-block  3
-        1:   66:		if (day > 30) return false;
-        1:   66-block  0
-        1:   66-block  1
-    $$$$$:   66-block  2
-        -:   67:#define FEBRUARY 2
-        -:   68:# define isLeapYear(year) (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
-       25:   69:	if (month == FEBRUARY) {
-       25:   69-block  0
-       23:   70:		if (isLeapYear(year)) {
-       23:   70-block  0
-       21:   70-block  1
-        2:   70-block  2
-       21:   71:			if (day > 29) return false;
-       21:   71-block  0
-    $$$$$:   71-block  1
-       23:   72:		} else if (day > 28)
-       21:   72-block  0
-        2:   72-block  1
-        1:   73:			return false;
-        1:   73-block  0
-       22:   74:	}
-       22:   74-block  0
-       24:   75:	return year >= 1800;
-       24:   75-block  0
-       29:   76:}
-       29:   76-block  0
-        -:   77:
-        2:   78:void Service::deleteFootage(const std::string& title) {
-        2:   78-block  0
-        -:   79:	try {
-        2:   80:		repository.deleteFootage(title);
+        1:   55:		throw std::exception();
+        1:   55-block  0
+        1:   56:	}
+        1:   56-block  0
+        1:   56-block  1
+    $$$$$:   56-block  2
+       27:   57:}
+    $$$$$:   57-block  0
+    $$$$$:   57-block  1
+    $$$$$:   57-block  2
+    $$$$$:   57-block  3
+    $$$$$:   57-block  4
+    $$$$$:   57-block  5
+    $$$$$:   57-block  6
+        4:   57-block  7
+        1:   57-block  8
+    $$$$$:   57-block  9
+    $$$$$:   57-block 10
+        1:   57-block 11
+       19:   57-block 12
+        1:   57-block 13
+        2:   57-block 14
+        6:   57-block 15
+        6:   57-block 16
+        6:   57-block 17
+        6:   57-block 18
+        6:   57-block 19
+        6:   57-block 20
+        6:   57-block 21
+        6:   57-block 22
+        6:   57-block 23
+        -:   58:
+       29:   59:bool Service::validateNewDate(int day, int month, int year) {
+       29:   59-block  0
+       29:   60:	if (day > 31 or month > 12) {
+       29:   60-block  0
+       29:   60-block  1
+        3:   61:		return false;
+        3:   61-block  0
+        -:   62:	}
+        -:   63:#define JUNE 6
+        -:   64:#define APRIL 4
+        -:   65:#define SEPTEMBER 9
+        -:   66:#define NOVEMBER 11
+       26:   67:	if (month == JUNE or month == APRIL or month == SEPTEMBER or month == NOVEMBER)
+       26:   67-block  0
+       26:   67-block  1
+       26:   67-block  2
+       26:   67-block  3
+        1:   68:		if (day > 30) return false;
+        1:   68-block  0
+        1:   68-block  1
+    $$$$$:   68-block  2
+        -:   69:#define FEBRUARY 2
+        -:   70:# define isLeapYear(year) (((year) % 4 == 0 and (year) % 100 != 0) or (year) % 400 == 0)
+       25:   71:	if (month == FEBRUARY) {
+       25:   71-block  0
+       23:   72:		if (isLeapYear(year)) {
+       23:   72-block  0
+       21:   72-block  1
+        2:   72-block  2
+       21:   73:			if (day > 29) return false;
+       21:   73-block  0
+    $$$$$:   73-block  1
+       23:   74:		} else if (day > 28)
+       21:   74-block  0
+        2:   74-block  1
+        1:   75:			return false;
+        1:   75-block  0
+       22:   76:	}
+       22:   76-block  0
+       24:   77:	return year >= 1800;
+       24:   77-block  0
+       29:   78:}
+       29:   78-block  0
+        -:   79:
+        2:   80:void Service::deleteFootage(const std::string& title) {
         2:   80-block  0
-        3:   81:	}catch (std::exception& e) {
-        1:   81-block  0
-        1:   81-block  1
-        1:   81-block  2
-        1:   82:		throw std::exception();
-        1:   82-block  0
-        1:   83:	}
+        -:   81:	try {
+        2:   82:		repository->deleteFootage(title);
+        2:   82-block  0
+        3:   83:	}catch (std::exception& e) {
         1:   83-block  0
         1:   83-block  1
-    $$$$$:   83-block  2
-        3:   84:}
+        1:   83-block  2
+        1:   84:		throw std::exception();
         1:   84-block  0
-        1:   84-block  1
-        -:   85:
-        5:   86:void Service::updateFootage(const std::string &title, const std::string &type, const std::string &dateString,
-        5:   86-block  0
-        -:   87:                            const std::string &numberAccessedString, const std::string &link) {
-        5:   88:	if (dateString.size() != SIZE_OF_DATE + 1) {
+        1:   85:	}
+        1:   85-block  0
+        1:   85-block  1
+    $$$$$:   85-block  2
+        3:   86:}
+        1:   86-block  0
+        1:   86-block  1
+        -:   87:
+        5:   88:void Service::updateFootage(const std::string &title, const std::string &type, const std::string &dateString,
         5:   88-block  0
-        1:   89:		throw std::exception();
-        1:   89-block  0
-        -:   90:	}
-        4:   91:	const std::string& newTitle = title;
-        4:   92:	std::string newType = type.substr(1, type.size() - 1);
-        4:   93:	std::string newNumberAccessedString = numberAccessedString.substr(1, numberAccessedString.size() - 1);
-        4:   93-block  0
-        4:   94:	std::string monthString = dateString.substr(1, 2);
-        4:   94-block  0
-        4:   95:	std::string dayString = dateString.substr(4, 2);
+        -:   89:                            const std::string &numberAccessedString, const std::string &link) {
+        5:   90:	if (dateString.size() != SIZE_OF_DATE + 1) {
+        5:   90-block  0
+        1:   91:		throw std::exception();
+        1:   91-block  0
+        -:   92:	}
+        4:   93:	const std::string& newTitle = title;
+        4:   94:	std::string newType = type.substr(1, type.size() - 1);
+        4:   95:	std::string newNumberAccessedString = numberAccessedString.substr(1, numberAccessedString.size() - 1);
         4:   95-block  0
-        4:   96:	std::string yearString = dateString.substr(7, 4);
+        4:   96:	std::string monthString = dateString.substr(1, 2);
         4:   96-block  0
-        4:   97:	std::stringstream convertDayStringToInt(dayString);
+        4:   97:	std::string dayString = dateString.substr(4, 2);
         4:   97-block  0
-        4:   98:	std::stringstream convertMonthStringToInt(monthString);
+        4:   98:	std::string yearString = dateString.substr(7, 4);
         4:   98-block  0
-        4:   99:	std::stringstream convertYearStringToInt(yearString);
+        4:   99:	std::stringstream convertDayStringToInt(dayString);
         4:   99-block  0
-        -:  100:	int newDay, newMonth, newYear;
-        4:  101:	convertDayStringToInt >> newDay;
+        4:  100:	std::stringstream convertMonthStringToInt(monthString);
+        4:  100-block  0
+        4:  101:	std::stringstream convertYearStringToInt(yearString);
         4:  101-block  0
-        4:  102:	convertMonthStringToInt >> newMonth;
-        4:  102-block  0
-        4:  103:	convertYearStringToInt >> newYear;
+        4:  102:	int newDay = 0, newMonth = 0, newYear = 0;
+        4:  103:	convertDayStringToInt >> newDay;
         4:  103-block  0
-        4:  104:	time_t currentTime = time(nullptr);
+        4:  104:	convertMonthStringToInt >> newMonth;
         4:  104-block  0
-        4:  105:	tm* currentTimePointer = localtime(&currentTime);
+        4:  105:	convertYearStringToInt >> newYear;
         4:  105-block  0
-        4:  106:	if (!validateNewDate(newDay, newMonth, newYear)) {
+        4:  106:	time_t currentTime = time(nullptr);
         4:  106-block  0
-        4:  106-block  1
-        2:  107:		throw std::exception();
-        2:  107-block  0
-        -:  108:	}
-        2:  109:	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
+        4:  107:	tm* currentTimePointer = localtime(&currentTime);
+        4:  107-block  0
+        4:  108:	if (!validateNewDate(newDay, newMonth, newYear)) {
+        4:  108-block  0
+        4:  108-block  1
+        2:  109:		throw std::exception();
         2:  109-block  0
-        2:  110:	auto newDate = Date(newDay, newMonth, newYear);
-        2:  110-block  0
-        2:  111:	if (currentDate < newDate) {
+        -:  110:	}
+        2:  111:	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
         2:  111-block  0
-        2:  111-block  1
-        1:  112:		throw std::exception();
-        1:  112-block  0
-        -:  113:	}
-        1:  114:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
+        2:  112:	auto newDate = Date(newDay, newMonth, newYear);
+        2:  112-block  0
+        2:  113:	if (currentDate < newDate) {
+        2:  113-block  0
+        2:  113-block  1
+        1:  114:		throw std::exception();
         1:  114-block  0
-        -:  115:	int numberAccessed;
-        1:  116:	convertNumberAccessedStringToInt >> numberAccessed;
+        -:  115:	}
+        1:  116:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
         1:  116-block  0
-        1:  117:	if (numberAccessed < 0) throw std::exception();
-        1:  117-block  0
-    $$$$$:  117-block  1
-        1:  118:	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
+        1:  117:	int numberAccessed = 0;
+        1:  118:	convertNumberAccessedStringToInt >> numberAccessed;
         1:  118-block  0
-        1:  118-block  1
-        1:  118-block  2
-        1:  118-block  3
-    $$$$$:  118-block  4
-    $$$$$:  118-block  5
-    $$$$$:  118-block  6
-        -:  119:	try {
-        1:  120:		repository.updateFootage(newFootage);
+        1:  119:	if (numberAccessed < 0) throw std::exception();
+        1:  119-block  0
+    $$$$$:  119-block  1
+        1:  120:	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
         1:  120-block  0
-        1:  121:	}catch (std::exception & exception) {throw exception;}
-        1:  121-block  0
-    $$$$$:  121-block  1
-    $$$$$:  121-block  2
-    $$$$$:  121-block  3
-    $$$$$:  121-block  4
-    $$$$$:  121-block  5
-        4:  122:}
-    $$$$$:  122-block  0
-    $$$$$:  122-block  1
-    $$$$$:  122-block  2
-    $$$$$:  122-block  3
-    $$$$$:  122-block  4
-    $$$$$:  122-block  5
-    $$$$$:  122-block  6
-        3:  122-block  7
-    $$$$$:  122-block  8
-    $$$$$:  122-block  9
-    $$$$$:  122-block 10
-    $$$$$:  122-block 11
-        1:  122-block 12
-    $$$$$:  122-block 13
-    $$$$$:  122-block 14
-        3:  122-block 15
-        3:  122-block 16
-        3:  122-block 17
-        3:  122-block 18
-        3:  122-block 19
-        3:  122-block 20
-        3:  122-block 21
-        3:  122-block 22
-        3:  122-block 23
-        -:  123:
-        3:  124:std::vector<Footage> Service::getAllElements() {
-        3:  124-block  0
-        3:  125:	return repository.getAllFootage();
-        3:  125-block  0
-        -:  126:}
-        -:  127:
-        -:  128://Service::Service(): repository(FileRepository(std::to_string(0))) {
-        -:  129://
-        -:  130://}
-        -:  131:
-        1:  132:Footage Service::getCurrent() {
-        1:  132-block  0
-        1:  133:	return repository.getCurrentElement();
-        1:  133-block  0
-        -:  134:}
-        -:  135:
-        2:  136:void Service::addToMyList(const std::string &title) {
-        2:  136-block  0
-        2:  137:	auto arrayOfTapes = repository.getAllFootage();
-        3:  138:	for (auto & arrayOfTape : arrayOfTapes) {
+        1:  120-block  1
+        1:  120-block  2
+        1:  120-block  3
+    $$$$$:  120-block  4
+    $$$$$:  120-block  5
+    $$$$$:  120-block  6
+        -:  121:	try {
+        1:  122:		repository->updateFootage(newFootage);
+        1:  122-block  0
+        1:  123:	}catch (std::exception & exception) {throw exception;}
+        1:  123-block  0
+    $$$$$:  123-block  1
+    $$$$$:  123-block  2
+    $$$$$:  123-block  3
+    $$$$$:  123-block  4
+    $$$$$:  123-block  5
+        4:  124:}
+    $$$$$:  124-block  0
+    $$$$$:  124-block  1
+    $$$$$:  124-block  2
+    $$$$$:  124-block  3
+    $$$$$:  124-block  4
+    $$$$$:  124-block  5
+    $$$$$:  124-block  6
+        3:  124-block  7
+    $$$$$:  124-block  8
+    $$$$$:  124-block  9
+    $$$$$:  124-block 10
+    $$$$$:  124-block 11
+        1:  124-block 12
+    $$$$$:  124-block 13
+    $$$$$:  124-block 14
+        3:  124-block 15
+        3:  124-block 16
+        3:  124-block 17
+        3:  124-block 18
+        3:  124-block 19
+        3:  124-block 20
+        3:  124-block 21
+        3:  124-block 22
+        3:  124-block 23
+        -:  125:
+        3:  126:std::vector<Footage> Service::getAllElements() {
+        3:  126-block  0
+        3:  127:	return repository->getAllFootage();
+        3:  127-block  0
+        -:  128:}
+        -:  129:
+        -:  130://Service::Service(): repository(FileRepository(std::to_string(0))) {
+        -:  131://
+        -:  132://}
+        -:  133:
+        1:  134:Footage Service::getCurrent() {
+        1:  134-block  0
+        1:  135:	return repository->getCurrentElement();
+        1:  135-block  0
+        -:  136:}
+        -:  137:
+        2:  138:void Service::addToMyList(const std::string &title) {
         2:  138-block  0
-        3:  138-block  1
-        1:  138-block  2
-        1:  138-block  3
-        2:  139:		if (arrayOfTape.getTitle() == title) {
-        2:  139-block  0
-        2:  139-block  1
-        1:  140:			myListRepository.addFootage(arrayOfTape);
-        1:  140-block  0
-        -:  141:			return;
-        -:  142:		}
-        -:  143:	}
-        1:  144:	throw std::exception();
-        1:  144-block  0
-        2:  145:}
-        1:  145-block  0
-        1:  145-block  1
-        1:  145-block  2
-        -:  146:
-        1:  147:std::vector<Footage> Service::getMyList() {
+        2:  139:	auto arrayOfTapes = repository->getAllFootage();
+        3:  140:	for (auto & arrayOfTape : arrayOfTapes) {
+        2:  140-block  0
+        3:  140-block  1
+        1:  140-block  2
+        1:  140-block  3
+        2:  141:		if (arrayOfTape.getTitle() == title) {
+        2:  141-block  0
+        2:  141-block  1
+        1:  142:			myListRepository->addFootage(arrayOfTape);
+        1:  142-block  0
+        -:  143:			return;
+        -:  144:		}
+        -:  145:	}
+        1:  146:	throw std::exception();
+        1:  146-block  0
+        2:  147:}
         1:  147-block  0
-        1:  148:	return myListRepository.getAllFootage();
-        1:  148-block  0
-        -:  149:}
-        -:  150:
-        2:  151:std::vector<Footage> Service::getFilteredList(const std::string &type, const std::string &maximumAccessCount) {
-        2:  151-block  0
-        2:  152:	auto arrayOfTapes = repository.getAllFootage();
-        2:  153:	std::string newNumberAccessedString = maximumAccessCount.substr(1, maximumAccessCount.size() - 1);
+        1:  147-block  1
+        1:  147-block  2
+        -:  148:
+        1:  149:std::vector<Footage> Service::getMyList() {
+        1:  149-block  0
+        1:  150:	return myListRepository->getAllFootage();
+        1:  150-block  0
+        -:  151:}
+        -:  152:
+        2:  153:std::vector<Footage> Service::getFilteredList(const std::string &type, const std::string &maximumAccessCount) {
         2:  153-block  0
-        2:  154:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
-        2:  154-block  0
-        -:  155:	int numberAccessed;
-        2:  156:	convertNumberAccessedStringToInt >> numberAccessed;
+        2:  154:	auto arrayOfTapes = repository->getAllFootage();
+        2:  155:	std::string newNumberAccessedString = maximumAccessCount.substr(1, maximumAccessCount.size() - 1);
+        2:  155-block  0
+        2:  156:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
         2:  156-block  0
-        2:  157:	if (numberAccessed < 0) {
-        2:  157-block  0
-        1:  158:		throw std::exception();
-        1:  158-block  0
-        -:  159:	}
-        1:  160:	std::vector<Footage> filteredList;
-        5:  161:	std::copy_if(arrayOfTapes.begin(), arrayOfTapes.end(), std::back_inserter(filteredList), [numberAccessed, &type](const Footage& footage) {
-        1:  161-block  0
-        1:  161-block  1
-        4:  161-block  2
-        4:  162:		return footage.getAccessCount() < numberAccessed and footage.getType() == type;
-        4:  162-block  0
-        2:  162-block  1
-        4:  162-block  2
-        2:  162-block  3
-        4:  162-block  4
-        -:  163:	});
-        1:  164:	return filteredList;
-        2:  165:}
-    $$$$$:  165-block  0
-    $$$$$:  165-block  1
-        1:  165-block  2
-        1:  165-block  3
-    $$$$$:  165-block  4
-    $$$$$:  165-block  5
-        1:  165-block  6
-        1:  165-block  7
-        1:  165-block  8
-        1:  165-block  9
-        1:  165-block 10
-        -:  166:
-        2:  167:void Service::setPath(const std::string& fileName) {
-        2:  167-block  0
-        2:  168:	repository.setPath(fileName);
-        2:  169:}
-        2:  169-block  0
-        -:  170:
-        -:  171:
+        2:  157:	int numberAccessed = 0;
+        2:  158:	convertNumberAccessedStringToInt >> numberAccessed;
+        2:  158-block  0
+        2:  159:	if (numberAccessed < 0) {
+        2:  159-block  0
+        1:  160:		throw std::exception();
+        1:  160-block  0
+        -:  161:	}
+        1:  162:	std::vector<Footage> filteredList;
+        5:  163:	std::copy_if(arrayOfTapes.begin(), arrayOfTapes.end(), std::back_inserter(filteredList), [numberAccessed, &type](const Footage& footage) {
+        1:  163-block  0
+        1:  163-block  1
+        4:  163-block  2
+        4:  164:		return footage.getAccessCount() < numberAccessed and footage.getType() == type;
+        4:  164-block  0
+        2:  164-block  1
+        4:  164-block  2
+        2:  164-block  3
+        4:  164-block  4
+        -:  165:	});
+        1:  166:	return filteredList;
+        2:  167:}
+    $$$$$:  167-block  0
+    $$$$$:  167-block  1
+        1:  167-block  2
+        1:  167-block  3
+    $$$$$:  167-block  4
+    $$$$$:  167-block  5
+        1:  167-block  6
+        1:  167-block  7
+        1:  167-block  8
+        1:  167-block  9
+        1:  167-block 10
+        -:  168:
+       20:  169:void Service::setPath(const std::string& fileName) {
+       20:  169-block  0
+       20:  170:	repository = new FileRepository(fileName);
+       20:  170-block  0
+    $$$$$:  170-block  1
+    $$$$$:  170-block  2
+       20:  171:}
+       20:  171-block  0
+        -:  172:
+       40:  173:Service::~Service() {
+       20:  173-block  0
+       20:  173-block  1
+       20:  174:	delete repository;
+       20:  174-block  0
+       20:  174-block  1
+       20:  175:	delete myListRepository;
+       20:  175-block  0
+       20:  175-block  1
+       40:  176:}
+       20:  176-block  0
+       20:  176-block  1
+        -:  177:
+        -:  178:
