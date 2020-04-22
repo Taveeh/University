@@ -3,13 +3,13 @@
 #include "TestMemoryRepository.h"
 #include "TestService.h"
 #include "TestFileRepository.h"
-
 void callTestFunctions();
+using namespace std;
 int main() {
 	callTestFunctions();
-//	Service service = Service();
-//	UI ui = UI(service);
-//	ui.runProgram();
+	Service service = Service();
+	UI ui = UI(service);
+	ui.runProgram();
 	return 0;
 }
 

@@ -28,7 +28,7 @@ void TestFootage::test_compareDate_differentDays_IncreasingDates() {
 
 void TestFootage::test_dateToString_emptyDate_zeroDate() {
 	auto date = Date();
-	assert(date.toString() == "0-0-0");
+	assert(date.toString() == "00-00-0");
 }
 
 void TestFootage::test_changeType_ValidInput_FootageChanged() {
@@ -81,5 +81,5 @@ void TestFootage::test_compareDate_differentYears_DecreasingDates() {
 
 void TestFootage::test_footageToString_emptyFootage_emptyString() {
 	auto footage = Footage();
-	assert(footage.toString() == "Title:  Type:  Date: 0-0-0 Access count: 0 Link: ");
+	assert(footage.toString() == "Title:  Type:  Date: 00-00-0 Access count: 0 Link: ");
 }

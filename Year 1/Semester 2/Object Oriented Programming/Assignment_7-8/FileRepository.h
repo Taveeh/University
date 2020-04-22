@@ -59,6 +59,9 @@ public:
 	 * Footage - current element from repository
 	 */
 	Footage getCurrentElement() override;
+
+	void openList() override;
+
 };
 
 

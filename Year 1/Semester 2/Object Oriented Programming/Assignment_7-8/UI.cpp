@@ -50,6 +50,7 @@ void UI::runProgramFieldAgent() {
 	mapOfChoices["save"] = &UI::saveTitle;
 	mapOfChoices["list"] = &UI::listProperty;
 	mapOfChoices["mylist"] = &UI::myList;
+	mapOfChoices["openMyList"] = &UI::openMyList;
 	mapOfChoices["mode"] = &UI::changeMode;
 	while(true) {
 		std::string stringLine;
@@ -90,16 +91,24 @@ void UI::addElement(const std::string& commandParameters) {
 	}
 	try {
 		service.addFootage(ArrayOfParameters[0], ArrayOfParameters[1], ArrayOfParameters[2], ArrayOfParameters[3], ArrayOfParameters[4]);
-	}catch (std::exception& exception) {
-		std::cout << "Invalid parameters\n";
+	}catch (ValidationException& exception) {
+		std::cout << exception.what();
+	}catch (RepositoryException& exception) {
+		std::cout << exception.what();
+	}catch (...) {
+		std::cout << "Invalid";
 	}
 }
 
 void UI::removeElement(const std::string &commandParameters) {
 	try {
 		service.deleteFootage(commandParameters);
-	}catch (std::exception& exception){
-		std::cout << "Invalid parameters\n";
+	}catch (ValidationException& exception) {
+		std::cout << exception.what();
+	}catch (RepositoryException& exception) {
+		std::cout << exception.what();
+	}catch (...) {
+		std::cout << "Invalid";
 	}
 }
 
@@ -115,8 +124,12 @@ void UI::updateElement(const std::string &commandParameters) {
 	}
 	try {
 		service.updateFootage(ArrayOfParameters[0], ArrayOfParameters[1], ArrayOfParameters[2], ArrayOfParameters[3], ArrayOfParameters[4]);
-	}catch (std::exception& exception) {
-		std::cout << "Invalid parameters\n";
+	}catch (ValidationException& exception) {
+		std::cout << exception.what();
+	}catch (RepositoryException& exception) {
+		std::cout << exception.what();
+	}catch (...) {
+		std::cout << "Invalid";
 	}
 }
 
@@ -149,8 +162,25 @@ void UI::runProgram() {
 		std::cout << "Invalid command";
 		exit(0);
 	}
-	service.setPath(path);
-
+	service.setPath(path, "storage");
+	std::string myListFileLine;
+	std::getline(std::cin,myListFileLine);
+	std::string myListCommandFile, myListPath;
+	isCommand = true;
+	for (auto fileLineCharacter: myListFileLine) {
+		if (isCommand and fileLineCharacter != ' ') {
+			myListCommandFile += fileLineCharacter;
+		}else if (isCommand) {
+			isCommand = false;
+		}else {
+			myListPath += fileLineCharacter;
+		}
+	}
+	if (myListCommandFile != "mylistLocation") {
+		std::cout << "Invalid command";
+		exit(0);
+	}
+	service.setPath(myListPath, "mylist");
 	std::string modeLine;
 	std::getline(std::cin, modeLine);
 	std::string command, mode;
@@ -189,8 +219,12 @@ void UI::nextElement(const std::string &commandParameters) {
 void UI::saveTitle(const std::string &commandParameters) {
 	try {
 		service.addToMyList(commandParameters);
-	}catch (std::exception&) {
-		std::cout << "Invalid title" << '\n';
+	}catch (ValidationException& exception) {
+		std::cout << exception.what();
+	}catch (RepositoryException& exception) {
+		std::cout << exception.what();
+	}catch (...) {
+		std::cout << "Invalid";
 	}
 }
 
@@ -214,8 +248,12 @@ void UI::listProperty(const std::string &commandParameters) {
 	std::vector<Footage> filteredListOfFootage;
 	try {
 		filteredListOfFootage = service.getFilteredList(ArrayOfParameters[0], ArrayOfParameters[1]);
-	}catch (std::exception&) {
-		std::cout << "Invalid parameters\n";
+	}catch (ValidationException& exception) {
+		std::cout << exception.what();
+	}catch (RepositoryException& exception) {
+		std::cout << exception.what();
+	}catch (...) {
+		std::cout << "Invalid";
 	}
 	if (filteredListOfFootage.empty()) {
 		std::cout << "There are no elements with given property\n";
@@ -224,4 +262,8 @@ void UI::listProperty(const std::string &commandParameters) {
 			std::cout << filteredListIndex.toString() << '\n';
 		}
 	}
+}
+
+void UI::openMyList(const std::string &commandParameters) {
+	service.openMyList();
 }

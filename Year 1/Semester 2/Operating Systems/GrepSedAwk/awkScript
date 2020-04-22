@@ -1,0 +1,17 @@
+BEGIN {
+	v = 0
+	c = 0
+}
+
+$0 ~ /[aeiou]$/ {
+	v++
+}§
+
+$0 ~/[a-z]$/ && /[^aeiou]$/ {
+	c++
+}
+
+END {
+	print "Lines ending in vowel: "v
+	print "Lines ending in consonant: "c
+}

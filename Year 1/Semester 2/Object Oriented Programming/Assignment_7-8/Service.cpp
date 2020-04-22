@@ -3,21 +3,28 @@
 //
 
 #include "Service.h"
-#include <exception>
 #include <iostream>
 #include <sstream>
-#include <ctime>
 #include <algorithm>
 #include <vector>
 
 Service::Service() {
 	repository = nullptr;
-	myListRepository = new MemoryRepository();
+	myListRepository = nullptr;
 }
 
 void Service::addFootage(const std::string &title, const std::string &type,const std::string &dateString, const std::string &numberAccessedString, const std::string &link) {
-	if (dateString.size() != SIZE_OF_DATE + 1) {
-		throw std::exception();
+	std::vector<std::string> arrayOfParameters;
+	arrayOfParameters.push_back("add");
+	arrayOfParameters.push_back(title);
+	arrayOfParameters.push_back(type);
+	arrayOfParameters.push_back(dateString);
+	arrayOfParameters.push_back(numberAccessedString);
+	arrayOfParameters.push_back(link);
+	try {
+		auto validator = Validator(arrayOfParameters);
+	}catch (ValidationException& exception) {
+		throw ValidationException(exception.what());
 	}
 	const std::string& newTitle = title;
 	std::string newType = type.substr(1, type.size() - 1);
@@ -32,63 +39,40 @@ void Service::addFootage(const std::string &title, const std::string &type,const
 	convertDayStringToInt >> newDay;
 	convertMonthStringToInt >> newMonth;
 	convertYearStringToInt >> newYear;
-	time_t currentTime = time(nullptr);
-	tm* currentTimePointer = localtime(&currentTime);
-	if (!validateNewDate(newDay, newMonth, newYear)) {
-		throw std::exception();
-	}
-	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
 	auto newDate = Date(newDay, newMonth, newYear);
-	if (currentDate < newDate) {
-		throw std::exception();
-	}
 	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
 	int numberAccessed = 0;
 	convertNumberAccessedStringToInt >> numberAccessed;
-	if (numberAccessed < 0) {
-		throw std::exception();
-	}
 	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
 	try {
 		repository->addFootage(newFootage);
-	}catch (std::exception& exception) {
-		throw std::exception();
+	}catch (RepositoryException& exception) {
+		throw ValidationException("Duplicate footage");
 	}
-}
-
-bool Service::validateNewDate(int day, int month, int year) {
-	if (day > 31 or month > 12) {
-		return false;
-	}
-#define JUNE 6
-#define APRIL 4
-#define SEPTEMBER 9
-#define NOVEMBER 11
-	if (month == JUNE or month == APRIL or month == SEPTEMBER or month == NOVEMBER)
-		if (day > 30) return false;
-#define FEBRUARY 2
-# define isLeapYear(year) (((year) % 4 == 0 and (year) % 100 != 0) or (year) % 400 == 0)
-	if (month == FEBRUARY) {
-		if (isLeapYear(year)) {
-			if (day > 29) return false;
-		} else if (day > 28)
-			return false;
-	}
-	return year >= 1800;
 }
 
 void Service::deleteFootage(const std::string& title) {
 	try {
 		repository->deleteFootage(title);
-	}catch (std::exception& e) {
-		throw std::exception();
+//		myListRepository->deleteFootage(title);
+	}catch (RepositoryException& e) {
+		throw e;
 	}
 }
 
 void Service::updateFootage(const std::string &title, const std::string &type, const std::string &dateString,
                             const std::string &numberAccessedString, const std::string &link) {
-	if (dateString.size() != SIZE_OF_DATE + 1) {
-		throw std::exception();
+	std::vector<std::string> arrayOfParameters;
+	arrayOfParameters.push_back("update");
+	arrayOfParameters.push_back(title);
+	arrayOfParameters.push_back(type);
+	arrayOfParameters.push_back(dateString);
+	arrayOfParameters.push_back(numberAccessedString);
+	arrayOfParameters.push_back(link);
+	try {
+		auto validator = Validator(arrayOfParameters);
+	}catch (ValidationException& exception) {
+		throw exception;
 	}
 	const std::string& newTitle = title;
 	std::string newType = type.substr(1, type.size() - 1);
@@ -103,24 +87,17 @@ void Service::updateFootage(const std::string &title, const std::string &type, c
 	convertDayStringToInt >> newDay;
 	convertMonthStringToInt >> newMonth;
 	convertYearStringToInt >> newYear;
-	time_t currentTime = time(nullptr);
-	tm* currentTimePointer = localtime(&currentTime);
-	if (!validateNewDate(newDay, newMonth, newYear)) {
-		throw std::exception();
-	}
-	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
 	auto newDate = Date(newDay, newMonth, newYear);
-	if (currentDate < newDate) {
-		throw std::exception();
-	}
 	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
 	int numberAccessed = 0;
 	convertNumberAccessedStringToInt >> numberAccessed;
-	if (numberAccessed < 0) throw std::exception();
 	auto newFootage = Footage(newTitle, newType, newDate, numberAccessed, link.substr(1));
 	try {
 		repository->updateFootage(newFootage);
-	}catch (std::exception & exception) {throw exception;}
+//		myListRepository->updateFootage(newFootage);
+	}catch (RepositoryException & exception) {
+		throw exception;
+	}
 }
 
 std::vector<Footage> Service::getAllElements() {
@@ -143,7 +120,7 @@ void Service::addToMyList(const std::string &title) {
 			return;
 		}
 	}
-	throw std::exception();
+	throw ValidationException("Element does not exist");
 }
 
 std::vector<Footage> Service::getMyList() {
@@ -157,7 +134,7 @@ std::vector<Footage> Service::getFilteredList(const std::string &type, const std
 	int numberAccessed = 0;
 	convertNumberAccessedStringToInt >> numberAccessed;
 	if (numberAccessed < 0) {
-		throw std::exception();
+		throw ValidationException("Invalid access count");
 	}
 	std::vector<Footage> filteredList;
 	std::copy_if(arrayOfTapes.begin(), arrayOfTapes.end(), std::back_inserter(filteredList), [numberAccessed, &type](const Footage& footage) {
@@ -166,13 +143,31 @@ std::vector<Footage> Service::getFilteredList(const std::string &type, const std
 	return filteredList;
 }
 
-void Service::setPath(const std::string& fileName) {
-	repository = new FileRepository(fileName);
+void Service::setPath(const std::string& fileName, const std::string& repositoryName) {
+	if (repositoryName == "mylist") {
+		if (fileName.substr(fileName.size() - 3) == "csv") {
+			myListRepository = new FileRepository(fileName);
+		}else if (fileName.substr(fileName.size() - 4) == "html") {
+			myListRepository = new HtmlFileRepository(fileName);
+		}else {
+			throw ValidationException("Invalid format");
+		}
+	}else {
+		if (fileName.substr(fileName.size() - 3) == "txt") {
+			repository = new FileRepository(fileName);
+		}else {
+			repository = new SQLRepository(fileName);
+		}
+	}
 }
 
 Service::~Service() {
 	delete repository;
 	delete myListRepository;
+}
+
+void Service::openMyList() {
+	myListRepository->openList();
 }
 
 

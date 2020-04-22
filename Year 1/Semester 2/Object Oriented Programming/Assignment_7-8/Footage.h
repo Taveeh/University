@@ -6,6 +6,8 @@
 #define ASSIGNMENT_5_6_FOOTAGE_H
 
 #include <string>
+
+class ValidatorFootage;
 class Date {
 private:
 	int day, month, year;
@@ -67,6 +69,7 @@ public:
 };
 
 class Footage {
+	friend class ValidatorFootage;
 private:
 	std::string title;
 	std::string type;
@@ -179,5 +182,8 @@ public:
 	friend std::ostream& operator<<(std::ostream& outputStream, const Footage& footage);
 };
 
+class ValidatorFootage {
+
+};
 
 #endif //ASSIGNMENT_5_6_FOOTAGE_H

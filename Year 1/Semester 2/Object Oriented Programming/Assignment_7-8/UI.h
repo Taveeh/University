@@ -32,6 +32,8 @@ private:
 
 	void myList(const std::string& commandParameters);
 
+	void openMyList(const std::string& commandParameters);
+
 public:
 	explicit UI(Service& service);
 

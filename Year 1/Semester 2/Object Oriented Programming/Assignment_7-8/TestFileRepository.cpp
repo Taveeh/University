@@ -40,6 +40,7 @@ void TestFileRepository::test_all() {
 	clearFile.open("test.txt", std::ofstream::out | std::ofstream::trunc);
 	clearFile.close();
 	test_getCurrentElement_EndOfArray_FirstElement();
+	remove("test.txt");
 }
 
 void TestFileRepository::test_addFootage_Duplicate_FootageNotAdded() {
@@ -49,7 +50,7 @@ void TestFileRepository::test_addFootage_Duplicate_FootageNotAdded() {
 	auto testFootage2 = Footage("abc", "efg", Date(3, 3, 2020), 9, "link2");
 	try {
 		repository.addFootage(testFootage2);
-	}catch (std::exception&) {
+	}catch (RepositoryException&) {
 		static_assert(true, "");
 	}
 }
@@ -70,7 +71,7 @@ void TestFileRepository::test_deleteFootage_Inexistent_FootageNotRemoved() {
 	repository.addFootage(testFootage);
 	try {
 		repository.deleteFootage("abd");
-	}catch (std::exception&) {
+	}catch (RepositoryException&) {
 		static_assert(true, "");
 	}
 }
@@ -93,7 +94,7 @@ void TestFileRepository::test_updateFootage_Inexistent_FootageNotChanged() {
 	auto testFootage2 = Footage("abd", "efg", Date(3, 3, 2020), 9, "link2");
 	try {
 		repository.updateFootage(testFootage2);
-	}catch (std::exception&) {
+	}catch (RepositoryException&) {
 		static_assert(true, "");
 	}
 }

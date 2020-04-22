@@ -6,6 +6,7 @@
 #define ASSIGNMENT_7_8_REPOSITORY_H
 
 #include "Footage.h"
+#include "Exceptions.h"
 #include <vector>
 
 class Repository {
@@ -24,6 +25,8 @@ public:
 	virtual std::vector<Footage> getAllFootage() = 0;
 
 	virtual Footage getCurrentElement() = 0;
+
+	virtual void openList() = 0;
 };
 
 

@@ -3,7 +3,6 @@
 //
 
 #include "MemoryRepository.h"
-
 MemoryRepository::MemoryRepository(): currentElement(0) {
 	arrayOfTapes = std::vector<Footage>();
 }
@@ -11,7 +10,7 @@ MemoryRepository::MemoryRepository(): currentElement(0) {
 void MemoryRepository::addFootage(const Footage &newFootage) {
 	for (auto & arrayOfTape : arrayOfTapes) {
 		if (arrayOfTape.getTitle() == newFootage.getTitle()) {
-			throw std::exception();
+			throw RepositoryException("Duplicate Footage");
 		}
 	}
 	arrayOfTapes.push_back(newFootage);
@@ -24,7 +23,7 @@ void MemoryRepository::deleteFootage(const std::string &titleToBeRemoved) {
 			return;
 		}
 	}
-	throw std::exception();
+	throw RepositoryException("Footage does not exist");
 }
 
 void MemoryRepository::updateFootage(const Footage &newFootage) {
@@ -34,7 +33,7 @@ void MemoryRepository::updateFootage(const Footage &newFootage) {
 			return;
 		}
 	}
-	throw std::exception();}
+	throw RepositoryException("Footage does not exist");}
 
 std::vector<Footage> MemoryRepository::getAllFootage() {
 	auto arrayOfFootage = std::vector<Footage>();

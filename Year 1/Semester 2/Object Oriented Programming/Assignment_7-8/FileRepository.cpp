@@ -23,7 +23,7 @@ void FileRepository::addFootage(const Footage &newFootage) {
 	while (fileIn >> footage) {
 		if (footage.getTitle().empty()) break;
 		if (footage.getTitle() == newFootage.getTitle()) {
-			throw std::exception();
+			throw RepositoryException("Duplicate footage");
 		}
 		arrayOfFootage.push_back(footage);
 	}
@@ -48,7 +48,7 @@ void FileRepository::deleteFootage(const std::string &titleToBeRemoved) {
 		}else arrayOfFootage.push_back(footage);
 	}
 	if (ok) {
-		throw std::exception();
+		throw RepositoryException("Footage does not exist");
 	}
 	fileIn.close();
 	std::ofstream fileOut(fileName);
@@ -67,7 +67,7 @@ void FileRepository::updateFootage(const Footage &newFootage) {
 			ok = false;
 		} else arrayOfFootage.push_back(footage);
 	}
-	if (ok) throw std::exception();
+	if (ok) throw RepositoryException("Footage does not exist");
 	fileIn.close();
 	std::ofstream fileOut(fileName);
 	for (const auto& footageToFile: arrayOfFootage) {
@@ -90,6 +90,12 @@ Footage FileRepository::getCurrentElement() {
 	std::vector<Footage> arrayOfTapes = getAllFootage();
 	if (currentElement == arrayOfTapes.size()) 		currentElement = 0;
 	return *(arrayOfTapes.begin() + currentElement++);
+}
+
+void FileRepository::openList() {
+	std::string systemString = "open " + fileName;
+	const char* openListString = systemString.c_str();
+	system(openListString);
 }
 
 //void FileRepository::setPath(const std::string& newFileName) {

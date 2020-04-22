@@ -43,7 +43,10 @@ Date::Date() {
 
 std::string Date::toString() const {
 	std::string stringDate;
-	stringDate += std::to_string(day) + "-" + std::to_string(month) + "-" + std::to_string(year);
+	if (month / 10 == 0) stringDate += '0';
+	stringDate += std::to_string(month) + "-";
+	if (day / 10 == 0) stringDate += '0';
+	stringDate += std::to_string(day) + "-" + std::to_string(year);
 	return stringDate;
 }
 
@@ -149,9 +152,9 @@ std::istream &operator>>(std::istream &inputStream, Footage &footage) {
 		std::stringstream dateStream(ArrayOfParameters[DATE]);
 		Date newDate;
 		dateStream >> newDate;
-		std::string newTitle = ArrayOfParameters[TITLE], newType = ArrayOfParameters[TYPE].substr(1);
-		std::string newLink = ArrayOfParameters[LINK].substr(1);
-		std::stringstream accessCountStream(ArrayOfParameters[ACCESS_COUNT].substr(1));
+		std::string newTitle = ArrayOfParameters[TITLE], newType = ArrayOfParameters[TYPE];
+		std::string newLink = ArrayOfParameters[LINK];
+		std::stringstream accessCountStream(ArrayOfParameters[ACCESS_COUNT]);
 		int accessCount = 0;
 		accessCountStream >> accessCount;
 		footage = Footage(newTitle, newType, newDate, accessCount, newLink);
@@ -160,6 +163,6 @@ std::istream &operator>>(std::istream &inputStream, Footage &footage) {
 }
 
 std::ostream &operator<<(std::ostream &outputStream, const Footage &footage) {
-	outputStream << footage.title <<", " << footage.type << ", " << footage.date << ", " << footage.numberAccessed << ", " << footage.link << std::endl;
+	outputStream << footage.title <<',' << footage.type << ',' << footage.date << ',' << footage.numberAccessed << ',' << footage.link << std::endl;
 	return outputStream;
 }

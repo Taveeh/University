@@ -8,22 +8,16 @@
 #include <string>
 #include "FileRepository.h"
 #include "MemoryRepository.h"
-
-#define SIZE_OF_DATE 10
+#include "HtmlFileRepository.h"
+#include "Validator.h"
+#include "SQLRepository.h"
 class Service {
 private:
 	Repository* repository;
 
 	Repository* myListRepository;
 
-	/*
-	 * Validates if the added date is valid
-	 * Input:
-	 *  day, month, year - int
-	 * Output:
-	 *
-	 */
-	static bool validateNewDate(int day, int month, int year);
+
 public:
 //	/*
 //	 * Default constructor
@@ -109,7 +103,9 @@ public:
 	/*
 	 * Function that sets path for the file repository
 	 */
-	void setPath(const std::string& fileName);
+	void setPath(const std::string& fileName, const std::string&);
+
+	void openMyList();
 
 	~Service();
 };

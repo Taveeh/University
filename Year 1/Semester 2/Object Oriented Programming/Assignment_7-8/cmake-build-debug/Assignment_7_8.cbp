@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Exceptions.cpp">
+			<Option target="Assignment_7_8"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Exceptions.h">
+			<Option target="Assignment_7_8"/>
+		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/FileRepository.cpp">
 			<Option target="Assignment_7_8"/>
 		</Unit>
@@ -92,6 +98,12 @@
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Footage.h">
 			<Option target="Assignment_7_8"/>
 		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/HtmlFileRepository.cpp">
+			<Option target="Assignment_7_8"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/HtmlFileRepository.h">
+			<Option target="Assignment_7_8"/>
+		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/MemoryRepository.cpp">
 			<Option target="Assignment_7_8"/>
 		</Unit>
@@ -99,6 +111,12 @@
 			<Option target="Assignment_7_8"/>
 		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Repository.h">
+			<Option target="Assignment_7_8"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/SQLRepository.cpp">
+			<Option target="Assignment_7_8"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/SQLRepository.h">
 			<Option target="Assignment_7_8"/>
 		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Service.cpp">
@@ -135,6 +153,12 @@
 			<Option target="Assignment_7_8"/>
 		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/UI.h">
+			<Option target="Assignment_7_8"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Validator.cpp">
+			<Option target="Assignment_7_8"/>
+		</Unit>
+		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Validator.h">
 			<Option target="Assignment_7_8"/>
 		</Unit>
 		<Unit filename="/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/main.cpp">
