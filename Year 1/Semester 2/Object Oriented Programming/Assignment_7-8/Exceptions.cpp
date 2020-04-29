@@ -4,15 +4,15 @@
 
 #include "Exceptions.h"
 
-std::string RepositoryException::what() {
-	return exception_name;
+const char* RepositoryException::what() {
+	return exception_name.c_str();
 }
 
 RepositoryException::RepositoryException(const std::string & exceptionString):exception_name(exceptionString) {}
 
 ValidationException::ValidationException(const std::string &exception):exception_name(exception) {}
 
-std::string ValidationException::what() {
-	return exception_name;
+const char* ValidationException::what() {
+	return exception_name.c_str();
 }
 

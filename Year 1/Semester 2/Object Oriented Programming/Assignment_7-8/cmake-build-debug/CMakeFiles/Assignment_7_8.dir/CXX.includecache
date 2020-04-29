@@ -6,37 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Exceptions.cpp
+Exceptions.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Exceptions.h
+
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Exceptions.h
 exception
 -
 string
 -
-
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Footage.h
-string
--
-
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Repository.h
-Footage.h
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Footage.h
-Exceptions.h
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Exceptions.h
-vector
--
-
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/SQLRepository.cpp
-SQLRepository.h
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/SQLRepository.h
-sstream
--
-iostream
--
-
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/SQLRepository.h
-string
--
-sqlite3.h
--
-Repository.h
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/Repository.h
 

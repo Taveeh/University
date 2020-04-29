@@ -8,7 +8,7 @@
 #include <string>
 class Exception: public std::exception {
 public:
-	virtual std::string what() = 0;
+	virtual const char* what() = 0;
 };
 
 class RepositoryException: Exception {
@@ -17,7 +17,7 @@ private:
 public:
 	explicit RepositoryException(const std::string&);
 
-	std::string what() override;
+	const char* what() override;
 };
 
 class ValidationException: Exception {
@@ -25,6 +25,6 @@ class ValidationException: Exception {
 public:
 	explicit ValidationException(const std::string& exception);
 
-	std::string what() override;
+	const char* what() override;
 };
 #endif //ASSIGNMENT_7_8_EXCEPTIONS_H

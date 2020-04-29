@@ -16,15 +16,15 @@ SortedIndexedList::SortedIndexedList(Relation r) {
 		next[i] =  i + 1;
 	}
 	next[capacity - 1] = -1;
-}
+} // theta(n)
 
 int SortedIndexedList::size() const {
 	return sizeL;
-}
+} //theta 1
 
 bool SortedIndexedList::isEmpty() const {
 	return sizeL == 0;
-}
+} // theta 1
 
 TComp SortedIndexedList::getElement(int i) const{
 	if (i < 0 or i >= sizeL) {
@@ -40,7 +40,7 @@ TComp SortedIndexedList::getElement(int i) const{
 		throw std::exception();
 	}
 	return elems[current];
-}
+} //O(n)
 
 TComp SortedIndexedList::remove(int i) {
 	auto current = head;
@@ -60,13 +60,15 @@ TComp SortedIndexedList::remove(int i) {
 			current = next[current];
 			currentPoz++;
 		}
+		auto nextElem = next[current];
+		next[current] = firstEmpty;
 		firstEmpty = current;
 		element = elems[current];
-		next[prev] = next[current];
+		next[prev] = nextElem;
 		sizeL--;
 	}
 	return element;
-}
+} // O(n)
 
 int SortedIndexedList::search(TComp e) const {
 	auto current = head;
@@ -82,7 +84,7 @@ int SortedIndexedList::search(TComp e) const {
 		return -1;
 	}
 	return poz;
-}
+} // O(n)
 
 void SortedIndexedList::add(TComp e) {
 	if (firstEmpty == -1) {
@@ -129,18 +131,17 @@ void SortedIndexedList::add(TComp e) {
 			sizeL++;
 		}
 	}
-
-}
+} //O(n)
 
 ListIterator SortedIndexedList::iterator(){
 	return ListIterator(*this);
-}
+} // theta(1)
 
 //destructor
 SortedIndexedList::~SortedIndexedList() {
 	delete []elems;
 	delete []next;
-}
+} // theta(1)
 
 void SortedIndexedList::resize(int newCap) {
 //	capacity = newCap;
@@ -160,5 +161,26 @@ void SortedIndexedList::resize(int newCap) {
 	next = newNext;
 	firstEmpty = capacity;
 	capacity = newCap;
+}// theta(n)
 
+
+/*
+ *  BestCase: theta(1) - element is on first position
+ *  WorstCase: theta(n) - element is on last position
+ *  AverageCase: O(n)
+ */
+int SortedIndexedList::lastIndexOf(TComp elem) const {
+	auto current = head;
+	auto previous = head;
+	int index = -1;
+	while (current != -1 and rel(elems[current], elem)) {
+		previous = current;
+		current = next[current];
+		index++;
+	}
+	if (elems[previous] == elem) {
+		return index;
+	}else {
+		return -1;
+	}
 }

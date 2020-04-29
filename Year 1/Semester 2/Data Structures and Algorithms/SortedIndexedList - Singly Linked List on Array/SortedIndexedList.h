@@ -49,6 +49,10 @@ public:
 	// returns an iterator set to the first element of the list or invalid if the list is empty
 	ListIterator iterator();
 
+	//returns the last index of a given element
+	//if the element is not in the list it returns an invalid TPosition
+	int lastIndexOf(TComp elem) const;
+
 	//destructor
 	~SortedIndexedList();
 };
