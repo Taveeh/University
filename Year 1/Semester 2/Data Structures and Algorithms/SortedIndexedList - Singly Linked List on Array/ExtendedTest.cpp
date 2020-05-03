@@ -151,6 +151,12 @@ void testAddAndSearch(Relation r) {
 	int m = 3;
 	int n = populate(list, vMin, vMax, s, m);
 	assert(!list.isEmpty());
+	ListIterator iterator = list.iterator();
+	std::cout << list.size() << std::endl;
+	while (iterator.valid()) {
+		std::cout << iterator.getCurrent() << ' ';
+		iterator.next();
+	}
 	assert(list.size() == n);
 
     //we can't find values outside the interval or on invalid positions

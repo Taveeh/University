@@ -1,0 +1,14 @@
+#!/usr/local/bin/bash
+
+nrFound=0
+for file in $(find utils/dir | grep "\.c$"); do
+	nrLines=$(cat "$file" | wc -l)
+	if [ $nrLines -gt 500 ]; then
+		nrFound=$(($nrFound + 1))
+		echo "$file"
+	fi
+	if [ $nrFound -eq 2 ]; then
+		exit 0
+	fi
+done
+

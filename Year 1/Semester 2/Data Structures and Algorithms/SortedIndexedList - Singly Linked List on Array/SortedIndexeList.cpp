@@ -90,47 +90,71 @@ void SortedIndexedList::add(TComp e) {
 	if (firstEmpty == -1) {
 		resize(capacity * 2);
 	}
-	if (head == -1) {
+	if (sizeL == 0) {
 		int newPos = firstEmpty;
 		elems[newPos] = e;
 		firstEmpty = next[firstEmpty];
 		next[newPos] = head;
 		head = newPos;
 		sizeL++;
-		return;
-	}
-	auto current = head;
-	int prev = -1;
-	while (current != -1 and rel(elems[current], e)) {
-		prev = current;
-		current = next[current];
-	}
-	if (current == -1) {
-		if (prev != -1) {
-			int newPos = firstEmpty;
+	}else {
+		int current = head;
+		int currentPos = 0;
+		while (current != -1 and currentPos < sizeL and rel(elems[current], e)) {
+			current = next[current];
+			currentPos++;
+		}
+		if (current != -1) {
+			int nextPos = firstEmpty;
 			firstEmpty = next[firstEmpty];
-			next[prev] = newPos;
-			next[newPos] = -1;
-			elems[newPos] = e;
+			elems[current] = e;
+			next[nextPos] = next[current];
+			next[current] = nextPos;
 			sizeL++;
 		}
-	} else {
-		if (prev == -1) {
-			int newPos = firstEmpty;
-			firstEmpty = next[firstEmpty];
-			elems[newPos] = e;
-			next[newPos] = head;
-			head = newPos;
-			sizeL++;
-		} else {
-			int newPos = firstEmpty;
-			firstEmpty = next[firstEmpty];
-			elems[newPos] = e;
-			next[prev] = newPos;
-			next[newPos] = current;
-			sizeL++;
-		}
+
 	}
+//	if (head == -1) {
+//		int newPos = firstEmpty;
+//		elems[newPos] = e;
+//		firstEmpty = next[firstEmpty];
+//		next[newPos] = head;
+//		head = newPos;
+//		sizeL++;
+//		return;
+//	}
+//	auto current = head;
+//	int prev = -1;
+//	while (current != -1 and rel(elems[current], e)) {
+//		prev = current;
+//		current = next[current];
+//	}
+//	if (current == -1) {
+//		if (prev != -1) {
+//			int newPos = firstEmpty;
+//			firstEmpty = next[firstEmpty];
+//			next[prev] = newPos;
+//			next[newPos] = -1;
+//			elems[newPos] = e;
+//			sizeL++;
+//		}
+//	} else {
+//		if (prev == -1) {
+//			int newPos = firstEmpty;
+//			firstEmpty = next[firstEmpty];
+//			elems[newPos] = e;
+//			next[newPos] = head;
+//			head = newPos;
+//			sizeL++;
+//		} else {
+//			int newPos = firstEmpty;
+//			firstEmpty = next[firstEmpty];
+//			elems[newPos] = e;
+//			next[prev] = newPos;
+//			next[newPos] = current;
+//			sizeL++;
+//		}
+//	}
 } //O(n)
 
 ListIterator SortedIndexedList::iterator(){
