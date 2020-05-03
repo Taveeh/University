@@ -1,6 +1,0 @@
-#!/usr/local/bin/bash
-
-for file in $(find utils/dir | grep "\.log$"); do
-	echo $(cat "$file" | sort) >& "$file"
-done
-
