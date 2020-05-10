@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/taveeh/Downloads/Bag/App.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/App.cpp
 Bag.h
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 ShortTest.h
-/Users/taveeh/Downloads/Bag/ShortTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ShortTest.h
 ExtendedTest.h
-/Users/taveeh/Downloads/Bag/ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ExtendedTest.h
 iostream
 -
 
-/Users/taveeh/Downloads/Bag/Bag.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.cpp
 Bag.h
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 BagIterator.h
-/Users/taveeh/Downloads/Bag/BagIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/BagIterator.h
 exception
 -
 iostream
@@ -28,29 +28,29 @@ iostream
 cmath
 -
 
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 
-/Users/taveeh/Downloads/Bag/BagIterator.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/BagIterator.cpp
 exception
 -
 BagIterator.h
-/Users/taveeh/Downloads/Bag/BagIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/BagIterator.h
 Bag.h
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 
-/Users/taveeh/Downloads/Bag/BagIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/BagIterator.h
 Bag.h
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 
-/Users/taveeh/Downloads/Bag/ExtendedTest.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ExtendedTest.cpp
 assert.h
 -
 Bag.h
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 ExtendedTest.h
-/Users/taveeh/Downloads/Bag/ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ExtendedTest.h
 BagIterator.h
-/Users/taveeh/Downloads/Bag/BagIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/BagIterator.h
 iostream
 -
 vector
@@ -58,17 +58,17 @@ vector
 exception
 -
 
-/Users/taveeh/Downloads/Bag/ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ExtendedTest.h
 
-/Users/taveeh/Downloads/Bag/ShortTest.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ShortTest.cpp
 ShortTest.h
-/Users/taveeh/Downloads/Bag/ShortTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ShortTest.h
 assert.h
 -
 Bag.h
-/Users/taveeh/Downloads/Bag/Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/Bag.h
 BagIterator.h
-/Users/taveeh/Downloads/Bag/BagIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/BagIterator.h
 
-/Users/taveeh/Downloads/Bag/ShortTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/ShortTest.h
 

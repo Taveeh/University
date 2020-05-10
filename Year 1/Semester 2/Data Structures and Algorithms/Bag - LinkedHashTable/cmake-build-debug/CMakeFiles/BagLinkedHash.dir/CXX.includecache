@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.cpp
+Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.h
+BagIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/BagIterator.h
+exception
+-
+iostream
+-
+cmath
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/BagIterator.h
+Bag.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.h
+

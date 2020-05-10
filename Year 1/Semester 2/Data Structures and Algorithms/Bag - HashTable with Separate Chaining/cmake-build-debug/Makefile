@@ -48,10 +48,10 @@ RM = "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/taveeh/Downloads/Bag
+CMAKE_SOURCE_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/taveeh/Downloads/Bag/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/taveeh/Downloads/Bag/cmake-build-debug/CMakeFiles /Users/taveeh/Downloads/Bag/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/cmake-build-debug/CMakeFiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/taveeh/Downloads/Bag/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - HashTable with Separate Chaining/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Bag
+# Target rules for targets named BagSeparateChaining
 
 # Build rule for target.
-Bag: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Bag
-.PHONY : Bag
+BagSeparateChaining: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BagSeparateChaining
+.PHONY : BagSeparateChaining
 
 # fast build rule for target.
-Bag/fast:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/build
-.PHONY : Bag/fast
+BagSeparateChaining/fast:
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/build
+.PHONY : BagSeparateChaining/fast
 
 App.o: App.cpp.o
 
@@ -129,7 +129,7 @@ App.o: App.cpp.o
 
 # target to build an object file
 App.cpp.o:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/App.cpp.o
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/App.cpp.o
 .PHONY : App.cpp.o
 
 App.i: App.cpp.i
@@ -138,7 +138,7 @@ App.i: App.cpp.i
 
 # target to preprocess a source file
 App.cpp.i:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/App.cpp.i
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/App.cpp.i
 .PHONY : App.cpp.i
 
 App.s: App.cpp.s
@@ -147,7 +147,7 @@ App.s: App.cpp.s
 
 # target to generate assembly for a file
 App.cpp.s:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/App.cpp.s
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/App.cpp.s
 .PHONY : App.cpp.s
 
 Bag.o: Bag.cpp.o
@@ -156,7 +156,7 @@ Bag.o: Bag.cpp.o
 
 # target to build an object file
 Bag.cpp.o:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/Bag.cpp.o
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/Bag.cpp.o
 .PHONY : Bag.cpp.o
 
 Bag.i: Bag.cpp.i
@@ -165,7 +165,7 @@ Bag.i: Bag.cpp.i
 
 # target to preprocess a source file
 Bag.cpp.i:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/Bag.cpp.i
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/Bag.cpp.i
 .PHONY : Bag.cpp.i
 
 Bag.s: Bag.cpp.s
@@ -174,7 +174,7 @@ Bag.s: Bag.cpp.s
 
 # target to generate assembly for a file
 Bag.cpp.s:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/Bag.cpp.s
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/Bag.cpp.s
 .PHONY : Bag.cpp.s
 
 BagIterator.o: BagIterator.cpp.o
@@ -183,7 +183,7 @@ BagIterator.o: BagIterator.cpp.o
 
 # target to build an object file
 BagIterator.cpp.o:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/BagIterator.cpp.o
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/BagIterator.cpp.o
 .PHONY : BagIterator.cpp.o
 
 BagIterator.i: BagIterator.cpp.i
@@ -192,7 +192,7 @@ BagIterator.i: BagIterator.cpp.i
 
 # target to preprocess a source file
 BagIterator.cpp.i:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/BagIterator.cpp.i
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/BagIterator.cpp.i
 .PHONY : BagIterator.cpp.i
 
 BagIterator.s: BagIterator.cpp.s
@@ -201,7 +201,7 @@ BagIterator.s: BagIterator.cpp.s
 
 # target to generate assembly for a file
 BagIterator.cpp.s:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/BagIterator.cpp.s
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/BagIterator.cpp.s
 .PHONY : BagIterator.cpp.s
 
 ExtendedTest.o: ExtendedTest.cpp.o
@@ -210,7 +210,7 @@ ExtendedTest.o: ExtendedTest.cpp.o
 
 # target to build an object file
 ExtendedTest.cpp.o:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/ExtendedTest.cpp.o
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/ExtendedTest.cpp.o
 .PHONY : ExtendedTest.cpp.o
 
 ExtendedTest.i: ExtendedTest.cpp.i
@@ -219,7 +219,7 @@ ExtendedTest.i: ExtendedTest.cpp.i
 
 # target to preprocess a source file
 ExtendedTest.cpp.i:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/ExtendedTest.cpp.i
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/ExtendedTest.cpp.i
 .PHONY : ExtendedTest.cpp.i
 
 ExtendedTest.s: ExtendedTest.cpp.s
@@ -228,7 +228,7 @@ ExtendedTest.s: ExtendedTest.cpp.s
 
 # target to generate assembly for a file
 ExtendedTest.cpp.s:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/ExtendedTest.cpp.s
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/ExtendedTest.cpp.s
 .PHONY : ExtendedTest.cpp.s
 
 ShortTest.o: ShortTest.cpp.o
@@ -237,7 +237,7 @@ ShortTest.o: ShortTest.cpp.o
 
 # target to build an object file
 ShortTest.cpp.o:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/ShortTest.cpp.o
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/ShortTest.cpp.o
 .PHONY : ShortTest.cpp.o
 
 ShortTest.i: ShortTest.cpp.i
@@ -246,7 +246,7 @@ ShortTest.i: ShortTest.cpp.i
 
 # target to preprocess a source file
 ShortTest.cpp.i:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/ShortTest.cpp.i
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/ShortTest.cpp.i
 .PHONY : ShortTest.cpp.i
 
 ShortTest.s: ShortTest.cpp.s
@@ -255,7 +255,7 @@ ShortTest.s: ShortTest.cpp.s
 
 # target to generate assembly for a file
 ShortTest.cpp.s:
-	$(MAKE) -f CMakeFiles/Bag.dir/build.make CMakeFiles/Bag.dir/ShortTest.cpp.s
+	$(MAKE) -f CMakeFiles/BagSeparateChaining.dir/build.make CMakeFiles/BagSeparateChaining.dir/ShortTest.cpp.s
 .PHONY : ShortTest.cpp.s
 
 # Help Target
@@ -266,7 +266,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Bag"
+	@echo "... BagSeparateChaining"
 	@echo "... App.o"
 	@echo "... App.i"
 	@echo "... App.s"

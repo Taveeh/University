@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/HospitalDepartment.h
+string
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/Surgery.cpp
+Surgery.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/Surgery.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/Surgery.h
+HospitalDepartment.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/HospitalDepartment.h
+

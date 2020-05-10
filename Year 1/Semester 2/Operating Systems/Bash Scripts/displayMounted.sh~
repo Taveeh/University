@@ -1,0 +1,9 @@
+#!/usr/local/bin/bash
+
+# Display all the mounted file systems who are either smaller than than 1GB or have less than 20% free space.
+
+files=$(cat utils/df.fake | awk '{print $2}')
+
+echo $files
+
+
