@@ -487,33 +487,6 @@ TestService.cpp.s:
 	$(MAKE) -f CMakeFiles/Assignment_9.dir/build.make CMakeFiles/Assignment_9.dir/TestService.cpp.s
 .PHONY : TestService.cpp.s
 
-UI.o: UI.cpp.o
-
-.PHONY : UI.o
-
-# target to build an object file
-UI.cpp.o:
-	$(MAKE) -f CMakeFiles/Assignment_9.dir/build.make CMakeFiles/Assignment_9.dir/UI.cpp.o
-.PHONY : UI.cpp.o
-
-UI.i: UI.cpp.i
-
-.PHONY : UI.i
-
-# target to preprocess a source file
-UI.cpp.i:
-	$(MAKE) -f CMakeFiles/Assignment_9.dir/build.make CMakeFiles/Assignment_9.dir/UI.cpp.i
-.PHONY : UI.cpp.i
-
-UI.s: UI.cpp.s
-
-.PHONY : UI.s
-
-# target to generate assembly for a file
-UI.cpp.s:
-	$(MAKE) -f CMakeFiles/Assignment_9.dir/build.make CMakeFiles/Assignment_9.dir/UI.cpp.s
-.PHONY : UI.cpp.s
-
 Validator.o: Validator.cpp.o
 
 .PHONY : Validator.o
@@ -617,9 +590,6 @@ help:
 	@echo "... TestService.o"
 	@echo "... TestService.i"
 	@echo "... TestService.s"
-	@echo "... UI.o"
-	@echo "... UI.i"
-	@echo "... UI.s"
 	@echo "... Validator.o"
 	@echo "... Validator.i"
 	@echo "... Validator.s"

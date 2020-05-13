@@ -1,0 +1,391 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/Footage.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/Footage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/Footage.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 18/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "Footage.h"
+        -:    6:#include <sstream>
+        -:    7:#include <utility>
+        -:    8:#define MAX_PARAMETERS_FOOTAGE 5
+        -:    9:#define TITLE 0
+        -:   10:#define TYPE 1
+        -:   11:#define DATE 2
+        -:   12:#define ACCESS_COUNT 3
+        -:   13:#define LINK 4
+      286:   14:Date::Date(int day, int month, int year):day{day}, month{month}, year{year} {
+      143:   14-block  0
+      143:   14-block  1
+        -:   15:
+      286:   16:}
+      143:   16-block  0
+      143:   16-block  1
+        -:   17:
+        5:   18:int Date::getDay() const {
+        5:   18-block  0
+        5:   19:	return day;
+        5:   19-block  0
+        -:   20:}
+        -:   21:
+       96:   22:int Date::getMonth() const {
+       96:   22-block  0
+       96:   23:	return month;
+       96:   23-block  0
+        -:   24:}
+        -:   25:
+      110:   26:int Date::getYear() const {
+      110:   26-block  0
+      110:   27:	return year;
+      110:   27-block  0
+        -:   28:}
+        -:   29:
+       29:   30:bool operator<(const Date &compareDate1, const Date &compareDate2) {
+       29:   30-block  0
+       29:   31:	if (compareDate1.getYear() < compareDate2.getYear()) return true;
+       29:   31-block  0
+        3:   31-block  1
+       26:   32:	if (compareDate1.getYear() > compareDate2.getYear()) return false;
+       26:   32-block  0
+        2:   32-block  1
+       24:   33:	if (compareDate1.getMonth() < compareDate1.getMonth()) return true;
+       24:   33-block  0
+    $$$$$:   33-block  1
+       24:   34:	if (compareDate1.getMonth() > compareDate2.getMonth()) return false;
+       24:   34-block  0
+       22:   34-block  1
+        2:   35:	return compareDate1.getDay() <= compareDate1.getDay();
+        2:   35-block  0
+       29:   36:}
+       29:   36-block  0
+        -:   37:
+      474:   38:Date::Date() {
+      237:   38-block  0
+      237:   38-block  1
+      237:   39:	day = 0;
+      237:   40:	year = 0;
+      237:   41:	month = 0;
+      474:   42:}
+      237:   42-block  0
+      237:   42-block  1
+        -:   43:
+        2:   44:std::string Date::toString() const {
+        2:   44-block  0
+        2:   45:	std::string stringDate;
+        2:   46:	if (month / 10 == 0) stringDate += '0';
+        2:   46-block  0
+        2:   46-block  1
+        2:   46-block  2
+        2:   47:	stringDate += std::to_string(month) + "-";
+        2:   47-block  0
+        2:   47-block  1
+        2:   47-block  2
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+        2:   48:	if (day / 10 == 0) stringDate += '0';
+        2:   48-block  0
+        2:   48-block  1
+        2:   48-block  2
+        2:   49:	stringDate += std::to_string(day) + "-" + std::to_string(year);
+        2:   49-block  0
+        2:   49-block  1
+        2:   49-block  2
+        2:   49-block  3
+        2:   49-block  4
+    $$$$$:   49-block  5
+    $$$$$:   49-block  6
+    $$$$$:   49-block  7
+    $$$$$:   49-block  8
+        2:   50:	return stringDate;
+        2:   51:}
+    $$$$$:   51-block  0
+    $$$$$:   51-block  1
+        2:   51-block  2
+    $$$$$:   51-block  3
+    $$$$$:   51-block  4
+    $$$$$:   51-block  5
+    $$$$$:   51-block  6
+        2:   51-block  7
+    $$$$$:   51-block  8
+    $$$$$:   51-block  9
+        -:   52:
+       38:   53:std::istream &operator>>(std::istream &inputStream, Date &date) {
+       38:   53-block  0
+       38:   54:	std::string dateString;
+       38:   55:	inputStream >> dateString;
+       38:   55-block  0
+       38:   56:	std::string monthString = dateString.substr(0, 2);
+       38:   56-block  0
+       38:   57:	std::string dayString = dateString.substr(3, 2);
+       38:   57-block  0
+       38:   58:	std::string yearString = dateString.substr(6, 4);
+       38:   58-block  0
+       38:   59:	std::stringstream convertDayStringToInt(dayString);
+       38:   59-block  0
+       38:   60:	std::stringstream convertMonthStringToInt(monthString);
+       38:   60-block  0
+       38:   61:	std::stringstream convertYearStringToInt(yearString);
+       38:   61-block  0
+       38:   62:	int newDay = 0, newMonth = 0, newYear = 0;
+       38:   63:	convertDayStringToInt >> newDay;
+       38:   63-block  0
+       38:   64:	convertMonthStringToInt >> newMonth;
+       38:   64-block  0
+       38:   65:	convertYearStringToInt >> newYear;
+       38:   65-block  0
+       38:   66:	date = Date(newDay, newMonth, newYear);
+       38:   66-block  0
+       38:   67:	return inputStream;
+       38:   68:}
+       38:   68-block  0
+    $$$$$:   68-block  1
+    $$$$$:   68-block  2
+    $$$$$:   68-block  3
+    $$$$$:   68-block  4
+    $$$$$:   68-block  5
+    $$$$$:   68-block  6
+    $$$$$:   68-block  7
+    $$$$$:   68-block  8
+    $$$$$:   68-block  9
+    $$$$$:   68-block 10
+    $$$$$:   68-block 11
+    $$$$$:   68-block 12
+    $$$$$:   68-block 13
+    $$$$$:   68-block 14
+        -:   69:
+       41:   70:std::ostream &operator<<(std::ostream &outputStream, const Date &date) {
+       41:   70-block  0
+       41:   71:	if (date.month / 10 == 0) {
+       41:   71-block  0
+       41:   72:		outputStream << 0;
+       41:   73:	}
+       41:   73-block  0
+       41:   74:	outputStream << date.month << '-';
+       41:   75:	if (date.day / 10 == 0) {
+       41:   75-block  0
+       41:   76:		outputStream << 0;
+       41:   77:	}
+       41:   77-block  0
+       41:   78:	outputStream << date.day << '-' << date.year;
+       41:   79:	return outputStream;
+       41:   79-block  0
+        -:   80:}
+        -:   81:
+        -:   82:
+      168:   83:Footage::Footage(std::string title, std::string type, Date date, int numberAccessed, std::string link):title{std::move(title)}, type{std::move(type)}, date{date}, numberAccessed{numberAccessed}, link{std::move(link)} {
+       84:   83-block  0
+       84:   83-block  1
+        -:   84:
+      168:   85:}
+       84:   85-block  0
+       84:   85-block  1
+        -:   86:
+        1:   87:void Footage::changeType(std::string newType) {
+        1:   87-block  0
+        1:   88:	type = std::move(newType);
+        1:   89:}
+        1:   89-block  0
+        -:   90:
+        1:   91:void Footage::changeDate(Date newDate) {
+        1:   91-block  0
+        1:   92:	date = newDate;
+        1:   93:}
+        1:   93-block  0
+        -:   94:
+        1:   95:void Footage::changeAccessCount(int newAccessCount) {
+        1:   95-block  0
+        1:   96:	numberAccessed = newAccessCount;
+        1:   97:}
+        1:   97-block  0
+        -:   98:
+        1:   99:void Footage::changeLink(std::string newLink) {
+        1:   99-block  0
+        1:  100:	link = std::move(newLink);
+        1:  101:}
+        1:  101-block  0
+        -:  102:
+       66:  103:std::string Footage::getTitle() const {
+       66:  103-block  0
+       66:  104:	return title;
+       66:  104-block  0
+        -:  105:}
+        -:  106:
+        6:  107:std::string Footage::getType() const {
+        6:  107-block  0
+        6:  108:	return type;
+        6:  108-block  0
+        -:  109:}
+        -:  110:
+        1:  111:Date Footage::getDate() const {
+        1:  111-block  0
+        1:  112:	return date;
+        1:  112-block  0
+        -:  113:}
+        -:  114:
+        5:  115:int Footage::getAccessCount() const {
+        5:  115-block  0
+        5:  116:	return numberAccessed;
+        5:  116-block  0
+        -:  117:}
+        -:  118:
+        1:  119:std::string Footage::getLink() const {
+        1:  119-block  0
+        1:  120:	return link;
+        1:  120-block  0
+        -:  121:}
+        -:  122:
+      198:  123:Footage::Footage() {
+       99:  123-block  0
+       99:  123-block  1
+       99:  123-block  2
+       99:  124:	title = "";
+       99:  124-block  0
+       99:  125:	type = "";
+       99:  125-block  0
+       99:  126:	date = Date();
+       99:  126-block  0
+       99:  127:	numberAccessed = 0;
+       99:  128:	link = "";
+       99:  128-block  0
+      198:  129:}
+       99:  129-block  0
+    $$$$$:  129-block  1
+    $$$$$:  129-block  2
+    $$$$$:  129-block  3
+    $$$$$:  129-block  4
+       99:  129-block  5
+        -:  130:
+        1:  131:std::string Footage::toString() const {
+        1:  131-block  0
+        1:  132:	std::string stringFootage;
+        1:  133:	stringFootage += "Title: " + title + " Type: " + type + " Date: " + date.toString() + " Access count: " + std::to_string(numberAccessed) + " Link: " + link;
+        1:  133-block  0
+        1:  133-block  1
+        1:  133-block  2
+        1:  133-block  3
+        1:  133-block  4
+        1:  133-block  5
+        1:  133-block  6
+        1:  133-block  7
+        1:  133-block  8
+        1:  133-block  9
+        1:  133-block 10
+        1:  133-block 11
+    $$$$$:  133-block 12
+    $$$$$:  133-block 13
+    $$$$$:  133-block 14
+    $$$$$:  133-block 15
+    $$$$$:  133-block 16
+    $$$$$:  133-block 17
+    $$$$$:  133-block 18
+    $$$$$:  133-block 19
+    $$$$$:  133-block 20
+    $$$$$:  133-block 21
+    $$$$$:  133-block 22
+        1:  134:	return stringFootage;
+        1:  135:}
+        1:  135-block  0
+    $$$$$:  135-block  1
+    $$$$$:  135-block  2
+    $$$$$:  135-block  3
+    $$$$$:  135-block  4
+    $$$$$:  135-block  5
+    $$$$$:  135-block  6
+    $$$$$:  135-block  7
+    $$$$$:  135-block  8
+    $$$$$:  135-block  9
+    $$$$$:  135-block 10
+    $$$$$:  135-block 11
+    $$$$$:  135-block 12
+        1:  135-block 13
+    $$$$$:  135-block 14
+    $$$$$:  135-block 15
+        -:  136:
+       86:  137:std::istream &operator>>(std::istream &inputStream, Footage &footage) {
+       86:  137-block  0
+       86:  138:	std::string footageLine;
+       86:  139:	getline(inputStream, footageLine);
+       86:  139-block  0
+       86:  140:	if (footageLine.empty()) {
+       86:  140-block  0
+       48:  141:		footage = Footage();
+       48:  141-block  0
+       48:  142:	}else {
+       48:  142-block  0
+      190:  143:		std::string ArrayOfParameters[MAX_PARAMETERS_FOOTAGE];
+       38:  143-block  0
+      190:  143-block  1
+       38:  144:		int currentCommand = 0;
+     1000:  145:		for (auto commandParametersElement: footageLine) {
+       38:  145-block  0
+     1000:  145-block  1
+      962:  145-block  2
+      962:  145-block  3
+      962:  146:			if (commandParametersElement != ',') {
+      962:  146-block  0
+      810:  147:				ArrayOfParameters[currentCommand] += commandParametersElement;
+      810:  147-block  0
+      810:  148:			} else {
+      810:  148-block  0
+      152:  149:				currentCommand++;
+      152:  149-block  0
+        -:  150:			}
+        -:  151:		}
+       38:  152:		std::stringstream dateStream(ArrayOfParameters[DATE]);
+       38:  152-block  0
+       38:  153:		Date newDate;
+       38:  153-block  0
+       38:  154:		dateStream >> newDate;
+       38:  154-block  0
+       38:  155:		std::string newTitle = ArrayOfParameters[TITLE], newType = ArrayOfParameters[TYPE];
+       38:  155-block  0
+       38:  155-block  1
+       38:  156:		std::string newLink = ArrayOfParameters[LINK];
+       38:  156-block  0
+       38:  157:		std::stringstream accessCountStream(ArrayOfParameters[ACCESS_COUNT]);
+       38:  157-block  0
+       38:  158:		int accessCount = 0;
+       38:  159:		accessCountStream >> accessCount;
+       38:  159-block  0
+       38:  160:		footage = Footage(newTitle, newType, newDate, accessCount, newLink);
+       38:  160-block  0
+       38:  160-block  1
+       38:  160-block  2
+       38:  160-block  3
+    $$$$$:  160-block  4
+    $$$$$:  160-block  5
+    $$$$$:  160-block  6
+      190:  161:	}
+       38:  161-block  0
+      190:  161-block  1
+    $$$$$:  161-block  2
+    $$$$$:  161-block  3
+    $$$$$:  161-block  4
+    $$$$$:  161-block  5
+    $$$$$:  161-block  6
+    $$$$$:  161-block  7
+    $$$$$:  161-block  8
+    $$$$$:  161-block  9
+       86:  162:	return inputStream;
+       86:  163:}
+    $$$$$:  163-block  0
+    $$$$$:  163-block  1
+    $$$$$:  163-block  2
+    $$$$$:  163-block  3
+    $$$$$:  163-block  4
+    $$$$$:  163-block  5
+    $$$$$:  163-block  6
+    $$$$$:  163-block  7
+    $$$$$:  163-block  8
+       86:  163-block  9
+    $$$$$:  163-block 10
+    $$$$$:  163-block 11
+        -:  164:
+       41:  165:std::ostream &operator<<(std::ostream &outputStream, const Footage &footage) {
+       41:  165-block  0
+       41:  166:	outputStream << footage.title <<',' << footage.type << ',' << footage.date << ',' << footage.numberAccessed << ',' << footage.link << std::endl;
+       41:  167:	return outputStream;
+       41:  167-block  0
+        -:  168:}

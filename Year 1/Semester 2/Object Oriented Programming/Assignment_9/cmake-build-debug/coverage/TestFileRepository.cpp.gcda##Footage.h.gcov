@@ -1,0 +1,200 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/Footage.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/TestFileRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/TestFileRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 18/03/2020.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef ASSIGNMENT_5_6_FOOTAGE_H
+        -:    6:#define ASSIGNMENT_5_6_FOOTAGE_H
+        -:    7:
+        -:    8:#include <string>
+        -:    9:
+        -:   10:class ValidatorFootage;
+        -:   11:class Date {
+        -:   12:private:
+        -:   13:	int day, month, year;
+        -:   14:public:
+        -:   15:	/*
+        -:   16:	 * Default constructor
+        -:   17:	 */
+        -:   18:	Date();
+        -:   19:
+        -:   20:	/*
+        -:   21:	 * Constructor
+        -:   22:	 */
+        -:   23:	Date(int day, int month, int year);
+        -:   24:	/*
+        -:   25:	 * Function that gets the day of the date
+        -:   26:	 * Input:
+        -:   27:	 * Output:
+        -:   28:	 * int - current day
+        -:   29:	 */
+        -:   30:	[[nodiscard]] int getDay() const;
+        -:   31:
+        -:   32:	/*
+        -:   33:	 * Function that gets the month of the date
+        -:   34:	 * Input:
+        -:   35:	 * Output:
+        -:   36:	 * int - current month
+        -:   37:	 */
+        -:   38:	[[nodiscard]] int getMonth() const;
+        -:   39:
+        -:   40:	/*
+        -:   41:	 * Function that gets the year of the date
+        -:   42:	 * Input:
+        -:   43:	 * Output:
+        -:   44:	 * int - current year
+        -:   45:	 */
+        -:   46:	[[nodiscard]] int getYear() const;
+        -:   47:
+        -:   48:	/*
+        -:   49:	 * Operator < for comparing dates
+        -:   50:	 * Input:
+        -:   51:	 * compareDate1, compareDate2 - const Date&
+        -:   52:	 * Output: bool
+        -:   53:	 * true if compareDate1 < compareDate2
+        -:   54:	 * false otherwise
+        -:   55:	 */
+        -:   56:	friend bool operator<(const Date& compareDate1, const Date& compareDate2);
+        -:   57:
+        -:   58:	/*
+        -:   59:	 * Returns the string for a class
+        -:   60:	 * Input:
+        -:   61:	 * Output:
+        -:   62:	 * std::string
+        -:   63:	 */
+        -:   64:	[[nodiscard]] std::string toString() const;
+        -:   65:
+        -:   66:	friend std::istream& operator>>(std::istream& inputStream, Date& date);
+        -:   67:
+        -:   68:	friend std::ostream& operator<<(std::ostream& outputStream, const Date& date);
+        -:   69:};
+        -:   70:
+    #####:   71:class Footage {
+    $$$$$:   71-block  0
+    $$$$$:   71-block  1
+    $$$$$:   71-block  2
+    $$$$$:   71-block  3
+    $$$$$:   71-block  4
+    $$$$$:   71-block  5
+        -:   72:	friend class ValidatorFootage;
+        -:   73:private:
+        -:   74:	std::string title;
+        -:   75:	std::string type;
+        -:   76:	Date date;
+        -:   77:	int numberAccessed;
+        -:   78:	std::string link;
+        -:   79:public:
+        -:   80:	/*
+        -:   81:	 * Default constructor
+        -:   82:	 */
+        -:   83:	Footage();
+        -:   84:
+        -:   85:	/*
+        -:   86:	 * Constructor
+        -:   87:	 */
+        -:   88:	Footage(std::string title, std::string type, Date date, int numberAccessed, std::string link);
+        -:   89:
+        -:   90:	/*
+        -:   91:	 * Function that changes type of footage
+        -:   92:	 * Input:
+        -:   93:	 * newType - std::string
+        -:   94:	 */
+        -:   95:	void changeType(std::string newType);
+        -:   96:
+        -:   97:	/*
+        -:   98:	 * Function that changes date of footage
+        -:   99:	 * Input:
+        -:  100:	 * newDate - Date
+        -:  101:	 */
+        -:  102:	void changeDate(Date newDate);
+        -:  103:
+        -:  104:	/*
+        -:  105:	 * Function that changes the access count of footage
+        -:  106:	 * Input:
+        -:  107:	 * newAccessCount - int
+        -:  108:	 */
+        -:  109:	void changeAccessCount(int newAccessCount);
+        -:  110:
+        -:  111:	/*
+        -:  112:	 * Function that changes the link of the footage
+        -:  113:	 * Input:
+        -:  114:	 * link - std::string
+        -:  115:	 */
+        -:  116:	void changeLink(std::string link);
+        -:  117:
+        -:  118:	/*
+        -:  119:	 * Function that gets the title of the Footage
+        -:  120:	 * Input:
+        -:  121:	 * Output:
+        -:  122:	 * title - std::string
+        -:  123:	 */
+        -:  124:	[[nodiscard]] std::string getTitle() const;
+        -:  125:
+        -:  126:	/*
+        -:  127:	* Function that gets the type of the Footage
+        -:  128:	* Input:
+        -:  129:	* Output:
+        -:  130:	* type - std::string
+        -:  131:	*/
+        -:  132:	[[nodiscard]] std::string getType() const;
+        -:  133:
+        -:  134:	/*
+        -:  135:	 * Function that gets the date of the Footage
+        -:  136:	 * Input:
+        -:  137:	 * Output:
+        -:  138:	 * date - Date
+        -:  139:	 */
+        -:  140:	[[nodiscard]] Date getDate() const;
+        -:  141:
+        -:  142:	/*
+        -:  143:	 * Function that gets the access count of the Footage
+        -:  144:	 * Input:
+        -:  145:	 * Output:
+        -:  146:	 * access count - int
+        -:  147:	 */
+        -:  148:	[[nodiscard]] int getAccessCount() const;
+        -:  149:
+        -:  150:	/*
+        -:  151:	 * Function that gets the link of the Footage
+        -:  152:	 * Input:
+        -:  153:	 * Output:
+        -:  154:	 * link - std::string
+        -:  155:	 */
+        -:  156:	[[nodiscard]] std::string getLink() const;
+        -:  157:
+        -:  158:	/*
+        -:  159:	 * Returns a string regarding the footage
+        -:  160:	 * Input:
+        -:  161:	 * Ouput: std::string
+        -:  162:	 */
+        -:  163:	[[nodiscard]] std::string toString() const;
+        -:  164:
+        -:  165:	/*
+        -:  166:	 * Reads a whole footage from the stream
+        -:  167:	 * Input:
+        -:  168:	 *  std::istream - input stream
+        -:  169:	 *  Footage& - footage to be read
+        -:  170:	 * Output:
+        -:  171:	 *  std::istream
+        -:  172:	 */
+        -:  173:	friend std::istream& operator>>(std::istream& inputStream, Footage& footage);
+        -:  174:	/*
+        -:  175:	 * Writes a footage to the stream
+        -:  176:	 * Input:
+        -:  177:	 *  std::ostream& - output stream
+        -:  178:	 *  const Footage& - footage to be written
+        -:  179:	 * Output:
+        -:  180:	 *  std::ostream&
+        -:  181:	 */
+        -:  182:	friend std::ostream& operator<<(std::ostream& outputStream, const Footage& footage);
+        -:  183:};
+        -:  184:
+        -:  185:class ValidatorFootage {
+        -:  186:
+        -:  187:};
+        -:  188:
+        -:  189:#endif //ASSIGNMENT_5_6_FOOTAGE_H

@@ -1,5 +1,5 @@
-#include "UI.h"
 #include "GUI.h"
+#include <QtWidgets/QApplication>
 #include "TestFootage.h"
 #include "TestMemoryRepository.h"
 #include "TestService.h"
@@ -8,13 +8,11 @@ void callTestFunctions();
 using namespace std;
 int main(int argc, char** argv) {
 //	callTestFunctions();
+	QApplication application(argc, argv);
 	Service service = Service();
-	GUI gui(argc, argv, service);
-
-//	UI ui = UI(service);
-//	ui.runProgram();
-
-	return gui.runProgram();
+	GUI gui{service};
+	gui.show();
+	return application.exec();
 }
 
 void callTestFunctions() {

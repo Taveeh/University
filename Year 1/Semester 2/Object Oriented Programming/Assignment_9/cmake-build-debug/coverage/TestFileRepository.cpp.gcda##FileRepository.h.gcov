@@ -1,0 +1,77 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/FileRepository.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/TestFileRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/TestFileRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 12/04/2020.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef ASSIGNMENT_7_8_FILEREPOSITORY_H
+        -:    6:#define ASSIGNMENT_7_8_FILEREPOSITORY_H
+        -:    7:
+        -:    8:#include "Repository.h"
+    #####:    9:class FileRepository: public Repository {
+    $$$$$:    9-block  0
+    $$$$$:    9-block  1
+    $$$$$:    9-block  2
+    $$$$$:    9-block  3
+        -:   10:private:
+        -:   11:	const std::string& fileName;
+        -:   12:	int currentElement;
+        -:   13:public:
+        -:   14:
+        -:   15://	void setPath(const std::string& newFileName);
+        -:   16:
+        -:   17:	explicit FileRepository(const std::string& fileName);
+        -:   18:	/*
+        -:   19:	 * Adds footage to the repository
+        -:   20:	 * Input:
+        -:   21:	 * newFootage - const Footage&
+        -:   22:	 * Throws:
+        -:   23:	 * std::exception() if same title exists
+        -:   24:	 */
+        -:   25:	void addFootage(const Footage& newFootage) override;
+        -:   26:
+        -:   27:	/*
+        -:   28:	 * Removes a footage from the repository
+        -:   29:	 * Input:
+        -:   30:	 * titleToBeRemoved - const std::string&
+        -:   31:	 * Throws:
+        -:   32:	 * std::exception() if title does not exist
+        -:   33:	 */
+        -:   34:	void deleteFootage(const std::string& titleToBeRemoved) override;
+        -:   35:
+        -:   36:	/*
+        -:   37:	 * Updates a footage from the repository
+        -:   38:	 * Input:
+        -:   39:	 * newFootage - const Footage&
+        -:   40:	 * Throws:
+        -:   41:	 * std::exception() if title does not exist
+        -:   42:	 */
+        -:   43:	void updateFootage(const Footage& newFootage) override;
+        -:   44:
+        -:   45:	/*
+        -:   46:	 * Function that gets all the footage from the repository
+        -:   47:	 * Input:
+        -:   48:	 *
+        -:   49:	 * Output:
+        -:   50:	 * std::vector<Footage> - vector of elements
+        -:   51:	 */
+        -:   52:	std::vector<Footage> getAllFootage() override;
+        -:   53:
+        -:   54:	/*
+        -:   55:	 * Function that returns the current element from the repository
+        -:   56:	 * Input:
+        -:   57:	 *
+        -:   58:	 * Ouput:
+        -:   59:	 * Footage - current element from repository
+        -:   60:	 */
+        -:   61:	Footage getCurrentElement() override;
+        -:   62:
+        -:   63:	void openList() override;
+        -:   64:
+        -:   65:};
+        -:   66:
+        -:   67:
+        -:   68:#endif //ASSIGNMENT_7_8_FILEREPOSITORY_H

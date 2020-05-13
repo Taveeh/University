@@ -27,7 +27,19 @@ CMakeFiles/Assignment_9.dir/GUI.cpp.o: ../SQLRepository.h
 CMakeFiles/Assignment_9.dir/GUI.cpp.o: ../Service.h
 CMakeFiles/Assignment_9.dir/GUI.cpp.o: ../Validator.h
 CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QApplication
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QFormLayout
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QLineEdit
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QListWidget
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QWidget
 CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qformlayout.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlayout.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlineedit.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlistwidget.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
+CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h
 CMakeFiles/Assignment_9.dir/GUI.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/QtWidgets
 
 CMakeFiles/Assignment_9.dir/HtmlFileRepository.cpp.o: ../Exceptions.h
@@ -89,18 +101,6 @@ CMakeFiles/Assignment_9.dir/TestService.cpp.o: ../TestService.cpp
 CMakeFiles/Assignment_9.dir/TestService.cpp.o: ../TestService.h
 CMakeFiles/Assignment_9.dir/TestService.cpp.o: ../Validator.h
 
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../Exceptions.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../FileRepository.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../Footage.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../HtmlFileRepository.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../MemoryRepository.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../Repository.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../SQLRepository.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../Service.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../UI.cpp
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../UI.h
-CMakeFiles/Assignment_9.dir/UI.cpp.o: ../Validator.h
-
 CMakeFiles/Assignment_9.dir/Validator.cpp.o: ../Exceptions.h
 CMakeFiles/Assignment_9.dir/Validator.cpp.o: ../Footage.h
 CMakeFiles/Assignment_9.dir/Validator.cpp.o: ../Validator.cpp
@@ -119,9 +119,16 @@ CMakeFiles/Assignment_9.dir/main.cpp.o: ../TestFileRepository.h
 CMakeFiles/Assignment_9.dir/main.cpp.o: ../TestFootage.h
 CMakeFiles/Assignment_9.dir/main.cpp.o: ../TestMemoryRepository.h
 CMakeFiles/Assignment_9.dir/main.cpp.o: ../TestService.h
-CMakeFiles/Assignment_9.dir/main.cpp.o: ../UI.h
 CMakeFiles/Assignment_9.dir/main.cpp.o: ../Validator.h
 CMakeFiles/Assignment_9.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QApplication
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QLineEdit
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QListWidget
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QWidget
 CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlineedit.h
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlistwidget.h
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
+CMakeFiles/Assignment_9.dir/main.cpp.o: /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h
 

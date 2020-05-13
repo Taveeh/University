@@ -17,7 +17,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Assignment_9.dir/TestFootage.cpp.o"
   "CMakeFiles/Assignment_9.dir/TestMemoryRepository.cpp.o"
   "CMakeFiles/Assignment_9.dir/TestService.cpp.o"
-  "CMakeFiles/Assignment_9.dir/UI.cpp.o"
   "CMakeFiles/Assignment_9.dir/Validator.cpp.o"
   "CMakeFiles/Assignment_9.dir/main.cpp.o"
 )

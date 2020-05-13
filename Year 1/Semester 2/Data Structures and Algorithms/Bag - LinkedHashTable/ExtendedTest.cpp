@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void showBag(const Bag& b) {
+void showBag(Bag& b) {
 	BagIterator bit = b.iterator();
 	while (bit.valid()) {
 		std::cout << bit.getCurrent() << ' ';

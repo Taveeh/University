@@ -73,11 +73,6 @@
 			"EWIEGA46WW/moc_TestService.cpp"
 		],
 		[
-			"/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/UI.h",
-			"MU",
-			"EWIEGA46WW/moc_UI.cpp"
-		],
-		[
 			"/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/Validator.h",
 			"MU",
 			"EWIEGA46WW/moc_Validator.cpp"
@@ -86,7 +81,7 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/Assignment_9_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/Assignment_9_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : [ "QT_CHARTS_LIB", "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -104,6 +99,8 @@
 		"/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework",
 		"/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers",
 		"/Users/taveeh/Qt/5.14.2/clang_64/mkspecs/macx-clang",
+		"/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCharts.framework",
+		"/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCharts.framework/Headers",
 		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
 		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include",
 		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
@@ -178,10 +175,6 @@
 		],
 		[
 			"/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/TestService.cpp",
-			"MU"
-		],
-		[
-			"/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/UI.cpp",
 			"MU"
 		],
 		[

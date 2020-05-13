@@ -10,11 +10,40 @@ int main() {
 
 	testAll();
 	cout << "Short tests over" << endl;
-//	Bag bag;
-//	for (int i = 0; i < 10; ++i) {
-//		bag.add(i);
-//	}
-//	BagIterator it = bag.iterator();
+	Bag bag;
+	for (int i = -20; i < 20; ++i) {
+		if (i == 5) bag.add(5);
+		bag.add(i);
+
+	}
+	BagIterator it = bag.iterator();
+	it.first();
+	std::cout <<std::endl << bag.size() << std::endl;
+	while (it.valid()) {
+		std::cout << it.getCurrent() << ' ';
+		it.next();
+	}
+	it.first();
+	std::cout << std::endl;
+	while(it.valid()) {
+		if (it.getCurrent() % 5 == 0) {
+			assert(it.remove() % 5 == 0);
+		}
+
+
+//		if (it.valid()) {
+			std::cout << it.getCurrent() << ' ';
+			it.next();
+//		}
+	}
+	std::cout << std::endl;
+	it.first();
+	std::cout <<std::endl << bag.size() << std::endl;
+	while (it.valid()) {
+		std::cout << it.getCurrent() << ' ';
+		it.next();
+	}
+	std::cout << std::endl;
 //	it.first();
 //	std::cout <<std::endl << bag.size() << std::endl;
 //	while (it.valid()) {

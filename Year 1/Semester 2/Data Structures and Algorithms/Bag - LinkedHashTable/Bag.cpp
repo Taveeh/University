@@ -137,7 +137,7 @@ bool Bag::isEmpty() const {
 	return head == nullptr;
 } // theta(1)
 
-BagIterator Bag::iterator() const {
+BagIterator Bag::iterator() {
 	return BagIterator(*this);
 } // theta(1)
 

@@ -1,0 +1,330 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/Validator.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/Validator.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/Validator.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 20/04/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "Validator.h"
+        -:    6:
+        -:    7:#include <iostream>
+        -:    8:#include <sstream>
+        -:    9:#include "Exceptions.h"
+        -:   10:
+       62:   11:Validator::Validator(const std::vector<std::string>&  parametersToValidate1): parametersToValidate(parametersToValidate1) {
+       31:   11-block  0
+       31:   11-block  1
+       31:   12:	if (parametersToValidate1.empty()) {
+       31:   12-block  0
+    #####:   13:		throw ValidationException("Invalid parameters");
+    $$$$$:   13-block  0
+    $$$$$:   13-block  1
+    $$$$$:   13-block  2
+    $$$$$:   13-block  3
+    $$$$$:   13-block  4
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+        -:   14:	}
+       31:   15:	if (parametersToValidate1[0] == "add") {
+       31:   15-block  0
+       31:   15-block  1
+       26:   16:		validateAdd();
+       26:   16-block  0
+       25:   17:	}else if (parametersToValidate1[0] == "remove") {
+       20:   17-block  0
+        5:   17-block  1
+        5:   17-block  2
+    #####:   18:		validateRemove();
+    $$$$$:   18-block  0
+        5:   19:	}else if (parametersToValidate1[0] == "update") {
+    $$$$$:   19-block  0
+        5:   19-block  1
+        5:   19-block  2
+        5:   20:		validateUpdate();
+        5:   20-block  0
+        1:   21:	}else {
+        1:   21-block  0
+    #####:   22:		throw ValidationException("Invalid operation to validate");
+    $$$$$:   22-block  0
+    $$$$$:   22-block  1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+        -:   23:	}
+       62:   24:}
+    $$$$$:   24-block  0
+       10:   24-block  1
+    $$$$$:   24-block  2
+       21:   24-block  3
+       10:   24-block  4
+       10:   24-block  5
+       31:   24-block  6
+        -:   25:
+       26:   26:void Validator::validateAdd() {
+       26:   26-block  0
+       26:   27:	if ((parametersToValidate.begin() + 3)->size() != SIZE_OF_DATE + 1) {
+       26:   27-block  0
+        6:   28:		throw ValidationException("Invalid date format");
+        1:   28-block  0
+        1:   28-block  1
+        1:   28-block  2
+        1:   28-block  3
+        1:   28-block  4
+    $$$$$:   28-block  5
+        1:   28-block  6
+        6:   28-block  7
+        -:   29:	}
+       25:   30:	std::string newType = (parametersToValidate.begin() + 2)->substr(1, (parametersToValidate.begin() + 2)->size() - 1);
+       25:   31:	std::string newNumberAccessedString =  (parametersToValidate.begin() + 4)->substr(1,  (parametersToValidate.begin() + 4)->size() - 1);
+       25:   31-block  0
+       25:   32:	std::string monthString = (parametersToValidate.begin() + 3)->substr(1, 2);
+       25:   32-block  0
+       25:   33:	std::string dayString = (parametersToValidate.begin() + 3)->substr(4, 2);
+       25:   33-block  0
+       25:   34:	std::string yearString = (parametersToValidate.begin() + 3)->substr(7, 4);
+       25:   34-block  0
+       25:   35:	std::stringstream convertDayStringToInt(dayString);
+       25:   35-block  0
+       25:   36:	std::stringstream convertMonthStringToInt(monthString);
+       25:   36-block  0
+       25:   37:	std::stringstream convertYearStringToInt(yearString);
+       25:   37-block  0
+       25:   38:	int newDay = 0, newMonth = 0, newYear = 0;
+       25:   39:	convertDayStringToInt >> newDay;
+       25:   39-block  0
+       25:   40:	convertMonthStringToInt >> newMonth;
+       25:   40-block  0
+       25:   41:	convertYearStringToInt >> newYear;
+       25:   41-block  0
+       25:   42:	time_t currentTime = time(nullptr);
+       25:   42-block  0
+       25:   43:	tm* currentTimePointer = localtime(&currentTime);
+       25:   43-block  0
+       25:   44:	if (!validateNewDate(newDay, newMonth, newYear)) {
+       25:   44-block  0
+       25:   44-block  1
+        3:   45:		throw ValidationException("Invalid date");
+        3:   45-block  0
+        3:   45-block  1
+        3:   45-block  2
+        3:   45-block  3
+        3:   45-block  4
+    $$$$$:   45-block  5
+        3:   45-block  6
+        -:   46:	}
+       22:   47:	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
+       22:   47-block  0
+       22:   48:	auto newDate = Date(newDay, newMonth, newYear);
+       22:   48-block  0
+       22:   49:	if (currentDate < newDate) {
+       22:   49-block  0
+       22:   49-block  1
+        1:   50:		throw ValidationException("Date too much in the future");
+        1:   50-block  0
+        1:   50-block  1
+        1:   50-block  2
+        1:   50-block  3
+        1:   50-block  4
+    $$$$$:   50-block  5
+        1:   50-block  6
+        -:   51:	}
+       21:   52:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
+       21:   52-block  0
+       21:   53:	int numberAccessed = 0;
+       21:   54:	convertNumberAccessedStringToInt >> numberAccessed;
+       21:   54-block  0
+       21:   55:	if (numberAccessed < 0) {
+       21:   55-block  0
+        1:   56:		throw ValidationException("Invalid access count");
+        1:   56-block  0
+        1:   56-block  1
+        1:   56-block  2
+        1:   56-block  3
+        1:   56-block  4
+    $$$$$:   56-block  5
+        1:   56-block  6
+        -:   57:	}
+        -:   58:
+       31:   59:}
+    $$$$$:   59-block  0
+    $$$$$:   59-block  1
+    $$$$$:   59-block  2
+    $$$$$:   59-block  3
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+    $$$$$:   59-block  6
+    $$$$$:   59-block  7
+    $$$$$:   59-block  8
+    $$$$$:   59-block  9
+    $$$$$:   59-block 10
+    $$$$$:   59-block 11
+    $$$$$:   59-block 12
+       20:   59-block 13
+        1:   59-block 14
+        5:   59-block 15
+        5:   59-block 16
+        5:   59-block 17
+        5:   59-block 18
+        5:   59-block 19
+        5:   59-block 20
+        5:   59-block 21
+        5:   59-block 22
+        -:   60:
+        -:   61:
+       29:   62:bool Validator::validateNewDate(int day, int month, int year) {
+       29:   62-block  0
+       29:   63:	if (day > 31 or month > 12) {
+       29:   63-block  0
+       29:   63-block  1
+        3:   64:		return false;
+        3:   64-block  0
+        -:   65:	}
+        -:   66:#define JUNE 6
+        -:   67:#define APRIL 4
+        -:   68:#define SEPTEMBER 9
+        -:   69:#define NOVEMBER 11
+       26:   70:	if (month == JUNE or month == APRIL or month == SEPTEMBER or month == NOVEMBER)
+       26:   70-block  0
+       26:   70-block  1
+       26:   70-block  2
+       26:   70-block  3
+        1:   71:		if (day > 30) return false;
+        1:   71-block  0
+        1:   71-block  1
+    $$$$$:   71-block  2
+        -:   72:#define FEBRUARY 2
+        -:   73:# define isLeapYear(year) (((year) % 4 == 0 and (year) % 100 != 0) or (year) % 400 == 0)
+       25:   74:	if (month == FEBRUARY) {
+       25:   74-block  0
+       23:   75:		if (isLeapYear(year)) {
+       23:   75-block  0
+       21:   75-block  1
+        2:   75-block  2
+       21:   76:			if (day > 29) return false;
+       21:   76-block  0
+    $$$$$:   76-block  1
+       23:   77:		} else if (day > 28)
+       21:   77-block  0
+        2:   77-block  1
+        1:   78:			return false;
+        1:   78-block  0
+       22:   79:	}
+       22:   79-block  0
+       24:   80:	return year >= 1800;
+       24:   80-block  0
+       29:   81:}
+       29:   81-block  0
+        -:   82:
+        -:   83:
+        5:   84:void Validator::validateUpdate() {
+        5:   84-block  0
+        5:   85:	if ((parametersToValidate.begin() + 3)->size() != SIZE_OF_DATE + 1) {
+        5:   85-block  0
+        4:   86:		throw ValidationException("Invalid date format");
+        1:   86-block  0
+        1:   86-block  1
+        1:   86-block  2
+        1:   86-block  3
+        1:   86-block  4
+    $$$$$:   86-block  5
+        1:   86-block  6
+        4:   86-block  7
+        -:   87:	}
+        4:   88:	std::string newType = (parametersToValidate.begin() + 2)->substr(1, (parametersToValidate.begin() + 2)->size() - 1);
+        4:   89:	std::string newNumberAccessedString =  (parametersToValidate.begin() + 4)->substr(1,  (parametersToValidate.begin() + 4)->size() - 1);
+        4:   89-block  0
+        4:   90:	std::string monthString = (parametersToValidate.begin() + 3)->substr(1, 2);
+        4:   90-block  0
+        4:   91:	std::string dayString = (parametersToValidate.begin() + 3)->substr(4, 2);
+        4:   91-block  0
+        4:   92:	std::string yearString = (parametersToValidate.begin() + 3)->substr(7, 4);
+        4:   92-block  0
+        4:   93:	std::stringstream convertDayStringToInt(dayString);
+        4:   93-block  0
+        4:   94:	std::stringstream convertMonthStringToInt(monthString);
+        4:   94-block  0
+        4:   95:	std::stringstream convertYearStringToInt(yearString);
+        4:   95-block  0
+        4:   96:	int newDay = 0, newMonth = 0, newYear = 0;
+        4:   97:	convertDayStringToInt >> newDay;
+        4:   97-block  0
+        4:   98:	convertMonthStringToInt >> newMonth;
+        4:   98-block  0
+        4:   99:	convertYearStringToInt >> newYear;
+        4:   99-block  0
+        4:  100:	time_t currentTime = time(nullptr);
+        4:  100-block  0
+        4:  101:	tm* currentTimePointer = localtime(&currentTime);
+        4:  101-block  0
+        4:  102:	if (!validateNewDate(newDay, newMonth, newYear)) {
+        4:  102-block  0
+        4:  102-block  1
+        2:  103:		throw ValidationException("Invalid date");
+        2:  103-block  0
+        2:  103-block  1
+        2:  103-block  2
+        2:  103-block  3
+        2:  103-block  4
+    $$$$$:  103-block  5
+        2:  103-block  6
+        -:  104:	}
+        2:  105:	Date currentDate = Date(currentTimePointer->tm_mday, currentTimePointer->tm_mon + 1, currentTimePointer->tm_year + 1900);
+        2:  105-block  0
+        2:  106:	auto newDate = Date(newDay, newMonth, newYear);
+        2:  106-block  0
+        2:  107:	if (currentDate < newDate) {
+        2:  107-block  0
+        2:  107-block  1
+        1:  108:		throw ValidationException("Date too much in the future");
+        1:  108-block  0
+        1:  108-block  1
+        1:  108-block  2
+        1:  108-block  3
+        1:  108-block  4
+    $$$$$:  108-block  5
+        1:  108-block  6
+        -:  109:	}
+        1:  110:	std::stringstream convertNumberAccessedStringToInt(newNumberAccessedString);
+        1:  110-block  0
+        1:  111:	int numberAccessed = 0;
+        1:  112:	convertNumberAccessedStringToInt >> numberAccessed;
+        1:  112-block  0
+        1:  113:	if (numberAccessed < 0) {
+        1:  113-block  0
+    #####:  114:		throw ValidationException("Invalid access count");
+    $$$$$:  114-block  0
+    $$$$$:  114-block  1
+    $$$$$:  114-block  2
+    $$$$$:  114-block  3
+    $$$$$:  114-block  4
+    $$$$$:  114-block  5
+    $$$$$:  114-block  6
+        -:  115:	}
+        8:  116:}
+    $$$$$:  116-block  0
+    $$$$$:  116-block  1
+    $$$$$:  116-block  2
+    $$$$$:  116-block  3
+    $$$$$:  116-block  4
+    $$$$$:  116-block  5
+    $$$$$:  116-block  6
+    $$$$$:  116-block  7
+    $$$$$:  116-block  8
+    $$$$$:  116-block  9
+    $$$$$:  116-block 10
+    $$$$$:  116-block 11
+    $$$$$:  116-block 12
+        1:  116-block 13
+    $$$$$:  116-block 14
+        3:  116-block 15
+        3:  116-block 16
+        3:  116-block 17
+        3:  116-block 18
+        3:  116-block 19
+        3:  116-block 20
+        3:  116-block 21
+        3:  116-block 22

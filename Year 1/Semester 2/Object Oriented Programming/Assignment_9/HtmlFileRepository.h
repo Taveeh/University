@@ -10,7 +10,7 @@
 
 class HtmlFileRepository: public Repository {
 private:
-	const std::string& pathName;
+	std::string pathName;
 	int currentElement;
 
 	void writeToFile(const std::vector<Footage>& arrayToBeWritten);
@@ -19,7 +19,7 @@ private:
 
 	std::vector<Footage> readHtmlFile();
 public:
-	explicit HtmlFileRepository(const std::string& fileName);
+	explicit HtmlFileRepository(std::string  fileName);
 
 	/*
 	 * Adds footage to the repository

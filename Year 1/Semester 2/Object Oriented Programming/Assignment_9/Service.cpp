@@ -7,6 +7,7 @@
 #include <sstream>
 #include <algorithm>
 #include <vector>
+#include <map>
 
 Service::Service() {
 	repository = nullptr;
@@ -144,19 +145,26 @@ std::vector<Footage> Service::getFilteredList(const std::string &type, const std
 }
 
 void Service::setPath(const std::string& fileName, const std::string& repositoryName) {
+
 	if (repositoryName == "mylist") {
-		if (fileName.substr(fileName.size() - 3) == "csv") {
+		if (fileName == "memory"){
+			myListRepository = new MemoryRepository();
+		}else if (fileName.substr(fileName.size() - 3) == "csv") {
 			myListRepository = new FileRepository(fileName);
 		}else if (fileName.substr(fileName.size() - 4) == "html") {
 			myListRepository = new HtmlFileRepository(fileName);
 		}else {
 			throw ValidationException("Invalid format");
 		}
-	}else {
-		if (fileName.substr(fileName.size() - 3) == "txt") {
+	}else if (repositoryName == "repository"){
+		if (fileName == "memory"){
+			repository = new MemoryRepository();
+		}else if (fileName.substr(fileName.size() - 3) == "txt") {
 			repository = new FileRepository(fileName);
-		}else {
+		}else if (fileName.substr(fileName.size() - 7) == "sqlite3") {
 			repository = new SQLRepository(fileName);
+		}else {
+			throw ValidationException("Invalid format");
 		}
 	}
 }

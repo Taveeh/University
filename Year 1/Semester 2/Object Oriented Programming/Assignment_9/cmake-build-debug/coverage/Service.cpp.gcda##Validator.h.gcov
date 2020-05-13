@@ -1,0 +1,43 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/Validator.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/Service.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 20/04/2020.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef ASSIGNMENT_7_8_VALIDATOR_H
+        -:    6:#define ASSIGNMENT_7_8_VALIDATOR_H
+        -:    7:
+        -:    8:#include <vector>
+        -:    9:#include <string>
+        -:   10:#include <ctime>
+        -:   11:#include "Exceptions.h"
+        -:   12:#include "Footage.h"
+        -:   13:#define SIZE_OF_DATE 10
+        -:   14:
+       42:   15:class Validator {
+       21:   15-block  0
+       21:   15-block  1
+       21:   15-block  2
+       21:   15-block  3
+        -:   16:private:
+        -:   17:	std::vector<std::string> parametersToValidate;
+        -:   18:	void validateAdd();
+        -:   19:	void validateUpdate();
+        -:   20:	static void validateRemove(){};
+        -:   21:	/*
+        -:   22:	 * Validates if the added date is valid
+        -:   23:	 * Input:
+        -:   24:	 *  day, month, year - int
+        -:   25:	 * Output:
+        -:   26:	 *
+        -:   27:	 */
+        -:   28:	static bool validateNewDate(int day, int month, int year);
+        -:   29:public:
+        -:   30:	explicit Validator(const std::vector<std::string>&  parametersToValidate);
+        -:   31:};
+        -:   32:
+        -:   33:
+        -:   34:#endif //ASSIGNMENT_7_8_VALIDATOR_H

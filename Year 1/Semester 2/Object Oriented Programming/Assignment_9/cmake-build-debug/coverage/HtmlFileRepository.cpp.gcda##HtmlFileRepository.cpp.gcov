@@ -1,0 +1,317 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/HtmlFileRepository.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/HtmlFileRepository.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/HtmlFileRepository.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 15/04/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "HtmlFileRepository.h"
+        -:    6:#include <fstream>
+        -:    7:#include "Footage.h"
+        -:    8:#include <sstream>
+        -:    9:#include <cstring>
+        -:   10:#define StartOfList 2
+    #####:   11:HtmlFileRepository::HtmlFileRepository(const std::string &fileName): pathName(fileName), currentElement(0) {
+    $$$$$:   11-block  0
+    $$$$$:   11-block  1
+    #####:   12:	std::ifstream checkIfFileExists(pathName);
+    $$$$$:   12-block  0
+    #####:   13:	if (!checkIfFileExists) {
+    $$$$$:   13-block  0
+    $$$$$:   13-block  1
+    #####:   14:		std::ofstream createFileIfNotExist(pathName);
+    $$$$$:   14-block  0
+    #####:   15:		createFileIfNotExist.close();
+    $$$$$:   15-block  0
+    #####:   16:	}
+    $$$$$:   16-block  0
+    $$$$$:   16-block  1
+    #####:   17:	checkIfFileExists.close();
+    $$$$$:   17-block  0
+    #####:   18:}
+    $$$$$:   18-block  0
+    $$$$$:   18-block  1
+    $$$$$:   18-block  2
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+        -:   19:
+    #####:   20:void HtmlFileRepository::writeToFile(const std::vector<Footage>& arrayToBeWritten) {
+    $$$$$:   20-block  0
+    #####:   21:	std::ofstream fileOut(pathName);
+    #####:   22:	fileOut << "<!DOCTYPE html><html><head><title>" << "Footage" << "</title></head>";
+    $$$$$:   22-block  0
+    $$$$$:   22-block  1
+    $$$$$:   22-block  2
+    #####:   23:	fileOut << "<body><table border=\"1\">\n<tr><td>Title</td><td>Type</td><td>Date</td><td>Access Count</td><td>Link</td></tr>\n";
+    $$$$$:   23-block  0
+    #####:   24:	for (const auto& footage: arrayToBeWritten) {
+    $$$$$:   24-block  0
+    $$$$$:   24-block  1
+    $$$$$:   24-block  2
+    $$$$$:   24-block  3
+    #####:   25:		fileOut << "<tr><td>" << footage.getTitle() << "</td><td>" << footage.getType() << "</td><td>" << footage.getDate() << "</td><td>" << footage.getAccessCount();
+    $$$$$:   25-block  0
+    $$$$$:   25-block  1
+    $$$$$:   25-block  2
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+    $$$$$:   25-block  6
+    $$$$$:   25-block  7
+    $$$$$:   25-block  8
+    $$$$$:   25-block  9
+    $$$$$:   25-block 10
+    $$$$$:   25-block 11
+    $$$$$:   25-block 12
+    $$$$$:   25-block 13
+    #####:   26:		fileOut << "</td><td><a href = \"" << footage.getLink() << "\">Link</a></td></tr>\n";
+    $$$$$:   26-block  0
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+    $$$$$:   26-block  3
+    $$$$$:   26-block  4
+        -:   27:	}
+    #####:   28:	fileOut << "</table></body></html>";
+    $$$$$:   28-block  0
+    #####:   29:	fileOut.close();
+    $$$$$:   29-block  0
+    #####:   30:}
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+    $$$$$:   30-block  2
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+        -:   31:
+    #####:   32:std::vector<Footage> HtmlFileRepository::readHtmlFile() {
+    $$$$$:   32-block  0
+    #####:   33:	std::ifstream fileIn(pathName);
+    #####:   34:	std::string htmlFileLine;
+    #####:   35:	int lineNumber = 0, index = 0;
+    #####:   36:	std::string stringFootage;
+    #####:   37:	std::vector<Footage> arrayOfFootage;
+    #####:   38:	std::string link;
+    #####:   39:	while (std::getline(fileIn, htmlFileLine, '<')) {
+    $$$$$:   39-block  0
+    $$$$$:   39-block  1
+    $$$$$:   39-block  2
+    $$$$$:   39-block  3
+    $$$$$:   39-block  4
+    #####:   40:		if (!htmlFileLine.empty() and htmlFileLine != "\n") {
+    $$$$$:   40-block  0
+    $$$$$:   40-block  1
+    #####:   41:			stringFootage += htmlFileLine + ',';
+    $$$$$:   41-block  0
+    $$$$$:   41-block  1
+    $$$$$:   41-block  2
+    #####:   42:			index++;
+    #####:   43:		}
+    $$$$$:   43-block  0
+    #####:   44:		if (htmlFileLine == "\n") {
+    $$$$$:   44-block  0
+    #####:   45:			if (lineNumber >= StartOfList) {
+    $$$$$:   45-block  0
+    #####:   46:				auto positionLink = stringFootage.find(("Link"));
+    #####:   47:				stringFootage.replace(positionLink, positionLink + 3, link);
+    $$$$$:   47-block  0
+    #####:   48:				std::stringstream computeFootage(stringFootage);
+    $$$$$:   48-block  0
+    #####:   49:				Footage newFootage;
+    $$$$$:   49-block  0
+    #####:   50:				computeFootage >> newFootage;
+    $$$$$:   50-block  0
+    #####:   51:				arrayOfFootage.push_back(newFootage);
+    $$$$$:   51-block  0
+    #####:   52:			}
+    $$$$$:   52-block  0
+    $$$$$:   52-block  1
+    $$$$$:   52-block  2
+    #####:   53:			index = 0;
+    #####:   54:			lineNumber++;
+    #####:   55:			stringFootage = "";
+    $$$$$:   55-block  0
+    #####:   56:			link = "";
+    $$$$$:   56-block  0
+        -:   57:
+    #####:   58:		}
+    $$$$$:   58-block  0
+    #####:   59:		std::getline(fileIn, htmlFileLine, '>');
+    $$$$$:   59-block  0
+    #####:   60:		bool isLink = false;
+    #####:   61:		if (index == 4 and lineNumber >= StartOfList) {
+    $$$$$:   61-block  0
+    $$$$$:   61-block  1
+    #####:   62:			if (htmlFileLine.find("a href") != std::string::npos) {
+    $$$$$:   62-block  0
+    #####:   63:				for (auto character: htmlFileLine) {
+    $$$$$:   63-block  0
+    $$$$$:   63-block  1
+    $$$$$:   63-block  2
+    $$$$$:   63-block  3
+    #####:   64:					if (character == '=') {
+    $$$$$:   64-block  0
+    #####:   65:						isLink = true;
+    #####:   66:					}
+    $$$$$:   66-block  0
+    #####:   67:					if (isLink) {
+    $$$$$:   67-block  0
+    #####:   68:						link += character;
+    $$$$$:   68-block  0
+    #####:   69:					}
+    $$$$$:   69-block  0
+        -:   70:				}
+    #####:   71:				link = link.substr(3);
+    $$$$$:   71-block  0
+    #####:   72:				link.pop_back();
+    $$$$$:   72-block  0
+        -:   73:
+    #####:   74:			}
+    $$$$$:   74-block  0
+    #####:   75:		}
+    $$$$$:   75-block  0
+        -:   76:	}
+    #####:   77:	fileIn.close();
+    $$$$$:   77-block  0
+    #####:   78:	return arrayOfFootage;
+    #####:   79:}
+    $$$$$:   79-block  0
+    $$$$$:   79-block  1
+    $$$$$:   79-block  2
+    $$$$$:   79-block  3
+    $$$$$:   79-block  4
+    $$$$$:   79-block  5
+    $$$$$:   79-block  6
+        -:   80:
+    #####:   81:void HtmlFileRepository::addFootage(const Footage &newFootage) {
+    $$$$$:   81-block  0
+    #####:   82:	auto arrayOfFootage = readHtmlFile();
+    #####:   83:	for (const auto& footage: arrayOfFootage) {
+    $$$$$:   83-block  0
+    $$$$$:   83-block  1
+    $$$$$:   83-block  2
+    $$$$$:   83-block  3
+    #####:   84:		if (footage.getTitle() == newFootage.getTitle()) {
+    $$$$$:   84-block  0
+    $$$$$:   84-block  1
+    $$$$$:   84-block  2
+    $$$$$:   84-block  3
+    #####:   85:			throw RepositoryException("Duplicate footage");
+    $$$$$:   85-block  0
+    $$$$$:   85-block  1
+    $$$$$:   85-block  2
+    $$$$$:   85-block  3
+    $$$$$:   85-block  4
+    $$$$$:   85-block  5
+    $$$$$:   85-block  6
+        -:   86:		}
+        -:   87:	}
+    #####:   88:	arrayOfFootage.push_back(newFootage);
+    $$$$$:   88-block  0
+    #####:   89:	writeToFile(arrayOfFootage);
+    $$$$$:   89-block  0
+    #####:   90:}
+    $$$$$:   90-block  0
+    $$$$$:   90-block  1
+    $$$$$:   90-block  2
+    $$$$$:   90-block  3
+    $$$$$:   90-block  4
+        -:   91:
+    #####:   92:void HtmlFileRepository::deleteFootage(const std::string &titleToBeRemoved) {
+    $$$$$:   92-block  0
+    #####:   93:	auto arrayOfFootage = readHtmlFile();
+    #####:   94:	auto elementToRemove = std::find_if(arrayOfFootage.begin(), arrayOfFootage.end(), [titleToBeRemoved](Footage footage) {
+    $$$$$:   94-block  0
+    $$$$$:   94-block  1
+    $$$$$:   94-block  2
+    $$$$$:   94-block  3
+    $$$$$:   94-block  4
+    $$$$$:   94-block  5
+    $$$$$:   94-block  6
+    $$$$$:   94-block  7
+    #####:   95:		return footage.getTitle() == titleToBeRemoved;
+    $$$$$:   95-block  0
+        -:   96:	});
+    #####:   97:	if (elementToRemove == arrayOfFootage.end()) {
+    $$$$$:   97-block  0
+    #####:   98:		throw RepositoryException("Footage does not exist");
+    $$$$$:   98-block  0
+    $$$$$:   98-block  1
+    $$$$$:   98-block  2
+    $$$$$:   98-block  3
+    $$$$$:   98-block  4
+    $$$$$:   98-block  5
+    $$$$$:   98-block  6
+        -:   99:	}else {
+    #####:  100:		arrayOfFootage.erase(elementToRemove);
+    $$$$$:  100-block  0
+    $$$$$:  100-block  1
+        -:  101:	}
+    #####:  102:}
+    $$$$$:  102-block  0
+    $$$$$:  102-block  1
+    $$$$$:  102-block  2
+    $$$$$:  102-block  3
+    $$$$$:  102-block  4
+        -:  103:
+    #####:  104:void HtmlFileRepository::updateFootage(const Footage &newFootage) {
+    $$$$$:  104-block  0
+    #####:  105:	auto arrayOfFootage = readHtmlFile();
+    #####:  106:	for (auto& footage: arrayOfFootage) {
+    $$$$$:  106-block  0
+    $$$$$:  106-block  1
+    $$$$$:  106-block  2
+    $$$$$:  106-block  3
+    #####:  107:		if (footage.getTitle() == newFootage.getTitle()) {
+    $$$$$:  107-block  0
+    $$$$$:  107-block  1
+    $$$$$:  107-block  2
+    $$$$$:  107-block  3
+    #####:  108:			footage = newFootage;
+    $$$$$:  108-block  0
+        -:  109:			return;
+        -:  110:		}
+        -:  111:	}
+    #####:  112:	throw RepositoryException("Footage does not exist");
+    $$$$$:  112-block  0
+    $$$$$:  112-block  1
+    $$$$$:  112-block  2
+    $$$$$:  112-block  3
+    $$$$$:  112-block  4
+    $$$$$:  112-block  5
+    $$$$$:  112-block  6
+    #####:  113:}
+    $$$$$:  113-block  0
+    $$$$$:  113-block  1
+    $$$$$:  113-block  2
+    $$$$$:  113-block  3
+    $$$$$:  113-block  4
+        -:  114:
+    #####:  115:std::vector<Footage> HtmlFileRepository::getAllFootage() {
+    $$$$$:  115-block  0
+    #####:  116:	return readHtmlFile();
+    $$$$$:  116-block  0
+        -:  117:}
+        -:  118:
+    #####:  119:Footage HtmlFileRepository::getCurrentElement() {
+    $$$$$:  119-block  0
+    #####:  120:	return *(readHtmlFile().begin() + currentElement++);
+    $$$$$:  120-block  0
+    $$$$$:  120-block  1
+    $$$$$:  120-block  2
+    $$$$$:  120-block  3
+    #####:  121:}
+        -:  122:
+    #####:  123:void HtmlFileRepository::openList() {
+    $$$$$:  123-block  0
+    #####:  124:	std::string systemString = "open " + pathName;
+    #####:  125:	const char* openListString = systemString.c_str();
+    #####:  126:	system(openListString);
+    $$$$$:  126-block  0
+    #####:  127:}
+    $$$$$:  127-block  0
+    $$$$$:  127-block  1
+    $$$$$:  127-block  2
+        -:  128:

@@ -6,16 +6,16 @@
 
 #IncludeRegexTransform: 
 
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.cpp
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/App.cpp
 Bag.h
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.h
 BagIterator.h
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/BagIterator.h
-exception
--
+ShortTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/ShortTest.h
+ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/ExtendedTest.h
 iostream
--
-cmath
 -
 
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.h
@@ -23,4 +23,8 @@ cmath
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/BagIterator.h
 Bag.h
 /Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/Bag.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/ExtendedTest.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/Bag - LinkedHashTable/ShortTest.h
 

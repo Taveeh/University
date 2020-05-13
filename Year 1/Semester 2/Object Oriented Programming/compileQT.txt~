@@ -8,4 +8,3 @@ set(CMAKE_AUTORCC ON)
 
 add_executable(...)
 target_link_libraries(Assignment_9 Qt5::Widgets)
-

@@ -7,8 +7,9 @@
 #include "Footage.h"
 #include <sstream>
 #include <cstring>
+#include <utility>
 #define StartOfList 2
-HtmlFileRepository::HtmlFileRepository(const std::string &fileName): pathName(fileName), currentElement(0) {
+HtmlFileRepository::HtmlFileRepository(std::string fileName): pathName(std::move(fileName)), currentElement(0) {
 	std::ifstream checkIfFileExists(pathName);
 	if (!checkIfFileExists) {
 		std::ofstream createFileIfNotExist(pathName);

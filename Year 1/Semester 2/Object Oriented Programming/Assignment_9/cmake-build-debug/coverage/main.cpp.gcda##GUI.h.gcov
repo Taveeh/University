@@ -1,0 +1,60 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/GUI.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/main.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 08/05/2020.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef ASSIGNMENT_9_GUI_H
+        -:    6:#define ASSIGNMENT_9_GUI_H
+        -:    7:#include <QApplication>
+        -:    8:#include <QWidget>
+        -:    9:#include <QListWidget>
+        -:   10:#include <QPushButton>
+        -:   11:#include <QLineEdit>
+        -:   12:#include "Service.h"
+        2:   13:class GUI: public QWidget {
+        1:   13-block  0
+        1:   13-block  1
+        1:   13-block  2
+        1:   13-block  3
+        -:   14:private:
+        -:   15:	Service& service;
+        -:   16:	void initGUI();
+        -:   17:	void populateList();
+        -:   18:	void makeConnections();
+        -:   19:	int getSelectedFootage() const;
+        -:   20:
+        -:   21:	// graphical element
+        -:   22:	QLineEdit* repositoryLineEdit;
+        -:   23:	QLineEdit* mylistLineEdit;
+        -:   24:	QPushButton* setPathRepository;
+        -:   25:	QPushButton* setPathMyList;
+        -:   26:
+        -:   27:	QListWidget* footageListWidget;
+        -:   28:	QLineEdit* titleLineEdit;
+        -:   29:	QLineEdit* typeLineEdit;
+        -:   30:	QLineEdit* dateLineEdit;
+        -:   31:	QLineEdit* accessCountLineEdit;
+        -:   32:	QLineEdit* linkLineEdit;
+        -:   33:	QPushButton * buttonAdd;
+        -:   34:	QPushButton * buttonRemove;
+        -:   35:	QPushButton * buttonUpdate;
+        -:   36:
+        -:   37:
+        -:   38:public:
+        -:   39:	explicit GUI(Service& service1);
+        -:   40:private:
+        -:   41:	void setRepository();
+        -:   42:	void setMyList();
+        -:   43:	void addFootage();
+        -:   44:	void removeFootage();
+        -:   45:	void updateFootage();
+        -:   46:
+        -:   47:};
+        -:   48:
+        -:   49:
+        -:   50:
+        -:   51:#endif //ASSIGNMENT_9_GUI_H

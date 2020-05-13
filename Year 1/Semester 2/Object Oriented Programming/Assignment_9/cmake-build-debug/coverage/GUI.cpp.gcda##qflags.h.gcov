@@ -1,0 +1,205 @@
+        -:    0:Source:/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qflags.h
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/GUI.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/GUI.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/****************************************************************************
+        -:    2:**
+        -:    3:** Copyright (C) 2016 The Qt Company Ltd.
+        -:    4:** Contact: https://www.qt.io/licensing/
+        -:    5:**
+        -:    6:** This file is part of the QtCore module of the Qt Toolkit.
+        -:    7:**
+        -:    8:** $QT_BEGIN_LICENSE:LGPL$
+        -:    9:** Commercial License Usage
+        -:   10:** Licensees holding valid commercial Qt licenses may use this file in
+        -:   11:** accordance with the commercial license agreement provided with the
+        -:   12:** Software or, alternatively, in accordance with the terms contained in
+        -:   13:** a written agreement between you and The Qt Company. For licensing terms
+        -:   14:** and conditions see https://www.qt.io/terms-conditions. For further
+        -:   15:** information use the contact form at https://www.qt.io/contact-us.
+        -:   16:**
+        -:   17:** GNU Lesser General Public License Usage
+        -:   18:** Alternatively, this file may be used under the terms of the GNU Lesser
+        -:   19:** General Public License version 3 as published by the Free Software
+        -:   20:** Foundation and appearing in the file LICENSE.LGPL3 included in the
+        -:   21:** packaging of this file. Please review the following information to
+        -:   22:** ensure the GNU Lesser General Public License version 3 requirements
+        -:   23:** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+        -:   24:**
+        -:   25:** GNU General Public License Usage
+        -:   26:** Alternatively, this file may be used under the terms of the GNU
+        -:   27:** General Public License version 2.0 or (at your option) the GNU General
+        -:   28:** Public license version 3 or any later version approved by the KDE Free
+        -:   29:** Qt Foundation. The licenses are as published by the Free Software
+        -:   30:** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+        -:   31:** included in the packaging of this file. Please review the following
+        -:   32:** information to ensure the GNU General Public License requirements will
+        -:   33:** be met: https://www.gnu.org/licenses/gpl-2.0.html and
+        -:   34:** https://www.gnu.org/licenses/gpl-3.0.html.
+        -:   35:**
+        -:   36:** $QT_END_LICENSE$
+        -:   37:**
+        -:   38:****************************************************************************/
+        -:   39:
+        -:   40:#include <QtCore/qglobal.h>
+        -:   41:
+        -:   42:#ifndef QFLAGS_H
+        -:   43:#define QFLAGS_H
+        -:   44:
+        -:   45:#include <initializer_list>
+        -:   46:
+        -:   47:QT_BEGIN_NAMESPACE
+        -:   48:
+        -:   49:class QDataStream;
+        -:   50:
+        -:   51:class QFlag
+        -:   52:{
+        -:   53:    int i;
+        -:   54:public:
+        -:   55:    Q_DECL_CONSTEXPR inline QFlag(int value) noexcept : i(value) {}
+        -:   56:    Q_DECL_CONSTEXPR inline operator int() const noexcept { return i; }
+        -:   57:
+        -:   58:#if !defined(Q_CC_MSVC)
+        -:   59:    // Microsoft Visual Studio has buggy behavior when it comes to
+        -:   60:    // unsigned enums: even if the enum is unsigned, the enum tags are
+        -:   61:    // always signed
+        -:   62:#  if !defined(__LP64__) && !defined(Q_CLANG_QDOC)
+        -:   63:    Q_DECL_CONSTEXPR inline QFlag(long value) noexcept : i(int(value)) {}
+        -:   64:    Q_DECL_CONSTEXPR inline QFlag(ulong value) noexcept : i(int(long(value))) {}
+        -:   65:#  endif
+        -:   66:    Q_DECL_CONSTEXPR inline QFlag(uint value) noexcept : i(int(value)) {}
+        -:   67:    Q_DECL_CONSTEXPR inline QFlag(short value) noexcept : i(int(value)) {}
+        -:   68:    Q_DECL_CONSTEXPR inline QFlag(ushort value) noexcept : i(int(uint(value))) {}
+        -:   69:    Q_DECL_CONSTEXPR inline operator uint() const noexcept { return uint(i); }
+        -:   70:#endif
+        -:   71:};
+        -:   72:Q_DECLARE_TYPEINFO(QFlag, Q_PRIMITIVE_TYPE);
+        -:   73:
+        -:   74:class QIncompatibleFlag
+        -:   75:{
+        -:   76:    int i;
+        -:   77:public:
+        -:   78:    Q_DECL_CONSTEXPR inline explicit QIncompatibleFlag(int i) noexcept;
+        -:   79:    Q_DECL_CONSTEXPR inline operator int() const noexcept { return i; }
+        -:   80:};
+        -:   81:Q_DECLARE_TYPEINFO(QIncompatibleFlag, Q_PRIMITIVE_TYPE);
+        -:   82:
+        -:   83:Q_DECL_CONSTEXPR inline QIncompatibleFlag::QIncompatibleFlag(int value) noexcept : i(value) {}
+        -:   84:
+        -:   85:
+        -:   86:#ifndef Q_NO_TYPESAFE_FLAGS
+        -:   87:
+        -:   88:template<typename Enum>
+        -:   89:class QFlags
+        -:   90:{
+        -:   91:    Q_STATIC_ASSERT_X((sizeof(Enum) <= sizeof(int)),
+        -:   92:                      "QFlags uses an int as storage, so an enum with underlying "
+        -:   93:                      "long long will overflow.");
+        -:   94:    Q_STATIC_ASSERT_X((std::is_enum<Enum>::value), "QFlags is only usable on enumeration types.");
+        -:   95:
+        -:   96:    struct Private;
+        -:   97:    typedef int (Private::*Zero);
+        -:   98:    template <typename E> friend QDataStream &operator>>(QDataStream &, QFlags<E> &);
+        -:   99:    template <typename E> friend QDataStream &operator<<(QDataStream &, QFlags<E>);
+        -:  100:public:
+        -:  101:#if defined(Q_CC_MSVC) || defined(Q_CLANG_QDOC)
+        -:  102:    // see above for MSVC
+        -:  103:    // the definition below is too complex for qdoc
+        -:  104:    typedef int Int;
+        -:  105:#else
+        -:  106:    typedef typename std::conditional<
+        -:  107:            std::is_unsigned<typename std::underlying_type<Enum>::type>::value,
+        -:  108:            unsigned int,
+        -:  109:            signed int
+        -:  110:        >::type Int;
+        -:  111:#endif
+        -:  112:    typedef Enum enum_type;
+        -:  113:    // compiler-generated copy/move ctor/assignment operators are fine!
+        -:  114:#ifdef Q_CLANG_QDOC
+        -:  115:    Q_DECL_CONSTEXPR inline QFlags(const QFlags &other);
+        -:  116:    Q_DECL_CONSTEXPR inline QFlags &operator=(const QFlags &other);
+        -:  117:#endif
+        -:  118:    Q_DECL_CONSTEXPR inline QFlags(Enum flags) noexcept : i(Int(flags)) {}
+       26:  119:    Q_DECL_CONSTEXPR inline QFlags(Zero = nullptr) noexcept : i(0) {}
+        3:  119-block  0
+        3:  119-block  1
+       10:  119-block  2
+       10:  119-block  3
+        3:  119-block  4
+        3:  119-block  5
+       10:  119-block  6
+       10:  119-block  7
+        -:  120:    Q_DECL_CONSTEXPR inline QFlags(QFlag flag) noexcept : i(flag) {}
+        -:  121:
+        -:  122:    Q_DECL_CONSTEXPR inline QFlags(std::initializer_list<Enum> flags) noexcept
+        -:  123:        : i(initializer_list_helper(flags.begin(), flags.end())) {}
+        -:  124:
+        -:  125:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator&=(int mask) noexcept { i &= mask; return *this; }
+        -:  126:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator&=(uint mask) noexcept { i &= mask; return *this; }
+        -:  127:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator&=(Enum mask) noexcept { i &= Int(mask); return *this; }
+        -:  128:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator|=(QFlags other) noexcept { i |= other.i; return *this; }
+        -:  129:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator|=(Enum other) noexcept { i |= Int(other); return *this; }
+        -:  130:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator^=(QFlags other) noexcept { i ^= other.i; return *this; }
+        -:  131:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &operator^=(Enum other) noexcept { i ^= Int(other); return *this; }
+        -:  132:
+        -:  133:    Q_DECL_CONSTEXPR inline operator Int() const noexcept { return i; }
+        -:  134:
+        -:  135:    Q_DECL_CONSTEXPR inline QFlags operator|(QFlags other) const noexcept { return QFlags(QFlag(i | other.i)); }
+        -:  136:    Q_DECL_CONSTEXPR inline QFlags operator|(Enum other) const noexcept { return QFlags(QFlag(i | Int(other))); }
+        -:  137:    Q_DECL_CONSTEXPR inline QFlags operator^(QFlags other) const noexcept { return QFlags(QFlag(i ^ other.i)); }
+        -:  138:    Q_DECL_CONSTEXPR inline QFlags operator^(Enum other) const noexcept { return QFlags(QFlag(i ^ Int(other))); }
+        -:  139:    Q_DECL_CONSTEXPR inline QFlags operator&(int mask) const noexcept { return QFlags(QFlag(i & mask)); }
+        -:  140:    Q_DECL_CONSTEXPR inline QFlags operator&(uint mask) const noexcept { return QFlags(QFlag(i & mask)); }
+        -:  141:    Q_DECL_CONSTEXPR inline QFlags operator&(Enum other) const noexcept { return QFlags(QFlag(i & Int(other))); }
+        -:  142:    Q_DECL_CONSTEXPR inline QFlags operator~() const noexcept { return QFlags(QFlag(~i)); }
+        -:  143:
+        -:  144:    Q_DECL_CONSTEXPR inline bool operator!() const noexcept { return !i; }
+        -:  145:
+        -:  146:    Q_DECL_CONSTEXPR inline bool testFlag(Enum flag) const noexcept { return (i & Int(flag)) == Int(flag) && (Int(flag) != 0 || i == Int(flag) ); }
+        -:  147:    Q_DECL_RELAXED_CONSTEXPR inline QFlags &setFlag(Enum flag, bool on = true) noexcept
+        -:  148:    {
+        -:  149:        return on ? (*this |= flag) : (*this &= ~Int(flag));
+        -:  150:    }
+        -:  151:
+        -:  152:private:
+        -:  153:    Q_DECL_CONSTEXPR static inline Int initializer_list_helper(typename std::initializer_list<Enum>::const_iterator it,
+        -:  154:                                                               typename std::initializer_list<Enum>::const_iterator end)
+        -:  155:    noexcept
+        -:  156:    {
+        -:  157:        return (it == end ? Int(0) : (Int(*it) | initializer_list_helper(it + 1, end)));
+        -:  158:    }
+        -:  159:
+        -:  160:    Int i;
+        -:  161:};
+        -:  162:
+        -:  163:#ifndef Q_MOC_RUN
+        -:  164:#define Q_DECLARE_FLAGS(Flags, Enum)\
+        -:  165:typedef QFlags<Enum> Flags;
+        -:  166:#endif
+        -:  167:
+        -:  168:#define Q_DECLARE_INCOMPATIBLE_FLAGS(Flags) \
+        -:  169:Q_DECL_CONSTEXPR inline QIncompatibleFlag operator|(Flags::enum_type f1, int f2) noexcept \
+        -:  170:{ return QIncompatibleFlag(int(f1) | f2); }
+        -:  171:
+        -:  172:#define Q_DECLARE_OPERATORS_FOR_FLAGS(Flags) \
+        -:  173:Q_DECL_CONSTEXPR inline QFlags<Flags::enum_type> operator|(Flags::enum_type f1, Flags::enum_type f2) noexcept \
+        -:  174:{ return QFlags<Flags::enum_type>(f1) | f2; } \
+        -:  175:Q_DECL_CONSTEXPR inline QFlags<Flags::enum_type> operator|(Flags::enum_type f1, QFlags<Flags::enum_type> f2) noexcept \
+        -:  176:{ return f2 | f1; } Q_DECLARE_INCOMPATIBLE_FLAGS(Flags)
+        -:  177:
+        -:  178:
+        -:  179:#else /* Q_NO_TYPESAFE_FLAGS */
+        -:  180:
+        -:  181:#ifndef Q_MOC_RUN
+        -:  182:#define Q_DECLARE_FLAGS(Flags, Enum)\
+        -:  183:typedef uint Flags;
+        -:  184:#endif
+        -:  185:
+        -:  186:#define Q_DECLARE_OPERATORS_FOR_FLAGS(Flags)
+        -:  187:
+        -:  188:#endif /* Q_NO_TYPESAFE_FLAGS */
+        -:  189:
+        -:  190:QT_END_NAMESPACE
+        -:  191:
+        -:  192:#endif // QFLAGS_H

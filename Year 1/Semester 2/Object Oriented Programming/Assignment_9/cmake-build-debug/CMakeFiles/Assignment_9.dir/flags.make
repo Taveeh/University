@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_FLAGS = --coverage -lsqlite3 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -fPIC -std=gnu++11
 
-CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+CXX_DEFINES = -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I"/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/Assignment_9_autogen/include" -iframework /Users/taveeh/Qt/5.14.2/clang_64/lib -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/taveeh/Qt/5.14.2/clang_64/./mkspecs/macx-clang 
+CXX_INCLUDES = -I"/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/Assignment_9_autogen/include" -iframework /Users/taveeh/Qt/5.14.2/clang_64/lib -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers -isystem /Users/taveeh/Qt/5.14.2/clang_64/./mkspecs/macx-clang -isystem /Users/taveeh/Qt/5.14.2/clang_64/lib/QtCharts.framework/Headers 
 

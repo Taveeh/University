@@ -4,13 +4,14 @@
 
 #include "FileRepository.h"
 #include <fstream>
+#include <utility>
 #include <vector>
 #include <iostream>
 
-FileRepository::FileRepository(const std::string& file): fileName(file), currentElement(0) {
-	std::ifstream doesFileExist(file);
+FileRepository::FileRepository(std::string file): fileName(std::move(file)), currentElement(0) {
+	std::ifstream doesFileExist(fileName);
 	if (!doesFileExist) {
-		std::ofstream createFileToExist(file);
+		std::ofstream createFileToExist(fileName);
 		createFileToExist.close();
 	}
 	doesFileExist.close();
@@ -29,6 +30,7 @@ void FileRepository::addFootage(const Footage &newFootage) {
 	}
 	fileIn.close();
 	arrayOfFootage.push_back(newFootage);
+
 	std::ofstream fileOut(fileName);
 	for (const auto& footageElement: arrayOfFootage) {
 		fileOut << footageElement;

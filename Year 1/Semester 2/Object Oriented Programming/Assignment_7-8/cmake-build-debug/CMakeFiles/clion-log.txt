@@ -1,4 +1,4 @@
-"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8"
+"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8"
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_7-8/cmake-build-debug

@@ -1,0 +1,233 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/TestFootage.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/TestFootage.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/TestFootage.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 21/03/2020.
+        -:    3://
+        -:    4:#include "TestFootage.h"
+        -:    5:#include "Footage.h"
+        -:    6:#include <cassert>
+        -:    7:#include <iostream>
+        -:    8:
+        1:    9:void TestFootage::test_all() {
+        1:   10:	test_compareDate_differentDays_IncreasingDates();
+        1:   10-block  0
+        1:   11:	test_compareDate_differentMonths_DecreasingDates();
+        1:   12:	test_compareDate_differentMonths_IncreasingDates();
+        1:   13:	test_compareDate_differentYears_DecreasingDates();
+        1:   14:	test_compareDate_differentYears_IncreasingDates();
+        1:   15:	test_dateToString_emptyDate_zeroDate();
+        1:   16:	test_changeType_ValidInput_FootageChanged();
+        1:   17:	test_changeAccessCount_ValidInput_FootageChanged();
+        1:   18:	test_changeDate_ValidInput_FootageChanged();
+        1:   19:	test_changeLink_ValidInput_FootageChanged();
+        1:   20:	test_footageToString_emptyFootage_emptyString();
+        1:   21:}
+        1:   21-block  0
+        -:   22:
+        1:   23:void TestFootage::test_compareDate_differentDays_IncreasingDates() {
+        1:   24:	auto Date1 = Date(12, 12, 2020);
+        1:   24-block  0
+        1:   25:	auto Date2 = Date(13, 12, 2020);
+        1:   26:	assert(Date1 < Date2);
+        1:   26-block  0
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+        1:   26-block  3
+        1:   27:}
+        1:   27-block  0
+        -:   28:
+        1:   29:void TestFootage::test_dateToString_emptyDate_zeroDate() {
+        1:   30:	auto date = Date();
+        1:   30-block  0
+        1:   31:	assert(date.toString() == "00-00-0");
+        1:   31-block  0
+    $$$$$:   31-block  1
+    $$$$$:   31-block  2
+    $$$$$:   31-block  3
+    $$$$$:   31-block  4
+        1:   31-block  5
+    $$$$$:   31-block  6
+        1:   32:}
+        1:   32-block  0
+        -:   33:
+        1:   34:void TestFootage::test_changeType_ValidInput_FootageChanged() {
+        1:   35:	Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   35-block  0
+        1:   35-block  1
+        1:   35-block  2
+        1:   35-block  3
+        1:   35-block  4
+    $$$$$:   35-block  5
+    $$$$$:   35-block  6
+    $$$$$:   35-block  7
+    $$$$$:   35-block  8
+        1:   36:	footage.changeType("efg");
+        1:   36-block  0
+        1:   36-block  1
+    $$$$$:   36-block  2
+        1:   37:	assert(footage.getType() == "efg");
+        1:   37-block  0
+        1:   37-block  1
+    $$$$$:   37-block  2
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+        1:   37-block  6
+        1:   38:}
+    $$$$$:   38-block  0
+    $$$$$:   38-block  1
+    $$$$$:   38-block  2
+        1:   38-block  3
+    $$$$$:   38-block  4
+        -:   39:
+        1:   40:void TestFootage::test_changeLink_ValidInput_FootageChanged() {
+        1:   41:	Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   41-block  0
+        1:   41-block  1
+        1:   41-block  2
+        1:   41-block  3
+        1:   41-block  4
+    $$$$$:   41-block  5
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+    $$$$$:   41-block  8
+        1:   42:	footage.changeLink("Never gonna give you up");
+        1:   42-block  0
+        1:   42-block  1
+    $$$$$:   42-block  2
+        1:   43:	assert(footage.getLink() == "Never gonna give you up");
+        1:   43-block  0
+        1:   43-block  1
+    $$$$$:   43-block  2
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+        1:   43-block  6
+        1:   44:}
+    $$$$$:   44-block  0
+    $$$$$:   44-block  1
+    $$$$$:   44-block  2
+        1:   44-block  3
+    $$$$$:   44-block  4
+        -:   45:
+        1:   46:void TestFootage::test_changeDate_ValidInput_FootageChanged() {
+        1:   47:	Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   47-block  0
+        1:   47-block  1
+        1:   47-block  2
+        1:   47-block  3
+        1:   47-block  4
+    $$$$$:   47-block  5
+    $$$$$:   47-block  6
+    $$$$$:   47-block  7
+    $$$$$:   47-block  8
+        1:   48:	footage.changeDate(Date(3, 3, 2019));
+        1:   48-block  0
+        1:   48-block  1
+        1:   49:	assert(footage.getDate().getDay() == 3);
+        1:   49-block  0
+        1:   49-block  1
+        1:   49-block  2
+    $$$$$:   49-block  3
+    $$$$$:   49-block  4
+    $$$$$:   49-block  5
+        1:   49-block  6
+        1:   50:}
+    $$$$$:   50-block  0
+    $$$$$:   50-block  1
+    $$$$$:   50-block  2
+        1:   50-block  3
+        -:   51:
+        1:   52:void TestFootage::test_changeAccessCount_ValidInput_FootageChanged() {
+        1:   53:	Footage footage = Footage("abc", "def", Date(2, 2, 2020), 8, "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        1:   53-block  0
+        1:   53-block  1
+        1:   53-block  2
+        1:   53-block  3
+        1:   53-block  4
+    $$$$$:   53-block  5
+    $$$$$:   53-block  6
+    $$$$$:   53-block  7
+    $$$$$:   53-block  8
+        1:   54:	footage.changeAccessCount(9);
+        1:   54-block  0
+        1:   55:	assert(footage.getAccessCount() == 9);
+        1:   55-block  0
+        1:   55-block  1
+    $$$$$:   55-block  2
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+        1:   55-block  5
+        1:   56:}
+    $$$$$:   56-block  0
+    $$$$$:   56-block  1
+    $$$$$:   56-block  2
+        1:   56-block  3
+        -:   57:
+        1:   58:void TestFootage::test_compareDate_differentYears_IncreasingDates() {
+        1:   59:	auto Date1 = Date(12, 12, 2019);
+        1:   59-block  0
+        1:   60:	auto Date2 = Date(13, 12, 2020);
+        1:   61:	assert(Date1 < Date2);
+        1:   61-block  0
+    $$$$$:   61-block  1
+    $$$$$:   61-block  2
+        1:   61-block  3
+        1:   62:}
+        1:   62-block  0
+        -:   63:
+        1:   64:void TestFootage::test_compareDate_differentMonths_IncreasingDates() {
+        1:   65:	auto Date1 = Date(12, 11, 2020);
+        1:   65-block  0
+        1:   66:	auto Date2 = Date(13, 12, 2020);
+        1:   67:	assert(Date1 < Date2);
+        1:   67-block  0
+    $$$$$:   67-block  1
+    $$$$$:   67-block  2
+        1:   67-block  3
+        1:   68:}
+        1:   68-block  0
+        -:   69:
+        1:   70:void TestFootage::test_compareDate_differentMonths_DecreasingDates() {
+        1:   71:	auto Date1 = Date(12, 12, 2020);
+        1:   71-block  0
+        1:   72:	auto Date2 = Date(13, 11, 2020);
+        1:   73:	assert(!(Date1 < Date2));
+        1:   73-block  0
+    $$$$$:   73-block  1
+    $$$$$:   73-block  2
+        1:   73-block  3
+        1:   74:}
+        1:   74-block  0
+        -:   75:
+        1:   76:void TestFootage::test_compareDate_differentYears_DecreasingDates() {
+        1:   77:	auto Date1 = Date(12, 12, 2020);
+        1:   77-block  0
+        1:   78:	auto Date2 = Date(13, 12, 2019);
+        1:   79:	assert(!(Date1 < Date2));
+        1:   79-block  0
+    $$$$$:   79-block  1
+    $$$$$:   79-block  2
+        1:   79-block  3
+        1:   80:}
+        1:   80-block  0
+        -:   81:
+        1:   82:void TestFootage::test_footageToString_emptyFootage_emptyString() {
+        1:   83:	auto footage = Footage();
+        1:   83-block  0
+        1:   84:	assert(footage.toString() == "Title:  Type:  Date: 00-00-0 Access count: 0 Link: ");
+        1:   84-block  0
+        1:   84-block  1
+    $$$$$:   84-block  2
+    $$$$$:   84-block  3
+    $$$$$:   84-block  4
+    $$$$$:   84-block  5
+        1:   84-block  6
+        1:   85:}
+    $$$$$:   85-block  0
+        1:   85-block  1
+    $$$$$:   85-block  2
+    $$$$$:   85-block  3

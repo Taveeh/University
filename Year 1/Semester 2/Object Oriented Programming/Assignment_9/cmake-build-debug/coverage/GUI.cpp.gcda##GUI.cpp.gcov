@@ -1,0 +1,557 @@
+        -:    0:Source:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/GUI.cpp
+        -:    0:Graph:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/GUI.cpp.gcno
+        -:    0:Data:/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_9/cmake-build-debug/CMakeFiles/Assignment_9.dir/GUI.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by Octavian Custura on 08/05/2020.
+        -:    3://
+        -:    4:
+        -:    5:#include "GUI.h"
+        -:    6:#include <QtWidgets>
+        -:    7:#include <qlayout.h>
+        -:    8:#include <QFormLayout>
+        -:    9:#include <vector>
+        -:   10:#include <iostream>
+        2:   11:GUI::GUI(Service &service1): service(service1){
+        1:   11-block  0
+        1:   11-block  1
+        1:   12:	initGUI();
+        1:   12-block  0
+        -:   13://	populateList();
+        1:   14:	makeConnections();
+        1:   14-block  0
+        2:   15:}
+        1:   15-block  0
+    $$$$$:   15-block  1
+    $$$$$:   15-block  2
+        1:   15-block  3
+        -:   16:
+        1:   17:void GUI::initGUI() {
+        1:   17-block  0
+        -:   18:	// Initiate elements
+        1:   19:	footageListWidget = new QListWidget;
+        1:   19-block  0
+    $$$$$:   19-block  1
+    $$$$$:   19-block  2
+        1:   20:	titleLineEdit = new QLineEdit;
+        1:   20-block  0
+    $$$$$:   20-block  1
+        1:   21:	typeLineEdit = new QLineEdit;
+        1:   21-block  0
+    $$$$$:   21-block  1
+        1:   22:	dateLineEdit = new QLineEdit;
+        1:   22-block  0
+    $$$$$:   22-block  1
+        1:   23:	accessCountLineEdit = new QLineEdit;
+        1:   23-block  0
+    $$$$$:   23-block  1
+        1:   24:	linkLineEdit = new QLineEdit;
+        1:   24-block  0
+    $$$$$:   24-block  1
+        1:   25:	repositoryLineEdit = new QLineEdit{};
+        1:   25-block  0
+    $$$$$:   25-block  1
+        1:   26:	mylistLineEdit = new QLineEdit{};
+        1:   26-block  0
+    $$$$$:   26-block  1
+        1:   27:	setPathRepository = new QPushButton{"Set repository"};
+        1:   27-block  0
+        1:   27-block  1
+    $$$$$:   27-block  2
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+    $$$$$:   27-block  5
+        1:   28:	setPathMyList = new QPushButton{"Set My List"};
+        1:   28-block  0
+        1:   28-block  1
+    $$$$$:   28-block  2
+    $$$$$:   28-block  3
+    $$$$$:   28-block  4
+    $$$$$:   28-block  5
+        -:   29:
+        1:   30:	buttonAdd = new QPushButton{"Add"};
+        1:   30-block  0
+        1:   30-block  1
+    $$$$$:   30-block  2
+    $$$$$:   30-block  3
+    $$$$$:   30-block  4
+    $$$$$:   30-block  5
+        1:   31:	buttonRemove = new QPushButton{"Remove"};
+        1:   31-block  0
+        1:   31-block  1
+    $$$$$:   31-block  2
+    $$$$$:   31-block  3
+    $$$$$:   31-block  4
+    $$$$$:   31-block  5
+        1:   32:	buttonUpdate = new QPushButton{"Update"};
+        1:   32-block  0
+        1:   32-block  1
+    $$$$$:   32-block  2
+    $$$$$:   32-block  3
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
+        -:   33:
+        -:   34:	// Initiate main layout
+        1:   35:	QVBoxLayout* mainLayout = new QVBoxLayout(this);
+        1:   35-block  0
+    $$$$$:   35-block  1
+        -:   36:
+        -:   37:	//Set path
+        1:   38:	QVBoxLayout* setPathLayout = new QVBoxLayout{};
+        1:   38-block  0
+    $$$$$:   38-block  1
+        -:   39:
+        1:   40:	QHBoxLayout* setRepositoryLayout = new QHBoxLayout{};
+        1:   40-block  0
+    $$$$$:   40-block  1
+        1:   41:	QLabel* repoLabel = new QLabel("Repository");
+        1:   41-block  0
+        1:   41-block  1
+    $$$$$:   41-block  2
+    $$$$$:   41-block  3
+    $$$$$:   41-block  4
+    $$$$$:   41-block  5
+        1:   42:	repoLabel->setFixedWidth(75);
+        1:   43:	setRepositoryLayout->addWidget(repoLabel);
+        1:   44:	setPathRepository->setFixedWidth(150);
+        1:   45:	setRepositoryLayout->addWidget(repositoryLineEdit);
+        1:   46:	setRepositoryLayout->addWidget(setPathRepository);
+        1:   47:	setPathLayout->addLayout(setRepositoryLayout);
+        -:   48:
+        1:   49:	QHBoxLayout* setMyListLayout = new QHBoxLayout{};
+        1:   49-block  0
+    $$$$$:   49-block  1
+        1:   50:	QLabel* myListLabel = new QLabel("My list");
+        1:   50-block  0
+        1:   50-block  1
+    $$$$$:   50-block  2
+    $$$$$:   50-block  3
+    $$$$$:   50-block  4
+    $$$$$:   50-block  5
+        1:   51:	myListLabel->setFixedWidth(75);
+        1:   52:	setMyListLayout->addWidget(myListLabel);
+        1:   53:	setPathMyList->setFixedWidth(150);
+        1:   54:	setMyListLayout->addWidget(mylistLineEdit);
+        1:   55:	setMyListLayout->addWidget(setPathMyList);
+        1:   56:	setPathLayout->addLayout(setMyListLayout);
+        -:   57:
+        1:   58:	mainLayout->addLayout(setPathLayout);
+        -:   59:
+        1:   60:	QHBoxLayout * adminMode = new QHBoxLayout();
+        1:   60-block  0
+    $$$$$:   60-block  1
+        -:   61:	// Initiate functionality
+        1:   62:	QVBoxLayout * functionality = new QVBoxLayout();
+        1:   62-block  0
+    $$$$$:   62-block  1
+        -:   63:	// Text edits for Footage
+        1:   64:	QFormLayout * footageDetails = new QFormLayout{};
+        1:   64-block  0
+    $$$$$:   64-block  1
+        1:   65:	footageDetails->addRow("Title", titleLineEdit);
+        1:   65-block  0
+    $$$$$:   65-block  1
+        1:   66:	footageDetails->addRow("Type", typeLineEdit);
+        1:   66-block  0
+    $$$$$:   66-block  1
+        1:   67:	footageDetails->addRow("Date", dateLineEdit);
+        1:   67-block  0
+    $$$$$:   67-block  1
+        1:   68:	footageDetails->addRow("Access Count", accessCountLineEdit);
+        1:   68-block  0
+    $$$$$:   68-block  1
+        1:   69:	footageDetails->addRow("Link", linkLineEdit);
+        1:   69-block  0
+    $$$$$:   69-block  1
+        1:   70:	functionality->addLayout(footageDetails);
+        -:   71:
+        -:   72:	// Buttons
+        1:   73:	QGridLayout* buttonsLayout = new QGridLayout{};
+        1:   73-block  0
+    $$$$$:   73-block  1
+        1:   74:	buttonsLayout->addWidget(buttonAdd, 0, 0);
+        1:   75:	buttonsLayout->addWidget(buttonRemove, 0, 1);
+        1:   76:	buttonsLayout->addWidget(buttonUpdate, 0, 2);
+        1:   77:	functionality->addLayout(buttonsLayout);
+        -:   78:
+        1:   79:	adminMode->addLayout(functionality);
+        1:   80:	adminMode->addWidget(footageListWidget);
+        -:   81:
+        1:   82:	mainLayout->addLayout(adminMode);
+        -:   83:
+        1:   84:}
+        1:   84-block  0
+    $$$$$:   84-block  1
+    $$$$$:   84-block  2
+    $$$$$:   84-block  3
+    $$$$$:   84-block  4
+    $$$$$:   84-block  5
+    $$$$$:   84-block  6
+    $$$$$:   84-block  7
+        -:   85:
+    #####:   86:void GUI::populateList() {
+    $$$$$:   86-block  0
+    #####:   87:	footageListWidget->clear();
+        -:   88:
+    #####:   89:	std::vector<Footage> listOfFootage = service.getAllElements();
+        -:   90://	listOfFootage.push_back(Footage("Never gonna give you up", "Masterpiece", Date(18, 5, 2009), 2000000, "https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+        -:   91://	listOfFootage.push_back(Footage("All star", "Shrek", Date(12, 4, 2010), 6000000, "https://www.youtube.com/watch?v=L_jWHffIx5E"));
+    #####:   92:	for (const auto& footage: listOfFootage) {
+    $$$$$:   92-block  0
+    $$$$$:   92-block  1
+    $$$$$:   92-block  2
+    $$$$$:   92-block  3
+    #####:   93:		footageListWidget->addItem(QString::fromStdString(footage.getTitle() + " --- " + footage.getType()));
+    $$$$$:   93-block  0
+    $$$$$:   93-block  1
+    $$$$$:   93-block  2
+    $$$$$:   93-block  3
+    $$$$$:   93-block  4
+    $$$$$:   93-block  5
+    $$$$$:   93-block  6
+    $$$$$:   93-block  7
+    $$$$$:   93-block  8
+    $$$$$:   93-block  9
+    $$$$$:   93-block 10
+        -:   94:	}
+    #####:   95:}
+    $$$$$:   95-block  0
+    $$$$$:   95-block  1
+    $$$$$:   95-block  2
+    $$$$$:   95-block  3
+    $$$$$:   95-block  4
+    $$$$$:   95-block  5
+    $$$$$:   95-block  6
+    $$$$$:   95-block  7
+        -:   96:
+        1:   97:void GUI::makeConnections() {
+        1:   97-block  0
+        1:   98:	QObject::connect(footageListWidget, &QListWidget::itemSelectionChanged, [this]() {
+    $$$$$:   98-block  0
+    #####:   99:		int selectedIndex = this->getSelectedFootage();
+        -:  100:
+    #####:  101:		if (selectedIndex < 0){
+    $$$$$:  101-block  0
+    #####:  102:			return;
+    $$$$$:  102-block  0
+        -:  103:		}
+    #####:  104:		Footage footage = service.getAllElements()[selectedIndex];
+    $$$$$:  104-block  0
+    $$$$$:  104-block  1
+    $$$$$:  104-block  2
+    $$$$$:  104-block  3
+    #####:  105:		this->titleLineEdit->setText(QString::fromStdString(footage.getTitle()));
+    $$$$$:  105-block  0
+    $$$$$:  105-block  1
+    $$$$$:  105-block  2
+    $$$$$:  105-block  3
+    $$$$$:  105-block  4
+    #####:  106:		this->typeLineEdit->setText(QString::fromStdString(footage.getType()));
+    $$$$$:  106-block  0
+    $$$$$:  106-block  1
+    $$$$$:  106-block  2
+    $$$$$:  106-block  3
+    $$$$$:  106-block  4
+    #####:  107:		this->dateLineEdit->setText(QString::fromStdString(footage.getDate().toString()));
+    $$$$$:  107-block  0
+    $$$$$:  107-block  1
+    $$$$$:  107-block  2
+    $$$$$:  107-block  3
+    $$$$$:  107-block  4
+    $$$$$:  107-block  5
+    #####:  108:		this->accessCountLineEdit->setText(QString::fromStdString(std::to_string(footage.getAccessCount())));
+    $$$$$:  108-block  0
+    $$$$$:  108-block  1
+    $$$$$:  108-block  2
+    $$$$$:  108-block  3
+    $$$$$:  108-block  4
+    $$$$$:  108-block  5
+    #####:  109:		this->linkLineEdit->setText(QString::fromStdString(footage.getLink()));
+    $$$$$:  109-block  0
+    $$$$$:  109-block  1
+    $$$$$:  109-block  2
+    $$$$$:  109-block  3
+    $$$$$:  109-block  4
+    #####:  110:	});
+    $$$$$:  110-block  0
+    $$$$$:  110-block  1
+    $$$$$:  110-block  2
+    $$$$$:  110-block  3
+    $$$$$:  110-block  4
+    $$$$$:  110-block  5
+    $$$$$:  110-block  6
+    $$$$$:  110-block  7
+    $$$$$:  110-block  8
+        1:  111:	QObject::connect(setPathRepository, &QPushButton::clicked, this, &GUI::setRepository);
+        1:  112:	QObject::connect(setPathMyList, &QPushButton::clicked, this, &GUI::setMyList);
+        1:  113:	QObject::connect(buttonAdd, &QPushButton::clicked, this, &GUI::addFootage);
+        1:  114:	QObject::connect(buttonRemove, &QPushButton::clicked, this, &GUI::removeFootage);
+        1:  115:	QObject::connect(buttonUpdate, &QPushButton::clicked, this, &GUI::updateFootage);
+        -:  116:
+        1:  117:}
+        1:  117-block  0
+        -:  118:
+    #####:  119:int GUI::getSelectedFootage() const {
+    $$$$$:  119-block  0
+    #####:  120:	QModelIndexList selectedIndexes = footageListWidget->selectionModel()->selectedIndexes();
+    #####:  121:	if (selectedIndexes.empty()) {
+    $$$$$:  121-block  0
+    $$$$$:  121-block  1
+    #####:  122:		titleLineEdit->clear();
+    $$$$$:  122-block  0
+    #####:  123:		typeLineEdit->clear();
+    $$$$$:  123-block  0
+    #####:  124:		dateLineEdit->clear();
+    $$$$$:  124-block  0
+    #####:  125:		accessCountLineEdit->clear();
+    $$$$$:  125-block  0
+    #####:  126:		linkLineEdit->clear();
+    $$$$$:  126-block  0
+    #####:  127:		return -1;
+    $$$$$:  127-block  0
+        -:  128:	}
+    #####:  129:	int selectedIndex = selectedIndexes.at(0).row();
+    $$$$$:  129-block  0
+    #####:  130:	return selectedIndex;
+    $$$$$:  130-block  0
+    #####:  131:}
+    $$$$$:  131-block  0
+    $$$$$:  131-block  1
+    $$$$$:  131-block  2
+        -:  132:
+    #####:  133:void GUI::setRepository() {
+    $$$$$:  133-block  0
+    #####:  134:	std::string path = repositoryLineEdit->text().toStdString();
+    $$$$$:  134-block  0
+    $$$$$:  134-block  1
+    $$$$$:  134-block  2
+    #####:  135:	service.setPath(path, "repository");
+    $$$$$:  135-block  0
+    $$$$$:  135-block  1
+    $$$$$:  135-block  2
+    #####:  136:	populateList();
+    $$$$$:  136-block  0
+    #####:  137:}
+    $$$$$:  137-block  0
+    $$$$$:  137-block  1
+    $$$$$:  137-block  2
+        -:  138:
+    #####:  139:void GUI::setMyList() {
+    $$$$$:  139-block  0
+    #####:  140:	std::string path = mylistLineEdit->text().toStdString();
+    $$$$$:  140-block  0
+    $$$$$:  140-block  1
+    $$$$$:  140-block  2
+    #####:  141:	service.setPath(path, "mylist");
+    $$$$$:  141-block  0
+    $$$$$:  141-block  1
+    $$$$$:  141-block  2
+    #####:  142:}
+    $$$$$:  142-block  0
+    $$$$$:  142-block  1
+    $$$$$:  142-block  2
+        -:  143:
+    #####:  144:void GUI::addFootage() {
+    $$$$$:  144-block  0
+    #####:  145:	std::string newTitle = titleLineEdit->text().toStdString();
+    $$$$$:  145-block  0
+    $$$$$:  145-block  1
+    $$$$$:  145-block  2
+    #####:  146:	std::string newType = " " + typeLineEdit->text().toStdString();
+    $$$$$:  146-block  0
+    $$$$$:  146-block  1
+    $$$$$:  146-block  2
+    $$$$$:  146-block  3
+    $$$$$:  146-block  4
+    #####:  147:	std::string newDateString = " " + dateLineEdit->text().toStdString();
+    $$$$$:  147-block  0
+    $$$$$:  147-block  1
+    $$$$$:  147-block  2
+    $$$$$:  147-block  3
+    $$$$$:  147-block  4
+    #####:  148:	std::string newAccessCountString = " " + accessCountLineEdit->text().toStdString();
+    $$$$$:  148-block  0
+    $$$$$:  148-block  1
+    $$$$$:  148-block  2
+    $$$$$:  148-block  3
+    $$$$$:  148-block  4
+    #####:  149:	std::string newLink = " " + linkLineEdit->text().toStdString();
+    $$$$$:  149-block  0
+    $$$$$:  149-block  1
+    $$$$$:  149-block  2
+    $$$$$:  149-block  3
+    $$$$$:  149-block  4
+        -:  150:	try {
+    #####:  151:		service.addFootage(newTitle, newType, newDateString, newAccessCountString, newLink);
+    $$$$$:  151-block  0
+    #####:  152:	}catch(ValidationException& e) {
+    $$$$$:  152-block  0
+    $$$$$:  152-block  1
+    $$$$$:  152-block  2
+    #####:  153:		std::cout << e.what();
+    $$$$$:  153-block  0
+    $$$$$:  153-block  1
+    #####:  154:	}catch(RepositoryException& e) {
+    $$$$$:  154-block  0
+    $$$$$:  154-block  1
+    $$$$$:  154-block  2
+    $$$$$:  154-block  3
+    #####:  155:		std::cout << e.what();
+    $$$$$:  155-block  0
+    $$$$$:  155-block  1
+    #####:  156:	}
+    $$$$$:  156-block  0
+    $$$$$:  156-block  1
+    $$$$$:  156-block  2
+    $$$$$:  156-block  3
+    $$$$$:  156-block  4
+    #####:  157:	populateList();
+    $$$$$:  157-block  0
+    #####:  158:	int lastElement = static_cast<int>(service.getAllElements().size() - 1);
+    $$$$$:  158-block  0
+    #####:  159:	footageListWidget->setCurrentRow(lastElement);
+    $$$$$:  159-block  0
+    #####:  160:}
+    $$$$$:  160-block  0
+    $$$$$:  160-block  1
+    $$$$$:  160-block  2
+    $$$$$:  160-block  3
+    $$$$$:  160-block  4
+    $$$$$:  160-block  5
+    $$$$$:  160-block  6
+    $$$$$:  160-block  7
+    $$$$$:  160-block  8
+    $$$$$:  160-block  9
+    $$$$$:  160-block 10
+    $$$$$:  160-block 11
+    $$$$$:  160-block 12
+    $$$$$:  160-block 13
+    $$$$$:  160-block 14
+    $$$$$:  160-block 15
+        -:  161:
+    #####:  162:void GUI::removeFootage() {
+    $$$$$:  162-block  0
+    #####:  163:	std::string titleToBeRemoved = titleLineEdit->text().toStdString();
+    $$$$$:  163-block  0
+    $$$$$:  163-block  1
+    $$$$$:  163-block  2
+        -:  164:	try {
+    #####:  165:		service.deleteFootage(titleToBeRemoved);
+    $$$$$:  165-block  0
+    #####:  166:	}catch(ValidationException& e) {
+    $$$$$:  166-block  0
+    $$$$$:  166-block  1
+    $$$$$:  166-block  2
+    #####:  167:		std::cout << e.what() << std::endl;
+    $$$$$:  167-block  0
+    $$$$$:  167-block  1
+    $$$$$:  167-block  2
+    #####:  168:	}catch(RepositoryException& e) {
+    $$$$$:  168-block  0
+    $$$$$:  168-block  1
+    $$$$$:  168-block  2
+    $$$$$:  168-block  3
+    #####:  169:		std::cout << e.what() << std::endl;
+    $$$$$:  169-block  0
+    $$$$$:  169-block  1
+    $$$$$:  169-block  2
+    #####:  170:	}
+    $$$$$:  170-block  0
+    $$$$$:  170-block  1
+    $$$$$:  170-block  2
+    $$$$$:  170-block  3
+    $$$$$:  170-block  4
+    #####:  171:	populateList();
+    $$$$$:  171-block  0
+    #####:  172:}
+    $$$$$:  172-block  0
+    $$$$$:  172-block  1
+    $$$$$:  172-block  2
+    $$$$$:  172-block  3
+        -:  173:
+    #####:  174:void GUI::updateFootage() {
+    $$$$$:  174-block  0
+    #####:  175:	std::string newTitle = titleLineEdit->text().toStdString();
+    $$$$$:  175-block  0
+    $$$$$:  175-block  1
+    $$$$$:  175-block  2
+    #####:  176:	std::string newType = " " + typeLineEdit->text().toStdString();
+    $$$$$:  176-block  0
+    $$$$$:  176-block  1
+    $$$$$:  176-block  2
+    $$$$$:  176-block  3
+    $$$$$:  176-block  4
+    #####:  177:	std::string newDateString = " " + dateLineEdit->text().toStdString();
+    $$$$$:  177-block  0
+    $$$$$:  177-block  1
+    $$$$$:  177-block  2
+    $$$$$:  177-block  3
+    $$$$$:  177-block  4
+    #####:  178:	std::string newAccessCountString = " " + accessCountLineEdit->text().toStdString();
+    $$$$$:  178-block  0
+    $$$$$:  178-block  1
+    $$$$$:  178-block  2
+    $$$$$:  178-block  3
+    $$$$$:  178-block  4
+    #####:  179:	std::string newLink = " " + linkLineEdit->text().toStdString();
+    $$$$$:  179-block  0
+    $$$$$:  179-block  1
+    $$$$$:  179-block  2
+    $$$$$:  179-block  3
+    $$$$$:  179-block  4
+        -:  180:	try {
+    #####:  181:		service.updateFootage(newTitle, newType, newDateString, newAccessCountString, newLink);
+    $$$$$:  181-block  0
+    #####:  182:	} catch (ValidationException& e) {
+    $$$$$:  182-block  0
+    $$$$$:  182-block  1
+    #####:  183:		std::cout << e.what();
+    $$$$$:  183-block  0
+    $$$$$:  183-block  1
+    #####:  184:	}
+    $$$$$:  184-block  0
+    $$$$$:  184-block  1
+    $$$$$:  184-block  2
+    $$$$$:  184-block  3
+    $$$$$:  184-block  4
+    #####:  185:	populateList();
+    $$$$$:  185-block  0
+    #####:  186:	auto footageList = service.getAllElements();
+    $$$$$:  186-block  0
+    #####:  187:	int index = 0;
+    #####:  188:	for (const auto& footage: footageList) {
+    $$$$$:  188-block  0
+    $$$$$:  188-block  1
+    $$$$$:  188-block  2
+    $$$$$:  188-block  3
+    #####:  189:		if (footage.getTitle() == newTitle) {
+    $$$$$:  189-block  0
+    $$$$$:  189-block  1
+    #####:  190:			break;
+    $$$$$:  190-block  0
+        -:  191:		}
+    #####:  192:		index++;
+        -:  193:	}
+    #####:  194:	footageListWidget->setCurrentRow(index);
+    $$$$$:  194-block  0
+        -:  195:
+    #####:  196:}
+    $$$$$:  196-block  0
+    $$$$$:  196-block  1
+    $$$$$:  196-block  2
+    $$$$$:  196-block  3
+    $$$$$:  196-block  4
+    $$$$$:  196-block  5
+    $$$$$:  196-block  6
+    $$$$$:  196-block  7
+    $$$$$:  196-block  8
+    $$$$$:  196-block  9
+    $$$$$:  196-block 10
+    $$$$$:  196-block 11
+    $$$$$:  196-block 12
+    $$$$$:  196-block 13
+    $$$$$:  196-block 14
+    $$$$$:  196-block 15
+    $$$$$:  196-block 16
+        -:  197:

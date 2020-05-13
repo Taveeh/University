@@ -61,9 +61,9 @@ std::vector<Footage> SQLRepository::getAllFootage() {
 }
 
 void SQLRepository::deleteFootage(const std::string &title) {
-	std::string sqlStatement = "DELETE from FOOTAGE where title=" + title + ';';
+	std::string sqlStatement = "DELETE from FOOTAGE where title=\"" + title + "\";";
 	if (sqlite3_exec(database, sqlStatement.c_str(), nullptr, nullptr, nullptr) != SQLITE_OK) {
-		std::cout << sqlite3_errmsg(database);
+		std::cout << sqlite3_errmsg(database) << std::endl;
 		throw RepositoryException("Footage does not exist");
 	}
 }

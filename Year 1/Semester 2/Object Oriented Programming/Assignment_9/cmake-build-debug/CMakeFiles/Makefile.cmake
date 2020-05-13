@@ -38,6 +38,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/Platform/Darwin.cmake"
   "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
   "/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/CLion.app/Contents/bin/cmake/mac/share/cmake-3.16/Modules/ProcessorCount.cmake"
+  "/Users/taveeh/Qt/5.14.2/clang_64/lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake"
+  "/Users/taveeh/Qt/5.14.2/clang_64/lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake"
   "/Users/taveeh/Qt/5.14.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake"
   "/Users/taveeh/Qt/5.14.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
   "/Users/taveeh/Qt/5.14.2/clang_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake"
