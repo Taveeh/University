@@ -1,0 +1,6 @@
+Mercedes-Benz | SUV | 2013 | blue
+Audi | SUV | 2012 | yellow
+Mercedes-Benz | 4x4 | 2016 | red
+BMW | SUV | 2018 | green
+Dacia | Duster | 2010 | red
+Opel | Logan | 2005 | blue

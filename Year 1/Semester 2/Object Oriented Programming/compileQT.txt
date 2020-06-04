@@ -10,6 +10,6 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 add_executable(...)
-target_link_libraries(Assignment_9 Qt5::Widgets)
-target_link_libraries(Assignment_9 Qt5::Charts)
+target_link_libraries(projectName Qt5::Widgets)
+target_link_libraries(projectName Qt5::Charts)
 

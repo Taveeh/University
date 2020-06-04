@@ -1,0 +1,440 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Action.h
+utility
+-
+Repository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Repository.h
+Footage.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Footage.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/ActualAbstractTableModel.h
+QAbstractTableModel
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Exceptions.h
+exception
+-
+string
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/FileRepository.h
+Repository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Repository.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Footage.h
+string
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/GUI.cpp
+GUI.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/GUI.h
+fstream
+-
+QtWidgets
+-
+iostream
+-
+QtCharts/QChartView
+-
+QtCharts/QBarSeries
+-
+QtCharts/QBarSet
+-
+QtCharts/QBarCategoryAxis
+-
+QFont
+-
+QAbstractTableModel
+-
+MyListTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyListTableModel.h
+MyFilteredListTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyFilteredListTableModel.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/GUI.h
+QApplication
+-
+QWidget
+-
+QListWidget
+-
+QPushButton
+-
+QLineEdit
+-
+Service.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Service.h
+QtCharts/QChart
+-
+QVBoxLayout
+-
+QShortcut
+-
+MyListWidget.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyListWidget.h
+MyFilteredListTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyFilteredListTableModel.h
+QSortFilterProxyModel
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/HtmlFileRepository.h
+Repository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Repository.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MemoryRepository.h
+Repository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Repository.h
+Footage.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Footage.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyFilteredListTableModel.h
+ActualAbstractTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/ActualAbstractTableModel.h
+Service.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Service.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyListTableModel.h
+QAbstractTableModel
+-
+Service.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Service.h
+ActualAbstractTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/ActualAbstractTableModel.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyListWidget.h
+QWidget
+-
+QAbstractTableModel
+-
+QTableView
+-
+MyListTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MyListTableModel.h
+ActualAbstractTableModel.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/ActualAbstractTableModel.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Repository.h
+Footage.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Footage.h
+Exceptions.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Exceptions.h
+vector
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/SQLRepository.h
+string
+-
+sqlite3.h
+-
+Repository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Repository.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Service.h
+string
+-
+memory
+-
+FileRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/FileRepository.h
+MemoryRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MemoryRepository.h
+HtmlFileRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/HtmlFileRepository.h
+Validator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Validator.h
+SQLRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/SQLRepository.h
+Action.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Action.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestFileRepository.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestFootage.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestMemoryRepository.h
+MemoryRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/MemoryRepository.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestService.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Validator.h
+vector
+-
+string
+-
+ctime
+-
+Exceptions.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Exceptions.h
+Footage.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/Footage.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/main.cpp
+GUI.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/GUI.h
+TestFootage.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestFootage.h
+TestMemoryRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestMemoryRepository.h
+TestService.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestService.h
+TestFileRepository.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Assignment_5-10/TestFileRepository.h
+QFileInfo
+-
+QDebug
+-
+iostream
+-
+QDir
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/QAbstractTableModel
+qabstractitemmodel.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qabstractitemmodel.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/QDebug
+qdebug.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qdebug.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/QDir
+qdir.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qdir.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/QFileInfo
+qfileinfo.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qfileinfo.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/QSortFilterProxyModel
+qsortfilterproxymodel.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qsortfilterproxymodel.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qabstractitemmodel.h
+QtCore/qvariant.h
+-
+QtCore/qobject.h
+-
+QtCore/qhash.h
+-
+QtCore/qvector.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qdebug.h
+QtCore/qalgorithms.h
+-
+QtCore/qhash.h
+-
+QtCore/qlist.h
+-
+QtCore/qmap.h
+-
+QtCore/qpair.h
+-
+QtCore/qtextstream.h
+-
+QtCore/qstring.h
+-
+QtCore/qvector.h
+-
+QtCore/qset.h
+-
+QtCore/qcontiguouscache.h
+-
+QtCore/qsharedpointer.h
+-
+vector
+-
+list
+-
+map
+-
+utility
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qdir.h
+QtCore/qstring.h
+-
+QtCore/qfileinfo.h
+-
+QtCore/qstringlist.h
+-
+QtCore/qshareddata.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qfileinfo.h
+QtCore/qfile.h
+-
+QtCore/qlist.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qmetatype.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtCore.framework/Headers/qsortfilterproxymodel.h
+QtCore/qabstractproxymodel.h
+-
+QtCore/qregexp.h
+-
+QtCore/qregularexpression.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtGui.framework/Headers/QFont
+qfont.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtGui.framework/Headers/qfont.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtGui.framework/Headers/qfont.h
+QtGui/qtguiglobal.h
+-
+QtGui/qwindowdefs.h
+-
+QtCore/qstring.h
+-
+QtCore/qsharedpointer.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QApplication
+qapplication.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QLineEdit
+qlineedit.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlineedit.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QListWidget
+qlistwidget.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlistwidget.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton
+qpushbutton.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QShortcut
+qshortcut.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qshortcut.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QTableView
+qtableview.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qtableview.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QVBoxLayout
+qboxlayout.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qboxlayout.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/QWidget
+qwidget.h
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtCore/qcoreapplication.h
+-
+QtGui/qwindowdefs.h
+-
+QtCore/qpoint.h
+-
+QtCore/qsize.h
+-
+QtGui/qcursor.h
+-
+QtWidgets/qdesktopwidget.h
+-
+QtGui/qguiapplication.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qboxlayout.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qlayout.h
+-
+QtWidgets/qwidget.h
+-
+limits.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlineedit.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
+-
+QtGui/qtextcursor.h
+-
+QtCore/qstring.h
+-
+QtCore/qmargins.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qlistwidget.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qlistview.h
+-
+QtCore/qvariant.h
+-
+QtCore/qvector.h
+-
+QtCore/qitemselectionmodel.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractbutton.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qshortcut.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+QtGui/qkeysequence.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qtableview.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractitemview.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtGui/qwindowdefs.h
+-
+QtCore/qobject.h
+-
+QtCore/qmargins.h
+-
+QtGui/qpaintdevice.h
+-
+QtGui/qpalette.h
+-
+QtGui/qfont.h
+-
+QtGui/qfontmetrics.h
+-
+QtGui/qfontinfo.h
+-
+QtWidgets/qsizepolicy.h
+-
+QtGui/qregion.h
+-
+QtGui/qbrush.h
+-
+QtGui/qcursor.h
+-
+QtGui/qkeysequence.h
+-
+QtGui/qevent.h
+-
+
+/Users/taveeh/Qt/5.14.2/clang_64/lib/QtWidgets.framework/QtWidgets
+

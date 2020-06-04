@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/App.cpp
+ExtendedTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/ExtendedTest.h
+ShortTest.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/ShortTest.h
+SortedMap.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SortedMap.h
+SMIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SMIterator.h
+vector
+-
+iostream
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/ExtendedTest.h
+vector
+-
+SortedMap.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SortedMap.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SMIterator.h
+SortedMap.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SortedMap.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/ShortTest.h
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SortedMap.cpp
+SMIterator.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SMIterator.h
+SortedMap.h
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SortedMap.h
+exception
+-
+iostream
+-
+
+/Users/taveeh/Desktop/University/Year 1/Semester 2/Data Structures and Algorithms/SortedMap - Binary Search Tree with Linked Representation on Array/SortedMap.h
+utility
+-
+
