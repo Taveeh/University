@@ -1,4 +1,4 @@
-//
+    //
 // Created by Octavian Custura on 27/05/2020.
 //
 
@@ -74,7 +74,7 @@ bool MyListTableModel::setData(const QModelIndex &index, const QVariant &value, 
 	}
 	int row = index.row();
 	int column = index.column();
-	Footage currentFootage = repository.getMyList()[row];
+	Footage currentFootage = repository.getMyList()[row];   
 	switch (column) {
 		case 0:
 			break;

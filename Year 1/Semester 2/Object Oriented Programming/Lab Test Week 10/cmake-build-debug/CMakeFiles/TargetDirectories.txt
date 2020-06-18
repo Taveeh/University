@@ -1,3 +1,0 @@
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 10/cmake-build-debug/CMakeFiles/Lab_Test_Week_10.dir

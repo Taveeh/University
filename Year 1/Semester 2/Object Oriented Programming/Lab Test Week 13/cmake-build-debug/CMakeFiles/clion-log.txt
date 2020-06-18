@@ -1,4 +1,0 @@
-"/Users/taveeh/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/201.7223.86/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/Users/taveeh/Qt/5.14.2/clang_64/lib/cmake/ -G "CodeBlocks - Unix Makefiles" "/Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 13"
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/taveeh/Desktop/University/Year 1/Semester 2/Object Oriented Programming/Lab Test Week 13/cmake-build-debug

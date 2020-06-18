@@ -172,7 +172,6 @@ void GUI::initGUI() {
 
 void GUI::populateList(QListWidget* listWidget) {
 	listWidget->clear();
-
 	std::vector<Footage> listOfFootage = service.getAllElements();
 	for (const auto& footage: listOfFootage) {
 		listWidget->addItem(QString::fromStdString(footage.getTitle() + " - " + footage.getType()));
