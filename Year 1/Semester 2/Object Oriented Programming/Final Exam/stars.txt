@@ -1,0 +1,12 @@
+PasCuPas,constellation3,70,54,120
+lovelyStar,constellation2,12,20,15
+star6,constellation2,15,15,15
+OmegaStar,constellation2,0,0,30
+bestStar,constellation2,50,-32,60
+star5,constellation2,14,14,14
+star2,constellation1,11,11,11
+qfdasf,constellation1,21,23,12
+star1,constellation1,10,10,10
+star3,constellation1,12,12,12
+star4,constellation1,13,13,13
+coolStar,constellation1,23,54,23

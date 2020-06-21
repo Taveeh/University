@@ -1,0 +1,4 @@
+Donald Trump,constellation1
+Vladimir Putin,constellation2
+Klaus Iohannis,constellation3
+Hillary Clinton,constellation1
