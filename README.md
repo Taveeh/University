@@ -1,4 +1,5 @@
 # University
+
 <ul>
     <li> Semester 1
         <ul>
@@ -49,6 +50,36 @@
             </li>
         </ul>
     </li>
+    <li> Semester 3
+        <ul>
+            <li>
+                <a href="https://github.com/Taveeh/Advanced-Programming-Methods">
+                    Advanced Programming Methods
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Taveeh/Databases">
+                    Databases
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Taveeh/Computer-Networks">
+                    Computer Networks
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Taveeh/Probabilities-and-Statistics">
+                    Probabilities and Statistics
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Taveeh/Logic-and-Functional-Programming">
+                   Logic and Functional Programming
+                </a>
+            </li>
+        </ul>
+    </li>
+    
 </ul>
         
         
