@@ -1,80 +1,80 @@
 # University
 
 <ul>
-    <li> Semester 1
+    <li>:closed_book: Semester 1
         <ul>
             <li>
                 <a href="https://github.com/Taveeh/Algebra">
-                    Algebra
+                    :heavy_division_sign: Algebra
                 </a>
             </li>
             <li>
                 <a href="https://github.com/Taveeh/Computer-System-Architecture">
-                    Computer System Architecture
+                    :floppy_disk: Computer System Architecture
                 </a>
             </li>
             <li>
                 <a href="https://github.com/Taveeh/Fundamentals-of-Programming">
-                    Fundamentals of Programming
+                    :snake: Fundamentals of Programming
                 </a>
             </li>
         </ul>
     </li>
-    <li> Semester 2
+    <li>:green_book: Semester 2
         <ul>
             <li>
                 <a href="https://github.com/Taveeh/Operating-Systems">
-                    Operating Systems
+                    :computer: Operating Systems
                 </a>
             </li>
         </ul>
         <ul>
             <li>
                 <a href="https://github.com/Taveeh/Data-Structures-and-Algorithms">
-                    Data Structures and Algorithms
+                    :postbox: Data Structures and Algorithms
                 </a>
             </li>
         </ul>
         <ul>
             <li>
                 <a href="https://github.com/Taveeh/Graph-Algorithms">
-                    Graph Algorithms
+                    :repeat: Graph Algorithms
                 </a>
             </li>
         </ul>
         <ul>
             <li>
                 <a href="https://github.com/Taveeh/Object-Oriented-Programming">
-                    Object Oriented Programming
+                    :penguin: Object Oriented Programming
                 </a>
             </li>
         </ul>
     </li>
-    <li> Semester 3
+    <li>:blue_book: Semester 3
         <ul>
             <li>
                 <a href="https://github.com/Taveeh/Advanced-Programming-Methods">
-                    Advanced Programming Methods
+                    :dvd: Advanced Programming Methods
                 </a>
             </li>
             <li>
                 <a href="https://github.com/Taveeh/Databases">
-                    Databases
+                    :file_folder: Databases
                 </a>
             </li>
             <li>
                 <a href="https://github.com/Taveeh/Computer-Networks">
-                    Computer Networks
+                    :satellite: Computer Networks
                 </a>
             </li>
             <li>
                 <a href="https://github.com/Taveeh/Probabilities-and-Statistics">
-                    Probabilities and Statistics
+                    :bar_chart: Probabilities and Statistics
                 </a>
             </li>
             <li>
                 <a href="https://github.com/Taveeh/Logic-and-Functional-Programming">
-                   Logic and Functional Programming
+                   :whale2: Logic and Functional Programming
                 </a>
             </li>
         </ul>
