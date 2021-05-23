@@ -86,6 +86,11 @@
                     🕸️ Web Programming 
                 </a>
             </li>
+            <li>
+                <a href="https://github.com/Taveeh/ArtificialIntelligence">
+                    🤖 Artificial Intelligence
+                </a>
+            </li>
         </ul>
     </li>
 </ul>
